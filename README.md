@@ -1,134 +1,134 @@
 # Backend Journey
 
-Catatan perjalanan belajar backend engineering.
+A learning log for my path to becoming a backend engineer.
 
-**Mulai:** November 2026
-**Target:** Magang backend, semester 7 (Oktober 2027)
-**Fokus:** Java + Spring Boot + PostgreSQL (utama), Node.js (pendamping)
-
----
-
-## Aturan
-
-1. Tidak ada minggu tanpa commit.
-2. 20% baca, 80% ketik sendiri. Jangan copy-paste.
-3. Setiap folder punya `Catatan.md` — apa yang dipelajari, apa yang membingungkan.
-4. Isi catatan ditulis Bahasa Inggris. Latihan dari hari pertama.
+**Started:** November 2026
+**Target:** Backend internship, semester 7 (October 2027)
+**Focus:** Java + Spring Boot + PostgreSQL (primary), Node.js (secondary)
 
 ---
 
-## Struktur
+## Rules
+
+1. No week without a commit.
+2. 20% reading, 80% typing. Never copy-paste.
+3. Every folder has a `Catatan.md` - what I learned and what confused me.
+4. All notes, commit messages, and code comments in English.
+
+---
+
+## Structure
 
 ```
-Fase 1 Fondasi/
+Phase 1 Foundation/
   1 Week/
     01_Js Basic/
-      Latihan/
+      Exercises/
       Catatan.md
 ```
 
-Pola penamaan:
+Naming pattern:
 
-| Level | Gaya | Contoh |
+| Level | Style | Example |
 |---|---|---|
-| Fase | Title Case | `Fase 1 Fondasi` |
-| Grup | N Week | `1 Week` |
-| Minggu | NN_Title Case | `01_Js Basic` |
-| Isi | Title Case | `Latihan`, `Catatan.md` |
+| Phase | Title Case | `Phase 1 Foundation` |
+| Group | N Week | `1 Week` |
+| Week | NN_Title Case | `01_Js Basic` |
+| Inside | Title Case | `Exercises`, `Catatan.md` |
 
 ---
 
-## Progres
+## Progress
 
-### Fase 1 Fondasi — November 2026 s.d. Januari 2027
+### Phase 1 Foundation - November 2026 to January 2027
 
-| Minggu | Topik | Selesai |
+| Week | Topic | Done |
 |---|---|---|
 | 01 | Js Basic | [ ] |
-| 02 | Fungsi Scope | [ ] |
+| 02 | Function Scope | [ ] |
 | 03 | Array Methods | [ ] |
 | 04 | Object Destructuring | [ ] |
 | 05 | Async Await | [ ] |
 | 06 | Http Fundamental | [ ] |
-| 07 | Nodejs Dasar | [ ] |
+| 07 | Nodejs Basics | [ ] |
 | 08 | Express Api | [ ] |
 | 09 | Sql Crud | [ ] |
 | 10 | Sql Query | [ ] |
 | 11 | Sql Join | [ ] |
 | 12 | Database Design | [ ] |
 
-### Fase 2 Bahasa Kedua — Februari s.d. April 2027
+### Phase 2 Second Language - February to April 2027
 
-| Minggu | Topik | Selesai |
+| Week | Topic | Done |
 |---|---|---|
 | 13 | Java Syntax | [ ] |
 | 14 | Java Method | [ ] |
-| 15 | Java Oop Dasar | [ ] |
-| 16 | Java Oop Lanjut | [ ] |
+| 15 | Java Oop Basics | [ ] |
+| 16 | Java Oop Advanced | [ ] |
 | 17 | Java Collection | [ ] |
 | 18 | Java Exception Io | [ ] |
 | 19 | Spring Boot Get | [ ] |
 | 20 | Spring Boot Crud | [ ] |
 | 21 | Spring Jpa Postgres | [ ] |
-| 22 | Docker Dasar | [ ] |
+| 22 | Docker Basics | [ ] |
 | 23 | Docker Compose | [ ] |
 | 24 | Testing Junit | [ ] |
 
-### Fase 3 Proyek — Mei s.d. Juli 2027
+### Phase 3 Project - May to July 2027
 
-| Minggu | Topik | Selesai |
+| Week | Topic | Done |
 |---|---|---|
 | 25 | Setup Auth | [ ] |
 | 26 | Jwt Middleware | [ ] |
 | 27 | Crud Events | [ ] |
-| 28 | Validasi Pagination | [ ] |
-| 29 | Ticketing Stok | [ ] |
-| 30 | Promo Harga | [ ] |
+| 28 | Validation Pagination | [ ] |
+| 29 | Ticketing Stock | [ ] |
+| 30 | Promo Pricing | [ ] |
 | 31 | Payment | [ ] |
-| 32 | Dokumentasi Api | [ ] |
+| 32 | Api Documentation | [ ] |
 | 33 | Github Actions | [ ] |
 | 34 | Deploy | [ ] |
 | 35 | Error Handling Logging | [ ] |
 | 36 | Polish Readme | [ ] |
 
-### Fase 4 Persiapan — Agustus s.d. Oktober 2027
+### Phase 4 Preparation - August to October 2027
 
-| Minggu | Topik | Selesai |
+| Week | Topic | Done |
 |---|---|---|
-| 37 | Linux Dasar | [ ] |
+| 37 | Linux Basics | [ ] |
 | 38 | Linux Ssh | [ ] |
 | 39 | System Design | [ ] |
 | 40 | System Design 2 | [ ] |
 | 41 | Mock Interview | [ ] |
-| 42 | Arsitektur Proyek | [ ] |
+| 42 | Project Architecture | [ ] |
 | 43 | Leetcode Sprint 1 | [ ] |
 | 44 | Leetcode Sprint 2 | [ ] |
 | 45 | Polish Repo | [ ] |
 | 46 | Github Profile | [ ] |
-| 47 | Cv Lamaran | [ ] |
+| 47 | Cv Application | [ ] |
 | 48 | Interview Prep | [ ] |
 
 ---
 
-## Alokasi Waktu
+## Time Budget
 
-| Satuan | Target |
+| Unit | Target |
 |---|---|
-| Per hari | 2-3 jam (minimum 30 menit) |
-| Per minggu | 15-20 jam |
-| Per bulan | 60-80 jam |
-| Total 48 minggu | 720-960 jam |
+| Per day | 2-3 hours (minimum 30 minutes) |
+| Per week | 15-20 hours |
+| Per month | 60-80 hours |
+| Total, 48 weeks | 720-960 hours |
 
 ---
 
-## Sumber
+## Resources
 
-| Sumber | Untuk |
+| Resource | For |
 |---|---|
-| javascript.info | JS mendalam |
-| java-programming.mooc.fi | Java terstruktur |
-| sqlbolt.com | SQL interaktif |
+| javascript.info | JavaScript in depth |
+| java-programming.mooc.fi | Structured Java |
+| sqlbolt.com | Interactive SQL |
 | baeldung.com | Spring Boot |
 | neetcode.io | LeetCode |
-| roadmap.sh/backend | Peta skill |
+| roadmap.sh/backend | Skill map |
 | docs.docker.com | Docker |
