@@ -12,8 +12,9 @@ A learning log for my path to becoming a backend engineer.
 
 1. No week without a commit.
 2. 20% reading, 80% typing. Never copy-paste.
-3. Every folder has a `Catatan.md` - what I learned and what confused me.
+3. Every folder has a `Catatan.md` — what I learned and what confused me.
 4. All notes, commit messages, and code comments in English.
+5. Keyword **"keeping"** = ask for a recall session on material already studied. When I say it, review by questioning me on key concepts, correct what is wrong, and do not restart from zero.
 
 ---
 
