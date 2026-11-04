@@ -45,7 +45,7 @@ Naming pattern:
 
 | Week | Topic | Done |
 |---|---|---|
-| 01 | Js Basic | [ ] |
+| 01 | Js Basic | in progress (day 1-2 of 5) |
 | 02 | Function Scope | [ ] |
 | 03 | Array Methods | [ ] |
 | 04 | Object Destructuring | [ ] |
@@ -133,3 +133,54 @@ Naming pattern:
 | neetcode.io | LeetCode |
 | roadmap.sh/backend | Skill map |
 | docs.docker.com | Docker |
+
+---
+
+## Key Concepts Learned
+
+A running list of things I do not want to forget.
+
+### Week 01 - JS Basics
+
+**Variables**
+- `const` by default, `let` only when the value changes, never `var`
+- Variable names use camelCase
+
+**Template literals**
+- `${}` only works inside backticks `` ` ``, not single or double quotes
+- Wrong quotes do not throw an error, they just print the literal text
+
+**Type conversion**
+- Data from outside (forms, URLs, files, APIs) always arrives as a string
+- `Number("123abc")` is `NaN` because `Number` is strict
+- `parseInt("123abc")` is `123` because it stops at the first non-digit
+- `Number("")` is `0` but `parseInt("")` is `NaN`
+
+**The `+` trap**
+- `+` has two jobs: add numbers and join strings
+- If either side is a string, `+` joins instead of adds
+- `-`, `*`, `/`, `%` only have one job, so they always convert to number
+- `"5" + 3` is `"53"` but `"5" - 3` is `2`
+
+**Comparison**
+- `==` converts types before comparing, `===` does not
+- Always use `===`. `0 == ""` is `true`, which causes real bugs
+
+**NaN**
+- `NaN` is the only value not equal to itself
+- Use `Number.isNaN(x)`, never `x === NaN`
+- One `NaN` in a calculation poisons the whole result
+
+**Truthy and falsy**
+- Only 8 falsy values: `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, `NaN`
+- `[]` and `{}` are truthy even when empty
+- `"false"` is truthy because it is a non-empty string
+
+**Browser vs Node.js**
+- `alert`, `prompt`, `document`, `window` exist only in the browser
+- Node.js has no DOM, so use `console.log` instead of `alert`
+
+**Reading errors**
+- The first line of an error shows the file and line number
+- Everything starting with `at Module...` is internal Node.js, ignore it
+- When an error happens, JavaScript stops and the rest of the file never runs
