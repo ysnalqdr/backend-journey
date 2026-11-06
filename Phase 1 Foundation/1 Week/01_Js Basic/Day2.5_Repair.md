@@ -83,7 +83,6 @@ console.log("5" === 5);         // ?
 console.log(NaN == NaN);        // ?
 console.log(Number.isNaN(NaN)); // ?
 ```
-
 ## Yang harus kamu lihat
 
 `==` menghasilkan `true` untuk pasangan yang **berbeda tipe**. `===` menolak semua yang tipenya beda, tanpa mencoba menolong.
