@@ -26,6 +26,8 @@ A learning log for my path to becoming a backend engineer.
 12. Two tracking files live at the repo root. `KESALAHAN.md` = thinking mistakes, filled
     immediately and reviewed monthly (anything appearing 3 times needs a different approach).
     `SKILLS.md` = concept status 0-4, updated every week. No core concept below 3 before applying.
+13. `SYMBOLS.md` at the repo root = how to read every JS symbol out loud, in English and
+    Indonesian. Open it whenever a symbol is unfamiliar. Do not guess.
 
 ---
 
