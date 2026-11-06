@@ -65,6 +65,16 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - Still not sure when to use `let` vs `const` — I default to `const` now and change to `let` only when needed
 - Folder names with spaces need quotes in the terminal
 
+## Explain back
+
+<5 baris penjelasan pakai bahasa sendiri, TANPA buka materi. Kalau tidak bisa, hari itu belum selesai.>
+
+## Bug log
+
+| # | Gejala | Akar masalah | Fix |
+|---|---|---|---|
+| 1 | | | |
+
 ## Questions to revisit
 
 - Why does `var` still exist if it has bugs?

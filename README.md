@@ -15,6 +15,17 @@ A learning log for my path to becoming a backend engineer.
 3. Every folder has a `Catatan.md` — what I learned and what confused me.
 4. All notes, commit messages, and code comments in English.
 5. Keyword **"keeping"** = ask for a recall session on material already studied. When I say it, review by questioning me on key concepts, correct what is wrong, and do not restart from zero.
+6. Every day ends with the gate: explain back (5 lines, no notes), predict 3 outputs, write 1 exercise from zero. Pass 2 of 3, or repeat the same day tomorrow. Do not advance on a failed gate.
+7. Every week needs 1 trace, 1 bug log entry, and 1 commit. Missing any of them means the week is not finished.
+8. Reading-code track: 1 file per week at the current level. Levels 1-5 are defined in PLAN.md.
+9. PLAN.md holds the phases, gates, and schedule. If it conflicts with this README, PLAN.md wins.
+10. Never delete wrong code. Comment it out and add one line saying why it was wrong:
+    `// WRONG - why: "90" is a string, so "90" < "100" is false`. Deleted code is lost evidence.
+11. End every session mid-problem, not at a clean stopping point. Stop while the next
+    step is written down and unfinished, so tomorrow starts with a task instead of a decision.
+12. Two tracking files live at the repo root. `KESALAHAN.md` = thinking mistakes, filled
+    immediately and reviewed monthly (anything appearing 3 times needs a different approach).
+    `SKILLS.md` = concept status 0-4, updated every week. No core concept below 3 before applying.
 
 ---
 
