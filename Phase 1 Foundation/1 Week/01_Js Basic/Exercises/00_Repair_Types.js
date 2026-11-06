@@ -1,138 +1,134 @@
-// ============================================================
-// DAY 2.5 - REPAIR: TYPES AND COMPARISON
-// File ini log belajar, bukan cuma kode.
-// Format tiap soal: GUESS -> REALITY -> ERROR -> FIX
-// Aturan: dugaan yang salah TIDAK dihapus (README rule 10)
-// ============================================================
+// DAY 2.5 REPAIR
+// Types and comparison
+// Format tiap baris: GUESS, REALITY, RESULT
+// Dugaan yang salah sengaja disimpan, lihat README rule 10
 
 
-// ============================================================
-// LUBANG 1 - Tipe data menentukan perilaku, bukan isi yang terlihat
-// ============================================================
+// LUBANG 1
+// Tipe data menentukan perilaku, bukan isi yang terlihat
 
-// --- Bagian A: perbandingan angka vs teks ---
+// Bagian A, perbandingan angka vs teks
 
-console.log(90 < 100);          // GUESS: true   | REALITY: true   | OK
-console.log("90" < "100");      // GUESS: true   | REALITY: false  | WRONG
-// ERROR: I read "90" as the number 90.
-// FIX:   Both sides are strings, so JS compares character by character.
-//        First char: "9" (57) > "1" (49) -> stops there -> false.
+console.log(90 < 100);              // GUESS true    REALITY true    OK
+console.log("90" < "100");          // GUESS true    REALITY false   WRONG
+// ERROR  saya membaca "90" sebagai angka sembilan puluh
+// FIX    dua sisi teks, jadi JS membandingkan huruf per huruf.
+//        karakter pertama "9" (57) lebih besar dari "1" (49), berhenti di situ
 
-console.log("90" < 100);        // GUESS: false  | REALITY: true   | WRONG
-// ERROR: I thought the string side still compared as text.
-// FIX:   One side is a number, so the string is converted to a number first. 90 < 100 -> true.
+console.log("90" < 100);            // GUESS false   REALITY true    WRONG
+// ERROR  saya pikir sisi teks tetap dibandingkan sebagai teks
+// FIX    satu sisi angka, jadi teks diubah jadi angka dulu. 90 < 100 jadi true
 
-console.log("9" < "60");        // GUESS: true   | REALITY: false  | WRONG
-// ERROR: I compared 9 and 60 as numbers.
-// FIX:   Both strings. First char "9" (57) > "6" (54) -> false.
+console.log("9" < "60");            // GUESS true    REALITY false   WRONG
+// ERROR  saya membandingkan 9 dan 60 sebagai angka
+// FIX    dua sisi teks. karakter pertama "9" (57) lebih besar dari "6" (54)
 
-console.log("2" > "10");        // GUESS: false  | REALITY: true   | WRONG
-// ERROR: I thought 2 < 10 so the answer must be false.
-// FIX:   Both strings. First char "2" (50) > "1" (49) -> true.
+console.log("2" > "10");            // GUESS false   REALITY true    WRONG
+// ERROR  saya pikir 2 lebih kecil dari 10 jadi hasilnya pasti false
+// FIX    dua sisi teks. karakter pertama "2" (50) lebih besar dari "1" (49)
 
-// --- Bagian B: apa yang terlihat saat dicetak ---
+// Bagian B, apa yang terlihat saat dicetak
 
-console.log(90);                // 90
-console.log("90");              // 90   (looks identical, but it is text)
-console.log(typeof 90);         // number
-console.log(typeof "90");       // string
+console.log(90);                    // 90
+console.log("90");                  // 90, terlihat sama tapi ini teks
+console.log(typeof 90);             // number
+console.log(typeof "90");           // string
 
-// --- Bagian C: kapan teks berubah jadi angka ---
+// Bagian C, kapan teks berubah jadi angka
 
-console.log("90" * 1);          // 90     -> number (the * operator only does math)
-console.log("90" + 0);          // "900"  -> STRING (the + operator joins text)
-// ERROR: I wrote "900 in number form". It is text, not a number.
-// FIX:   typeof ("90" + 0) is "string". The + operator joins when either side is a string.
-console.log("90" - 0);          // 90     -> number
+console.log("90" * 1);              // 90, number, operator kali hanya untuk hitung
+console.log("90" + 0);              // 900, STRING, operator tambah menggabungkan teks
+// ERROR  saya tulis 900 dalam bentuk angka, padahal ini teks
+// FIX    typeof ("90" + 0) adalah string. tambah menggabung kalau ada sisi teks
+console.log("90" - 0);              // 90, number
 
-// --- Gate Lubang 1 (passed 2/2) ---
-// Q1: Why is "90" < "100" false even though 90 is smaller than 100?
-// A1: Both are strings, so JS compares character by character from the left.
-//     First character: "9" > "1", so the comparison stops there and returns false.
-//     Length and numeric value are never considered.
-// Q2: If form data is always text, what must I do before comparing it?
-// A2: Convert it to a number first with Number(), then check Number.isNaN()
-//     before comparing. Conversion alone is not enough because Number("abc") is NaN,
-//     and NaN never matches any comparison.
-
-
-// ============================================================
-// LUBANG 2 - == mengubah tipe, === tidak
-// ============================================================
-
-// --- Bagian A: pasangan yang dianggap sama oleh == ---
-
-console.log(0 == "");           // GUESS: true   | REALITY: true   | OK
-console.log(0 === "");          // GUESS: false  | REALITY: false  | OK
-console.log(false == 0);        // GUESS: true   | REALITY: true   | OK
-console.log(false === 0);       // GUESS: false  | REALITY: false  | OK
-console.log(null == undefined); // GUESS: true   | REALITY: true   | OK
-console.log(null === undefined);// GUESS: false  | REALITY: false  | OK
-console.log("5" == 5);          // GUESS: true   | REALITY: true   | OK
-console.log("5" === 5);         // GUESS: false  | REALITY: false  | OK
-
-// --- Bagian B: yang tidak pernah sama, bahkan dengan == ---
-
-console.log(NaN == NaN);        // GUESS: false  | REALITY: false  | OK, but wrong reason
-// ERROR: I wrote "because string equals string". NaN is a number, not a string.
-// FIX:   NaN is never equal to anything, including itself. Both sides are the same type,
-//        so == compares them directly, and that comparison is always false.
-//        NaN represents a failed numeric operation, so two failures are not "the same".
-
-console.log(Number.isNaN(NaN)); // true
-// Use Number.isNaN(x), never x === NaN, because NaN === NaN is always false.
-
-// --- Gate Lubang 2 (passed 2/2) ---
-// Q1: Name 2 pairs where == is true but === is false, and explain why == says true.
-// A1: Pair 1 - "5" and 5
-//       ==  -> true, step 3 of the algorithm: number vs string, the string becomes a number.
-//       === -> false, only one step: types differ, so it stops immediately.
-//     Pair 2 - 0 and ""
-//       ==  -> true, step 3: number vs string, "" becomes Number("") = 0.
-//       === -> false, types differ (number vs string).
-// Q2: Why is NaN == NaN false, and how do you check for NaN correctly?
-// A2: NaN never equals anything, including itself, because NaN means a failed numeric
-//     operation. Check with Number.isNaN(value), which inspects the value instead of comparing.
+// Gate Lubang 1, lulus 2 dari 2
+// Q1  kenapa "90" < "100" false padahal 90 lebih kecil dari 100
+// A1  dua sisi teks, jadi dibandingkan huruf per huruf dari kiri.
+//     karakter pertama "9" lebih besar dari "1", jadi berhenti dan hasilnya false.
+//     panjang dan nilai angka tidak pernah diperhitungkan
+// Q2  kalau data form selalu teks, apa yang harus dilakukan sebelum membandingkan
+// A2  konversi dulu pakai Number(), lalu cek Number.isNaN() sebelum membandingkan.
+//     konversi saja tidak cukup, karena Number("abc") menghasilkan NaN,
+//     dan NaN tidak pernah cocok dengan perbandingan apa pun
 
 
-// ============================================================
-// LUBANG 3 - Untuk angka, jangan pakai truthy/falsy
-// ============================================================
+// LUBANG 2
+// == mengubah tipe, === tidak
 
-// --- Bagian A: 0 diperlakukan sebagai "tidak ada" ---
+// Bagian A, pasangan yang dianggap sama oleh ==
+
+console.log(0 == "");               // GUESS true    REALITY true    OK
+console.log(0 === "");              // GUESS false   REALITY false   OK
+console.log(false == 0);            // GUESS true    REALITY true    OK
+console.log(false === 0);           // GUESS false   REALITY false   OK
+console.log(null == undefined);     // GUESS true    REALITY true    OK
+console.log(null === undefined);    // GUESS false   REALITY false   OK
+console.log("5" == 5);              // GUESS true    REALITY true    OK
+console.log("5" === 5);             // GUESS false   REALITY false   OK
+
+// Bagian B, yang tidak pernah sama, bahkan dengan ==
+
+console.log(NaN == NaN);            // GUESS false   REALITY false   OK tapi alasannya salah
+// ERROR  saya tulis karena string sama string. NaN itu angka, bukan teks
+// FIX    NaN tidak pernah sama dengan apa pun, termasuk dirinya sendiri.
+//        kedua sisi tipenya sama, jadi == membandingkan langsung,
+//        dan perbandingan itu selalu false. NaN artinya operasi angka yang gagal,
+//        jadi dua kegagalan tidak dianggap sama
+
+console.log(Number.isNaN(NaN));     // true
+// pakai Number.isNaN(x), jangan x === NaN, karena NaN === NaN selalu false
+
+// Gate Lubang 2, lulus 2 dari 2
+// Q1  sebutkan 2 pasangan yang == true tapi === false, jelaskan kenapa == true
+// A1  pasangan 1, "5" dan 5
+//       == true, langkah 3 algoritma, angka vs teks, teks jadi angka
+//       === false, hanya satu langkah, tipe berbeda jadi langsung berhenti
+//     pasangan 2, 0 dan ""
+//       == true, langkah 3, angka vs teks, "" jadi Number("") yaitu 0
+//       === false, tipe berbeda, angka vs teks
+// Q2  kenapa NaN == NaN false, dan bagaimana cek NaN dengan benar
+// A2  NaN tidak pernah sama dengan apa pun termasuk dirinya sendiri,
+//     karena NaN artinya operasi angka yang gagal.
+//     cek pakai Number.isNaN(value), yang memeriksa nilai bukan membandingkan
+
+
+// LUBANG 3
+// Untuk angka, jangan pakai truthy atau falsy
+
+// Bagian A, 0 diperlakukan sebagai tidak ada
 
 const stok = 0;
-console.log(Boolean(stok));     // GUESS: ?   | REALITY: ?
+console.log(Boolean(stok));         // GUESS ?    REALITY ?
 if (stok) {
-  console.log("Tiket tersedia"); // GUESS: ?   | REALITY: ?
+  console.log("Tiket tersedia");    // GUESS ?    REALITY ?
 } else {
-  console.log("Tiket habis");    // GUESS: ?   | REALITY: ?
+  console.log("Tiket habis");       // GUESS ?    REALITY ?
 }
 
-// --- Bagian B: masalah sebenarnya, 0 dan undefined tidak bisa dibedakan ---
+// Bagian B, masalah sebenarnya, 0 dan undefined tidak bisa dibedakan
 
-const saldoA = 0;               // saldo nol rupiah (data sah)
-const saldoB = undefined;       // saldo belum pernah diisi (data tidak ada)
+const saldoA = 0;
+const saldoB = undefined;
 
-if (!saldoA) console.log("A dianggap kosong");   // GUESS: ?
-if (!saldoB) console.log("B dianggap kosong");   // GUESS: ?
-// Dua-duanya masuk ke cabang yang sama, padahal artinya beda
+if (!saldoA) console.log("A dianggap kosong");  // GUESS ?    REALITY ?
+if (!saldoB) console.log("B dianggap kosong");  // GUESS ?    REALITY ?
 
-// --- Bagian C: cara yang benar ---
+// Bagian C, cara yang benar
 
 if (stok > 0) console.log("C: tersedia");
 if (stok === 0) console.log("C: habis");
 if (saldoA !== undefined) console.log("C: saldo diketahui");
 
-// --- Gate Lubang 3: tulis ulang tiga kondisi ini dengan benar, tanpa melihat contoh ---
+// Gate Lubang 3, tulis ulang tiga kondisi ini tanpa melihat contoh
 
-// 1. kalau stok habis, cetak "Habis"
-// YOUR ANSWER:
-
-
-// 2. kalau saldo nol, cetak "Saldo kosong"
-// YOUR ANSWER:
+// 1  kalau stok habis, cetak Habis
+// YOUR ANSWER
 
 
-// 3. kalau diskon 0 persen, cetak "Tanpa diskon"
-// YOUR ANSWER:
+// 2  kalau saldo nol, cetak Saldo kosong
+// YOUR ANSWER
+
+
+// 3  kalau diskon 0 persen, cetak Tanpa diskon
+// YOUR ANSWER
