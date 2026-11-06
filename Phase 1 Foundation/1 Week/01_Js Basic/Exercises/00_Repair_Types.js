@@ -1,6 +1,6 @@
 // DAY 2.5 REPAIR
 // Types and comparison
-// Format tiap baris: GUESS, REALITY, RESULT
+// Format tiap baris: GUESS (dugaan sebelum jalan) REALITY (hasil sebenarnya) RESULT
 // Dugaan yang salah sengaja disimpan, lihat README rule 10
 
 
@@ -29,18 +29,18 @@ console.log("2" > "10");            // GUESS false   REALITY true    WRONG
 
 // Bagian B, apa yang terlihat saat dicetak
 
-console.log(90);                    // 90
-console.log("90");                  // 90, terlihat sama tapi ini teks
-console.log(typeof 90);             // number
-console.log(typeof "90");           // string
+console.log(90);                    // REALITY 90
+console.log("90");                  // REALITY 90, terlihat sama tapi ini teks
+console.log(typeof 90);             // REALITY number
+console.log(typeof "90");           // REALITY string
 
 // Bagian C, kapan teks berubah jadi angka
 
-console.log("90" * 1);              // 90, number, operator kali hanya untuk hitung
-console.log("90" + 0);              // 900, STRING, operator tambah menggabungkan teks
+console.log("90" * 1);              // REALITY 90, number, operator kali hanya untuk hitung
+console.log("90" + 0);              // REALITY 900, STRING, operator tambah menggabungkan teks
 // ERROR  saya tulis 900 dalam bentuk angka, padahal ini teks
 // FIX    typeof ("90" + 0) adalah string. tambah menggabung kalau ada sisi teks
-console.log("90" - 0);              // 90, number
+console.log("90" - 0);              // REALITY 90, number
 
 // Gate Lubang 1, lulus 2 dari 2
 // Q1  kenapa "90" < "100" false padahal 90 lebih kecil dari 100
@@ -76,7 +76,7 @@ console.log(NaN == NaN);            // GUESS false   REALITY false   OK tapi ala
 //        dan perbandingan itu selalu false. NaN artinya operasi angka yang gagal,
 //        jadi dua kegagalan tidak dianggap sama
 
-console.log(Number.isNaN(NaN));     // true
+console.log(Number.isNaN(NaN));     // REALITY true
 // pakai Number.isNaN(x), jangan x === NaN, karena NaN === NaN selalu false
 
 // Gate Lubang 2, lulus 2 dari 2
@@ -99,11 +99,13 @@ console.log(Number.isNaN(NaN));     // true
 // Bagian A, 0 diperlakukan sebagai tidak ada
 
 const stok = 0;
-console.log(Boolean(stok));         // GUESS ?    REALITY ?
+console.log(Boolean(stok));         // GUESS false   REALITY false   OK
 if (stok) {
-  console.log("Tiket tersedia");    // GUESS ?    REALITY ?
+  console.log("Tiket tersedia");    // GUESS true    REALITY tidak jalan   WRONG
+// ERROR  saya pikir 0 itu nilai sah jadi dianggap ada isinya
+// FIX    0 itu falsy. if (stok) menanyakan truthy, bukan menanyakan nilai sah
 } else {
-  console.log("Tiket habis");       // GUESS ?    REALITY ?
+  console.log("Tiket habis");       // GUESS true    REALITY jalan   OK
 }
 
 // Bagian B, masalah sebenarnya, 0 dan undefined tidak bisa dibedakan
@@ -111,8 +113,10 @@ if (stok) {
 const saldoA = 0;
 const saldoB = undefined;
 
-if (!saldoA) console.log("A dianggap kosong");  // GUESS ?    REALITY ?
-if (!saldoB) console.log("B dianggap kosong");  // GUESS ?    REALITY ?
+if (!saldoA) console.log("A dianggap kosong");  // GUESS true    REALITY jalan   OK
+// ERROR  alasan saya lemah, saya tulis "karena terdapat nilai"
+// FIX    !saldoA jadi true karena saldoA bernilai 0, dan 0 itu falsy. !0 = true
+if (!saldoB) console.log("B dianggap kosong");  // GUESS true    REALITY jalan   OK
 
 // Bagian C, cara yang benar
 
@@ -120,15 +124,14 @@ if (stok > 0) console.log("C: tersedia");
 if (stok === 0) console.log("C: habis");
 if (saldoA !== undefined) console.log("C: saldo diketahui");
 
-// Gate Lubang 3, tulis ulang tiga kondisi ini tanpa melihat contoh
+// Gate Lubang 3, lulus 3 dari 3
 
 // 1  kalau stok habis, cetak Habis
-// YOUR ANSWER
-
+if (stok === 0) console.log("Habis");
 
 // 2  kalau saldo nol, cetak Saldo kosong
-// YOUR ANSWER
-
+if (saldoA === 0) console.log("Saldo kosong");
 
 // 3  kalau diskon 0 persen, cetak Tanpa diskon
-// YOUR ANSWER
+const diskon = 0;
+if (diskon === 0) console.log("Tanpa diskon");
