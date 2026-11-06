@@ -87,12 +87,12 @@ console.log(Number.isNaN(NaN)); // ?
 
 `==` menghasilkan `true` untuk pasangan yang **berbeda tipe**. `===` menolak semua yang tipenya beda, tanpa mencoba menolong.
 
-| Ekspresi | `==` | `===` |
+| Ekspresi               | `==` | `===` |
 |---|---|---|
-| `0` vs `""` | `true` | `false` |
-| `false` vs `0` | `true` | `false` |
+| `0` vs `""`           | `true` | `false` |
+| `false` vs `0`        | `true` | `false` |
 | `null` vs `undefined` | `true` | `false` |
-| `"5"` vs `5` | `true` | `false` |
+| `"5"` vs `5`          | `true` | `false` |
 
 **Aturan: selalu `===`.** Bukan karena `==` "salah", tapi karena `==` menebak maksudmu, dan tebakan yang salah lebih mahal daripada penolakan yang benar.
 
