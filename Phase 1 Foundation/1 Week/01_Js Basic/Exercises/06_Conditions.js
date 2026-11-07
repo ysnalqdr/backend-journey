@@ -21,7 +21,7 @@ if(nilai >= 90) {
 // yang tercetak ialah B
 // 2x memeriksa kondisi
 // yang tercetak A
-
+//switch branch
 
 // NEXT SESSION - Day 3 continued
 // TODO 1  ternary operator  ? :
