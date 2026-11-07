@@ -26,12 +26,12 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - [ ] `NaN` and how to check with `Number.isNaN()`
 
 ### Day 3 - Conditions
-- [ ] `if` / `else if` / `else`
+- [x] `if` / `else if` / `else`
 - [ ] Ternary operator `? :`
 - [ ] `switch` statement
 - [ ] Logical operators `&&`, `||`, `!`
 - [ ] Nullish coalescing `??`
-- [ ] Truthy and falsy values
+- [x] Truthy and falsy values
 
 ### Day 4 - Loops
 - [ ] `for` loop

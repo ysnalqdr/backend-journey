@@ -58,7 +58,7 @@ Naming pattern:
 
 | Week | Topic | Done |
 |---|---|---|
-| 01 | Js Basic | in progress (day 1-2 of 5) |
+| 01 | Js Basic | in progress (day 3 of 5) |
 | 02 | Function Scope | [ ] |
 | 03 | Array Methods | [ ] |
 | 04 | Object Destructuring | [ ] |

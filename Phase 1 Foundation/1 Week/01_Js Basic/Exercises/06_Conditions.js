@@ -21,3 +21,10 @@ if(nilai >= 90) {
 // yang tercetak ialah B
 // 2x memeriksa kondisi
 // yang tercetak A
+
+
+// NEXT SESSION - Day 3 continued
+// TODO 1  ternary operator  ? :
+// TODO 2  switch + break
+// TODO 3  logical operators  && || !
+// TODO 4  nullish coalescing  ?? vs ||
