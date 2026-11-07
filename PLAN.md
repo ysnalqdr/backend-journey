@@ -50,15 +50,26 @@ Kalau waktu cuma 60 menit: kerjakan A, B, D. Blok C dan E boleh dilewat sehari, 
 
 ## 4. Gerbang kelulusan (tidak bisa dilewati)
 
-Setiap akhir hari, 3 tes:
+Setiap akhir hari, 4 tes:
 
 1. **Explain back** — tulis 5 baris penjelasan pakai bahasa sendiri, tanpa buka materi atau catatan
 2. **Predict output** — 3 potongan kode, tebak hasilnya sebelum dijalankan
 3. **Write from zero** — 1 soal kecil, tanpa melihat contoh
+4. **Modify** — kode yang sengaja dirusak, perbaiki tanpa melihat versi aslinya
 
-**Lulus 2 dari 3 → maju. Gagal → ulangi hari yang sama besok.** Tidak ada pengecualian. Kalau gagal 2 hari berturut di topik yang sama, tulis di `Catatan.md` bagian "What confused me" dan minta materi dijelaskan ulang dengan pendekatan berbeda.
+**Lulus 3 dari 4 → maju. Gagal → ulangi hari yang sama besok.** Tidak ada pengecualian.
 
-Gerbang ini yang menggantikan "target jam". Kamu tidak dinilai dari berapa lama duduk, tapi dari apa yang bisa kamu jelaskan.
+### Mastery rule — berlaku di dalam setiap tes
+
+Satu jawaban benar tidak cukup. Berlaku aturan:
+
+- **2 jawaban benar berturut-turut, tanpa bantuan, pada soal yang BERBEDA**
+- Jawaban benar dengan alasan salah = **GAGAL**
+- Salah → jalankan siklus remediasi penuh (lihat README aturan 17), tidak boleh lanjut
+
+Kalau gagal 2 hari berturut di topik yang sama, tulis di `Catatan.md` bagian "What confused me" dan minta materi dijelaskan ulang dengan **pendekatan berbeda**, bukan diulang dengan kata yang sama.
+
+Gerbang ini yang menggantikan "target jam". Kamu tidak dinilai dari berapa lama duduk, tapi dari apa yang bisa kamu jelaskan dan kerjakan sendiri.
 
 ---
 

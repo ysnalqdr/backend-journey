@@ -28,6 +28,91 @@ A learning log for my path to becoming a backend engineer.
     `SKILLS.md` = concept status 0-4, updated every week. No core concept below 3 before applying.
 13. `SYMBOLS.md` at the repo root = how to read every JS symbol out loud, in English and
     Indonesian. Open it whenever a symbol is unfamiliar. Do not guess.
+14. Every session declares a mode. `Normal` = full material. `Recovery` = minimum 15 minutes,
+    one small exercise, still commit. Maximum 2 consecutive Recovery days; the third must be
+    Normal or it is logged in `KESALAHAN.md` as avoidance.
+15. `SKILLS.md` status 3+ requires evidence in the Evidence column. No evidence means the
+    status stays at 2.
+
+---
+
+## Mastery Gate — no advancing without mastery
+
+16. **Two consecutive correct answers, unaided, on DIFFERENT questions.** That is the only
+    condition for moving to the next concept. Repeating the same question proves recall,
+    not understanding.
+17. When an answer is wrong, run the full remediation loop. No skipping steps:
+    a. **STOP.** Do not advance, do not say "we will come back to it later".
+    b. **DIAGNOSE.** Name the exact misconception, not just "wrong".
+    c. **RE-TEACH with a DIFFERENT explanation.** Never repeat the same words or analogy.
+       If explanation 1 failed, use analogy 2, then analogy 3.
+    d. **MICRO-CHECK.** One tiny question to confirm the new explanation landed.
+    e. **NEW QUESTION.** Same concept, different form. Never the same question.
+    f. **REPEAT** until 2 consecutive correct on different questions.
+17b. **Failure ladder.** Track attempts per concept within a session.
+    - Attempt 1-2 fail → continue remediation, new analogy each time.
+    - Attempt 3 fail → STOP the concept. Write it in `Catatan.md` under `## Deferred`,
+      with the exact question that broke it. Move to another concept or end the session.
+    - Never attempt the same concept more than 3 times in one day. A fourth attempt
+      today trains frustration, not understanding.
+17c. **"Different question" means a different SURFACE FORM, not different numbers.**
+    Acceptable variation: same concept inside `console.log` vs inside a variable
+    assignment; an invalid-code variant where the learner must find the bug; the same
+    concept rewritten from if/else. Not acceptable: changing 85 to 95 in an otherwise
+    identical question.
+17d. **Difficulty ladder.** Each concept needs at least one MEDIUM question passed.
+    - EASY: direct output prediction.
+    - MEDIUM: find the bug, or rewrite from another form.
+    - HARD: combine with a previously learned concept.
+    Two EASY passes alone do not clear a concept.
+17e. **Write-from-memory test.** Each concept needs one question where the learner writes
+    the syntax from scratch with no example visible. Reading code is not the same as
+    producing it. This is the only test that catches typing-level gaps such as `>+`
+    instead of `>=`.
+17f. **Cross-concept HARD.** Every third HARD question must combine the current concept with
+    one from a previous day. Concepts decay; testing only today's topic hides the decay.
+17g. **Time targets.** EASY 30 seconds, MEDIUM 2 minutes, HARD 5 minutes. Exceeding the
+    target is not a FAIL, but it is recorded in the Gate Log. Two overruns on the same
+    concept means it needs another pass — slow recall is not mastery.
+18. **Correct answer with wrong reasoning = FAIL.** Always ask "why?" after a correct answer.
+    A lucky guess is not mastery.
+18b. **Reasoning rubric.** A "why" answer passes only if it names the MECHANISM.
+    - PASS: "because 0 > 0 is false, so it takes the part after the colon"
+    - PASS: "because ?? only replaces null and undefined, and 0 is neither"
+    - FAIL: "because it is the newer operator"
+    - FAIL: "because that is how it works"
+    Rule of thumb: if the answer would still be true for a different input, it is not
+    an explanation.
+19. **Error taxonomy.** Classify every mistake before fixing it:
+    | Type | Symptom | Treatment |
+    |---|---|---|
+    | CONCEPT | Does not understand the idea | Re-teach with a new analogy |
+    | READING | Misread the instruction | Practise reading to the end before answering |
+    | SYNTAX | Typo, wrong symbol | Drill that symbol 5 times |
+    | LOGIC | Right idea, wrong order or flow | Trace it step by step |
+    Different errors need different fixes. Do not treat a reading error as a concept error.
+20. **Spaced re-check.** Every concept at status 3 is re-tested 2 days later. If it fails,
+    the status drops to 2 and the remediation loop applies again. The schedule lives in
+    `REVIEW_QUEUE.md` — a concept with no due date will never be re-checked.
+21. **AI never fixes the learner's code.** The learner fixes it. AI may point at the line and
+    ask a question, never edit the file on the learner's behalf.
+22. **Gate log is mandatory.** Every question asked, every answer given, and every verdict is
+    written into `Catatan.md` under `## Gate Log`. A gate that exists only in conversation
+    leaves no evidence and cannot be reviewed.
+22b. **Gate log economy.** Log every FAIL. Log a PASS only if it is MEDIUM or HARD — an EASY
+    pass carries no information. More than 20 questions in one day means the session is too
+    broad: cut scope, do not cut logging.
+23. **System budget.** Maintaining the system — editing README, PLAN, SKILLS, KESALAHAN,
+    templates — is capped at 20 minutes per week, done only at the end of the week. An
+    improvement idea that appears mid-week goes into `IMPROVEMENTS.md` and waits. A system
+    that grows faster than the skill it tracks has become the work.
+23b. **Improvement triage.** Every item in `IMPROVEMENTS.md` gets one of three verdicts at the
+    weekly review: ADOPT (real failure observed), DEFER (plausible, no evidence yet),
+    REJECT (solves a problem that does not exist). No item may stay undecided for more than
+    two weeks — undecided items become permanent clutter.
+23c. **One change at a time.** Only one rule may be added per week. If two changes are
+    proposed, pick the one with observed evidence. Multiple simultaneous rule changes make
+    it impossible to tell which one helped.
 
 ---
 

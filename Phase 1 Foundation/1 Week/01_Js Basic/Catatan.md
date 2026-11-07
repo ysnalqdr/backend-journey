@@ -75,6 +75,29 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 |---|---|---|---|
 | 1 | | | |
 
+## Gate Log
+
+Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, gerbang tidak punya bukti.
+
+**Aturan pencatatan:** catat **semua FAIL**. Catat PASS hanya kalau MEDIUM atau HARD. PASS di level EASY tidak memberi informasi.
+
+| # | Level | Concept | Question | My answer | Verdict | Type | Time | Note |
+|---|---|---|---|---|---|---|---|---|
+| 1 | EASY | ternary | `tiket=0`, `tiket > 0 ? "Tersedia" : "Habis"` | "Habis", alasan: tiket falsy | FAIL | CONCEPT | 20s | alasan salah sasaran — yang diperiksa `tiket > 0`, bukan `tiket` |
+
+**Level:** EASY / MEDIUM / HARD
+**Verdict:** PASS / FAIL
+**Type:** CONCEPT / READING / SYNTAX / LOGIC / —
+**Time target:** EASY 30s / MEDIUM 2m / HARD 5m
+
+## Deferred
+
+Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
+
+| Concept | Question that broke it | Date |
+|---|---|---|
+| | | |
+
 ## Questions to revisit
 
 - Why does `var` still exist if it has bugs?

@@ -16,6 +16,20 @@ Update **setiap akhir minggu**. Jujur. Status yang terlalu tinggi merugikan diri
 | **3** | bisa tulis dari nol | bisa tulis tanpa melihat contoh |
 | **4** | bisa jelaskan & mengoreksi orang lain | bisa menemukan kesalahan orang lain dan menjelaskan kenapa |
 
+**Aturan bukti:** status **3 ke atas wajib punya bukti** di kolom Bukti. Tanpa bukti, status maksimal 2.
+
+Format bukti yang diterima:
+
+| Bukti | Contoh isi |
+|---|---|
+| E1 Implementasi mandiri | `06_Conditions.js, ditulis tanpa AI` |
+| E2 Tested | `gate 4/4, predict output semua benar` |
+| E3 Debug mandiri | `memperbaiki >+ jadi >= tanpa bantuan` |
+| E4 Penjelasan | `bisa jelaskan algoritma == tanpa buka catatan` |
+| E5 Latihan | `00_Repair_Types.js, 8/8 dugaan benar` |
+
+**Aturan re-check:** konsep status 3 diuji ulang **2 hari kemudian**. Gagal → status turun ke 2, remediasi berlaku lagi.
+
 Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 ---
@@ -24,47 +38,47 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 ### Bahasa dasar
 
-| Konsep | Status | Minggu | Catatan |
-|---|---|---|---|
-| `let` / `const` / `var`, scope | | 1 | |
-| Tipe data & `typeof` | | 1 | |
-| Template literal | | 1 | |
-| Konversi tipe (`Number`, `parseInt`) | | 2 | |
-| `==` vs `===` | | 2 | |
-| `NaN` & `Number.isNaN` | | 2 | |
-| Truthy / falsy | | 2 | |
-| Operator aritmatika & jebakan `+` | | 2 | |
-| `if` / `else if` / `else`, urutan kondisi | | 3 | |
-| Ternary | | 3 | |
-| `switch` & `break` | | 3 | |
-| `&&` `\|\|` `!` & short-circuit | | 3 | |
-| `??` vs `\|\|` | | 3 | |
-| `for`, `while`, `do...while` | | 4 | |
-| `break`, `continue`, nested loop | | 4 | |
-| Fungsi, parameter, return | | 2 | |
-| Scope & closure | | 2 | |
-| Array & method (`map`, `filter`, `reduce`) | | 3 | |
-| Object, destructuring, spread | | 4 | |
-| Reference vs value (mutability) | | 4 | |
+| Konsep | Status | Bukti | Minggu | Catatan |
+|---|---|---|---|---|
+| `let` / `const` / `var`, scope | | | 1 | |
+| Tipe data & `typeof` | | | 1 | |
+| Template literal | | | 1 | |
+| Konversi tipe (`Number`, `parseInt`) | | | 2 | |
+| `==` vs `===` | | | 2 | |
+| `NaN` & `Number.isNaN` | | | 2 | |
+| Truthy / falsy | | | 2 | |
+| Operator aritmatika & jebakan `+` | | | 2 | |
+| `if` / `else if` / `else`, urutan kondisi | | | 3 | |
+| Ternary | | | 3 | |
+| `switch` & `break` | | | 3 | |
+| `&&` `\|\|` `!` & short-circuit | | | 3 | |
+| `??` vs `\|\|` | | | 3 | |
+| `for`, `while`, `do...while` | | | 4 | |
+| `break`, `continue`, nested loop | | | 4 | |
+| Fungsi, parameter, return | | | 2 | |
+| Scope & closure | | | 2 | |
+| Array & method (`map`, `filter`, `reduce`) | | | 3 | |
+| Object, destructuring, spread | | | 4 | |
+| Reference vs value (mutability) | | | 4 | |
 
 ### Backend fundamental
 
-| Konsep | Status | Minggu | Catatan |
-|---|---|---|---|
-| HTTP method & status code | | 6 | |
-| Header, body, query param | | 6 | |
-| Request–response lifecycle | | 6 | |
-| Node.js: `fs`, `process`, module | | 7 | |
-| Express: routing, middleware | | 8 | |
-| Error handling middleware | | 8 | |
-| Async / await, Promise | | 5 | |
-| Callback vs Promise vs async | | 5 | |
-| SQL: SELECT / INSERT / UPDATE / DELETE | | 9 | |
-| SQL: WHERE, ORDER BY, LIMIT | | 10 | |
-| SQL: JOIN | | 11 | |
-| Normalisasi & desain tabel | | 12 | |
-| Index & kenapa query lambat | | 12 | |
-| Transaksi & kenapa perlu | | 12 | |
+| Konsep | Status | Bukti | Minggu | Catatan |
+|---|---|---|---|---|
+| HTTP method & status code | | | 6 | |
+| Header, body, query param | | | 6 | |
+| Request–response lifecycle | | | 6 | |
+| Node.js: `fs`, `process`, module | | | 7 | |
+| Express: routing, middleware | | | 8 | |
+| Error handling middleware | | | 8 | |
+| Async / await, Promise | | | 5 | |
+| Callback vs Promise vs async | | | 5 | |
+| SQL: SELECT / INSERT / UPDATE / DELETE | | | 9 | |
+| SQL: WHERE, ORDER BY, LIMIT | | | 10 | |
+| SQL: JOIN | | | 11 | |
+| Normalisasi & desain tabel | | | 12 | |
+| Index & kenapa query lambat | | | 12 | |
+| Transaksi & kenapa perlu | | | 12 | |
 
 ---
 

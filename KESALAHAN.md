@@ -6,26 +6,45 @@ Kesalahan **berpikir**, bukan kesalahan kode. Bug log mencatat kode yang rusak; 
 
 ---
 
+## Empat jenis kesalahan
+
+Setiap baris wajib diberi **Jenis**. Penanganannya berbeda — ini yang membuat file ini berguna.
+
+| Jenis | Ciri | Penanganan |
+|---|---|---|
+| **CONCEPT** | Tidak paham idenya | Ajar ulang dengan analogi **berbeda**, bukan diulang |
+| **READING** | Salah baca instruksi | Latih membaca sampai selesai sebelum menjawab |
+| **SYNTAX** | Typo, simbol salah | Drill simbol itu 5× |
+| **LOGIC** | Ide benar, urutan/alur salah | Telusuri langkah per langkah |
+
+**Kenapa dipisah:** kesalahan READING tidak sembuh dengan belajar konsep. Kesalahan SYNTAX tidak sembuh dengan penjelasan ulang. Kalau semua diperlakukan sama, kamu berlatih hal yang salah.
+
+---
+
 ## Cara mengisi
 
 Setiap kali kamu sadar salah — di gerbang, di placement check, di latihan — tambahkan satu baris. Tiga detik. Jangan menunggu sampai rapi.
 
 ```markdown
-| Tanggal | Kesalahan | Konsep yang salah | Muncul ke- | Sudah diperbaiki? |
+| Tanggal | Jenis | Kesalahan | Konsep yang salah | Muncul ke- | Sudah diperbaiki? |
 ```
 
-Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa jawab benar tanpa buka materi.
+Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa jawab benar **tanpa buka materi** dan **alasannya benar**.
 
 ---
 
 ## Catatan
 
-| Tanggal | Kesalahan | Konsep yang salah | Muncul ke- | Sudah diperbaiki? |
-|---|---|---|---|---|
-| 2026-11-06 | jawab `0 == ""` itu `false` | `==` mengubah tipe sebelum membandingkan | 1 | belum |
-| 2026-11-06 | jawab soal 4 outputnya `D` | tipe data menentukan hasil perbandingan | 1 | belum |
-| 2026-11-06 | tulis `subtotal + promo` padahal instruksinya potong | membaca instruksi sampai selesai | 1 | belum |
-| 2026-11-06 | tidak bisa jelaskan kenapa `if (stok)` untuk `0` salah | truthy/falsy untuk angka | 1 | belum |
+| Tanggal | Jenis | Kesalahan | Konsep yang salah | Muncul ke- | Sudah diperbaiki? |
+|---|---|---|---|---|---|
+| 2026-11-06 | CONCEPT | jawab `0 == ""` itu `false` | `==` mengubah tipe sebelum membandingkan | 1 | belum |
+| 2026-11-06 | CONCEPT | jawab soal 4 outputnya `D` | tipe data menentukan hasil perbandingan | 1 | belum |
+| 2026-11-06 | READING | tulis `subtotal + promo` padahal instruksinya potong | membaca instruksi sampai selesai | 1 | belum |
+| 2026-11-06 | CONCEPT | tidak bisa jelaskan kenapa `if (stok)` untuk `0` salah | truthy/falsy untuk angka | 1 | belum |
+| 2026-11-07 | CONCEPT | alasan `NaN == NaN` ditulis "string sama string" | NaN itu number, dan tidak sama dengan apa pun | 1 | belum |
+| 2026-11-07 | SYNTAX | menulis `>+` bukan `>=` | operator perbandingan | 1 | ya |
+| 2026-11-07 | CONCEPT | menjawab `"90" < "100"` itu `true` | perbandingan teks huruf per huruf | 1 | ya |
+| 2026-11-07 | READING | pakai `stokTiket` sebagai jumlah beli | membaca nama variabel sesuai maksudnya | 1 | ya |
 
 ---
 
