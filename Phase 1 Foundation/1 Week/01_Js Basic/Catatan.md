@@ -95,6 +95,7 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 10 | EASY | switch | `hewan="kucing"`, fallthrough sampai default | "meong","moo","petok" | PASS | — | 50s | melacak fallthrough sampai `default` dengan benar |
 | 11 | MEDIUM | switch | cari bug: `level="gold"`, `diskon = 20` tanpa break | "20 dan 10" | FAIL | CONCEPT | 60s | benar temukan bug & fix, tapi salah hitung output — assignment disangka print |
 | 12 | EASY | assignment | `saldo` ditimpa 3×, lalu 2× console.log | 2 baris, 200000, tidak mencetak | PASS | — | 35s | paham assignment menimpa nilai lama |
+| 13 | EASY | switch | `level=2` angka, fallthrough case 2 → case 3 | "menengah dan lanjut" | FAIL | CONCEPT | 55s | ULANG kesalahan #11: assignment disangka print. Juga salah: `case 2` vs `case "2"` |
 
 **Level:** EASY / MEDIUM / HARD
 **Verdict:** PASS / FAIL
@@ -107,9 +108,16 @@ Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
 | Concept | Question that broke it | Date |
 |---|---|---|
-| `switch` — hitung output | `level="gold"`, `diskon = 20` tanpa break, berapa yang tercetak | 2026-11-08 |
+| `switch` | `level=2` angka, fallthrough case 2 → case 3: berapa yang tercetak | 2026-11-08 |
 
-**Catatan:** bug-nya sudah ditemukan dengan benar dan perbaikannya tepat. Yang gagal hanya menghitung output, karena `diskon = 20` disangka mencetak. Konsep assignment vs output sudah lulus di soal #12. `switch` diulang besok dengan soal bersih.
+**Kenapa ditunda:** 4× gagal dalam satu hari (rule 17b). Dua kegagalan terakhir adalah kesalahan yang **sama**: mengira `variabel = nilai` mencetak sesuatu. Mengulang soal `switch` hari ini akan menghasilkan kesalahan yang sama.
+
+**Yang sudah benar:** melacak fallthrough (soal #10), menemukan bug `break` yang hilang (#11), memahami `break` menghentikan eksekusi.
+
+**Rencana besok:**
+1. Drill terpisah dulu: 5 soal **hanya** tentang `=` vs `console.log`, tanpa `switch`
+2. Setelah itu baru ulang `switch` dengan soal bersih
+3. Tambah drill: `case 2` vs `case "2"` — perbandingan `===` di switch
 
 ## Questions to revisit
 
