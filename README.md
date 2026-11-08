@@ -113,6 +113,26 @@ A learning log for my path to becoming a backend engineer.
 23c. **One change at a time.** Only one rule may be added per week. If two changes are
     proposed, pick the one with observed evidence. Multiple simultaneous rule changes make
     it impossible to tell which one helped.
+24. **Question quality standard.** Every gate question must satisfy all five. A question that
+    fails any of these is rewritten before it is asked, not after.
+    a. **ONE concept** — no mixing three things at once.
+    b. **STATED intent** — the learner knows what is being tested.
+    c. **NO trick** — it tests understanding, not reading sharpness.
+    d. **REAL context** — an application situation, not abstract code.
+    e. **EXPLAINABLE** — the answer has a reason, not a guess.
+24b. **No zero-output trick questions.** Never ask "how many lines are printed" when the
+     answer is zero. That tests attention, not understanding. If output is zero, ask why
+     there is no output and what would need to change to produce one.
+24c. **State what is already known.** If the code prints exactly one line, say so in the
+     question. Then ask what that line contains and why. Removing the trivial part frees
+     the learner to think about the mechanism.
+25. **One concept in flight.** Do not open a new concept while any concept sits in
+    `## Deferred`. If the session ends, the next session starts with the Deferred concept,
+    not with new material. A half-finished topic is a debt that compounds.
+25b. **Full completion per concept.** A concept is complete only after all four levels pass:
+    EASY (predict), MEDIUM (find the bug), HARD (combine with an earlier concept), and
+    WRITE (produce from memory). Two of four is not completion. There is no attempt limit
+    while a concept is the active one — if it takes twenty questions, it takes twenty.
 
 ---
 

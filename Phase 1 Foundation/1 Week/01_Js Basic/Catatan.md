@@ -18,17 +18,17 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - [x] Template literals
 
 ### Day 2 - Type conversion and operators
-- [ ] String to number: `Number()`, `parseInt()`, `parseFloat()`
-- [ ] Number to string: `String()`, `.toString()`
-- [ ] Arithmetic: `+ - * / % **`
-- [ ] Assignment: `+= -= *= /=`
-- [ ] Comparison: `==` vs `===` (why `===` matters)
-- [ ] `NaN` and how to check with `Number.isNaN()`
+- [x] String to number: `Number()`, `parseInt()`, `parseFloat()`
+- [x] Number to string: `String()`, `.toString()`
+- [x] Arithmetic: `+ - * / % **`
+- [x] Assignment: `+= -= *= /=`
+- [x] Comparison: `==` vs `===` (why `===` matters)
+- [x] `NaN` and how to check with `Number.isNaN()`
 
 ### Day 3 - Conditions
 - [x] `if` / `else if` / `else`
-- [ ] Ternary operator `? :`
-- [ ] `switch` statement
+- [x] Ternary operator `? :`
+- [x] `switch` statement
 - [ ] Logical operators `&&`, `||`, `!`
 - [ ] Nullish coalescing `??`
 - [x] Truthy and falsy values
@@ -96,6 +96,13 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 11 | MEDIUM | switch | cari bug: `level="gold"`, `diskon = 20` tanpa break | "20 dan 10" | FAIL | CONCEPT | 60s | benar temukan bug & fix, tapi salah hitung output — assignment disangka print |
 | 12 | EASY | assignment | `saldo` ditimpa 3×, lalu 2× console.log | 2 baris, 200000, tidak mencetak | PASS | — | 35s | paham assignment menimpa nilai lama |
 | 13 | EASY | switch | `level=2` angka, fallthrough case 2 → case 3 | "menengah dan lanjut" | FAIL | CONCEPT | 55s | ULANG kesalahan #11: assignment disangka print. Juga salah: `case 2` vs `case "2"` |
+| 14 | EASY | switch | `role="user"`, dua case + break | "terbatas" | FAIL | CONCEPT | 45s | output benar, tapi mekanisme tidak disebut — "switch hanya mencari user" |
+| 15 | EASY | switch | `warna="hijau"`, jelaskan proses di `case "merah"` | diperiksa, tidak cocok, dilewati, lanjut | PASS | — | 40s | mekanisme lengkap: urutan, perbandingan, lewati |
+| 16 | EASY | switch | `level=2` angka, telusuri `case 1` | "menengah", `2 === 1` false | PASS | — | 30s | PASS kedua berturut-turut |
+| 17 | MEDIUM | switch | cari bug: `tipe="vip"`, `harga * 0.8` tanpa break | "reguler" | FAIL | CONCEPT | 70s | bug & fix benar, tapi output dijawab nama case bukan angka (72000) |
+| 18 | MEDIUM | switch | cari bug laten: `tier="silver"`, `case "platinum"` tanpa break | "fitur dasar" + temukan bug laten | PASS | — | 65s | menemukan bug yang tidak muncul untuk input saat ini |
+| 19 | HARD | switch + ternary | `tier="gold"` → switch, lalu label pakai ternary | "Diskon 20%", lacak nilai diskon | PASS | — | 80s | pelacakan lengkap switch → ternary |
+| 20 | WRITE | switch | tulis dari nol: `status="member"` → switch 3 case + break | kode benar, output potongan = 10 | PASS | — | 150s | semua syarat terpenuhi, bonus pakai template literal |
 
 **Level:** EASY / MEDIUM / HARD
 **Verdict:** PASS / FAIL
@@ -108,16 +115,9 @@ Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
 | Concept | Question that broke it | Date |
 |---|---|---|
-| `switch` | `level=2` angka, fallthrough case 2 → case 3: berapa yang tercetak | 2026-11-08 |
+| | | |
 
-**Kenapa ditunda:** 4× gagal dalam satu hari (rule 17b). Dua kegagalan terakhir adalah kesalahan yang **sama**: mengira `variabel = nilai` mencetak sesuatu. Mengulang soal `switch` hari ini akan menghasilkan kesalahan yang sama.
-
-**Yang sudah benar:** melacak fallthrough (soal #10), menemukan bug `break` yang hilang (#11), memahami `break` menghentikan eksekusi.
-
-**Rencana besok:**
-1. Drill terpisah dulu: 5 soal **hanya** tentang `=` vs `console.log`, tanpa `switch`
-2. Setelah itu baru ulang `switch` dengan soal bersih
-3. Tambah drill: `case 2` vs `case "2"` — perbandingan `===` di switch
+**Kosong.** `switch` sudah tuntas di keempat level pada 2026-11-08 (Gate Log #15-#20).
 
 ## Questions to revisit
 

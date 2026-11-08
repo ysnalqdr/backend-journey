@@ -32,3 +32,20 @@ if(nilai >= 90) {
 const stok = 0;
 const statusTiket = stok > 0 ? "tersedia" : "habis";
 console.log(statusTiket);
+
+const status = "member";
+let potongan = 0;
+
+switch (status) {
+    case "vip":
+        potongan = 25;
+    break;
+    case "member":
+        potongan = 10;
+    break;
+    case "guest":
+        potongan = 0;
+    break;
+}
+console.log(`Potongan Diskon Sebesar : Rp. ${potongan} sebagai ${status}`);
+

@@ -50,7 +50,8 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 | 2026-11-08 | CONCEPT | mengira `switch` melakukan looping | `switch` berjalan sekali, fallthrough hanya ke bawah | 1 | ya |
 | 2026-11-08 | CONCEPT | `diskon = 20` disangka mencetak 20 | `=` menugaskan, `console.log` mencetak | **2** | belum |
 | 2026-11-08 | CONCEPT | `case 2` dikira sama dengan `case "2"` | `switch` membandingkan dengan `===`, tipe harus sama | 1 | belum |
-| 2026-11-08 | CONCEPT | jawab "berhenti di case B" tanpa sebut `break` | `break` yang menghentikan, bukan kecocokan `case` | 1 | belum |
+| 2026-11-08 | CONCEPT | jawab "berhenti di case B" tanpa sebut `break` | `break` yang menghentikan, bukan kecocokan `case` | 1 | ya |
+| 2026-11-08 | CONCEPT | output dijawab "reguler" padahal yang tercetak angka 72000 | nama `case` itu label, yang tercetak adalah nilai variabel | 1 | ya |
 
 ---
 

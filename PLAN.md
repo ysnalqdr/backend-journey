@@ -50,24 +50,37 @@ Kalau waktu cuma 60 menit: kerjakan A, B, D. Blok C dan E boleh dilewat sehari, 
 
 ## 4. Gerbang kelulusan (tidak bisa dilewati)
 
-Setiap akhir hari, 4 tes:
+### Empat level per konsep — semua harus lulus
 
-1. **Explain back** — tulis 5 baris penjelasan pakai bahasa sendiri, tanpa buka materi atau catatan
-2. **Predict output** — 3 potongan kode, tebak hasilnya sebelum dijalankan
-3. **Write from zero** — 1 soal kecil, tanpa melihat contoh
-4. **Modify** — kode yang sengaja dirusak, perbaiki tanpa melihat versi aslinya
+| Level | Tes | Contoh |
+|---|---|---|
+| **EASY** | prediksi output | "kode ini mencetak apa, dan kenapa" |
+| **MEDIUM** | temukan bug | "user gold seharusnya dapat 20, kenapa dapat 10" |
+| **HARD** | gabung konsep sebelumnya | switch + ternary dalam satu kode |
+| **WRITE** | tulis dari nol | tanpa contoh, tanpa melihat materi |
 
-**Lulus 3 dari 4 → maju. Gagal → ulangi hari yang sama besok.** Tidak ada pengecualian.
+**Bukan 2 dari 4. Semua harus lulus.** Tidak ada batas percobaan selama konsep itu masih aktif (README 25b).
 
-### Mastery rule — berlaku di dalam setiap tes
+### Kualitas soal (README 24)
 
-Satu jawaban benar tidak cukup. Berlaku aturan:
+Setiap soal wajib memenuhi lima syarat:
+1. Satu konsep saja
+2. Tujuan soal dinyatakan jelas
+3. Bukan jebakan — menguji pemahaman, bukan ketelitian
+4. Konteks nyata, bukan kode abstrak
+5. Jawabannya bisa dijelaskan alasannya
 
-- **2 jawaban benar berturut-turut, tanpa bantuan, pada soal yang BERBEDA**
-- Jawaban benar dengan alasan salah = **GAGAL**
-- Salah → jalankan siklus remediasi penuh (lihat README aturan 17), tidak boleh lanjut
+### Mastery rule di dalam setiap level
 
-Kalau gagal 2 hari berturut di topik yang sama, tulis di `Catatan.md` bagian "What confused me" dan minta materi dijelaskan ulang dengan **pendekatan berbeda**, bukan diulang dengan kata yang sama.
+- **2 jawaban benar berturut-turut, tanpa bantuan, pada soal yang BERBEDA** (README 16)
+- Jawaban benar dengan alasan salah = **GAGAL** (README 18)
+- Alasan harus menyebut mekanisme, bukan hasil (README 18b)
+- Salah → siklus remediasi penuh: diagnosa → ajar ulang dengan analogi **berbeda** → cek kecil → soal baru (README 17)
+
+### Aturan urutan
+
+- **Satu konsep dalam proses** (README 25). Tidak ada materi baru selama masih ada konsep di `## Deferred`
+- Kalau sesi habis, sesi berikutnya **wajib** mulai dari konsep yang tertunda
 
 Gerbang ini yang menggantikan "target jam". Kamu tidak dinilai dari berapa lama duduk, tapi dari apa yang bisa kamu jelaskan dan kerjakan sendiri.
 

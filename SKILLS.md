@@ -40,26 +40,28 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 | Konsep | Status | Bukti | Minggu | Catatan |
 |---|---|---|---|---|
-| `let` / `const` / `var`, scope | | | 1 | |
-| Tipe data & `typeof` | | | 1 | |
-| Template literal | | | 1 | |
-| Konversi tipe (`Number`, `parseInt`) | | | 2 | |
-| `==` vs `===` | | | 2 | |
-| `NaN` & `Number.isNaN` | | | 2 | |
-| Truthy / falsy | | | 2 | |
-| Operator aritmatika & jebakan `+` | | | 2 | |
-| `if` / `else if` / `else`, urutan kondisi | | | 3 | |
-| Ternary | | | 3 | |
-| `switch` & `break` | | | 3 | |
-| `&&` `\|\|` `!` & short-circuit | | | 3 | |
-| `??` vs `\|\|` | | | 3 | |
-| `for`, `while`, `do...while` | | | 4 | |
-| `break`, `continue`, nested loop | | | 4 | |
-| Fungsi, parameter, return | | | 2 | |
-| Scope & closure | | | 2 | |
-| Array & method (`map`, `filter`, `reduce`) | | | 3 | |
-| Object, destructuring, spread | | | 4 | |
-| Reference vs value (mutability) | | | 4 | |
+| `let` / `const` / `var`, scope | 3 | `01_Variables.js`, `02_Challenge.js` ditulis tanpa AI | 1 | |
+| Tipe data & `typeof` | 3 | `01_Variables.js`, `04_TypeConversion.js` | 1 | |
+| Template literal | 3 | `01_Variables.js`; bug kutip ditemukan & diperbaiki sendiri | 1 | |
+| Konversi tipe (`Number`, `parseInt`) | 3 | `04_TypeConversion.js`, gate Day 2.5 | 2 | |
+| `==` vs `===` | 3 | gate Lubang 2, 2/2 | 2 | |
+| `NaN` & `Number.isNaN` | 3 | gate Lubang 2, alasan dikoreksi | 2 | |
+| Truthy / falsy | 3 | gate Day 2.5, 3/3 | 2 | |
+| Operator aritmatika & jebakan `+` | 3 | `04_TypeConversion.js`, `05_Challenge.js` | 2 | |
+| `if` / `else if` / `else`, urutan kondisi | 3 | Gate Log #3 (MEDIUM), 90 vs `>` vs `>=` | 3 | |
+| Ternary | 3 | Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol | 3 | |
+| `switch` & `break` | 3 | Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18) | 3 | |
+| `&&` `\|\|` `!` & short-circuit | | | 3 | belum |
+| `??` vs `\|\|` | | | 3 | belum |
+| `for`, `while`, `do...while` | | | 4 | belum |
+| `break`, `continue`, nested loop | | | 4 | belum |
+| Fungsi, parameter, return | | | 2 | belum |
+| Scope & closure | | | 2 | belum |
+| Array & method (`map`, `filter`, `reduce`) | | | 3 | belum |
+| Object, destructuring, spread | | | 4 | belum |
+| Reference vs value (mutability) | | | 4 | belum |
+
+**Tambahan di luar daftar:** assignment vs output (`=` menugaskan, `console.log` mencetak) — status **2**, lulus 1 soal (#12) lalu gagal lagi (#13).
 
 ### Backend fundamental
 
