@@ -45,6 +45,11 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 | 2026-11-07 | SYNTAX | menulis `>+` bukan `>=` | operator perbandingan | 1 | ya |
 | 2026-11-07 | CONCEPT | menjawab `"90" < "100"` itu `true` | perbandingan teks huruf per huruf | 1 | ya |
 | 2026-11-07 | READING | pakai `stokTiket` sebagai jumlah beli | membaca nama variabel sesuai maksudnya | 1 | ya |
+| 2026-11-08 | CONCEPT | alasan ternary: "karena tiket falsy" | yang diperiksa `tiket > 0`, bukan `tiket` | 1 | ya |
+| 2026-11-08 | READING | melihat `!` padahal kode tidak punya `!` | membaca simbol satu per satu sebelum menjawab | 1 | ya |
+| 2026-11-08 | CONCEPT | mengira `switch` melakukan looping | `switch` berjalan sekali, fallthrough hanya ke bawah | 1 | ya |
+| 2026-11-08 | CONCEPT | `diskon = 20` disangka mencetak 20 | `=` menugaskan, `console.log` mencetak | 1 | ya |
+| 2026-11-08 | CONCEPT | jawab "berhenti di case B" tanpa sebut `break` | `break` yang menghentikan, bukan kecocokan `case` | 1 | belum |
 
 ---
 
