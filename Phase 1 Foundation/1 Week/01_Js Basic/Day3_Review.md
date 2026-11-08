@@ -186,22 +186,192 @@ a = 3;
 
 ---
 
-## 5. Yang akan datang
+## 5. Materi berikutnya — `&&` `||` `!` dan short-circuit
 
-Sisa Day 3: **`&&` `||` `!`** dan **`??` vs `||`**.
-
-Sekilas:
+### Tiga operator
 
 ```javascript
-umur >= 17 && punyaTiket     // DAN — dua-duanya harus benar
-punyaTiket || punyaUndangan  // ATAU — salah satu cukup
-!sudahLogin                  // BUKAN — membalik
-
-stok || 100    // 100  ← salah untuk angka
-stok ?? 100    // 0    ← benar
+umur >= 17 && punyaTiket      // DAN
+punyaTiket || punyaUndangan   // ATAU
+!sudahLogin                   // BUKAN
 ```
 
-Yang paling penting nanti: **short-circuit** — JavaScript berhenti kalau sudah tahu jawabannya. Itu yang mencegah error seperti `user.nama` saat `user` bernilai `null`.
+| Operator | Dibaca | Hasilnya benar kalau |
+|---|---|---|
+| `&&` | dan | **kedua** sisi benar |
+| `\|\|` | atau | **salah satu** benar |
+| `!` | bukan | membalik nilainya |
+
+### Tabel kebenaran
+
+| A | B | `A && B` | `A \|\| B` |
+|---|---|---|---|
+| true | true | true | true |
+| true | false | false | true |
+| false | true | false | true |
+| false | false | false | false |
+
+### `!` membalik apa pun
+
+```javascript
+!true       // false
+!false      // true
+!0          // true    karena 0 falsy, dibalik jadi true
+!"halo"     // false   karena teks berisi itu truthy, dibalik jadi false
+```
+
+### Short-circuit — bagian yang paling penting
+
+JavaScript itu malas. Kalau sudah tahu jawabannya, ia berhenti dan **tidak memeriksa sisanya**.
+
+```javascript
+false && apaPun     // false, sisi kanan TIDAK dijalankan
+true  || apaPun     // true,  sisi kanan TIDAK dijalankan
+```
+
+Kenapa `&&` berhenti di kiri yang false: karena kalau satu sisi sudah false, hasilnya pasti false. Tidak perlu memeriksa kanan.
+
+Kenapa `||` berhenti di kiri yang true: karena kalau satu sisi sudah true, hasilnya pasti true. Tidak perlu memeriksa kanan.
+
+### Kegunaan nyata: mencegah error
+
+Ini alasan short-circuit penting.
+
+```javascript
+const user = null;
+
+if (user.nama === "Yasin") { }
+```
+
+Kalau dijalankan, hasilnya:
+
+```
+TypeError: Cannot read properties of null (reading 'nama')
+```
+
+Karena `user` itu `null`, tidak punya properti `nama`.
+
+Sekarang tambahkan `&&` di depan:
+
+```javascript
+if (user && user.nama === "Yasin") { }
+```
+
+Alurnya:
+
+```
+user = null
+  ↓
+null && ...          && periksa kiri dulu
+  ↓
+null itu falsy → BERHENTI, hasilnya null
+  ↓
+user.nama TIDAK PERNAH dijalankan → tidak error
+```
+
+Kode kedua tidak error. Bukan karena `null` diubah jadi sesuatu, tapi karena **sisi kanan tidak pernah dieksekusi**.
+
+### Kenapa ini dipakai setiap hari di backend
+
+Hampir semua validasi request bentuknya begini:
+
+```javascript
+if (req.body && req.body.user && req.body.user.id) {
+  // baru proses
+}
+```
+
+Kalau salah satu kosong, pengecekan berhenti di situ. Tidak ada error, dan yang diproses hanya data yang lengkap.
+
+### Pola lain: `&&` untuk menjalankan sesuatu bersyarat
+
+```javascript
+const isAdmin = true;
+isAdmin && console.log("Tampilkan menu admin");
+```
+
+Kalau `isAdmin` false, sisi kanan tidak jalan. Ini singkatan dari:
+
+```javascript
+if (isAdmin) {
+  console.log("Tampilkan menu admin");
+}
+```
+
+Tapi hanya cocok untuk satu baris. Lebih dari itu, pakai `if` biasa.
+
+### Dua jebakan yang sering terjadi
+
+**Jebakan 1 — `&&` mengembalikan nilai, bukan selalu boolean**
+
+```javascript
+console.log(5 && 10);        // 10
+console.log(0 && 10);        // 0
+console.log("a" || "b");     // "a"
+console.log(null || "b");    // "b"
+```
+
+`&&` mengembalikan sisi **kanan** kalau kiri truthy, dan sisi **kiri** kalau kiri falsy.
+
+`||` mengembalikan sisi **kiri** kalau kiri truthy, dan sisi **kanan** kalau kiri falsy.
+
+Ini bukan bug — ini cara kerjanya. Tapi kalau kamu mengira hasilnya selalu `true` atau `false`, kamu akan bingung.
+
+**Jebakan 2 — jangan pakai `||` untuk angka**
+
+```javascript
+const stok = 0;
+const stokTampil = stok || 100;   // 100  ← salah, stok jadi hilang
+```
+
+Karena `0` itu falsy, `||` menggantinya dengan `100`. Padahal stok `0` itu informasi yang sah.
+
+Untuk angka, pakai `??` — yang akan dibahas setelah ini.
+
+### Tiga pertanyaan untuk menguji diri
+
+Jawab tanpa buka bagian di atas.
+
+**Q1.** Apa yang tercetak, dan kenapa?
+
+```javascript
+const stok = 0;
+const sudahLogin = true;
+
+console.log(stok > 0 && sudahLogin);
+console.log(stok > 0 || sudahLogin);
+console.log(!sudahLogin);
+```
+
+**Q2.** Kenapa baris kedua tidak error padahal `user` bernilai `null`?
+
+```javascript
+const user = null;
+
+console.log(user.nama);
+console.log(user && user.nama);
+```
+
+**Q3.** Apa yang tercetak?
+
+```javascript
+console.log(0 && "halo");
+console.log("halo" && "dunia");
+console.log(null || "cadangan");
+```
+
+<details>
+<summary>Jawaban</summary>
+
+**Q1.** `false`, `true`, `false`.
+`stok > 0` adalah `0 > 0` → `false`. Lalu `false && true` → `false`, dan `false || true` → `true`. `!true` → `false`.
+
+**Q2.** Baris pertama **error**, bukan tidak error. `user` itu `null`, jadi `user.nama` melempar `TypeError`. Baris kedua **aman**, karena `null` itu falsy sehingga `&&` berhenti di kiri dan `user.nama` tidak pernah dijalankan.
+
+**Q3.** `0`, `"dunia"`, `"cadangan"`.
+`0` itu falsy, jadi `&&` mengembalikan sisi kiri: `0`. `"halo"` truthy, jadi `&&` mengembalikan sisi kanan: `"dunia"`. `null` falsy, jadi `||` mengembalikan sisi kanan: `"cadangan"`.
+
+</details>
 
 ---
 
