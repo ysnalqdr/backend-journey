@@ -19,9 +19,9 @@ Kalau gagal: status turun ke 2, masuk antrean lagi 2 hari kemudian.
 
 | Concept | Passed on | Re-check due | Result | Status after |
 |---|---|---|---|---|
-| ternary | 2026-11-07 | 2026-11-09 | | |
-| switch + break | 2026-11-07 | 2026-11-09 | | |
-| `??` vs `\|\|` | 2026-11-07 | 2026-11-09 | | |
+| | | | | |
+
+**Kosong.** Belum ada konsep Day 3 yang benar-benar lulus — `if/else` lulus 3 November tapi belum diuji ulang.
 
 ---
 
