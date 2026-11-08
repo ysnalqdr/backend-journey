@@ -1,15 +1,28 @@
+// if / else
+
 const saldo = 50000;
 const hargaTiket = 250000;
 
 if (saldo >= hargaTiket) {
-    console.log("Pembayaran berhasil"); 
+    console.log("Pembayaran berhasil");
 } else {
-    console.log("Saldo tidak cukup"); // hasil outputnya false/saldo tidak cukup karna saldo dari case ini tidak cukup untuk membeli harga dari sebuah tiket
+    console.log("Saldo tidak cukup");
 }
+
+// variasi saldo cukup
+const saldoCukup = 300000;
+
+if (saldoCukup >= hargaTiket) {
+    console.log("Pembayaran berhasil");
+} else {
+    console.log("Saldo tidak cukup");
+}
+
+// else if - urutan dari ketat ke longgar
 
 const nilai = 85;
 
-if(nilai >= 90) {
+if (nilai >= 90) {
     console.log("A");
 } else if (nilai >= 80) {
     console.log("B");
@@ -18,20 +31,35 @@ if(nilai >= 90) {
 } else {
     console.log("D");
 }
-// yang tercetak ialah B
-// 2x memeriksa kondisi
-// yang tercetak A
-//switch branch
 
-// NEXT SESSION - Day 3 continued
-// TODO 1  ternary operator  ? :
-// TODO 2  switch + break
-// TODO 3  logical operators  && || !
-// TODO 4  nullish coalescing  ?? vs ||
+// variasi nilai tepat di batas
+const nilaiBatas = 90;
+
+if (nilaiBatas >= 90) {
+    console.log("A");
+} else if (nilaiBatas >= 80) {
+    console.log("B");
+} else {
+    console.log("C");
+}
+
+// ternary
 
 const stok = 0;
-const statusTiket = stok > 0 ? "tersedia" : "habis";
-console.log(statusTiket);
+const labelStok = stok > 0 ? "Tersedia" : "Habis";
+console.log(labelStok);
+
+// variasi stok negatif, hasilnya tetap Habis karena -5 > 0 itu false
+const stokMinus = -5;
+const labelStokMinus = stokMinus > 0 ? "Tersedia" : "Habis";
+console.log(labelStokMinus);
+
+// ternary bisa mengembalikan angka
+const saldoKecil = 50000;
+const bonus = saldoKecil >= 100000 ? 1 : 0;
+console.log(bonus, typeof bonus);
+
+// switch
 
 const status = "member";
 let potongan = 0;
@@ -39,13 +67,44 @@ let potongan = 0;
 switch (status) {
     case "vip":
         potongan = 25;
-    break;
+        break;
     case "member":
         potongan = 10;
-    break;
+        break;
     case "guest":
         potongan = 0;
-    break;
+        break;
 }
-console.log(`Potongan Diskon Sebesar : Rp. ${potongan} sebagai ${status}`);
 
+console.log(potongan);
+
+// variasi case pakai angka
+const level = 2;
+let akses = "";
+
+switch (level) {
+    case 1:
+        akses = "pemula";
+        break;
+    case 2:
+        akses = "menengah";
+        break;
+    case 3:
+        akses = "lanjut";
+        break;
+}
+
+console.log(akses);
+
+// variasi tanpa break, hasilnya dua baris karena jatuh ke case bawah
+const role = "admin";
+
+switch (role) {
+    case "admin":
+        console.log("penuh");
+    case "user":
+        console.log("terbatas");
+        break;
+}
+
+//operator logika && || !

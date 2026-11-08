@@ -13,7 +13,9 @@ A learning log for my path to becoming a backend engineer.
 1. No week without a commit.
 2. 20% reading, 80% typing. Never copy-paste.
 3. Every folder has a `Catatan.md` — what I learned and what confused me.
-4. All notes, commit messages, and code comments in English.
+4. Catatan belajar ditulis Bahasa Indonesia. Commit message tetap Bahasa Inggris
+   (conventional commits: feat, fix, docs, chore). Nama variabel dan komentar kode
+   juga Bahasa Indonesia, kecuali istilah teknis yang memang tidak punya padanan.
 5. Keyword **"keeping"** = ask for a recall session on material already studied. When I say it, review by questioning me on key concepts, correct what is wrong, and do not restart from zero.
 6. Every day ends with the gate: explain back (5 lines, no notes), predict 3 outputs, write 1 exercise from zero. Pass 2 of 3, or repeat the same day tomorrow. Do not advance on a failed gate.
 7. Every week needs 1 trace, 1 bug log entry, and 1 commit. Missing any of them means the week is not finished.
@@ -133,6 +135,23 @@ A learning log for my path to becoming a backend engineer.
     EASY (predict), MEDIUM (find the bug), HARD (combine with an earlier concept), and
     WRITE (produce from memory). Two of four is not completion. There is no attempt limit
     while a concept is the active one — if it takes twenty questions, it takes twenty.
+26. **File format standard — locked.** Do not change this again. Every exercise file follows it.
+
+    `NN_Topic.js` (material practice):
+    - topic label as a plain one-line comment: `// if / else`, `// ternary`, `// switch`
+    - variation label: `// variasi <what is being tested>`
+    - no long explanations, no separate notes block
+    - 4-space indent
+    - unfinished topics marked at the bottom with `//operator ...`
+
+    `NN_Challenge.js` (questions and answers):
+    - `// Soal N. <question>` then `// Jawab: <answer> karena <reason>`
+    - code follows the question and answer
+    - alternative version labelled `// versi yang sudah diperbaiki`
+    - 2-space indent
+
+    Forbidden in both: `====` separators or any divider lines, a notes block separated from
+    its question, and notes outnumbering the questions.
 
 ---
 
