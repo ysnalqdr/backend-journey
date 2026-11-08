@@ -28,3 +28,7 @@ if(nilai >= 90) {
 // TODO 2  switch + break
 // TODO 3  logical operators  && || !
 // TODO 4  nullish coalescing  ?? vs ||
+
+const stok = 0;
+const statusTiket = stok > 0 ? "tersedia" : "habis";
+console.log(statusTiket);

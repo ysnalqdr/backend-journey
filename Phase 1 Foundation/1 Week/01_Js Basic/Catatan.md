@@ -84,6 +84,12 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | # | Level | Concept | Question | My answer | Verdict | Type | Time | Note |
 |---|---|---|---|---|---|---|---|---|
 | 1 | EASY | ternary | `tiket=0`, `tiket > 0 ? "Tersedia" : "Habis"` | "Habis", alasan: tiket falsy | FAIL | CONCEPT | 20s | alasan salah sasaran — yang diperiksa `tiket > 0`, bukan `tiket` |
+| 2 | EASY | ternary | `stok=-3`, `stok ? "Ada" : "Tidak ada"` | "Ada", alasan: -3 truthy | PASS | — | 15s | mekanisme benar; istilah "output true" dikoreksi |
+| 3 | MEDIUM | if/else if | `nilai=90`, `if (nilai > 90)` A / `else if (nilai >= 80)` B | B, alasan: 90 > 90 false → cek >= 80 true | PASS | — | 40s | urutan kondisi + beda `>` vs `>=` benar |
+| 4 | EASY | ternary | `stok=5, beli=3`, `stok - beli >= 2 ? "cukup" : "kurang"` | "cukup", 2 >= 2 true | PASS | — | 30s | langkah 1 dan 2 digabung, tapi hasil & alasan benar |
+| 5 | EASY | ternary | `saldo=50000`, `saldo >= 100000 ? 1 : 0` | "1", number | FAIL | READING | 25s | tidak mengevaluasi kondisi; lalu salah baca `!` yang tidak ada |
+| 6 | MEDIUM | ternary | cari bug: `umur >= 17 ? "dewasa" : "anak" : "remaja"` | SyntaxError, dua titik dua | PASS | — | 45s | tidak terjebak menghitung output |
+| 7 | EASY | ternary | tulis dari nol: `stok=0` → ternary `status` | kode benar, output "habis" | PASS | — | 90s | ditulis tanpa melihat contoh |
 
 **Level:** EASY / MEDIUM / HARD
 **Verdict:** PASS / FAIL
