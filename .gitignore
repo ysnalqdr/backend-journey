@@ -20,6 +20,9 @@ target/
 # Python
 __pycache__/
 *.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
 
 # Env
 .env

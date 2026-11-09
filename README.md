@@ -2,7 +2,7 @@
 
 A learning log for my path to becoming a backend engineer.
 
-**Started:** November 2026
+**Started:** 9 November 2026 (prep mulai 1 November 2026)
 **Target:** Backend internship, semester 7 (October 2027)
 **Focus:** Java + Spring Boot + PostgreSQL (primary), Node.js (secondary)
 
@@ -152,6 +152,22 @@ A learning log for my path to becoming a backend engineer.
 
     Forbidden in both: `====` separators or any divider lines, a notes block separated from
     its question, and notes outnumbering the questions.
+27. **Question presentation format — locked.** Every question asked in chat uses these four
+    sections, in this order, with nothing added or removed:
+
+    ```
+    ## Konteks      - the real situation, one or two sentences
+    ## Kode         - the code, complete, no elision
+    ## Yang sudah diketahui  - facts the learner already has (values, types, rules)
+    ## Yang ditanyakan       - the numbered questions
+    ```
+
+    Why: `Konteks` gives the learner a reason to care, `Yang sudah diketahui` removes
+    arithmetic distractions so the answer tests the concept, `Yang ditanyakan` keeps the
+    question countable. Without the third section the learner spends attention on what
+    the code contains instead of how it behaves.
+
+    Never rename a section, never merge two, never add a fifth.
 
 ---
 
@@ -178,7 +194,9 @@ Naming pattern:
 
 ## Progress
 
-### Phase 1 Foundation - November 2026 to January 2027
+Fase mengikuti PLAN.md §2 (5 fase). README sebelumnya memakai 4 fase dan bentrok — sudah diselaraskan 2026-11-08.
+
+### Phase 1 Foundation - 9 Nov 2026 to 31 Jan 2027 (minggu 1-12)
 
 | Week | Topic | Done |
 |---|---|---|
@@ -195,7 +213,7 @@ Naming pattern:
 | 11 | Sql Join | [ ] |
 | 12 | Database Design | [ ] |
 
-### Phase 2 Second Language - February to April 2027
+### Phase 2 Second Language - 1 Feb to 25 Apr 2027 (minggu 13-24)
 
 | Week | Topic | Done |
 |---|---|---|
@@ -212,7 +230,7 @@ Naming pattern:
 | 23 | Docker Compose | [ ] |
 | 24 | Testing Junit | [ ] |
 
-### Phase 3 Project - May to July 2027
+### Phase 3 Project - 26 Apr to 20 Jun 2027 (minggu 25-32)
 
 | Week | Topic | Done |
 |---|---|---|
@@ -224,19 +242,24 @@ Naming pattern:
 | 30 | Promo Pricing | [ ] |
 | 31 | Payment | [ ] |
 | 32 | Api Documentation | [ ] |
+
+### Phase 4 Preparation - 21 Jun to 15 Agu 2027 (minggu 33-40)
+
+| Week | Topic | Done |
+|---|---|---|
 | 33 | Github Actions | [ ] |
 | 34 | Deploy | [ ] |
 | 35 | Error Handling Logging | [ ] |
 | 36 | Polish Readme | [ ] |
-
-### Phase 4 Preparation - August to October 2027
-
-| Week | Topic | Done |
-|---|---|---|
 | 37 | Linux Basics | [ ] |
 | 38 | Linux Ssh | [ ] |
 | 39 | System Design | [ ] |
 | 40 | System Design 2 | [ ] |
+
+### Phase 5 Application - 16 Agu to 10 Okt 2027 (minggu 41-48)
+
+| Week | Topic | Done |
+|---|---|---|
 | 41 | Mock Interview | [ ] |
 | 42 | Project Architecture | [ ] |
 | 43 | Leetcode Sprint 1 | [ ] |

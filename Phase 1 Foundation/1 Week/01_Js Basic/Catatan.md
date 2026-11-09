@@ -29,9 +29,14 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - [x] `if` / `else if` / `else`
 - [x] Ternary operator `? :`
 - [x] `switch` statement
-- [ ] Logical operators `&&`, `||`, `!`
+- [x] Logical operators `&&`, `||`, `!`
 - [ ] Nullish coalescing `??`
 - [x] Truthy and falsy values
+
+**Catatan status 2026-11-08:**
+- `&&` `||`: latihan 21 soal, drill terakhir 4/4. Gerbang 4 level belum dijalankan.
+- `!`: materi sudah ditulis di `Day3_Review.md`, belum dibaca, belum diuji.
+- `??`: sudah dipakai di latihan (soal 29-31), belum digerbang.
 
 ### Day 4 - Loops
 - [ ] `for` loop
@@ -103,9 +108,31 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 18 | MEDIUM | switch | cari bug laten: `tier="silver"`, `case "platinum"` tanpa break | "fitur dasar" + temukan bug laten | PASS | — | 65s | menemukan bug yang tidak muncul untuk input saat ini |
 | 19 | HARD | switch + ternary | `tier="gold"` → switch, lalu label pakai ternary | "Diskon 20%", lacak nilai diskon | PASS | — | 80s | pelacakan lengkap switch → ternary |
 | 20 | WRITE | switch | tulis dari nol: `status="member"` → switch 3 case + break | kode benar, output potongan = 10 | PASS | — | 150s | semua syarat terpenuhi, bonus pakai template literal |
+| 21 | MEDIUM | `&&` | `email` truthy + `password=""`, sisi mana yang menentukan | "sisi kanan, password" + "&& kembalikan kiri sebagai false" | FAIL | CONCEPT | — | arah benar, mekanisme salah: `&&` mengembalikan nilai asli, bukan `false` |
+| 22 | MEDIUM | `&&` | `password="123"`, apa yang berubah | "3 === 3 true, jadi Masuk" | FAIL | CONCEPT | — | output benar, alasan salah (rule 18). Tidak ada `===` di kode itu |
+| 23 | MEDIUM | `&&` `\|\|` | `kupon="HEMAT50"`, dua baris | baris 1 "HEMAT50", baris 2 "HEMAT50" | FAIL | CONCEPT | — | pakai aturan `\|\|` di tempat `&&`. `&&` kiri truthy → ambil kanan |
+| 24 | MEDIUM | `\|\|` | `stok=0`, baris mana yang menyesatkan | "baris 2 benar, baris 1 menyesatkan" | PASS | — | — | paham kenapa `\|\|` berbahaya untuk angka |
+| 25 | MEDIUM | short-circuit | `user=null`, apakah `user.nama` dieksekusi | "tidak, karena bikin error" | FAIL | CONCEPT | — | "tidak dieksekusi" benar, alasan terbalik: `&&` yang mencegah error |
+| 26 | MEDIUM | short-circuit | hapus `user &&`, apa yang terjadi | "mencetak belum login" | FAIL | CONCEPT | — | error bukan `false`. TypeError menghentikan program, `else` tidak jalan |
+| 27 | MEDIUM | `&&` | `user={nama:""}`, bagian mana yang menentukan | "user truthy karena object terisi" | FAIL | CONCEPT | — | tidak menyebut `user.nama` sebagai penentu hasil akhir |
+| 28 | MEDIUM | `&&` | `user.nama="Yasin"`, apa yang berubah | "&& menghasilkan true" | FAIL | CONCEPT | — | output benar, mekanisme salah. `&&` menghasilkan `"Yasin"`, bukan `true` |
+| 29 | EASY | `&&` | `user={nama:"Yasin"}`, `tampilan = user && user.nama` | "user" | FAIL | CONCEPT | — | ambil sisi kiri, padahal kiri truthy → ambil kanan. Hasilnya `"Yasin"` |
+| 30 | MEDIUM | `&&` `\|\|` | tambah `\|\| "Tamu"` | "error, mencetak user" | FAIL | CONCEPT | — | tidak ada error. Hasilnya tetap `"Yasin"`, `"Tamu"` tidak dipakai |
+| 31 | MEDIUM | `??` | `nama=""`, `\|\|` vs `??` | "`\|\|`→Tamu, `??`→`""`" + pilih `??` untuk nama | PASS | — | — | dua nilai benar. Pilihan `??` masuk akal untuk role, tapi untuk nama tampilan `\|\|` lebih tepat |
+| 32 | MEDIUM | `!` | soal diberikan sebelum materi ditulis | — | VOID | — | — | soal tidak sah: materi `!` belum pernah diberikan. Dibuang dari penilaian |
 
-**Level:** EASY / MEDIUM / HARD
-**Verdict:** PASS / FAIL
+**Catatan sesi `&&` `\|\|` (2026-11-08):**
+
+- 21 soal diberikan (#21–#31 di file `07_Challenge.js`, nomor gate berbeda).
+- Hanya FAIL dan PASS level MEDIUM yang dicatat, sesuai README 22b.
+- PASS level EASY tidak dicatat: #14, #15, #17, #18, #20, #23, #27, #29(kode), #30(kode).
+- **Drill akhir 4/4** (`a && "jeruk"` → jeruk, `b && "jeruk"` → `""`, `a \|\| "jeruk"` → apel, `c \|\| "jeruk"` → jeruk). Ini bukti pemulihan setelah 3 kegagalan berurutan.
+- **Pelanggaran prosedur:** gagal 3× berturut-turut (#28, #29, #30) seharusnya memicu STOP + Deferred (README 17b). Drill diberikan sebagai gantinya, dan berhasil. Keberhasilan tidak membatalkan pelanggaran.
+- **Level gerbang:** EASY ⬜ · MEDIUM ⬜ · HARD ⬜ · WRITE ⬜ — belum ada satu pun yang formal.
+- **Waktu tidak diukur** pada sesi ini (README 17g dilanggar).
+
+**Level:** EASY / MEDIUM / HARD / WRITE / VOID
+**Verdict:** PASS / FAIL / VOID
 **Type:** CONCEPT / READING / SYNTAX / LOGIC / —
 **Time target:** EASY 30s / MEDIUM 2m / HARD 5m
 
