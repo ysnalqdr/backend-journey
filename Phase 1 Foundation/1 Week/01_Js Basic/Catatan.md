@@ -127,6 +127,23 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 37 | HARD | `&&` + switch | `sudahLogin=false`, `role="admin"`, ada `default: akses="tamu"` | "tamu" | FAIL | CONCEPT | — | `if` gagal → `switch` tidak jalan → `default` tidak jalan → `akses` tetap `""` |
 | 38 | HARD | `&&` + switch | harapan developer: user belum login dapat "tamu" | "belum tercapai, karena if berisi teks kosong `""`" | FAIL | READING | — | `sudahLogin` itu `false` (boolean), bukan `""`. Lalu perbaikan diusulkan dengan membalik urutan — tidak menolong |
 | 39 | EASY | if/else | `nilai=45`, `if (nilai >= 70)` + `else` | "tidak tercetak apapun" | FAIL | READING | — | kode punya `else`. `if` gagal → `else` jalan → "tidak lulus" |
+| 40 | EASY | if/else | drill ulang 1: `stok=0`, `if (stok > 0)` + else | false → "Stok habis" | PASS | — | — | Q2 ragu karena kata "if jalan" ambigu (salahku) |
+| 41 | EASY | if/else | drill 2: `umur=15`, `if (umur >= 17)` + else | false, blok if tidak jalan, else jalan | PASS | — | — | 3/3, menyebut "else" secara eksplisit |
+| 42 | EASY | else if | drill 3: `nilai=75`, 3 kondisi berurutan | false, false, true → "C" | PASS | — | — | 4/4, telusur berurutan benar |
+| 43 | EASY | else if | drill 4: `nilai=50`, tidak ada yang cocok | semua false → else → "D" | PASS | — | — | paham `else` jalan saat tidak ada yang cocok |
+| 44 | EASY | if tanpa else | drill 5: `stok=0`, `if` tanpa `else` | false, blok dilewati, tercetak "Selesai" | PASS | — | — | **kunci**: if gagal → program TETAP lanjut |
+| 45 | EASY | switch + default | `role="guest"`, tidak ada case cocok | "default dijalankan", "Akses tamu" | PASS | — | — | 3/3 |
+| 46 | HARD | `&&` + if + switch | `sudahLogin=false`, `role="admin"`, `default: akses="tamu"` | false, blok if tidak jalan, switch tidak jalan, `akses: ""` | PASS | — | — | **soal yang sama dengan #37** — sekarang benar semua. Pemulihan penuh |
+| 47 | HARD | `&&` + if + switch + else | versi diperbaiki, ada `else` di luar switch | false → else → "tamu" | PASS | — | — | paham beda `default` (di dalam switch) vs `else` (di luar) |
+
+**Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
+
+- **Drill terpisah berhasil.** 5 drill `if`/`else` tanpa `switch` dan tanpa `&&` → semua lulus.
+- **Konsep dipisah dulu, baru digabung.** Ini yang seharusnya dilakukan sejak awal, bukan dicampur.
+- **HARD lulus** lewat 2 jawaban benar berturut-turut pada soal berbeda (#46, #47).
+- #46 adalah soal yang sama persis dengan #37 yang gagal 3×. Sekarang benar tanpa bantuan.
+- **Level gerbang:** EASY ✅ · MEDIUM ✅ · HARD ✅ · WRITE ⬜
+- Sisa: WRITE saja.
 
 **Catatan gerbang `&&` `\|\|` (2026-11-08, sesi lanjutan):**
 
@@ -164,17 +181,13 @@ Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
 | Concept | Question that broke it | Date |
 |---|---|---|
-| `&&` HARD: `if` gagal → `switch` tidak jalan | `sudahLogin=false`, `role="admin"`, ada `default: akses="tamu"` — dijawab "tamu", seharusnya `""` (#37). Diulang #38 dan #39. | 2026-11-08 |
+| | | |
 
-**Kenapa ditunda:** kesalahan "`if` gagal disangka menjalankan `default`" muncul 3× dalam satu sesi (#37, #38, #39). Aturan #17b: berhenti.
+**Kosong.** Konsep `&&` HARD yang sempat ditunda (#37) sudah pulih pada 2026-11-08 lewat drill terpisah `if`/`else` (Gate Log #40-#47). Soal yang sama (#46) kini dijawab benar tanpa bantuan.
 
-**Yang sudah benar:** EASY ✅, MEDIUM ✅ (jalur tulis-ulang). WRITE belum.
+**Cara pemulihannya:** konsep dipisah dulu — 5 drill `if`/`else` tanpa `switch` dan tanpa `&&`, lalu 1 drill `switch` tanpa `if`, baru digabung. Mencampur keduanya sejak awal adalah penyebab kegagalan.
 
-**Rencana besok — mulai dari sini, bukan materi baru:**
-1. Drill terpisah 5 soal **hanya** `if` / `else` / `else if`, tanpa `switch` dan tanpa `&&`
-2. Lanjut 5 soal `switch` + `default`, tanpa `if` di luarnya
-3. Baru setelah itu gabungkan keduanya
-4. Setelah lulus: HARD `&&` `||`, lalu WRITE
+**Sisa:** WRITE level untuk `&&` `||` belum dijalankan.
 
 ## Questions to revisit
 
