@@ -51,7 +51,7 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 | `if` / `else if` / `else`, urutan kondisi | 3 | Gate Log #3 (MEDIUM), 90 vs `>` vs `>=` | 3 | |
 | Ternary | 3 | Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol | 3 | |
 | `switch` & `break` | 3 | Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18) | 3 | |
-| `&&` `\|\|` `!` & short-circuit | 3 | EASY ✅ MEDIUM ✅ HARD ✅ (Gate Log #40-#47, HARD lulus setelah drill terpisah `if`/`else`). WRITE belum | 3 | sisa WRITE |
+| `&&` `\|\|` `!` & short-circuit | 3 | Gate Log #40-#48: EASY, MEDIUM, HARD, WRITE semua PASS. Guard 3 tingkat ditulis dari nol, diuji 5 kasus | 3 | `!` belum diuji terpisah |
 | `??` vs `\|\|` | | | 3 | belum |
 | `for`, `while`, `do...while` | | | 4 | belum |
 | `break`, `continue`, nested loop | | | 4 | belum |

@@ -431,4 +431,30 @@ const umur = 0;
 console.log(umur || 18);
 console.log(umur ?? 18);
 
+// Soal 32. Tulis dari nol. Guard 3 tingkat: pesanan bisa null,
+// pesanan.user bisa null, pesanan.user.nama bisa "". Aman -> diproses.
+// Jawab: pesanan && pesanan.user && pesanan.user.nama
+
+const pesanan = { user: { nama: "Yasin" } };
+
+if (pesanan && pesanan.user && pesanan.user.nama) {
+  console.log("diproses");
+} else {
+  console.log("ditolak");
+}
+
+// diuji dengan 5 isi berbeda, semua aman
+const kasus = [
+  { user: { nama: "Yasin" } },
+  null,
+  { user: null },
+  { user: { nama: "" } },
+  {}
+];
+
+for (const p of kasus) {
+  const hasil = p && p.user && p.user.nama ? "diproses" : "ditolak";
+  console.log(hasil);
+}
+
 //nullish coalescing ?? vs ||

@@ -135,6 +135,7 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 45 | EASY | switch + default | `role="guest"`, tidak ada case cocok | "default dijalankan", "Akses tamu" | PASS | — | — | 3/3 |
 | 46 | HARD | `&&` + if + switch | `sudahLogin=false`, `role="admin"`, `default: akses="tamu"` | false, blok if tidak jalan, switch tidak jalan, `akses: ""` | PASS | — | — | **soal yang sama dengan #37** — sekarang benar semua. Pemulihan penuh |
 | 47 | HARD | `&&` + if + switch + else | versi diperbaiki, ada `else` di luar switch | false → else → "tamu" | PASS | — | — | paham beda `default` (di dalam switch) vs `else` (di luar) |
+| 48 | WRITE | `&&` guard chain | tulis dari nol: guard 3 tingkat `pesanan.user.nama` | `pesanan && pesanan.user && pesanan.user.nama` | PASS | — | — | diuji 5 kasus (lengkap, null, user null, nama kosong, tanpa user) — semua benar, tidak crash. Kurang `;` di satu baris |
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 
@@ -142,8 +143,7 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - **Konsep dipisah dulu, baru digabung.** Ini yang seharusnya dilakukan sejak awal, bukan dicampur.
 - **HARD lulus** lewat 2 jawaban benar berturut-turut pada soal berbeda (#46, #47).
 - #46 adalah soal yang sama persis dengan #37 yang gagal 3×. Sekarang benar tanpa bantuan.
-- **Level gerbang:** EASY ✅ · MEDIUM ✅ · HARD ✅ · WRITE ⬜
-- Sisa: WRITE saja.
+- **Level gerbang:** EASY ✅ · MEDIUM ✅ · HARD ✅ · WRITE ✅ — **TUNTAS** (#48)
 
 **Catatan gerbang `&&` `\|\|` (2026-11-08, sesi lanjutan):**
 
@@ -187,7 +187,7 @@ Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
 **Cara pemulihannya:** konsep dipisah dulu — 5 drill `if`/`else` tanpa `switch` dan tanpa `&&`, lalu 1 drill `switch` tanpa `if`, baru digabung. Mencampur keduanya sejak awal adalah penyebab kegagalan.
 
-**Sisa:** WRITE level untuk `&&` `||` belum dijalankan.
+**Sisa:** `&&` `\|\|` sudah tuntas 4 level (#48). Konsep berikutnya: `!` (materi sudah ditulis, belum dibaca) dan `??` (sebagian, belum digerbang).
 
 ## Questions to revisit
 
