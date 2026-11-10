@@ -120,6 +120,28 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 30 | MEDIUM | `&&` `\|\|` | tambah `\|\| "Tamu"` | "error, mencetak user" | FAIL | CONCEPT | — | tidak ada error. Hasilnya tetap `"Yasin"`, `"Tamu"` tidak dipakai |
 | 31 | MEDIUM | `??` | `nama=""`, `\|\|` vs `??` | "`\|\|`→Tamu, `??`→`""`" + pilih `??` untuk nama | PASS | — | — | dua nilai benar. Pilihan `??` masuk akal untuk role, tapi untuk nama tampilan `\|\|` lebih tepat |
 | 32 | MEDIUM | `!` | soal diberikan sebelum materi ditulis | — | VOID | — | — | soal tidak sah: materi `!` belum pernah diberikan. Dibuang dari penilaian |
+| 33 | EASY | `&&` | `jumlah=2`, `nama=""`, dua baris `&&` | "lanjut", `""`, alasan: "kiri true dan kanan false, js hanya baca yang true" | FAIL | CONCEPT | — | nilai benar, mekanisme kebalik: JS WAJIB periksa kanan kalau kiri truthy |
+| 34 | MEDIUM | short-circuit | `pesanan.user=null`, cari bug | "ganti `.nama` jadi string" | FAIL | CONCEPT | — | memperbaiki data, bukan kode. Perbaikan benar: tambah guard `pesanan.user &&` |
+| 35 | MEDIUM | short-circuit | guard `user` ditaruh di KANAN `if (user.nama.length > 0 && user)` | "crash, karena `.nama` berisi null" | FAIL | CONCEPT | — | sebabnya bukan isi `.nama`, tapi posisi guard. `&&` baca kiri dulu |
+| 36 | MEDIUM | short-circuit | tulis ulang guard 2 tingkat: `produk.kategori.nama` | `produk && produk.kategori && produk.kategori.nama === "konser"` | PASS | — | — | kode benar, diuji 4 kasus (null, kategori null, cocok, tidak cocok) — semua aman |
+| 37 | HARD | `&&` + switch | `sudahLogin=false`, `role="admin"`, ada `default: akses="tamu"` | "tamu" | FAIL | CONCEPT | — | `if` gagal → `switch` tidak jalan → `default` tidak jalan → `akses` tetap `""` |
+| 38 | HARD | `&&` + switch | harapan developer: user belum login dapat "tamu" | "belum tercapai, karena if berisi teks kosong `""`" | FAIL | READING | — | `sudahLogin` itu `false` (boolean), bukan `""`. Lalu perbaikan diusulkan dengan membalik urutan — tidak menolong |
+| 39 | EASY | if/else | `nilai=45`, `if (nilai >= 70)` + `else` | "tidak tercetak apapun" | FAIL | READING | — | kode punya `else`. `if` gagal → `else` jalan → "tidak lulus" |
+
+**Catatan gerbang `&&` `\|\|` (2026-11-08, sesi lanjutan):**
+
+- EASY: **PASS** (#33 gagal alasan, lalu pulih lewat 2 jawaban benar berturut-turut)
+- MEDIUM: **PASS** (#36, jalur tulis-ulang; jalur temukan-bug gagal 2×)
+- HARD: **BELUM** (#37, #38 gagal)
+- WRITE: **BELUM**
+- Total 39 soal dalam sehari → melebihi batas #22b (20 soal). Cakupan terlalu lebar.
+- **Dihentikan** sesuai #17b: kesalahan "`if` gagal disangka menjalankan `default`" muncul 3× (#37, #38, #39).
+- Soal `switch (true)` (nilai=45) dicabut: bukan pola yang pernah diajarkan, melanggar #24.
+
+**Pelajaran untuk pengajar (aku):**
+- Mencampur soal `switch` dan `if/else` tanpa jeda membuat learner mencampur model mentalnya.
+- Menanyakan "apa yang berubah" ketika output-nya identik = soal cacat (#24).
+- Menjelaskan `&&` 3× dengan tabel yang sama melanggar #17c (analogi harus berbeda).
 
 **Catatan sesi `&&` `\|\|` (2026-11-08):**
 
@@ -142,9 +164,17 @@ Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
 | Concept | Question that broke it | Date |
 |---|---|---|
-| | | |
+| `&&` HARD: `if` gagal → `switch` tidak jalan | `sudahLogin=false`, `role="admin"`, ada `default: akses="tamu"` — dijawab "tamu", seharusnya `""` (#37). Diulang #38 dan #39. | 2026-11-08 |
 
-**Kosong.** `switch` sudah tuntas di keempat level pada 2026-11-08 (Gate Log #15-#20).
+**Kenapa ditunda:** kesalahan "`if` gagal disangka menjalankan `default`" muncul 3× dalam satu sesi (#37, #38, #39). Aturan #17b: berhenti.
+
+**Yang sudah benar:** EASY ✅, MEDIUM ✅ (jalur tulis-ulang). WRITE belum.
+
+**Rencana besok — mulai dari sini, bukan materi baru:**
+1. Drill terpisah 5 soal **hanya** `if` / `else` / `else if`, tanpa `switch` dan tanpa `&&`
+2. Lanjut 5 soal `switch` + `default`, tanpa `if` di luarnya
+3. Baru setelah itu gabungkan keduanya
+4. Setelah lulus: HARD `&&` `||`, lalu WRITE
 
 ## Questions to revisit
 

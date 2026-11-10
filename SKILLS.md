@@ -51,7 +51,7 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 | `if` / `else if` / `else`, urutan kondisi | 3 | Gate Log #3 (MEDIUM), 90 vs `>` vs `>=` | 3 | |
 | Ternary | 3 | Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol | 3 | |
 | `switch` & `break` | 3 | Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18) | 3 | |
-| `&&` `\|\|` `!` & short-circuit | | | 3 | belum |
+| `&&` `\|\|` `!` & short-circuit | 2 | EASY ✅, MEDIUM ✅ (tulis-ulang). HARD ❌, WRITE belum. Lihat `Catatan.md` Deferred | 3 | butuh drill ulang `if`/`else` terpisah |
 | `??` vs `\|\|` | | | 3 | belum |
 | `for`, `while`, `do...while` | | | 4 | belum |
 | `break`, `continue`, nested loop | | | 4 | belum |

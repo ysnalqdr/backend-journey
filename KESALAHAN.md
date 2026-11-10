@@ -52,6 +52,12 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 | 2026-11-08 | CONCEPT | `case 2` dikira sama dengan `case "2"` | `switch` membandingkan dengan `===`, tipe harus sama | 1 | belum |
 | 2026-11-08 | CONCEPT | jawab "berhenti di case B" tanpa sebut `break` | `break` yang menghentikan, bukan kecocokan `case` | 1 | ya |
 | 2026-11-08 | CONCEPT | output dijawab "reguler" padahal yang tercetak angka 72000 | nama `case` itu label, yang tercetak adalah nilai variabel | 1 | ya |
+| 2026-11-08 | CONCEPT | `&&` disangka mengembalikan `true` | `&&` mengembalikan nilai asli sisi yang dipilih, bukan boolean | **3** | belum |
+| 2026-11-08 | CONCEPT | "kiri true dan kanan false, JS hanya membaca yang true" | `&&` WAJIB periksa kanan kalau kiri truthy; berhenti hanya kalau kiri falsy | 1 | belum |
+| 2026-11-08 | CONCEPT | perbaikan crash: "ganti `.nama` jadi string" | memperbaiki data ≠ memperbaiki kode; guard ditaruh sebelum akses properti | 1 | belum |
+| 2026-11-08 | CONCEPT | `if` gagal disangka menjalankan `default` di dalam switch | `default` bagian dari `switch`; kalau `if` gagal, switch tidak jalan sama sekali | **3** | belum |
+| 2026-11-08 | READING | membaca `sudahLogin` (boolean `false`) sebagai teks kosong `""` | periksa tipe nilai sebelum menyimpulkan | 1 | belum |
+| 2026-11-08 | READING | menjawab "tidak tercetak apapun" padahal kode punya `else` | baca seluruh struktur `if/else` sebelum menjawab | 1 | belum |
 
 ---
 
