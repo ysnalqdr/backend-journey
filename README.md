@@ -105,14 +105,14 @@ A learning log for my path to becoming a backend engineer.
     pass carries no information. More than 20 questions in one day means the session is too
     broad: cut scope, do not cut logging.
 23. **System budget.** Maintaining the system — editing README, PLAN, SKILLS, KESALAHAN,
-    templates — is capped at 20 minutes per week, done only at the end of the week. An
-    improvement idea that appears mid-week goes into `IMPROVEMENTS.md` and waits. A system
-    that grows faster than the skill it tracks has become the work.
+    templates — is capped at 20 minutes per day. It may not replace a learning block: the
+    day's material comes first, the system edit comes after. A system that grows faster than
+    the skill it tracks has become the work.
 23b. **Improvement triage.** Every item in `IMPROVEMENTS.md` gets one of three verdicts at the
     weekly review: ADOPT (real failure observed), DEFER (plausible, no evidence yet),
     REJECT (solves a problem that does not exist). No item may stay undecided for more than
     two weeks — undecided items become permanent clutter.
-23c. **One change at a time.** Only one rule may be added per week. If two changes are
+23c. **One change at a time.** Only one rule may be added per day. If two changes are
     proposed, pick the one with observed evidence. Multiple simultaneous rule changes make
     it impossible to tell which one helped.
 24. **Question quality standard.** Every gate question must satisfy all five. A question that
@@ -176,6 +176,58 @@ A learning log for my path to becoming a backend engineer.
     dibaca 'cadangan kalau null'" teaches three things at once.
 
     If the symbol is unfamiliar, open `SYMBOLS.md` and quote the row before using it.
+
+---
+
+## Working Skills — what the job actually asks for
+
+The gate in the section above trains production: write it from memory. Work asks for
+something else: understand and change code that already exists. Google's review guide puts
+Design first and Style last. LaToza's study found 49% of developer time goes to bugs. The
+reading-to-writing ratio is above 10:1. These six rules train that side.
+
+29. **Code reading — one file per week, no running.** A file of 20–30 lines the learner has
+    never seen. The learner answers from reading alone, then runs it to check. Question set is
+    fixed: (a) what does it take in, (b) what does it produce, (c) what happens with bad input,
+    (d) which line is most fragile, (e) what would you rename and why. Running before reading
+    is forbidden — the whole point is to predict. Written up in `Trace.md`.
+
+30. **Code review — two directions, weekly.** The reviewer order is Google's: design, then
+    functionality, then complexity, then tests, then naming. Style comes last and is a nit.
+    - **Reviewing:** the learner receives code with defects and writes comments labelled
+      `[blocking]` (must fix) or `[nit]` (optional). Every blocking comment needs a reason,
+      not just "this is wrong".
+    - **Being reviewed:** the learner's own code gets reviewed the same way. The reviewer
+      points and asks; the reviewer never edits. Rule 21 still holds.
+
+31. **Documentation first, AI second.** When a task needs an API the learner does not know, the
+    first stop is MDN or the official docs, not the tutor. The learner quotes the relevant
+    line, then asks. Reporting "I could not find it" is a valid answer and gets logged — it
+    means the docs were unclear, which is real information.
+
+32. **Bug report before bug fix.** Every bug gets written in this shape before any code changes:
+
+    ```
+    Judul             : one specific sentence
+    Langkah reproduksi: 1. ... 2. ... 3. ...
+    Harapan           : what should happen
+    Kenyataan         : what actually happens
+    Dugaan penyebab   : hypothesis, explicitly marked as a guess
+    ```
+
+    The skill is separating observation from explanation. A report that mixes them cannot be
+    acted on by anyone else. Lives in `Catatan.md` under `## Bug log`.
+
+33. **Reading an unfamiliar codebase — one question, not full understanding.** Never read a
+    codebase to "understand it". Pick one question ("where does a ticket get its price?") and
+    follow the thread. Understanding accumulates as a side effect. This replaces the earlier
+    plan of reading a whole file top to bottom.
+
+34. **Debugging — evidence over intuition.** Four steps, in order: reproduce, locate, find root
+    cause, verify the fix. When stuck after 20 minutes on the same code, the cause is usually
+    the curse of knowledge — reading what was intended instead of what is written. The remedy
+    is to switch tactics, not to read again: explain the code line by line out loud, or print
+    the actual values.
 
 ---
 

@@ -36,15 +36,27 @@ Master plan. Kalau ada aturan yang bentrok dengan README, file ini yang menang.
 
 ## 3. Ritme harian
 
-| Blok | Durasi | Isi |
-|---|---|---|
-| A — Baca kode | 20 mnt | Trace atau code reading sesuai level. Tanpa AI |
-| B — Materi + latihan | 60–90 mnt | Materi hari itu. Tulis sendiri dulu, baru tanya |
-| C — DSA | 20 mnt | 1 soal. Mulai minggu 10. Pakai JS dulu, ulang di Java nanti |
-| D — Gerbang | 15 mnt | 3 tes (lihat bagian 4) |
-| E — Catat | 5 mnt | Bug log + What I learned |
+| Blok | Durasi | Isi | README |
+|---|---|---|---|
+| A — Baca kode | 20 mnt | 1 file asing 20–30 baris, jawab dari membaca saja, baru jalankan | #29 |
+| B — Materi + latihan | 60–90 mnt | Materi hari itu. Tulis sendiri dulu, baru tanya | — |
+| C — Review kode | 15 mnt | Bergantian: review kode berisi bug, atau kode sendiri direview | #30 |
+| D — Gerbang | 15 mnt | 4 level (lihat bagian 4) | — |
+| E — Catat | 5 mnt | Bug report + What I learned | #32 |
 
 Kalau waktu cuma 60 menit: kerjakan A, B, D. Blok C dan E boleh dilewat sehari, tapi tidak boleh dua hari berturut.
+
+**Rotasi mingguan** — supaya tidak ada yang terlupa:
+
+| Hari | Blok tambahan |
+|---|---|
+| Senin | Baca kode (A) — file baru |
+| Selasa | Review kode orang lain (C) |
+| Rabu | Baca dokumentasi sendiri (C) — tugas dari MDN, bukan dari tutor |
+| Kamis | Kode sendiri direview (C) |
+| Jumat | Weekly review + isi `Trace.md` |
+
+**DSA** 20 mnt terpisah, mulai minggu 10. **Debugging** (README #34) tidak dijadwalkan — dipakai saat benar-benar macet.
 
 ---
 
@@ -88,17 +100,24 @@ Gerbang ini yang menggantikan "target jam". Kamu tidak dinilai dari berapa lama 
 
 ## 5. Track membaca kode (Level 1–5)
 
-1 file per minggu, naik level seiring fase.
+1 file per minggu, naik level seiring fase. **Aturan #33 berlaku: baca untuk menjawab satu pertanyaan, bukan untuk "memahami seluruh file".**
 
-| Level | Kapan | Yang dibaca | Yang harus bisa dijawab |
+| Level | Kapan | Yang dibaca | Pertanyaan yang harus dijawab |
 |---|---|---|---|
-| 1 | Fase 1, minggu 1–6 | 10–20 baris JS, satu fungsi | Input apa, output apa, ada `if` atau tidak, tipe datanya apa |
+| 1 | Fase 1, minggu 1–6 | 20–30 baris, satu alur | Input apa, output apa, ada `if` atau tidak, tipe datanya apa, baris mana yang paling rapuh |
 | 2 | Fase 1, minggu 7–12 | 30–50 baris, satu file utuh | Alur eksekusi, apa yang terjadi kalau input salah, di mana tipe tidak cocok |
 | 3 | Fase 2 | File backend kecil (Express/Spring) | Endpoint apa, validasi di mana, apa yang disimpan ke database |
 | 4 | Fase 3 | Beberapa file sekaligus | Dependency antar file, siapa memanggil siapa, error ditangani di mana |
 | 5 | Fase 3–4 | Sistem (Soundwave penuh) | Lapisan layer, di mana kebenaran data dipegang, titik risiko |
 
-**Aturan:** baca dulu 10 menit tanpa bantuan. Kalau mentok, tulis pertanyaannya dulu — sering menulis pertanyaan sudah menyelesaikan masalahnya. Baru tanya AI, dan minta **penjelasan**, bukan kode.
+**Lima pertanyaan tetap level 1** (README #29):
+1. Apa yang masuk ke kode ini?
+2. Apa yang keluar?
+3. Apa yang terjadi kalau inputnya salah?
+4. Baris mana yang paling rapuh kalau syarat berubah?
+5. Apa yang akan kamu ganti namanya, dan kenapa?
+
+**Aturan:** baca dulu 10 menit tanpa bantuan, **tanpa menjalankan**. Tulis jawaban. Baru jalankan untuk memeriksa. Kalau mentok, tulis pertanyaannya dulu — sering menulis pertanyaan sudah menyelesaikan masalahnya.
 
 ---
 
