@@ -258,6 +258,15 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     A session that ends without these three has no evidence, and evidence is the only thing
     that survives a month.
 
+37. **Health check before starting.** Run `python check_system.py` at the start of each week.
+    It verifies syntax, guards, keys, template locations, and evidence files. Exit code 1 means
+    something critical is broken — fix it before studying. A warning is not a failure but must
+    be read.
+
+    Why: the system audit on 2026-11-08 found two exercises that leaked their own answers and
+    one file referencing a template that no longer existed. None of it was visible from reading
+    the files; all of it was visible to a script.
+
 ---
 
 ## Structure
@@ -268,6 +277,15 @@ Phase 1 Foundation/
     01_Js Basic/
       Exercises/
       Catatan.md
+    Trace.md
+Working Skills/
+  Templates/
+  Kunci/
+  Reading/
+  Review/
+  Docs/
+  Debug/
+check_system.py
 ```
 
 Naming pattern:
