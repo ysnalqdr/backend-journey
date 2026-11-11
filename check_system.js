@@ -114,7 +114,11 @@ for (const d of DOCS) {
     const src = read(d);
     let m;
     while ((m = REF.exec(src)) !== null) {
-        const ref = m[1].trim();
+        let ref = m[1].trim();
+
+        // buang awalan perintah: "node x.js", "python x.py", "git x"
+        ref = ref.replace(/^(node|python3?|npx|git|npm)\s+/i, "").trim();
+
         if (seen.has(ref)) continue;
         if (ref.startsWith("NN_")) continue;
         if (FUTURE.has(path.basename(ref))) continue;
