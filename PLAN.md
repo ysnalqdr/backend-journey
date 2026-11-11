@@ -123,7 +123,7 @@ Gerbang ini yang menggantikan "target jam". Kamu tidak dinilai dari berapa lama 
 
 ## 6. Trace mingguan
 
-1 alur per minggu, dilacak manual, ditulis di `Trace.md`. Template ada di `_templates/Trace.md`.
+1 alur per minggu, dilacak manual, ditulis di `Trace.md` di folder minggu. Template ada di `Working Skills/Templates/CodeReading.md`.
 
 Urutan alur Soundwave (dari mudah):
 
@@ -144,7 +144,7 @@ Sesudah minggu 8, ulangi dari awal tapi dengan pertanyaan yang lebih dalam (di m
 
 ## 7. Bug log
 
-Minimal 1 entri per minggu, di `Catatan.md` bagian `## Bug log`. Template ada di `_templates/BugLog.md`.
+Minimal 1 entri per minggu, di `Catatan.md` bagian `## Bug log`. Template ada di `Working Skills/Templates/BugReport.md`.
 
 Target: 20 entri dalam sebulan pertama. Setelah itu kamu akan mulai melihat pola bug yang berulang — itu tanda naik level.
 

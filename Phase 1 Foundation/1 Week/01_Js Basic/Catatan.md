@@ -77,9 +77,17 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 
 ## Bug log
 
-| # | Gejala | Akar masalah | Fix |
-|---|---|---|---|
-| 1 | | | |
+Satu entri per bug. Format lengkap ada di `Working Skills/Templates/BugReport.md`.
+
+| # | Tanggal | Judul | Langkah reproduksi | Harapan | Kenyataan | Dugaan penyebab | Akar masalah | Status |
+|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | |
+
+**Aturan:**
+- **Dugaan penyebab** ditandai dugaan, bukan fakta
+- **Akar masalah** diisi setelah diperbaiki — boleh beda dari dugaan
+- **Status:** `terbuka` / `diperbaiki` / `tidak bisa direproduksi`
+- Minimal 1 entri per minggu (README #7)
 
 ## Gate Log
 

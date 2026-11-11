@@ -1,7 +1,7 @@
 # Debug 01 — Stok Berkurang Dua Kali
 
-**Tanggal dibuat:** 2026-11-08
-**Aturan:** README #32, #34
+**Level:** 1
+**Aturan:** README #32 (bug report) dan #34 (debugging 4 langkah)
 
 ---
 
@@ -11,41 +11,37 @@ Laporan dari user, ditulis apa adanya:
 
 > "Aku klik tombol bayar, kagetnya stok tiket langsung berkurang dua, padahal aku cuma beli satu. Uangku kepotong sekali sih."
 
-Kamu diminta menangani. **Sebelum** menyentuh kode, tulis bug report-nya.
+Kamu diminta menangani.
 
 ---
 
 ## Langkah 1 — Tulis bug report
 
-Salin `Templates/BugReport.md`, isi bagian ini saja dulu:
+Salin `Templates/BugReport.md`. Isi **tanpa membaca kode**.
 
-- Judul
-- Langkah reproduksi (kamu harus **mengarang** langkahnya dari laporan di atas — laporan user hampir selalu tidak lengkap)
-- Harapan
-- Kenyataan
-- Dugaan penyebab (tandai sebagai dugaan)
+Bagian yang harus kamu isi:
 
-Jangan baca kode dulu. Ini latihan menulis laporan dari informasi yang tidak lengkap — persis seperti kerja nyata.
+- **Judul** — satu kalimat spesifik
+- **Langkah reproduksi** — kamu harus **mengarang** dari laporan di atas. Laporan user hampir selalu tidak lengkap.
+- **Harapan**
+- **Kenyataan**
+- **Dugaan penyebab** — tandai jelas ini dugaan
 
 ---
 
 ## Langkah 2 — Baca kode
 
-Setelah laporan selesai, baru buka:
-
-```
-debug_01.js
-```
+Baru setelah laporan selesai, buka `debug_01.js`.
 
 ---
 
 ## Langkah 3 — Telusuri
 
-Jawab berurutan. Jangan lompat ke perbaikan.
+Jawab berurutan. **Jangan lompat ke perbaikan.**
 
 ### 3a. Reproduce
 
-Jalankan `node debug_01.js`. Apa yang tercetak?
+Ubah `sudahLapor` jadi `true`, jalankan. Apa yang tercetak?
 
 >
 
@@ -55,25 +51,29 @@ Apakah perilaku di laporan user muncul?
 
 ### 3b. Locate
 
-Baris mana yang menyebabkan stok berkurang?
+Baris mana yang mengurangi stok?
 
 >
 
-Baris mana yang menyebabkan stok berkurang **dua kali**?
+Baris mana yang membuatnya berkurang **dua kali**?
 
 >
 
 ### 3c. Root cause
 
-Bukan "karena ada dua pengurangan". Itu gejala, bukan akar.
+Bukan "karena ada dua pengurangan". Itu **gejala**, bukan akar.
 
 Akar masalahnya: **apa yang seharusnya mencegah pengurangan kedua terjadi?**
 
 >
 
+Petunjuk: perhatikan urutan — validasi, pengurangan, penyimpanan, notifikasi, lalu apa?
+
+>
+
 ### 3d. Verifikasi
 
-Kalau dugaanmu benar, apa yang akan berubah kalau satu baris tertentu dihapus? Coba, lalu jelaskan.
+Kalau dugaanmu benar, apa yang berubah kalau baris pengurangan kedua dihapus? Coba, lalu jelaskan.
 
 >
 
@@ -89,9 +89,15 @@ Tulis perbaikannya. **Satu perubahan saja.** Jangan sekalian merapikan yang lain
 
 ## Langkah 5 — Cegah terulang
 
-Kalau bug ini muncul lagi besok dalam bentuk lain, apa yang akan menangkapnya?
+Kalau bug ini muncul lagi besok dalam bentuk berbeda, apa yang akan menangkapnya?
 
 >
+
+---
+
+## Setelah selesai
+
+Bandingkan dengan `Kunci/Debug 01.md`.
 
 ---
 
@@ -107,6 +113,6 @@ Kalau bug ini muncul lagi besok dalam bentuk lain, apa yang akan menangkapnya?
 
 ---
 
-## Catatan
+## Catatan dari kerja nyata
 
-Di kerja nyata, langkah 1 dan 3c adalah yang paling sering dilewati junior. Akibatnya: perbaikan menutupi gejala, bug kembali dua minggu kemudian dengan bentuk berbeda.
+Langkah 1 dan 3c adalah yang paling sering dilewati. Akibatnya: perbaikan menutupi gejala, bug kembali dua minggu kemudian dengan bentuk berbeda.

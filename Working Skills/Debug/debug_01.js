@@ -1,26 +1,31 @@
 // debug_01.js
-// Latihan debugging. Baca laporannya dulu di 01_Stok Berkurang Dua Kali.md
+// Latihan debugging. Level 1.
+//
+// JANGAN dijalankan sebelum menulis bug report di
+// "01_Stok Berkurang Dua Kali.md".
 
-const stokAwal = 10;
-let stok = stokAwal;
+const sudahLapor = false;       // ubah jadi true SETELAH menulis bug report
 
-// simulasi: user memilih 1 tiket
-const jumlahBeli = 1;
+if (!sudahLapor) {
+    console.log("STOP.");
+    console.log("Tulis bug report dulu di 01_Stok Berkurang Dua Kali.md.");
+    console.log("Baru ubah sudahLapor jadi true.");
+} else {
 
-// validasi: stok cukup?
-if (stok >= jumlahBeli) {
-    // kurangi stok
-    stok = stok - jumlahBeli;
+    const stokAwal = 10;
+    let stok = stokAwal;
 
-    // simpan pesanan
-    console.log("pesanan dibuat, stok sekarang:", stok);
+    const jumlahBeli = 1;
 
-    // kirim notifikasi
-    console.log("notifikasi terkirim");
+    if (stok >= jumlahBeli) {
+        stok = stok - jumlahBeli;
+        console.log("pesanan dibuat, stok sekarang:", stok);
 
-    // kurangi stok (untuk cadangan)
-    stok = stok - jumlahBeli;
+        console.log("notifikasi terkirim");
+
+        stok = stok - jumlahBeli;
+    }
+
+    console.log("stok akhir:", stok);
+    console.log("stok seharusnya:", stokAwal - jumlahBeli);
 }
-
-console.log("stok akhir:", stok);
-console.log("stok seharusnya:", stokAwal - jumlahBeli);

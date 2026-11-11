@@ -21,10 +21,43 @@ Sumber tiap aturan ada di README #29–#34.
 | Folder | Untuk | Aturan |
 |---|---|---|
 | `Templates/` | format kosong, disalin setiap sesi | — |
+| `Kunci/` | jawaban — **jangan dibuka sebelum mengerjakan** | — |
 | `Reading/` | file kode asing + pertanyaan | #29 |
 | `Review/` | kode berisi bug untuk direview | #30 |
 | `Docs/` | tugas mencari jawaban di dokumentasi resmi | #31 |
 | `Debug/` | bug report dan telusur | #32, #34 |
+
+---
+
+## Penjaga anti-bocor
+
+Setiap file `.js` di folder ini punya saklar di baris atas:
+
+```javascript
+const sudahMenjawab = false;
+```
+
+Selama `false`, file hanya mencetak STOP. Kode aslinya tidak dijalankan, output tidak terlihat.
+
+**Ubah jadi `true` hanya setelah** kamu menulis jawaban di `Trace.md`. Itu satu-satunya cara menjalankan latihan ini dengan benar.
+
+Kalau dijalankan sebelum menjawab, latihan hangus — kamu melihat output, bukan memprediksinya.
+
+---
+
+## Alur satu latihan
+
+```
+1. Buka file .md, baca konteks dan pertanyaan
+2. Baca file .js — TANPA menjalankan
+3. Tulis jawaban di Trace.md
+4. Ubah saklar jadi true, jalankan
+5. Bandingkan dengan Kunci/
+6. Isi kolom "yang meleset" di Trace.md
+7. Update status di SKILLS.md bagian Working Skills
+```
+
+Kalau langkah 3 dilewati, latihan ini tidak mengukur apa pun.
 
 ---
 
@@ -47,6 +80,7 @@ Sumber tiap aturan ada di README #29–#34.
 3. **Label `[blocking]` dan `[nit]` wajib dipakai.** Tanpa label, penulis kode tidak tahu mana yang harus dikerjakan dulu.
 4. **Dokumentasi sebelum tutor.** Kalau macet, tulis dulu apa yang kamu cari. "Tidak ketemu" itu jawaban yang sah.
 5. **Bug report sebelum perbaikan.** Pisahkan "apa yang terjadi" dari "kenapa".
+6. **`Kunci/` dibuka paling akhir**, setelah menjawab — bukan untuk mencari jawaban.
 
 ---
 

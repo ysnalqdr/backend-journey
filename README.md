@@ -231,6 +231,35 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
 
 ---
 
+## Session Protocol
+
+35. **Every session opens with the same four checks, in this order.** No material starts until
+    all four are done. Two minutes total.
+
+    1. **`## Deferred`** in the week's `Catatan.md` — is anything waiting? If yes, that concept
+       comes first, not new material (rule 25).
+    2. **`REVIEW_QUEUE.md`** — anything due today? Re-check it before new material (rule 20).
+    3. **Today's block** from the rotation in PLAN.md §3 — reading, review, docs, or own-code
+       review? Do that block before the daily gate.
+    4. **`## Explain back`** — is yesterday's entry still empty? If yes, that is the first task,
+       not the last.
+
+    Why: without this, a due re-check silently expires, a Deferred concept is forgotten, and the
+    working-skills rotation never happens. Three of the four failures found in the system audit
+    came from having no opening protocol.
+
+36. **Every session closes with three writes.** Not optional, not "later".
+
+    1. **Gate Log** — every FAIL, and every MEDIUM/HARD pass (rule 22b).
+    2. **`## What I learned`** — one line, in own words.
+    3. **`## Explain back`** — five lines, no notes. If it cannot be written, the day is not
+       finished (rule 6).
+
+    A session that ends without these three has no evidence, and evidence is the only thing
+    that survives a month.
+
+---
+
 ## Structure
 
 ```

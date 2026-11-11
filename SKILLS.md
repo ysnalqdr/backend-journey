@@ -150,6 +150,37 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 ---
 
+## Working Skills — kemampuan kerja
+
+Delapan konsep ini **tidak bisa** dinilai dengan "tulis dari nol". Tesnya berbeda, dan buktinya ada di `Working Skills/`.
+
+| Konsep | Status | Bukti | Latihan |
+|---|---|---|---|
+| Membaca kode asing | 0 | | `Reading/` |
+| Menulis komentar review | 0 | | `Review/` |
+| Menerima review | 0 | | `Review/` |
+| Mencari di dokumentasi | 0 | | `Docs/` |
+| Menulis bug report | 0 | | `Debug/` |
+| Debugging sistematis | 0 | | `Debug/` |
+| Membaca codebase dengan satu pertanyaan | 0 | | `Trace.md` |
+| Menilai desain, bukan cuma sintaks | 0 | | `Review/` |
+
+**Skala untuk working skills** (beda dari skala konsep):
+
+| Status | Arti | Tesnya |
+|---|---|---|
+| **0** | belum pernah | — |
+| **1** | bisa kalau dibantu | menjawab dengan tutor menuntun |
+| **2** | bisa sendiri, hasil kurang | jawaban ada tapi meleset di beberapa bagian |
+| **3** | bisa sendiri, hasil baik | ≥ 70% benar dan tidak ada false positive |
+| **4** | bisa mengoreksi orang lain | menemukan kesalahan review orang lain dan menjelaskan kenapa |
+
+**Aturan bukti:** status 3+ wajib menyebut file latihan dan tanggal. Tanpa itu, maksimal 2.
+
+**Target sebelum melamar:** kelima working skills minimal status 3.
+
+---
+
 ## Cara pakai
 
 1. **Awal minggu:** lihat konsep minggu ini, isi status awal (biasanya 0 atau 1)
@@ -163,8 +194,9 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 | Fase | Konsep | Status 3+ | Status ≤2 |
 |---|---|---|---|
-| 1 — JS | 34 | | |
-| 2 — Java | 21 | | |
-| 3 — Port | 13 | | |
-| 4 — Go & DSA | 11 | | |
-| **Total** | **79** | | |
+| 1 — JS | 34 | 14 | 20 |
+| 2 — Java | 21 | 0 | 21 |
+| 3 — Port | 13 | 0 | 13 |
+| 4 — Go & DSA | 11 | 0 | 11 |
+| Working Skills | 8 | 0 | 8 |
+| **Total** | **87** | **14** | **73** |

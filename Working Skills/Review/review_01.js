@@ -1,34 +1,39 @@
 // review_01.js
-// Kode untuk direview. Baca dulu, jangan langsung jalankan.
+// Kode untuk direview. Level 1.
+//
+// JANGAN dijalankan sebelum menulis komentar review di "01_Kode Review.md".
+// Jalankan hanya untuk MEMBUKTIKAN temuan, bukan untuk mencari temuan.
 
-const pesanan = {
-    total: 300000,
-    kodePromo: "HEMAT",
-    member: false
-};
+const sudahReview = false;      // ubah jadi true SETELAH menulis komentar
 
-let d = 0;
-let x = pesanan.total;
-
-if (pesanan.kodePromo === "HEMAT") {
-    d = 10;
-}
-
-if (pesanan.member) {
-    d = 20;
-}
-
-let akhir = x - (x * d / 100);
-
-if (akhir < 0) {
-    akhir = 0;
-}
-
-if (akhir == 0) {
-    console.log("gratis");
+if (!sudahReview) {
+    console.log("STOP.");
+    console.log("Tulis komentar review dulu di 01_Kode Review.md.");
+    console.log("Baru ubah sudahReview jadi true.");
 } else {
-    console.log("bayar", akhir);
-}
 
-let diskonRupiah = x * d / 100;
-let totalAkhir = x - diskonRupiah;
+    const pesanan = {
+        total: 300000,
+        kodePromo: "HEMAT",
+        member: false
+    };
+
+    let diskonPersen = 0;
+
+    if (pesanan.kodePromo === "HEMAT") {
+        diskonPersen = 10;
+    }
+
+    if (pesanan.member) {
+        diskonPersen = 20;
+    }
+
+    const potongan = pesanan.total * diskonPersen / 100;
+    const hargaAkhir = pesanan.total - potongan;
+
+    if (hargaAkhir < 0) {
+        console.log("gratis");
+    } else {
+        console.log("bayar", hargaAkhir);
+    }
+}
