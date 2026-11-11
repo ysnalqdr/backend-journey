@@ -23,6 +23,7 @@ Kalau gagal: status turun ke 2, masuk antrean lagi 2 hari kemudian.
 | `switch` + `break` | 2026-11-08 | 2026-11-10 | | |
 | `&&` `\|\|` short-circuit | 2026-11-08 | **2026-11-10** | | |
 | `!` logical not | 2026-11-08 | **2026-11-10** | | |
+| `??` vs `\|\|` | 2026-11-08 | **2026-11-10** | | |
 
 ---
 

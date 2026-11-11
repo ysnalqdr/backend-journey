@@ -52,7 +52,7 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 | Ternary | 3 | Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol | 3 | |
 | `switch` & `break` | 3 | Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18) | 3 | |
 | `&&` `\|\|` `!` & short-circuit | 3 | Gate Log #40-#48 (`&&` `\|\|`), #49-#59 (`!`). Semua 4 level PASS | 3 | |
-| `??` vs `\|\|` | | | 3 | belum |
+| `??` vs `\|\|` | 3 | Gate Log #60-#65: EASY, MEDIUM, HARD, WRITE semua PASS. Resolver `limit`/`diskon` diuji 4 nilai | 3 | |
 | `for`, `while`, `do...while` | | | 4 | belum |
 | `break`, `continue`, nested loop | | | 4 | belum |
 | Fungsi, parameter, return | | | 2 | belum |

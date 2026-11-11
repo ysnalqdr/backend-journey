@@ -145,4 +145,33 @@ const b = false;
 console.log(!a && b);
 console.log(!(a && b));
 
-//operator ?? vs ||
+// ?? vs ||
+
+const diskonA = 0;
+const diskonB = null;
+
+console.log(diskonA || 10);
+console.log(diskonA ?? 10);
+console.log(diskonB || 10);
+console.log(diskonB ?? 10);
+
+// variasi: "" dan false, dua-duanya falsy tapi bukan nullish
+const teksKosong = "";
+const nilaiFalse = false;
+
+console.log(teksKosong || "cadangan");
+console.log(teksKosong ?? "cadangan");
+console.log(nilaiFalse || "cadangan");
+console.log(nilaiFalse ?? "cadangan");
+
+// variasi: NaN itu number, jadi ?? mempertahankannya
+console.log(NaN || "cadangan");
+console.log(NaN ?? "cadangan");
+
+// variasi: gabung ?? dengan ternary
+const limitDariClient = 0;
+const limit = limitDariClient ?? 10;
+const pesan = limit > 0 ? "pakai limit " + limit : "limit tidak valid";
+
+console.log(limit);
+console.log(pesan);

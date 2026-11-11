@@ -110,6 +110,44 @@ const sudahLogin = false;
 | `if (!stok)` | "kalau stok tidak ada" ← **hindari untuk angka** |
 | `if (stok !== 0)` | "kalau stok bukan nol" |
 
+### Cara membaca `??` (nullish coalescing)
+
+Nama lengkapnya **nullish coalescing operator**. Dibaca: **"cadangan kalau null"**.
+
+Kata *nullish* artinya **null-ish** = mirip null. Yang termasuk cuma dua: `null` dan `undefined`.
+
+```javascript
+stok ?? 0        // dibaca: "stok, kalau null pakai 0"
+nama ?? "Tamu"   // dibaca: "nama, kalau null pakai Tamu"
+```
+
+| Kode | Dibaca |
+|---|---|
+| `stok ?? 0` | "stok, kalau null atau undefined pakai 0" |
+| `nama ?? "Tamu"` | "nama, kalau null pakai Tamu" |
+
+**Bedanya dengan `\|\|`:** `\|\|` mengganti semua yang falsy (`0`, `""`, `false`, `NaN`). `??` hanya mengganti `null` dan `undefined`.
+
+```javascript
+const stok = 0;
+
+stok || 100    // 100  ← stok 0 dianggap kosong, hilang
+stok ?? 100    // 0    ← stok 0 dipertahankan, karena bukan null
+```
+
+**Aturan pakai:** angka dan boolean → `??`. Teks tampilan → `\|\|`.
+
+### Cara membaca `&&` dan `\|\|`
+
+| Kode | Dibaca |
+|---|---|
+| `a && b` | "a dan b" |
+| `a \|\| b` | "a atau b" |
+| `umur >= 17 && punyaTiket` | "umur cukup dan punya tiket" |
+| `punyaTiket \|\| punyaUndangan` | "punya tiket atau punya undangan" |
+
+Nama lengkapnya **logical AND operator** dan **logical OR operator**.
+
 ### Tabel kebenaran `&&` dan `||`
 
 | A | B | `A && B` | `A \|\| B` |

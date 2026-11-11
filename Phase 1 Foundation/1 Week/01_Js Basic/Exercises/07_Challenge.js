@@ -568,4 +568,68 @@ if (user && user.nama) {
   console.log("belum login");
 }
 
-//nullish coalescing ?? vs ||
+// Soal 42. diskonA = 0, diskonB = null. Empat baris: || dan ??.
+// Jawab: 10, 0, 10, 10. Baris 3 dan 4 sama karena null itu falsy DAN nullish.
+
+const diskonA = 0;
+const diskonB = null;
+
+console.log(diskonA || 10);
+console.log(diskonA ?? 10);
+console.log(diskonB || 10);
+console.log(diskonB ?? 10);
+
+// Soal 43. Ada bug di mana?
+// nama ?? "Tamu" tidak mengganti "" karena "" bukan nullish.
+// Untuk nama tampilan, yang tepat adalah ||.
+
+const namaKosong2 = "";
+
+console.log(namaKosong2 ?? "Tamu");
+console.log(namaKosong2 || "Tamu");
+
+// Soal 44. limitDariClient = 0. limit pakai ??, lalu ternary.
+// Jawab: limit 0, pesan "limit tidak valid". Kalau null -> 10 dan "pakai limit 10".
+
+const limitDariClient = 0;
+const limitDefault = 10;
+
+const limit = limitDariClient ?? limitDefault;
+const pesanLimit = limit > 0 ? "pakai limit " + limit : "limit tidak valid";
+
+console.log(limit);
+console.log(pesanLimit);
+
+// versi null
+const limitDariClientNull = null;
+const limitNull = limitDariClientNull ?? limitDefault;
+console.log(limitNull);
+
+// Soal 45. jumlahNotif = 0, pengaturan = null. Rantai ?? lalu ||.
+// Jawab: a = 0, b = "default", c = "default".
+
+const jumlahNotif = 0;
+const pengaturan = null;
+
+const nilaiA = jumlahNotif ?? 5;
+const nilaiB = pengaturan ?? "default";
+const nilaiC = nilaiA || nilaiB;
+
+console.log(nilaiA);
+console.log(nilaiB);
+console.log(nilaiC);
+
+// Soal 46. Tulis dari nol. limit null -> 10, diskon 0 harus tetap 0.
+// Jawab: dua-duanya pakai ??.
+
+const limitDariDb = null;
+const diskonDariDb = 0;
+
+const limitDb = limitDariDb ?? 10;
+const diskonDb = diskonDariDb ?? 0;
+
+console.log(limitDb);
+console.log(diskonDb);
+
+// versi salah, dibiarkan sebagai bukti
+// const diskon = !diskonDariDb || 0;  -> true, karena ! menghancurkan nilai 0

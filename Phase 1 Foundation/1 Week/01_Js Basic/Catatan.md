@@ -30,14 +30,14 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - [x] Ternary operator `? :`
 - [x] `switch` statement
 - [x] Logical operators `&&`, `||`, `!`
-- [ ] Nullish coalescing `??`
+- [x] Nullish coalescing `??`
 - [x] Truthy and falsy values
 
 **Catatan status 2026-11-08:**
 - `&&` `||`: **TUNTAS** 4 level (Gate Log #40-#48). Guard 3 tingkat ditulis dari nol, diuji 5 kasus.
 - `!`: **TUNTAS** 4 level (Gate Log #49-#59). Guard clause 3 cabang ditulis dari nol, diuji 3 kasus.
-- `??`: sudah dipakai di latihan (soal 29-31), belum digerbang.
-- Sisa Day 3: `??` saja.
+- `??`: **TUNTAS** 4 level (Gate Log #60-#65). Resolver `limit`/`diskon` ditulis dari nol, diuji 4 nilai.
+- **Day 3 SELESAI.** Semua 6 topik tuntas.
 
 ### Day 4 - Loops
 - [ ] `for` loop
@@ -148,6 +148,12 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 57 | HARD | `!` + `&&` | `sudahLogin && !punyaTiket` | true, boolean, else if tidak diperiksa, "Silakan beli tiket" | PASS | — | — | 3/3, mekanisme `!` di dalam `&&` tepat |
 | 58 | HARD | `!` precedence | `!a && b` vs `!(a && b)` | false, true, alasan prioritas benar | PASS | — | — | 3/3, paham `!` mengikat lebih kuat dari `&&` |
 | 59 | WRITE | `!` guard clause | tulis 3 cabang: belum login / nama kosong / sambut | `user && user.nama` / `user && !user.nama` / else | PASS | — | — | diuji 3 kasus, semua benar. Percobaan pertama gagal karena soal meminta menulis objek (materi minggu 4) — soal diperbaiki |
+| 60 | EASY | `??` | `diskonA=0`, `diskonB=null`, empat baris `\|\|` vs `??` | 10, 0, lalu "sama karena null falsy dan nullish" | PASS | — | — | 4/4, memakai kata "nullish" dan "falsy" di tempat yang tepat |
+| 61 | MEDIUM | `??` | bug: `nama=""`, `nama ?? "Tamu"` untuk nama tampilan | `""`, tidak sesuai keinginan, seharusnya `\|\|` | PASS | — | — | 3/3, paham `??` tidak mengganti `""` |
+| 62 | HARD | `??` + ternary | `limitDariClient=0`, `limit = x ?? 10`, lalu ternary | 0, false, "0" dan "limit tidak valid"; kalau null → 10 dan "pakai limit 10" | PASS | — | — | 4/4 |
+| 63 | HARD | `??` + `\|\|` | `jumlahNotif=0`, `pengaturan=null`, rantai `??` lalu `\|\|` | a=0, b="default", c="default" | PASS | — | — | 4/4, paham `0` sah untuk `??` tapi falsy untuk `\|\|` |
+| 64 | WRITE | `??` | tulis resolver: `limit` null→10, `diskon` 0 harus tetap 0 | typo `limidaridb`/`limitdaridb` + `!diskon \|\| 0` → `true` | FAIL | SYNTAX + CONCEPT | — | dua kesalahan: nama variabel tidak konsisten, dan `!` dipakai untuk nilai cadangan padahal `!` menghancurkan nilai asli |
+| 65 | WRITE | `??` | tulis ulang resolver dengan operator yang tepat | `limitDariDb ?? 10`, `diskonDariDb ?? 0` | PASS | — | — | diuji 4 nilai (null, 0, 25, undefined) untuk dua variabel — semua benar |
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 

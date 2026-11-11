@@ -167,7 +167,15 @@ A learning log for my path to becoming a backend engineer.
     question countable. Without the third section the learner spends attention on what
     the code contains instead of how it behaves.
 
-    Never rename a section, never merge two, never add a fifth.
+28. **Never use a symbol without naming it first.** When introducing or using any operator or
+    punctuation the learner has not been taught, write its full name in the same message:
+    `?? (nullish coalescing operator)`, `&& (logical AND)`, `! (logical NOT)`, `\|\| (logical OR)`.
+
+    Why: a symbol the learner cannot name is a symbol the learner cannot search, ask about, or
+    remember. "Pakai `??`" teaches nothing; "pakai `??`, namanya nullish coalescing operator,
+    dibaca 'cadangan kalau null'" teaches three things at once.
+
+    If the symbol is unfamiliar, open `SYMBOLS.md` and quote the row before using it.
 
 ---
 
