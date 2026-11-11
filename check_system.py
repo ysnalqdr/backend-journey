@@ -154,10 +154,55 @@ for c in catatan:
             ok(f"explain back terisi: {c.parent.name}")
 
 # ---------- 10. Review queue jatuh tempo ----------
+import datetime
 rq = read(ROOT / "REVIEW_QUEUE.md")
-due = re.findall(r"\|\s*(\d{4}-\d{2}-\d{2})\s*\|", rq)
-if due:
-    ok(f"review queue: {len(due)} item terjadwal")
+today = datetime.date.today()
+overdue = []
+pending = 0
+for line in rq.splitlines():
+    m = re.match(r"\|\s*(.+?)\s*\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*\**(\d{4}-\d{2}-\d{2})\**\s*\|(.*)\|", line)
+    if not m:
+        continue
+    konsep, _, due, rest = m.groups()
+    if konsep.strip().lower() in ("concept", "---"):
+        continue
+    if "|" not in rest:
+        continue
+    hasil = rest.split("|")[0].strip()
+    if hasil:
+        continue
+    pending += 1
+    d = datetime.date.fromisoformat(due)
+    if d < today:
+        overdue.append(f"{konsep.strip()} (jatuh tempo {due})")
+
+if overdue:
+    for o in overdue:
+        warn(f"re-check terlewat: {o}")
+else:
+    ok(f"review queue: {pending} item menunggu, tidak ada yang terlewat")
+
+# ---------- 10b. Setiap file .js latihan punya .md pendamping ----------
+ws = ROOT / "Working Skills"
+if ws.exists():
+    orphan = []
+    for js in ws.rglob("*.js"):
+        sibling = list(js.parent.glob("*.md"))
+        if not sibling:
+            orphan.append(str(js.relative_to(ROOT)))
+    if orphan:
+        for o in orphan:
+            err(f"file .js tanpa .md pendamping: {o}")
+    else:
+        ok("working skills: setiap .js punya .md")
+
+# ---------- 10c. Jumlah aturan README ----------
+main_rules = len(re.findall(r"^\d+\. ", readme, re.M))
+sub_rules = len(re.findall(r"^\d+[a-g]\. ", readme, re.M))
+if main_rules < 30:
+    warn(f"aturan README hanya {main_rules}, seharusnya ≥ 30")
+else:
+    ok(f"aturan README: {main_rules} utama + {sub_rules} sub = {main_rules + sub_rules}")
 
 # ---------- 11. Gate log ada isinya ----------
 for c in catatan:
