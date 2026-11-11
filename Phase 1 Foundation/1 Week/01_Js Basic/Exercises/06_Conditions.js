@@ -107,4 +107,42 @@ switch (role) {
         break;
 }
 
-//operator logika && || !
+// && dan ||
+
+const jumlah = 2;
+const nama = "";
+
+console.log(jumlah && "lanjut");
+console.log(nama && "lanjut");
+
+// variasi: kiri truthy, kanan diambil apa adanya
+const stokAda = 5;
+const stokKosong = 0;
+
+console.log(stokAda && "tersedia");
+console.log(stokKosong && "tersedia");
+
+// variasi: || mengambil kiri kalau kiri truthy
+console.log(stokAda || "habis");
+console.log(stokKosong || "habis");
+
+// ! dan !!
+
+const belumDibaca = 3;
+
+console.log(!belumDibaca);
+console.log(!!belumDibaca);
+
+// variasi: ! pada nilai falsy
+console.log(!0);
+console.log(!"");
+console.log(!null);
+
+// variasi: ! mengikat lebih kuat dari &&
+const a = true;
+const b = false;
+
+console.log(!a && b);
+console.log(!(a && b));
+
+//operator ?? vs ||

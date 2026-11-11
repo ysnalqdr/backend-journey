@@ -457,4 +457,115 @@ for (const p of kasus) {
   console.log(hasil);
 }
 
+// Soal 33. belumDibaca = 3. Apa hasil !x dan !!x?
+// Jawab: false dan true, karena !! membalik dua kali.
+
+const belumDibaca = 3;
+
+console.log(!belumDibaca);
+console.log(!!belumDibaca);
+
+// Soal 34. stok = 0. Apa hasil !stok, dan kenapa if jalan?
+// Jawab: true, karena 0 falsy dibalik jadi true.
+
+const stokNol = 0;
+
+console.log(!stokNol);
+
+if (!stokNol) {
+  console.log("Stok habis");
+}
+
+// Soal 35. Kalau stok = 5, apakah "Stok habis" tetap tercetak?
+// Jawab: tidak, karena !5 itu false.
+
+const stokLima = 5;
+
+console.log(!stokLima);
+
+if (!stokLima) {
+  console.log("Stok habis");
+} else {
+  console.log("Stok tersedia");
+}
+
+// Soal 36. Ada bug di mana?
+// if (nama) seharusnya if (!nama), karena peringatan harus muncul
+// saat nama KOSONG, bukan saat nama terisi.
+
+const namaForm = "";
+
+if (!namaForm) {
+  console.log("Nama wajib diisi");
+}
+
+// versi salah, dibiarkan sebagai bukti
+// if (namaForm) { console.log("Nama wajib diisi"); }  -> tidak pernah jalan
+
+// Soal 37. Ada bug di mana?
+// if (!stok) mengirim email saat stok 0, padahal harusnya saat stok ADA.
+// Perbaikannya: hapus ! di dalam if, atau pakai !! saat menyimpan.
+
+const stokTokoB = 10;
+const stokNolB = 0;
+
+const tersedia = !!stokTokoB;
+
+console.log(tersedia);
+
+if (tersedia) {
+  console.log("Kirim email restock");
+}
+
+// Soal 38. jumlah = 5, adaPesanan = !jumlah. Apa isinya, dan bug di mana?
+// Jawab: false, boolean. Bug: ! membalik, jadi 5 dianggap tidak ada pesanan.
+// Perbaikan: adaPesanan = !!jumlah, atau hapus !.
+
+const jumlahPesanan = 5;
+const adaPesanan = !!jumlahPesanan;
+
+console.log(adaPesanan);
+
+if (adaPesanan) {
+  console.log("Ada pesanan");
+} else {
+  console.log("Belum ada pesanan");
+}
+
+// Soal 39. Gabung ! dengan &&.
+// sudahLogin true, punyaTiket false -> "Silakan beli tiket"
+
+const sudahLogin = true;
+const punyaTiket = false;
+
+if (sudahLogin && !punyaTiket) {
+  console.log("Silakan beli tiket");
+} else if (sudahLogin && punyaTiket) {
+  console.log("Silakan masuk");
+} else {
+  console.log("Silakan login");
+}
+
+// Soal 40. Prioritas ! vs &&.
+// !a && b dibaca (!a) && b, beda dengan !(a && b).
+
+const x = true;
+const y = false;
+
+console.log(!x && y);
+console.log(!(x && y));
+
+// Soal 41. Tulis dari nol: tiga cabang pakai !
+// belum login / nama kosong / sambut
+
+const user = { nama: "Yasin" };
+
+if (user && user.nama) {
+  console.log("selamat datang, " + user.nama);
+} else if (user && !user.nama) {
+  console.log("nama belum diisi");
+} else {
+  console.log("belum login");
+}
+
 //nullish coalescing ?? vs ||

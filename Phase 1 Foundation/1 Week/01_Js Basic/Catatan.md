@@ -34,9 +34,10 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - [x] Truthy and falsy values
 
 **Catatan status 2026-11-08:**
-- `&&` `||`: latihan 21 soal, drill terakhir 4/4. Gerbang 4 level belum dijalankan.
-- `!`: materi sudah ditulis di `Day3_Review.md`, belum dibaca, belum diuji.
+- `&&` `||`: **TUNTAS** 4 level (Gate Log #40-#48). Guard 3 tingkat ditulis dari nol, diuji 5 kasus.
+- `!`: **TUNTAS** 4 level (Gate Log #49-#59). Guard clause 3 cabang ditulis dari nol, diuji 3 kasus.
 - `??`: sudah dipakai di latihan (soal 29-31), belum digerbang.
+- Sisa Day 3: `??` saja.
 
 ### Day 4 - Loops
 - [ ] `for` loop
@@ -136,6 +137,17 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 | 46 | HARD | `&&` + if + switch | `sudahLogin=false`, `role="admin"`, `default: akses="tamu"` | false, blok if tidak jalan, switch tidak jalan, `akses: ""` | PASS | — | — | **soal yang sama dengan #37** — sekarang benar semua. Pemulihan penuh |
 | 47 | HARD | `&&` + if + switch + else | versi diperbaiki, ada `else` di luar switch | false → else → "tamu" | PASS | — | — | paham beda `default` (di dalam switch) vs `else` (di luar) |
 | 48 | WRITE | `&&` guard chain | tulis dari nol: guard 3 tingkat `pesanan.user.nama` | `pesanan && pesanan.user && pesanan.user.nama` | PASS | — | — | diuji 5 kasus (lengkap, null, user null, nama kosong, tanpa user) — semua benar, tidak crash. Kurang `;` di satu baris |
+| 49 | EASY | `!` | `belumDibaca=3`, `!x` dan `!!x` | false, true, "kembali ke awal karena 2 `!`" | PASS | — | — | 3/3. Belum sadar `!!3` menghasilkan `true`, bukan `3` |
+| 50 | EASY | `!` + `.length` | `keranjang=[]`, `!keranjang.length` | "teks kosong", "false" | VOID | — | — | soal dicabut: `.length` materi minggu 3, belum diajarkan |
+| 51 | EASY | `!` | `stok=0`, `!stok` dan `if (!stok)` | true, "if cari tahu stok ada", "stok=5 tetap tercetak" | FAIL | CONCEPT | — | `!0` benar, tapi `if (!stok)` disangka bertanya keberadaan variabel; `!stok` dengan `stok=5` disangka tetap `true` |
+| 52 | EASY | `!` | `sudahLogin=true`, `!sudahLogin` | false → else → "Selamat datang" | PASS | — | — | 3/3 |
+| 53 | MEDIUM | `!` | bug: `if (nama)` padahal ingin peringatan saat nama kosong | "program error", "sesuai keinginan", fix `if (!nama)` | FAIL | CONCEPT | — | fix benar, tapi kondisi falsy disangka error dan logika terbalik tidak terlihat |
+| 54 | EASY | `!` | `nama=""`, `if (nama)` + else | tidak error, false, "B" | PASS | — | — | 3/3 — **falsy bukan error** akhirnya masuk |
+| 55 | MEDIUM | `!` | bug: `if (!stok)` padahal ingin kirim email saat stok TERSEDIA | "if dilewati, tidak sesuai", fix `if (!!stok)` | PASS | — | — | fix jalan tapi `!!` berlebihan di dalam `if`. Belum sebut stok=0 sebagai pemicu |
+| 56 | MEDIUM | `!` | `adaPesanan = !jumlah`, `jumlah=5` | false, boolean, "Belum ada pesanan", 2 versi fix | PASS | — | — | 3/3. Dua fix benar; versi `!!jumlah` lebih bersih karena tipe variabel cocok dengan namanya |
+| 57 | HARD | `!` + `&&` | `sudahLogin && !punyaTiket` | true, boolean, else if tidak diperiksa, "Silakan beli tiket" | PASS | — | — | 3/3, mekanisme `!` di dalam `&&` tepat |
+| 58 | HARD | `!` precedence | `!a && b` vs `!(a && b)` | false, true, alasan prioritas benar | PASS | — | — | 3/3, paham `!` mengikat lebih kuat dari `&&` |
+| 59 | WRITE | `!` guard clause | tulis 3 cabang: belum login / nama kosong / sambut | `user && user.nama` / `user && !user.nama` / else | PASS | — | — | diuji 3 kasus, semua benar. Percobaan pertama gagal karena soal meminta menulis objek (materi minggu 4) — soal diperbaiki |
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 
