@@ -1,0 +1,28 @@
+{
+    "editor.fontSize": 22,
+    "editor.fontFamily": "Hack, Consolas, 'Courier New', monospace",
+    "editor.cursorBlinking": "expand",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "window.zoomLevel": -1,
+    "workbench.startupEditor": "none",
+
+    "[markdown]": {
+        "editor.wordWrap": "off",
+        "editor.wrappingIndent": "none",
+        "editor.minimap.enabled": false,
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        },
+        "editor.rulers": []
+    },
+
+    "markdown.preview.fontSize": 15,
+    "markdown.preview.lineHeight": 1.6,
+
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "explorer.confirmDragAndDrop": false
+}

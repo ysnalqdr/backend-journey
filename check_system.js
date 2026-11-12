@@ -293,6 +293,88 @@ if (dirty) {
     ok("working tree bersih");
 }
 
+// ---------- 16. Tabel markdown ----------
+{
+    const isRow = (l) => l.trim().startsWith("|") && l.trim().endsWith("|");
+    const isSep = (l) => /^\|[\s:|-]+\|$/.test(l.trim()) && l.includes("-");
+    const isFence = (l) => /^\s*(```|~~~)/.test(l);
+
+    // hitung kolom, hormati pipe yang di-escape (\|)
+    const ncol = (line) => {
+        let s = line.trim();
+        if (s.startsWith("|")) s = s.slice(1);
+        if (s.endsWith("|") && !s.endsWith("\\|")) s = s.slice(0, -1);
+        let n = 1;
+        for (let i = 0; i < s.length; i++) {
+            if (s[i] === "\\" && s[i + 1] === "|") {
+                i++;
+                continue;
+            }
+            if (s[i] === "|") n++;
+        }
+        return n;
+    };
+
+    const badCols = [];
+    const tooWide = [];
+    let tableCount = 0;
+
+    for (const f of walk(ROOT, ".md")) {
+        const lines = fs.readFileSync(f, "utf8").replace(/\r\n/g, "\n").split("\n");
+        let fence = false;
+        let i = 0;
+
+        while (i < lines.length) {
+            if (isFence(lines[i])) {
+                fence = !fence;
+                i++;
+                continue;
+            }
+            if (fence) {
+                i++;
+                continue;
+            }
+
+            if (isRow(lines[i])) {
+                const block = [];
+                const at = i + 1;
+                while (i < lines.length && isRow(lines[i])) {
+                    block.push(lines[i]);
+                    i++;
+                }
+                if (block.length < 2 || !isSep(block[1])) continue;
+
+                tableCount++;
+                const want = ncol(block[0]);
+                block.forEach((row, k) => {
+                    const got = ncol(row);
+                    if (got !== want) {
+                        badCols.push(`${rel(f)}:${at + k} kolom ${got} vs ${want}`);
+                    }
+                });
+
+                const w = Math.max(...block.map((l) => l.length));
+                if (w > 100) tooWide.push(`${rel(f)}:${at} (${w} char)`);
+            } else {
+                i++;
+            }
+        }
+    }
+
+    if (badCols.length) {
+        badCols.slice(0, 5).forEach((b) => err(`tabel tidak konsisten: ${b}`));
+    } else {
+        ok(`tabel markdown: ${tableCount} tabel, kolom konsisten`);
+    }
+
+    if (tooWide.length) {
+        tooWide.slice(0, 3).forEach((t) => warn(`tabel terlalu lebar: ${t}`));
+        if (tooWide.length > 3) warn(`... dan ${tooWide.length - 3} tabel lebar lainnya`);
+    } else {
+        ok("tabel: semua muat di lebar editor");
+    }
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);

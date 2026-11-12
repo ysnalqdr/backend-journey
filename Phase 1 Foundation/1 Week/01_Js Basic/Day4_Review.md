@@ -88,12 +88,14 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
-| Putaran | `i` sebelum cek | `i < 3`?  | Yang tercetak | `i` setelah `i++` |
-|---------|-----------------|-----------|---------------|-------------------|
-| 1       | `0`             | true      | `0`           | `1`               |
-| 2       | `1`             | true      | `1`           | `2`               |
-| 3       | `2`             | true      | `2`           | `3`               |
-| 4       | `3`             | **false** | —             | loop berhenti     |
+| Putaran | `i` cek | `i < 3`?  | Cetak | `i` sesudah |
+|---------|---------|-----------|-------|-------------|
+| 1       | `0`     | true      | `0`   | `1`         |
+| 2       | `1`     | true      | `1`   | `2`         |
+| 3       | `2`     | true      | `2`   | `3`         |
+| 4       | `3`     | **false** | —     | berhenti    |
+
+Kolom dipendekkan supaya tabel muat di editor tanpa wrap. Artinya: `i` cek = nilai `i` sebelum kondisi diperiksa, `i` sesudah = nilai `i` setelah `i++`.
 
 Output: `0`, `1`, `2`. **Bukan** `0 1 2 3`.
 
