@@ -114,6 +114,14 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 - **2026-11-12** · CONCEPT · ke-4 · belum
   - Salah: `user.alamat = null` disangka menyebabkan error
   - Konsep benar: kondisi falsy ≠ error; `&&` berhenti sebelum menyentuh properti
+- **2026-11-12** · CONCEPT · ke-1 · belum
+  - Salah: `??` dijelaskan sebagai pengganti untuk `null` dan `undefined`
+  - Konsep benar: untuk `null`, `??` dan `||` hasilnya sama. `??` dipakai justru karena
+    `0`, `""`, dan `false` adalah nilai sah yang tidak boleh diganti `||`
+- **2026-11-12** · CONCEPT · ke-1 · belum
+  - Salah: arah ternary dan `if` dibalik, dikira ternary bisa masuk ke dalam `if`
+  - Konsep benar: `if` itu pernyataan, ternary itu ekspresi. Yang bisa jadi nilai hanya
+    ekspresi; `if` tidak bisa ditaruh di variabel sama sekali
 
 ---
 
