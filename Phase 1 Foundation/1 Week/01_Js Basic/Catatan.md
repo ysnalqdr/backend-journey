@@ -73,7 +73,24 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 
 ## Explain back
 
-<5 baris penjelasan pakai bahasa sendiri, TANPA buka materi. Kalau tidak bisa, hari itu belum selesai.>
+Dikerjakan 2026-11-12, tanpa buka materi.
+
+1. **Kapan pakai if/else, kapan pakai ternary.** Sewaktu sebuah nilai memiliki kondisi yang
+   ingin ditentukan, dan ternary bisa diimplementasikan di dalam if untuk menentukan hasil
+   yang diharapkan developer.
+
+2. **Kenapa `switch` butuh `break`.** Untuk menghindari fallthrough.
+
+3. **Apa yang sebenarnya dikembalikan `&&` dan `||`.** Bukan boolean, tapi nilai. Yang
+   dikembalikan ialah nilai dari sisi yang dipilih.
+
+4. **Kapan pakai `??` dan kenapa bukan `||`.** Saat sebuah nilai berisi `null` atau
+   `undefined`. Bukan `||`, karena `null` dan `undefined` sudah dicadangkan langsung oleh
+   nullish coalescing.
+
+5. **Satu hal yang tadinya salah paham.** `&&` (logical AND). Hasilnya selalu kupakai dengan
+   cara yang salah. Sekarang paham cara membacanya, dan paham juga membaca kode secara
+   keseluruhan.
 
 ## Bug log
 
