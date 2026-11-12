@@ -11,24 +11,24 @@ Tanpa file ini, kamu akan merasa sibuk tanpa tahu apakah benar-benar berkembang.
 ### 1. Apa yang selesai, dan buktinya apa?
 
 | Yang selesai | Bukti |
-|---|---|
-| | |
+|--------------|-------|
+|              |       |
 
 **Aturan:** tanpa bukti, jangan tulis selesai. "Sudah belajar" bukan bukti. "`06_Conditions.js` jalan, output benar" itu bukti.
 
 ### 2. Apa yang tidak selesai, dan kenapa?
 
-| Yang belum | Penyebab | Jenis |
-|---|---|---|
-| | | kurang jelas / kurang skill / takut gagal / kelebihan beban / energi rendah / distraksi / menghindar |
+| Yang belum | Penyebab | Jenis                                                                                                |
+|------------|----------|------------------------------------------------------------------------------------------------------|
+|            |          | kurang jelas / kurang skill / takut gagal / kelebihan beban / energi rendah / distraksi / menghindar |
 
 Penyebab yang jujur lebih berguna daripada "tidak ada waktu".
 
 ### 3. Kompetensi apa yang naik? Buktinya?
 
 | Konsep | Status lama → baru | Bukti |
-|---|---|---|
-| | | |
+|--------|--------------------|-------|
+|        |                    |       |
 
 Update `SKILLS.md` berdasarkan tabel ini.
 
@@ -41,20 +41,20 @@ Ini daftar latihan minggu depan. Bukan daftar kegagalan.
 ### 5. AI dipakai untuk apa, dan bagaimana diverifikasi?
 
 | Dipakai untuk | Diverifikasi dengan |
-|---|---|
-| | |
+|---------------|---------------------|
+|               |                     |
 
 Kalau kolom kedua kosong, itu `UNVERIFIED` — belum boleh dihitung sebagai kompetensi.
 
 ### 6. Ada tanda menghindar?
 
-| Sinyal | Ada? | Penyebab |
-|---|---|---|
-| riset tanpa eksperimen | | |
-| rencana tanpa eksekusi | | |
-| ganti-ganti tool tanpa alasan | | |
-| cakupan melebar saat sulit | | |
-| menunda tugas yang jelas bisa | | |
+| Sinyal                        | Ada? | Penyebab |
+|-------------------------------|------|----------|
+| riset tanpa eksperimen        |      |          |
+| rencana tanpa eksekusi        |      |          |
+| ganti-ganti tool tanpa alasan |      |          |
+| cakupan melebar saat sulit    |      |          |
+| menunda tugas yang jelas bisa |      |          |
 
 Satu sinyal belum cukup untuk disebut pola. Yang berulang 3 minggu, itu pola.
 

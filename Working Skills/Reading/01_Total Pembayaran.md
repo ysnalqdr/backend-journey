@@ -104,10 +104,10 @@ Pilih **satu** dan jelaskan hasilnya:
 
 ## Yang diuji
 
-| Kemampuan | Pertanyaan |
-|---|---|
-| membaca tipe data dari konteks | 1 |
-| melacak `Number` vs `parseInt` vs `NaN` | 2 |
-| memikirkan input tidak normal | 3 |
-| melihat logika yang saling menimpa | 4 |
-| menilai kualitas nama | 5 |
+| Kemampuan                               | Pertanyaan |
+|-----------------------------------------|------------|
+| membaca tipe data dari konteks          | 1          |
+| melacak `Number` vs `parseInt` vs `NaN` | 2          |
+| memikirkan input tidak normal           | 3          |
+| melihat logika yang saling menimpa      | 4          |
+| menilai kualitas nama                   | 5          |

@@ -41,13 +41,13 @@ console.log("90" - 0);
 
 ## Cara membaca hasilnya
 
-| Baris | Hasil | Kenapa |
-|---|---|---|
-| `90 < 100` | `true` | dua angka, dibandingkan sebagai nilai |
+| Baris          | Hasil   | Kenapa                                                                   |
+|----------------|---------|--------------------------------------------------------------------------|
+| `90 < 100`     | `true`  | dua angka, dibandingkan sebagai nilai                                    |
 | `"90" < "100"` | `false` | dua teks, dibandingkan huruf per huruf: `"9"` vs `"1"` — `9` lebih besar |
-| `"90" < 100` | `true` | teks diubah jadi angka dulu karena pasangannya angka |
-| `"9" < "60"` | `false` | teks vs teks → `"9"` vs `"6"` → `9` lebih besar |
-| `"2" > "10"` | `true` | teks vs teks → `"2"` vs `"1"` → `2` lebih besar |
+| `"90" < 100`   | `true`  | teks diubah jadi angka dulu karena pasangannya angka                     |
+| `"9" < "60"`   | `false` | teks vs teks → `"9"` vs `"6"` → `9` lebih besar                          |
+| `"2" > "10"`   | `true`  | teks vs teks → `"2"` vs `"1"` → `2` lebih besar                          |
 
 **Ini sebabnya penilaian mahasiswa bisa rusak:** nilai `"90"` dapat D, nilai `"100"` dapat A. Tidak ada error. Aplikasi jalan. Datanya salah.
 
@@ -87,8 +87,8 @@ console.log(Number.isNaN(NaN)); // ?
 
 `==` menghasilkan `true` untuk pasangan yang **berbeda tipe**. `===` menolak semua yang tipenya beda, tanpa mencoba menolong.
 
-| Ekspresi               | `==` | `===` |
-|---|---|---|
+| Ekspresi              | `==`   | `===`   |
+|-----------------------|--------|---------|
 | `0` vs `""`           | `true` | `false` |
 | `false` vs `0`        | `true` | `false` |
 | `null` vs `undefined` | `true` | `false` |
@@ -141,12 +141,12 @@ if (saldoA !== undefined) console.log("C: saldo diketahui");
 
 ## Cara berpikirnya
 
-| Yang kamu mau tahu | Jangan tulis | Tulis |
-|---|---|---|
-| stok masih ada? | `if (stok)` | `if (stok > 0)` |
-| stok habis? | `if (!stok)` | `if (stok === 0)` |
-| data ada atau tidak? | `if (nilai)` | `if (nilai !== undefined)` atau `??` |
-| teks kosong? | — | `if (!teks)` ← ini boleh, karena `""` memang tidak berisi |
+| Yang kamu mau tahu   | Jangan tulis | Tulis                                                     |
+|----------------------|--------------|-----------------------------------------------------------|
+| stok masih ada?      | `if (stok)`  | `if (stok > 0)`                                           |
+| stok habis?          | `if (!stok)` | `if (stok === 0)`                                         |
+| data ada atau tidak? | `if (nilai)` | `if (nilai !== undefined)` atau `??`                      |
+| teks kosong?         | —            | `if (!teks)` ← ini boleh, karena `""` memang tidak berisi |
 
 Untuk **teks dan object**, truthy/falsy aman. Untuk **angka**, selalu bandingkan eksplisit.
 
@@ -166,10 +166,10 @@ Tulis ulang tiga kondisi ini dengan benar, tanpa melihat contoh di atas:
 
 Lulus kalau **2 dari 3** tes di atas benar tanpa buka catatan.
 
-| Hasil | Tindakan |
-|---|---|
-| 3/3 | Lanjut Day 3 hari ini juga. Fondasi sudah rapat |
-| 2/3 | Lanjut Day 3, tapi ulangi lubang yang gagal besok pagi (15 menit) |
+| Hasil        | Tindakan                                                                          |
+|--------------|-----------------------------------------------------------------------------------|
+| 3/3          | Lanjut Day 3 hari ini juga. Fondasi sudah rapat                                   |
+| 2/3          | Lanjut Day 3, tapi ulangi lubang yang gagal besok pagi (15 menit)                 |
 | 1/3 atau 0/3 | Ulangi Day 2.5 besok. Tulis di `Catatan.md` bagian mana yang paling membingungkan |
 
 Setelah lulus, tulis di `Catatan.md`:

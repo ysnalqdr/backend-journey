@@ -18,11 +18,11 @@ Di akhir hari, **setelah** semua materi dan gerbang selesai. Maksimal 20 menit.
 
 ## Skor
 
-| Skor | Arti |
-|---|---|
-| 100% | lulus, lanjut hari berikutnya |
+| Skor   | Arti                                                        |
+|--------|-------------------------------------------------------------|
+| 100%   | lulus, lanjut hari berikutnya                               |
 | 75–99% | lulus bersyarat — konsep yang gagal masuk `REVIEW_QUEUE.md` |
-| < 75% | ulangi hari yang sama besok |
+| < 75%  | ulangi hari yang sama besok                                 |
 
 ---
 

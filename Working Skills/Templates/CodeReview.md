@@ -57,11 +57,11 @@ Ini paling akhir, dan hampir selalu `[nit]`.
 
 ## Daftar komentar
 
-| # | Baris | Label | Komentar | Alasan |
-|---|---|---|---|---|
-| 1 | | `[blocking]` / `[nit]` | | |
-| 2 | | | | |
-| 3 | | | | |
+| #   | Baris | Label                  | Komentar | Alasan |
+|-----|-------|------------------------|----------|--------|
+| 1   |       | `[blocking]` / `[nit]` |          |        |
+| 2   |       |                        |          |        |
+| 3   |       |                        |          |        |
 
 **Aturan label:**
 - `[blocking]` = harus diperbaiki sebelum digabung. Wajib ada alasan.
@@ -75,10 +75,10 @@ Ini paling akhir, dan hampir selalu `[nit]`.
 
 **Komentar yang kuterima:**
 
-| # | Komentar | Setuju? | Yang kulakukan |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
+| #   | Komentar | Setuju? | Yang kulakukan |
+|-----|----------|---------|----------------|
+| 1   |          |         |                |
+| 2   |          |         |                |
 
 **Yang kutolak, dan alasannya:**
 

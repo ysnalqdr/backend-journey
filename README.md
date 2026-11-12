@@ -86,12 +86,12 @@ A learning log for my path to becoming a backend engineer.
     Rule of thumb: if the answer would still be true for a different input, it is not
     an explanation.
 19. **Error taxonomy.** Classify every mistake before fixing it:
-    | Type | Symptom | Treatment |
-    |---|---|---|
-    | CONCEPT | Does not understand the idea | Re-teach with a new analogy |
-    | READING | Misread the instruction | Practise reading to the end before answering |
-    | SYNTAX | Typo, wrong symbol | Drill that symbol 5 times |
-    | LOGIC | Right idea, wrong order or flow | Trace it step by step |
+    | Type    | Symptom                         | Treatment                                    |
+    |---------|---------------------------------|----------------------------------------------|
+    | CONCEPT | Does not understand the idea    | Re-teach with a new analogy                  |
+    | READING | Misread the instruction         | Practise reading to the end before answering |
+    | SYNTAX  | Typo, wrong symbol              | Drill that symbol 5 times                    |
+    | LOGIC   | Right idea, wrong order or flow | Trace it step by step                        |
     Different errors need different fixes. Do not treat a reading error as a concept error.
 20. **Spaced re-check.** Every concept at status 3 is re-tested 2 days later. If it fails,
     the status drops to 2 and the remediation loop applies again. The schedule lives in
@@ -291,12 +291,12 @@ check_system.js
 
 Naming pattern:
 
-| Level | Style | Example |
-|---|---|---|
-| Phase | Title Case | `Phase 1 Foundation` |
-| Group | N Week | `1 Week` |
-| Week | NN_Title Case | `01_Js Basic` |
-| Inside | Title Case | `Exercises`, `Catatan.md` |
+| Level  | Style         | Example                   |
+|--------|---------------|---------------------------|
+| Phase  | Title Case    | `Phase 1 Foundation`      |
+| Group  | N Week        | `1 Week`                  |
+| Week   | NN_Title Case | `01_Js Basic`             |
+| Inside | Title Case    | `Exercises`, `Catatan.md` |
 
 ---
 
@@ -306,101 +306,101 @@ Fase mengikuti PLAN.md §2 (5 fase). README sebelumnya memakai 4 fase dan bentro
 
 ### Phase 1 Foundation - 9 Nov 2026 to 31 Jan 2027 (minggu 1-12)
 
-| Week | Topic | Done |
-|---|---|---|
-| 01 | Js Basic | in progress (day 3 of 5) |
-| 02 | Function Scope | [ ] |
-| 03 | Array Methods | [ ] |
-| 04 | Object Destructuring | [ ] |
-| 05 | Async Await | [ ] |
-| 06 | Http Fundamental | [ ] |
-| 07 | Nodejs Basics | [ ] |
-| 08 | Express Api | [ ] |
-| 09 | Sql Crud | [ ] |
-| 10 | Sql Query | [ ] |
-| 11 | Sql Join | [ ] |
-| 12 | Database Design | [ ] |
+| Week | Topic                | Done                     |
+|------|----------------------|--------------------------|
+| 01   | Js Basic             | in progress (day 3 of 5) |
+| 02   | Function Scope       | [ ]                      |
+| 03   | Array Methods        | [ ]                      |
+| 04   | Object Destructuring | [ ]                      |
+| 05   | Async Await          | [ ]                      |
+| 06   | Http Fundamental     | [ ]                      |
+| 07   | Nodejs Basics        | [ ]                      |
+| 08   | Express Api          | [ ]                      |
+| 09   | Sql Crud             | [ ]                      |
+| 10   | Sql Query            | [ ]                      |
+| 11   | Sql Join             | [ ]                      |
+| 12   | Database Design      | [ ]                      |
 
 ### Phase 2 Second Language - 1 Feb to 25 Apr 2027 (minggu 13-24)
 
-| Week | Topic | Done |
-|---|---|---|
-| 13 | Java Syntax | [ ] |
-| 14 | Java Method | [ ] |
-| 15 | Java Oop Basics | [ ] |
-| 16 | Java Oop Advanced | [ ] |
-| 17 | Java Collection | [ ] |
-| 18 | Java Exception Io | [ ] |
-| 19 | Spring Boot Get | [ ] |
-| 20 | Spring Boot Crud | [ ] |
-| 21 | Spring Jpa Postgres | [ ] |
-| 22 | Docker Basics | [ ] |
-| 23 | Docker Compose | [ ] |
-| 24 | Testing Junit | [ ] |
+| Week | Topic               | Done |
+|------|---------------------|------|
+| 13   | Java Syntax         | [ ]  |
+| 14   | Java Method         | [ ]  |
+| 15   | Java Oop Basics     | [ ]  |
+| 16   | Java Oop Advanced   | [ ]  |
+| 17   | Java Collection     | [ ]  |
+| 18   | Java Exception Io   | [ ]  |
+| 19   | Spring Boot Get     | [ ]  |
+| 20   | Spring Boot Crud    | [ ]  |
+| 21   | Spring Jpa Postgres | [ ]  |
+| 22   | Docker Basics       | [ ]  |
+| 23   | Docker Compose      | [ ]  |
+| 24   | Testing Junit       | [ ]  |
 
 ### Phase 3 Project - 26 Apr to 20 Jun 2027 (minggu 25-32)
 
-| Week | Topic | Done |
-|---|---|---|
-| 25 | Setup Auth | [ ] |
-| 26 | Jwt Middleware | [ ] |
-| 27 | Crud Events | [ ] |
-| 28 | Validation Pagination | [ ] |
-| 29 | Ticketing Stock | [ ] |
-| 30 | Promo Pricing | [ ] |
-| 31 | Payment | [ ] |
-| 32 | Api Documentation | [ ] |
+| Week | Topic                 | Done |
+|------|-----------------------|------|
+| 25   | Setup Auth            | [ ]  |
+| 26   | Jwt Middleware        | [ ]  |
+| 27   | Crud Events           | [ ]  |
+| 28   | Validation Pagination | [ ]  |
+| 29   | Ticketing Stock       | [ ]  |
+| 30   | Promo Pricing         | [ ]  |
+| 31   | Payment               | [ ]  |
+| 32   | Api Documentation     | [ ]  |
 
 ### Phase 4 Preparation - 21 Jun to 15 Agu 2027 (minggu 33-40)
 
-| Week | Topic | Done |
-|---|---|---|
-| 33 | Github Actions | [ ] |
-| 34 | Deploy | [ ] |
-| 35 | Error Handling Logging | [ ] |
-| 36 | Polish Readme | [ ] |
-| 37 | Linux Basics | [ ] |
-| 38 | Linux Ssh | [ ] |
-| 39 | System Design | [ ] |
-| 40 | System Design 2 | [ ] |
+| Week | Topic                  | Done |
+|------|------------------------|------|
+| 33   | Github Actions         | [ ]  |
+| 34   | Deploy                 | [ ]  |
+| 35   | Error Handling Logging | [ ]  |
+| 36   | Polish Readme          | [ ]  |
+| 37   | Linux Basics           | [ ]  |
+| 38   | Linux Ssh              | [ ]  |
+| 39   | System Design          | [ ]  |
+| 40   | System Design 2        | [ ]  |
 
 ### Phase 5 Application - 16 Agu to 10 Okt 2027 (minggu 41-48)
 
-| Week | Topic | Done |
-|---|---|---|
-| 41 | Mock Interview | [ ] |
-| 42 | Project Architecture | [ ] |
-| 43 | Leetcode Sprint 1 | [ ] |
-| 44 | Leetcode Sprint 2 | [ ] |
-| 45 | Polish Repo | [ ] |
-| 46 | Github Profile | [ ] |
-| 47 | Cv Application | [ ] |
-| 48 | Interview Prep | [ ] |
+| Week | Topic                | Done |
+|------|----------------------|------|
+| 41   | Mock Interview       | [ ]  |
+| 42   | Project Architecture | [ ]  |
+| 43   | Leetcode Sprint 1    | [ ]  |
+| 44   | Leetcode Sprint 2    | [ ]  |
+| 45   | Polish Repo          | [ ]  |
+| 46   | Github Profile       | [ ]  |
+| 47   | Cv Application       | [ ]  |
+| 48   | Interview Prep       | [ ]  |
 
 ---
 
 ## Time Budget
 
-| Unit | Target |
-|---|---|
-| Per day | 2-3 hours (minimum 30 minutes) |
-| Per week | 15-20 hours |
-| Per month | 60-80 hours |
-| Total, 48 weeks | 720-960 hours |
+| Unit            | Target                         |
+|-----------------|--------------------------------|
+| Per day         | 2-3 hours (minimum 30 minutes) |
+| Per week        | 15-20 hours                    |
+| Per month       | 60-80 hours                    |
+| Total, 48 weeks | 720-960 hours                  |
 
 ---
 
 ## Resources
 
-| Resource | For |
-|---|---|
-| javascript.info | JavaScript in depth |
-| java-programming.mooc.fi | Structured Java |
-| sqlbolt.com | Interactive SQL |
-| baeldung.com | Spring Boot |
-| neetcode.io | LeetCode |
-| roadmap.sh/backend | Skill map |
-| docs.docker.com | Docker |
+| Resource                 | For                 |
+|--------------------------|---------------------|
+| javascript.info          | JavaScript in depth |
+| java-programming.mooc.fi | Structured Java     |
+| sqlbolt.com              | Interactive SQL     |
+| baeldung.com             | Spring Boot         |
+| neetcode.io              | LeetCode            |
+| roadmap.sh/backend       | Skill map           |
+| docs.docker.com          | Docker              |
 
 ---
 

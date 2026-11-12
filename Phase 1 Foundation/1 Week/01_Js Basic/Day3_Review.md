@@ -7,13 +7,13 @@ Baca satu bagian, tutup, coba jelaskan ulang dengan kata sendiri.
 
 ## 1. Yang sudah kamu kuasai
 
-| Konsep | Bukti |
-|---|---|
-| `if` / `else if` / `else` + urutan kondisi | Gate Log #3 |
-| Ternary `? :` | Gate Log #2, #4, #6, #7 |
-| `switch` + `break` | Gate Log #15–#20, semua level |
-| Truthy / falsy untuk angka | Day 2.5, 3/3 |
-| Assignment vs output | Gate Log #12, #16, #19 |
+| Konsep                                     | Bukti                         |
+|--------------------------------------------|-------------------------------|
+| `if` / `else if` / `else` + urutan kondisi | Gate Log #3                   |
+| Ternary `? :`                              | Gate Log #2, #4, #6, #7       |
+| `switch` + `break`                         | Gate Log #15–#20, semua level |
+| Truthy / falsy untuk angka                 | Day 2.5, 3/3                  |
+| Assignment vs output                       | Gate Log #12, #16, #19        |
 
 ---
 
@@ -85,10 +85,10 @@ Output: `A` lalu `U`.
 
 `switch` membandingkan dengan `===`, jadi tipe harus sama.
 
-| `level` | `case 2` cocok? |
-|---|---|
-| `2` (number) | ✅ |
-| `"2"` (string) | ❌ |
+| `level`        | `case 2` cocok? |
+|----------------|-----------------|
+| `2` (number)   | ✅               |
+| `"2"` (string) | ❌               |
 
 Ini penting di backend: data dari form selalu **string**.
 
@@ -197,19 +197,19 @@ punyaTiket || punyaUndangan   // ATAU
 ```
 
 | Operator | Dibaca | Hasilnya benar kalau |
-|---|---|---|
-| `&&` | dan | **kedua** sisi benar |
-| `\|\|` | atau | **salah satu** benar |
-| `!` | bukan | membalik nilainya |
+|----------|--------|----------------------|
+| `&&`     | dan    | **kedua** sisi benar |
+| `\|\|`   | atau   | **salah satu** benar |
+| `!`      | bukan  | membalik nilainya    |
 
 ### Tabel kebenaran
 
-| A | B | `A && B` | `A \|\| B` |
-|---|---|---|---|
-| true | true | true | true |
-| true | false | false | true |
-| false | true | false | true |
-| false | false | false | false |
+| A     | B     | `A && B` | `A \|\| B` |
+|-------|-------|----------|------------|
+| true  | true  | true     | true       |
+| true  | false | false    | true       |
+| false | true  | false    | true       |
+| false | false | false    | false      |
 
 ### `!` membalik apa pun
 
@@ -550,9 +550,9 @@ console.log(null || "cadangan");
 
 ## 6. Catatan re-check
 
-| Konsep | Lulus | Re-check |
-|---|---|---|
-| Ternary | 2026-11-08 | **2026-11-10** |
+| Konsep             | Lulus      | Re-check       |
+|--------------------|------------|----------------|
+| Ternary            | 2026-11-08 | **2026-11-10** |
 | `switch` + `break` | 2026-11-08 | **2026-11-10** |
 
 Pada 10 November, uji ulang dua konsep ini dengan **satu soal MEDIUM** masing-masing, tanpa buka materi. Kalau gagal, status turun ke 2.

@@ -56,11 +56,11 @@ if (hargaAkhir < 0) {
 
 ## Ada 5 masalah
 
-| Lapisan | Jumlah | Petunjuk |
-|---|---|---|
-| Design | 2 | (1) dua sumber diskon — bagaimana seharusnya keduanya berhubungan? (2) ada nilai promo yang tidak ditangani sama sekali |
-| Functionality | 1 | satu nilai yang seharusnya dibatasi, tapi tidak |
-| Naming | 2 | dua nama yang menyesatkan atau tidak konsisten |
+| Lapisan       | Jumlah | Petunjuk                                                                                                                |
+|---------------|--------|-------------------------------------------------------------------------------------------------------------------------|
+| Design        | 2      | (1) dua sumber diskon — bagaimana seharusnya keduanya berhubungan? (2) ada nilai promo yang tidak ditangani sama sekali |
+| Functionality | 1      | satu nilai yang seharusnya dibatasi, tapi tidak                                                                         |
+| Naming        | 2      | dua nama yang menyesatkan atau tidak konsisten                                                                          |
 
 **Yang BUKAN masalah** — jangan ditandai, nanti dihitung salah:
 
@@ -93,10 +93,10 @@ Alasan: <kenapa>
 
 ## Yang diuji
 
-| Kemampuan | Lapisan |
-|---|---|
-| melihat dua diskon saling menimpa | Design |
-| menemukan kondisi yang tidak pernah benar | Design |
-| melihat nilai yang tidak dibatasi | Functionality |
-| membedakan nama menyesatkan dari nama panjang | Naming |
-| **tidak** menandai hal yang benar sebagai bug | Semua |
+| Kemampuan                                     | Lapisan       |
+|-----------------------------------------------|---------------|
+| melihat dua diskon saling menimpa             | Design        |
+| menemukan kondisi yang tidak pernah benar     | Design        |
+| melihat nilai yang tidak dibatasi             | Functionality |
+| membedakan nama menyesatkan dari nama panjang | Naming        |
+| **tidak** menandai hal yang benar sebagai bug | Semua         |

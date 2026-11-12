@@ -115,12 +115,12 @@
 ## Penilaian diri
 
 | Tugas | Ketemu? | Menit | Dokumentasinya jelas? |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+|-------|---------|-------|-----------------------|
+| 1     |         |       |                       |
+| 2     |         |       |                       |
+| 3     |         |       |                       |
+| 4     |         |       |                       |
+| 5     |         |       |                       |
 
 **Tugas mana yang paling sulit, dan kenapa:**
 
@@ -136,10 +136,10 @@ Bandingkan dengan `Kunci/Docs 01.md` — di sana ada catatan tentang **apa yang 
 
 ## Yang diuji
 
-| Kemampuan | Tugas |
-|---|---|
-| mencari jawaban spesifik, bukan membaca semuanya | 1, 3 |
-| membedakan dua hal yang mirip | 2, 3 |
-| membaca dokumentasi yang ditulis untuk orang lain | 5 |
-| menilai kualitas dokumentasi | semua |
-| mengakui "tidak ketemu" tanpa merasa gagal | semua |
+| Kemampuan                                         | Tugas |
+|---------------------------------------------------|-------|
+| mencari jawaban spesifik, bukan membaca semuanya  | 1, 3  |
+| membedakan dua hal yang mirip                     | 2, 3  |
+| membaca dokumentasi yang ditulis untuk orang lain | 5     |
+| menilai kualitas dokumentasi                      | semua |
+| mengakui "tidak ketemu" tanpa merasa gagal        | semua |

@@ -87,12 +87,12 @@ Usulan: `pesanan.subtotal` dan `totalBayar`.
 
 ## Yang BUKAN masalah
 
-| Hal | Kenapa bukan masalah |
-|---|---|
-| `const` pada `potongan` dan `hargaAkhir` | sudah benar, nilainya tidak diubah |
-| pengecekan `hargaAkhir < 0` | perlu sebagai jaring pengaman, walaupun bukan solusi akar |
-| `console.log` untuk output | sesuai konteks skrip sederhana |
-| tidak ada fungsi | satu alur, belum perlu dipisah |
+| Hal                                      | Kenapa bukan masalah                                      |
+|------------------------------------------|-----------------------------------------------------------|
+| `const` pada `potongan` dan `hargaAkhir` | sudah benar, nilainya tidak diubah                        |
+| pengecekan `hargaAkhir < 0`              | perlu sebagai jaring pengaman, walaupun bukan solusi akar |
+| `console.log` untuk output               | sesuai konteks skrip sederhana                            |
+| tidak ada fungsi                         | satu alur, belum perlu dipisah                            |
 
 Kalau kamu menandai salah satu dari ini sebagai `[blocking]`, itu **false positive** — dan reviewer yang sering false positive akan diabaikan oleh penulis kode.
 
@@ -100,13 +100,13 @@ Kalau kamu menandai salah satu dari ini sebagai `[blocking]`, itu **false positi
 
 ## Cara menilai dirimu
 
-| Temuan | Bobot |
-|---|---|
-| D1 (diskon menimpa) | 30% |
-| D2 (promo tidak dikenal) | 25% |
-| F1 (tidak dibatasi) | 25% |
-| N1 atau N2 | 10% |
-| **tidak ada false positive** | 10% |
+| Temuan                       | Bobot |
+|------------------------------|-------|
+| D1 (diskon menimpa)          | 30%   |
+| D2 (promo tidak dikenal)     | 25%   |
+| F1 (tidak dibatasi)          | 25%   |
+| N1 atau N2                   | 10%   |
+| **tidak ada false positive** | 10%   |
 
 Lulus kalau ≥ 70% **dan** tidak ada false positive.
 

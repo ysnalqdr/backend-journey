@@ -12,13 +12,13 @@ Satu alur per minggu, dilacak manual. Template: `Working Skills/Templates/CodeRe
 
 File: `Working Skills/Reading/reading_01.js`
 
-| # | Pertanyaan | Dugaanku | Kenyataan | Cocok? |
-|---|---|---|---|---|
-| 1 | Apa yang masuk? | | | |
-| 2 | Apa yang keluar? | | | |
-| 3 | Kalau input salah? | | | |
-| 4 | Baris paling rapuh? | | | |
-| 5 | Nama yang diganti? | | | |
+| #   | Pertanyaan          | Dugaanku | Kenyataan | Cocok? |
+|-----|---------------------|----------|-----------|--------|
+| 1   | Apa yang masuk?     |          |           |        |
+| 2   | Apa yang keluar?    |          |           |        |
+| 3   | Kalau input salah?  |          |           |        |
+| 4   | Baris paling rapuh? |          |           |        |
+| 5   | Nama yang diganti?  |          |           |        |
 
 **Yang meleset:**
 
@@ -30,13 +30,13 @@ File: `Working Skills/Reading/reading_01.js`
 
 File: `Working Skills/Review/review_01.js`
 
-| Lapisan | Temuan | Label |
-|---|---|---|
-| Design | | |
-| Functionality | | |
-| Complexity | | |
-| Naming | | |
-| Style | | |
+| Lapisan       | Temuan | Label |
+|---------------|--------|-------|
+| Design        |        |       |
+| Functionality |        |       |
+| Complexity    |        |       |
+| Naming        |        |       |
+| Style         |        |       |
 
 **Jumlah temuan:** ___ dari 6
 
@@ -49,12 +49,12 @@ File: `Working Skills/Review/review_01.js`
 File: `Working Skills/Docs/01_Cari Sendiri di MDN.md`
 
 | Tugas | Ketemu? | Menit |
-|---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+|-------|---------|-------|
+| 1     |         |       |
+| 2     |         |       |
+| 3     |         |       |
+| 4     |         |       |
+| 5     |         |       |
 
 **Dokumentasi paling membingungkan:**
 
@@ -66,10 +66,10 @@ File: `Exercises/09_Challenge.js` (pilihan soal E)
 
 **Komentar yang kuterima:**
 
-| # | Label | Komentar | Setuju? |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
+| #   | Label | Komentar | Setuju? |
+|-----|-------|----------|---------|
+| 1   |       |          |         |
+| 2   |       |          |         |
 
 **Yang kutolak, dan alasannya:**
 
@@ -79,9 +79,9 @@ File: `Exercises/09_Challenge.js` (pilihan soal E)
 
 **Bug ditemukan minggu ini:**
 
-| # | Judul | Akar masalah | Sudah diperbaiki? |
-|---|---|---|---|
-| 1 | | | |
+| #   | Judul | Akar masalah | Sudah diperbaiki? |
+|-----|-------|--------------|-------------------|
+| 1   |       |              |                   |
 
 **Konsep yang naik status:**
 

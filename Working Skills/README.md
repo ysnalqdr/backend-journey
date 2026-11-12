@@ -4,13 +4,13 @@ Latihan untuk kemampuan yang dipakai di kerja, bukan di ujian.
 
 Bedanya:
 
-| Gate harian | Working Skills |
-|---|---|
-| tulis dari nol | ubah kode yang sudah ada |
-| satu konsep | banyak hal bercampur |
-| ada jawaban benar | ada jawaban yang bisa diterima |
-| materi disiapkan | cari sendiri |
-| tidak ada reviewer | ada komentar review |
+| Gate harian        | Working Skills                 |
+|--------------------|--------------------------------|
+| tulis dari nol     | ubah kode yang sudah ada       |
+| satu konsep        | banyak hal bercampur           |
+| ada jawaban benar  | ada jawaban yang bisa diterima |
+| materi disiapkan   | cari sendiri                   |
+| tidak ada reviewer | ada komentar review            |
 
 Sumber tiap aturan ada di README #29–#34.
 
@@ -18,14 +18,14 @@ Sumber tiap aturan ada di README #29–#34.
 
 ## Isi folder
 
-| Folder | Untuk | Aturan |
-|---|---|---|
-| `Templates/` | format kosong, disalin setiap sesi | — |
-| `Kunci/` | jawaban — **jangan dibuka sebelum mengerjakan** | — |
-| `Reading/` | file kode asing + pertanyaan | #29 |
-| `Review/` | kode berisi bug untuk direview | #30 |
-| `Docs/` | tugas mencari jawaban di dokumentasi resmi | #31 |
-| `Debug/` | bug report dan telusur | #32, #34 |
+| Folder       | Untuk                                           | Aturan   |
+|--------------|-------------------------------------------------|----------|
+| `Templates/` | format kosong, disalin setiap sesi              | —        |
+| `Kunci/`     | jawaban — **jangan dibuka sebelum mengerjakan** | —        |
+| `Reading/`   | file kode asing + pertanyaan                    | #29      |
+| `Review/`    | kode berisi bug untuk direview                  | #30      |
+| `Docs/`      | tugas mencari jawaban di dokumentasi resmi      | #31      |
+| `Debug/`     | bug report dan telusur                          | #32, #34 |
 
 ---
 
@@ -63,13 +63,13 @@ Kalau langkah 3 dilewati, latihan ini tidak mengukur apa pun.
 
 ## Rotasi mingguan
 
-| Hari | Blok | Folder |
-|---|---|---|
-| Senin | Baca kode | `Reading/` |
-| Selasa | Review kode orang lain | `Review/` |
-| Rabu | Baca dokumentasi sendiri | `Docs/` |
-| Kamis | Kode sendiri direview | `Review/` |
-| Jumat | Weekly review + `Trace.md` | — |
+| Hari   | Blok                       | Folder     |
+|--------|----------------------------|------------|
+| Senin  | Baca kode                  | `Reading/` |
+| Selasa | Review kode orang lain     | `Review/`  |
+| Rabu   | Baca dokumentasi sendiri   | `Docs/`    |
+| Kamis  | Kode sendiri direview      | `Review/`  |
+| Jumat  | Weekly review + `Trace.md` | —          |
 
 ---
 
@@ -88,11 +88,11 @@ Kalau langkah 3 dilewati, latihan ini tidak mengukur apa pun.
 
 Data dari riset:
 
-| Sumber | Temuan |
-|---|---|
-| Microsoft, 5.971 developer | menulis kode cuma 9–61% hari kerja |
-| LaToza & Venolia | 49% waktu untuk bug, 36% fitur baru |
-| Clean Code | rasio baca:tulis > 10:1 |
-| Google eng-practices | review: Design dulu, Style terakhir |
+| Sumber                     | Temuan                              |
+|----------------------------|-------------------------------------|
+| Microsoft, 5.971 developer | menulis kode cuma 9–61% hari kerja  |
+| LaToza & Venolia           | 49% waktu untuk bug, 36% fitur baru |
+| Clean Code                 | rasio baca:tulis > 10:1             |
+| Google eng-practices       | review: Design dulu, Style terakhir |
 
 Artinya: yang dinilai di kerja bukan kecepatan menulis, tapi kecepatan **mengerti**.

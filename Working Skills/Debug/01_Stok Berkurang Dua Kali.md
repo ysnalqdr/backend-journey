@@ -103,13 +103,13 @@ Bandingkan dengan `Kunci/Debug 01.md`.
 
 ## Yang diuji
 
-| Kemampuan | Langkah |
-|---|---|
-| menulis laporan dari informasi tidak lengkap | 1 |
-| memisahkan gejala dari akar masalah | 3c |
-| membuktikan dugaan, bukan menebak | 3d |
-| memperbaiki minimal, bukan melebar | 4 |
-| berpikir tentang pencegahan | 5 |
+| Kemampuan                                    | Langkah |
+|----------------------------------------------|---------|
+| menulis laporan dari informasi tidak lengkap | 1       |
+| memisahkan gejala dari akar masalah          | 3c      |
+| membuktikan dugaan, bukan menebak            | 3d      |
+| memperbaiki minimal, bukan melebar           | 4       |
+| berpikir tentang pencegahan                  | 5       |
 
 ---
 

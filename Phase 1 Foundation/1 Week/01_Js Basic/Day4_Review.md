@@ -29,10 +29,10 @@ Loop adalah cara mengatakan **"lakukan ini berulang, sampai suatu kondisi berhen
 
 Tiga hal yang selalu ada di setiap loop:
 
-| Bagian | Pertanyaan |
-|---|---|
-| **Awal** | dari mana mulai? |
-| **Kondisi** | sampai kapan lanjut? |
+| Bagian        | Pertanyaan                       |
+|---------------|----------------------------------|
+| **Awal**      | dari mana mulai?                 |
+| **Kondisi**   | sampai kapan lanjut?             |
 | **Perubahan** | apa yang berubah setiap putaran? |
 
 Kalau salah satu hilang, loop tidak berhenti. Itu bukan bug kecil — itu program yang menggantung.
@@ -59,12 +59,12 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
-| Bagian | Isi | Kapan dijalankan |
-|---|---|---|
-| `awal` | `let i = 0` | **sekali**, sebelum loop mulai |
-| `kondisi` | `i < 3` | **sebelum setiap** putaran |
-| `badan` | `console.log(i)` | kalau kondisi `true` |
-| `perubahan` | `i++` | **setelah** badan, sebelum kondisi berikutnya |
+| Bagian      | Isi              | Kapan dijalankan                              |
+|-------------|------------------|-----------------------------------------------|
+| `awal`      | `let i = 0`      | **sekali**, sebelum loop mulai                |
+| `kondisi`   | `i < 3`          | **sebelum setiap** putaran                    |
+| `badan`     | `console.log(i)` | kalau kondisi `true`                          |
+| `perubahan` | `i++`            | **setelah** badan, sebelum kondisi berikutnya |
 
 ## Urutan eksekusi
 
@@ -88,12 +88,12 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
-| Putaran | `i` sebelum cek | `i < 3`? | Yang tercetak | `i` setelah `i++` |
-|---|---|---|---|---|
-| 1 | `0` | true | `0` | `1` |
-| 2 | `1` | true | `1` | `2` |
-| 3 | `2` | true | `2` | `3` |
-| 4 | `3` | **false** | — | loop berhenti |
+| Putaran | `i` sebelum cek | `i < 3`?  | Yang tercetak | `i` setelah `i++` |
+|---------|-----------------|-----------|---------------|-------------------|
+| 1       | `0`             | true      | `0`           | `1`               |
+| 2       | `1`             | true      | `1`           | `2`               |
+| 3       | `2`             | true      | `2`           | `3`               |
+| 4       | `3`             | **false** | —             | loop berhenti     |
 
 Output: `0`, `1`, `2`. **Bukan** `0 1 2 3`.
 
@@ -199,11 +199,11 @@ Output sama: `0`, `1`, `2`.
 
 ## Kapan pakai `while` dibanding `for`
 
-| Pakai `for` kalau... | Pakai `while` kalau... |
-|---|---|
-| jumlah putaran sudah diketahui | jumlah putaran tidak diketahui |
-| menghitung 1 sampai 10 | mengulang sampai user memasukkan input benar |
-| mengiterasi array | menunggu kondisi berubah |
+| Pakai `for` kalau...           | Pakai `while` kalau...                       |
+|--------------------------------|----------------------------------------------|
+| jumlah putaran sudah diketahui | jumlah putaran tidak diketahui               |
+| menghitung 1 sampai 10         | mengulang sampai user memasukkan input benar |
+| mengiterasi array              | menunggu kondisi berubah                     |
 
 Contoh nyata `while` — validasi input:
 
@@ -255,9 +255,9 @@ Perhatikan: titik koma **setelah** `while (kondisi)`. Ini satu-satunya loop yang
 
 ## Bedanya dengan `while`
 
-| | Kondisi diperiksa |
-|---|---|
-| `while` | **sebelum** badan |
+|              | Kondisi diperiksa |
+|--------------|-------------------|
+| `while`      | **sebelum** badan |
 | `do...while` | **sesudah** badan |
 
 Akibatnya:
@@ -339,11 +339,11 @@ Output: `0`, `1`, `2`, `4`, `5`. Angka `3` dilewati, sisanya tetap jalan.
 
 ## Perbedaan yang mudah tertukar
 
-| | `break` | `continue` |
-|---|---|---|
-| Efek | loop **berhenti** | putaran ini **dilewati** |
-| Putaran berikutnya | tidak ada | tetap jalan |
-| Dipakai untuk | sudah ketemu yang dicari | data ini tidak perlu diproses |
+|                    | `break`                  | `continue`                    |
+|--------------------|--------------------------|-------------------------------|
+| Efek               | loop **berhenti**        | putaran ini **dilewati**      |
+| Putaran berikutnya | tidak ada                | tetap jalan                   |
+| Dipakai untuk      | sudah ketemu yang dicari | data ini tidak perlu diproses |
 
 ## `continue` di `for` vs `while` — jebakan
 
@@ -451,14 +451,14 @@ Jumlah total putaran = luar × dalam. Di contoh ini 2 × 3 = 6.
 
 ## Trace tabel
 
-| `i` | `j` | Tercetak |
-|---|---|---|
-| 1 | 1 | `i=1 j=1` |
-| 1 | 2 | `i=1 j=2` |
-| 1 | 3 | `i=1 j=3` |
-| 2 | 1 | `i=2 j=1` |
-| 2 | 2 | `i=2 j=2` |
-| 2 | 3 | `i=2 j=3` |
+| `i` | `j` | Tercetak  |
+|-----|-----|-----------|
+| 1   | 1   | `i=1 j=1` |
+| 1   | 2   | `i=1 j=2` |
+| 1   | 3   | `i=1 j=3` |
+| 2   | 1   | `i=2 j=1` |
+| 2   | 2   | `i=2 j=2` |
+| 2   | 3   | `i=2 j=3` |
 
 Perhatikan: `j` **kembali ke 1** setiap kali `i` naik. Itu karena `let j = 1` dijalankan ulang setiap kali loop dalam dimulai.
 
@@ -517,11 +517,11 @@ Label jarang dipakai. Kalau kamu merasa butuh label, sering kali ada cara yang l
 
 Muncul nanti, jangan dihafal dulu:
 
-| Bentuk | Muncul di | Untuk apa |
-|---|---|---|
-| `for...of` | Minggu 3 | mengiterasi nilai array |
-| `for...in` | Minggu 4 | mengiterasi nama properti object |
-| `forEach`, `map`, `filter` | Minggu 3 | method array |
+| Bentuk                     | Muncul di | Untuk apa                        |
+|----------------------------|-----------|----------------------------------|
+| `for...of`                 | Minggu 3  | mengiterasi nilai array          |
+| `for...in`                 | Minggu 4  | mengiterasi nama properti object |
+| `forEach`, `map`, `filter` | Minggu 3  | method array                     |
 
 Ketiganya akan terasa mudah setelah `for` biasa dikuasai, karena konsepnya sama: mengulang.
 
@@ -531,15 +531,15 @@ Ketiganya akan terasa mudah setelah `for` biasa dikuasai, karena konsepnya sama:
 
 Dipakai saat membaca kode loop orang lain, atau kode sendiri setelah 2 minggu.
 
-| # | Periksa | Kenapa |
-|---|---|---|
-| 1 | Mulai dari mana? | menentukan nilai pertama |
-| 2 | Kondisinya `<` atau `<=`? | sumber off-by-one |
-| 3 | Perubahan menuju arah yang benar? | kalau salah arah → tak berujung |
-| 4 | Ada `break`? Keluar dari loop mana? | di nested loop, hanya loop dalam |
-| 5 | Ada `continue`? Apakah perubahan terlewat? | jebakan di `while` |
-| 6 | Berapa putaran total? | hitung manual, cocokkan dengan output |
-| 7 | Apa yang terjadi kalau kondisi langsung `false`? | loop 0 putaran, apakah itu benar? |
+| #   | Periksa                                          | Kenapa                                |
+|-----|--------------------------------------------------|---------------------------------------|
+| 1   | Mulai dari mana?                                 | menentukan nilai pertama              |
+| 2   | Kondisinya `<` atau `<=`?                        | sumber off-by-one                     |
+| 3   | Perubahan menuju arah yang benar?                | kalau salah arah → tak berujung       |
+| 4   | Ada `break`? Keluar dari loop mana?              | di nested loop, hanya loop dalam      |
+| 5   | Ada `continue`? Apakah perubahan terlewat?       | jebakan di `while`                    |
+| 6   | Berapa putaran total?                            | hitung manual, cocokkan dengan output |
+| 7   | Apa yang terjadi kalau kondisi langsung `false`? | loop 0 putaran, apakah itu benar?     |
 
 Tujuh pertanyaan ini menjawab 90% bug loop.
 
@@ -785,13 +785,13 @@ console.log(hitung);
 
 # Cara penilaian
 
-| Kelompok | Yang diuji | Level |
-|---|---|---|
-| A | prediksi output | EASY |
-| B | menemukan bug | MEDIUM |
-| C | menilai kualitas kode | MEDIUM |
-| D | melacak alur | HARD |
-| E | menulis dari nol | WRITE |
-| F | penalaran | HARD |
+| Kelompok | Yang diuji            | Level  |
+|----------|-----------------------|--------|
+| A        | prediksi output       | EASY   |
+| B        | menemukan bug         | MEDIUM |
+| C        | menilai kualitas kode | MEDIUM |
+| D        | melacak alur          | HARD   |
+| E        | menulis dari nol      | WRITE  |
+| F        | penalaran             | HARD   |
 
 Gerbang Day 4: **semua kelompok minimal satu soal benar**, dan Kelompok E harus dikerjakan tanpa melihat contoh.

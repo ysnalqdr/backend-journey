@@ -19,11 +19,11 @@ Dugaan penyebab   : (dugaan) pengurangan stok ditulis dua kali dalam
 
 **Kesalahan umum di langkah ini:**
 
-| Salah | Kenapa salah |
-|---|---|
-| "stok berkurang dua" saja | tidak ada langkah, tidak bisa direproduksi orang lain |
-| menulis "karena ada `stok - jumlahBeli` dua kali" di bagian Kenyataan | itu sudah masuk analisis, bukan observasi |
-| tidak menulis harapan | tanpa harapan, tidak ada yang tahu ini bug atau bukan |
+| Salah                                                                 | Kenapa salah                                          |
+|-----------------------------------------------------------------------|-------------------------------------------------------|
+| "stok berkurang dua" saja                                             | tidak ada langkah, tidak bisa direproduksi orang lain |
+| menulis "karena ada `stok - jumlahBeli` dua kali" di bagian Kenyataan | itu sudah masuk analisis, bukan observasi             |
+| tidak menulis harapan                                                 | tanpa harapan, tidak ada yang tahu ini bug atau bukan |
 
 ---
 
@@ -116,12 +116,12 @@ if (stok >= jumlahBeli) {
 
 Yang **tidak** boleh dilakukan di langkah ini:
 
-| Jangan | Kenapa |
-|---|---|
-| sekalian mengganti nama variabel | memperbesar risiko, dan tidak terkait bug |
-| sekalian menambah fungsi | bukan tugas perbaikan bug |
-| sekalian mengubah `if` jadi `while` | mengubah perilaku, bukan memperbaiki |
-| menambah `try/catch` | menutupi gejala, bukan menyelesaikan |
+| Jangan                              | Kenapa                                    |
+|-------------------------------------|-------------------------------------------|
+| sekalian mengganti nama variabel    | memperbesar risiko, dan tidak terkait bug |
+| sekalian menambah fungsi            | bukan tugas perbaikan bug                 |
+| sekalian mengubah `if` jadi `while` | mengubah perilaku, bukan memperbaiki      |
+| menambah `try/catch`                | menutupi gejala, bukan menyelesaikan      |
 
 Perbaikan bug = perubahan terkecil yang membuat bug hilang. Perapian dilakukan di commit terpisah.
 
@@ -131,11 +131,11 @@ Perbaikan bug = perubahan terkecil yang membuat bug hilang. Perapian dilakukan d
 
 Jawaban yang baik menyebut **mekanisme**, bukan niat:
 
-| Jawaban lemah | Jawaban kuat |
-|---|---|
-| "lebih hati-hati" | "satu fungsi hanya boleh mengubah stok sekali; kalau butuh dua, itu tanda ada dua tanggung jawab" |
-| "ditest dulu" | "test: untuk 1 pembelian, stok akhir harus `stokAwal - jumlahBeli`. Test ini akan gagal kalau ada pengurangan kedua" |
-| "review kode" | "di review, tanya tiap baris: tugasnya apa? baris tanpa tugas = hapus" |
+| Jawaban lemah     | Jawaban kuat                                                                                                         |
+|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| "lebih hati-hati" | "satu fungsi hanya boleh mengubah stok sekali; kalau butuh dua, itu tanda ada dua tanggung jawab"                    |
+| "ditest dulu"     | "test: untuk 1 pembelian, stok akhir harus `stokAwal - jumlahBeli`. Test ini akan gagal kalau ada pengurangan kedua" |
+| "review kode"     | "di review, tanya tiap baris: tugasnya apa? baris tanpa tugas = hapus"                                               |
 
 ---
 

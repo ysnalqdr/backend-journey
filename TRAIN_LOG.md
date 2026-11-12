@@ -9,7 +9,7 @@ Satu baris per sesi latihan.
 ## Format
 
 | Tanggal | Konsep | Soal | PASS | FAIL | Level tertinggi lulus | Waktu total | Catatan |
-|---|---|---|---|---|---|---|---|
+|---------|--------|------|------|------|-----------------------|-------------|---------|
 
 **Level tertinggi lulus:** EASY / MEDIUM / HARD
 Konsep baru dianggap lulus hanya kalau ada minimal 1 MEDIUM yang PASS.
@@ -18,17 +18,17 @@ Konsep baru dianggap lulus hanya kalau ada minimal 1 MEDIUM yang PASS.
 
 ## Sesi
 
-| Tanggal | Konsep | Soal | PASS | FAIL | Level tertinggi lulus | Waktu | Catatan |
-|---|---|---|---|---|---|---|---|
-| 2026-11-07 | ternary | 1 | 0 | 1 | — | 20s | alasan salah sasaran: diperiksa `tiket > 0`, bukan `tiket` |
+| Tanggal    | Konsep  | Soal | PASS | FAIL | Level tertinggi lulus | Waktu | Catatan                                                    |
+|------------|---------|------|------|------|-----------------------|-------|------------------------------------------------------------|
+| 2026-11-07 | ternary | 1    | 0    | 1    | —                     | 20s   | alasan salah sasaran: diperiksa `tiket > 0`, bukan `tiket` |
 
 ---
 
 ## Ringkasan per konsep
 
-| Konsep | Sesi | Total PASS | Total FAIL | Status | Bukti |
-|---|---|---|---|---|---|
-| ternary | 1 | 0 | 1 | 1 | — |
+| Konsep  | Sesi | Total PASS | Total FAIL | Status | Bukti |
+|---------|------|------------|------------|--------|-------|
+| ternary | 1    | 0          | 1          | 1      | —     |
 
 ---
 

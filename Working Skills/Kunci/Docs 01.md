@@ -26,11 +26,11 @@ Jangan dibuka sebelum mengerjakan kelima tugas.
 
 **Jawaban:**
 
-| | `slice` | `splice` |
-|---|---|---|
-| mengubah array asli? | **tidak** | **ya** |
-| mengembalikan | array baru | elemen yang dihapus |
-| dipakai untuk | mengambil sebagian | menghapus / menyisipkan |
+|                      | `slice`            | `splice`                |
+|----------------------|--------------------|-------------------------|
+| mengubah array asli? | **tidak**          | **ya**                  |
+| mengembalikan        | array baru         | elemen yang dihapus     |
+| dipakai untuk        | mengambil sebagian | menghapus / menyisipkan |
 
 Nama yang mirip, perilaku yang berlawanan. Ini salah satu sumber bug paling umum untuk pemula.
 
@@ -46,12 +46,12 @@ Nama yang mirip, perilaku yang berlawanan. Ini salah satu sumber bug paling umum
 
 **Jawaban:**
 
-| Input | `Number.isNaN(x)` | `isNaN(x)` |
-|---|---|---|
-| `NaN` | `true` | `true` |
-| `"abc"` | `false` | **`true`** ← beda |
-| `undefined` | `false` | **`true`** ← beda |
-| `"123"` | `false` | `false` |
+| Input       | `Number.isNaN(x)` | `isNaN(x)`        |
+|-------------|-------------------|-------------------|
+| `NaN`       | `true`            | `true`            |
+| `"abc"`     | `false`           | **`true`** ← beda |
+| `undefined` | `false`           | **`true`** ← beda |
+| `"123"`     | `false`           | `false`           |
 
 `isNaN` mengubah dulu ke angka, baru memeriksa. Jadi `"abc"` dianggap `NaN` walaupun ia string, bukan `NaN`.
 
@@ -106,12 +106,12 @@ console.log(sumWithInitial);   // 10
 
 Ini bagian yang penting — dokumentasi resmi punya batas:
 
-| MDN menjelaskan | MDN tidak menjelaskan |
-|---|---|
-| apa fungsi itu | kapan kamu **butuh** fungsi itu |
-| parameter dan tipe | kapan **jangan** memakainya |
-| contoh yang benar | kesalahan umum orang lain |
-| perilaku resmi | performa di data besar |
+| MDN menjelaskan    | MDN tidak menjelaskan           |
+|--------------------|---------------------------------|
+| apa fungsi itu     | kapan kamu **butuh** fungsi itu |
+| parameter dan tipe | kapan **jangan** memakainya     |
+| contoh yang benar  | kesalahan umum orang lain       |
+| perilaku resmi     | performa di data besar          |
 
 Kalau kamu merasa "sudah baca tapi masih bingung", sering kali yang kurang bukan penjelasan fungsinya — tapi **konteks pemakaian**. Itu dicari di tempat lain: Stack Overflow, blog, atau bertanya.
 
@@ -121,12 +121,12 @@ Kalau kamu merasa "sudah baca tapi masih bingung", sering kali yang kurang bukan
 
 ## Cara menilai dirimu
 
-| Tugas | Lulus kalau |
-|---|---|
-| 1 | menyebut `Array.isArray` dan alasan `typeof` tidak cukup |
-| 2 | menyebut `splice` mengubah asli, `slice` tidak |
-| 3 | menyebut `isNaN` mengonversi dulu |
-| 4 | menyebut nama "nullish coalescing" dan `SyntaxError` tanpa kurung |
-| 5 | bisa menjelaskan `reduce` dalam satu kalimat sendiri |
+| Tugas | Lulus kalau                                                       |
+|-------|-------------------------------------------------------------------|
+| 1     | menyebut `Array.isArray` dan alasan `typeof` tidak cukup          |
+| 2     | menyebut `splice` mengubah asli, `slice` tidak                    |
+| 3     | menyebut `isNaN` mengonversi dulu                                 |
+| 4     | menyebut nama "nullish coalescing" dan `SyntaxError` tanpa kurung |
+| 5     | bisa menjelaskan `reduce` dalam satu kalimat sendiri              |
 
 Tidak perlu sempurna. Yang dinilai: **kamu mencari sendiri, bukan menunggu dijelaskan.**

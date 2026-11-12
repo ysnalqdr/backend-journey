@@ -45,12 +45,12 @@ Disalin ke `Trace.md` setiap minggu. Diisi **sebelum** kode dijalankan.
 ## Setelah menjalankan
 
 | Pertanyaan | Dugaanku | Kenyataan | Cocok? |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+|------------|----------|-----------|--------|
+| 1          |          |           |        |
+| 2          |          |           |        |
+| 3          |          |           |        |
+| 4          |          |           |        |
+| 5          |          |           |        |
 
 ---
 
