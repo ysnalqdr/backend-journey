@@ -26,7 +26,8 @@ Setiap baris wajib diberi **Jenis**. Penanganannya berbeda — ini yang membuat 
 Setiap kali kamu sadar salah — di gerbang, di placement check, di latihan — tambahkan satu baris. Tiga detik. Jangan menunggu sampai rapi.
 
 ```markdown
-| Tanggal | Jenis | Kesalahan | Konsep yang salah | Muncul ke- | Sudah diperbaiki? |
+Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
+
 ```
 
 Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa jawab benar **tanpa buka materi** dan **alasannya benar**.
@@ -35,29 +36,71 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 
 ## Catatan
 
-| Tanggal    | Jenis   | Kesalahan                                                       | Konsep yang salah                                                                | Muncul ke- | Sudah diperbaiki? |
-|------------|---------|-----------------------------------------------------------------|----------------------------------------------------------------------------------|------------|-------------------|
-| 2026-11-06 | CONCEPT | jawab `0 == ""` itu `false`                                     | `==` mengubah tipe sebelum membandingkan                                         | 1          | belum             |
-| 2026-11-06 | CONCEPT | jawab soal 4 outputnya `D`                                      | tipe data menentukan hasil perbandingan                                          | 1          | belum             |
-| 2026-11-06 | READING | tulis `subtotal + promo` padahal instruksinya potong            | membaca instruksi sampai selesai                                                 | 1          | belum             |
-| 2026-11-06 | CONCEPT | tidak bisa jelaskan kenapa `if (stok)` untuk `0` salah          | truthy/falsy untuk angka                                                         | 1          | belum             |
-| 2026-11-07 | CONCEPT | alasan `NaN == NaN` ditulis "string sama string"                | NaN itu number, dan tidak sama dengan apa pun                                    | 1          | belum             |
-| 2026-11-07 | SYNTAX  | menulis `>+` bukan `>=`                                         | operator perbandingan                                                            | 1          | ya                |
-| 2026-11-07 | CONCEPT | menjawab `"90" < "100"` itu `true`                              | perbandingan teks huruf per huruf                                                | 1          | ya                |
-| 2026-11-07 | READING | pakai `stokTiket` sebagai jumlah beli                           | membaca nama variabel sesuai maksudnya                                           | 1          | ya                |
-| 2026-11-08 | CONCEPT | alasan ternary: "karena tiket falsy"                            | yang diperiksa `tiket > 0`, bukan `tiket`                                        | 1          | ya                |
-| 2026-11-08 | READING | melihat `!` padahal kode tidak punya `!`                        | membaca simbol satu per satu sebelum menjawab                                    | 1          | ya                |
-| 2026-11-08 | CONCEPT | mengira `switch` melakukan looping                              | `switch` berjalan sekali, fallthrough hanya ke bawah                             | 1          | ya                |
-| 2026-11-08 | CONCEPT | `diskon = 20` disangka mencetak 20                              | `=` menugaskan, `console.log` mencetak                                           | **2**      | belum             |
-| 2026-11-08 | CONCEPT | `case 2` dikira sama dengan `case "2"`                          | `switch` membandingkan dengan `===`, tipe harus sama                             | 1          | belum             |
-| 2026-11-08 | CONCEPT | jawab "berhenti di case B" tanpa sebut `break`                  | `break` yang menghentikan, bukan kecocokan `case`                                | 1          | ya                |
-| 2026-11-08 | CONCEPT | output dijawab "reguler" padahal yang tercetak angka 72000      | nama `case` itu label, yang tercetak adalah nilai variabel                       | 1          | ya                |
-| 2026-11-08 | CONCEPT | `&&` disangka mengembalikan `true`                              | `&&` mengembalikan nilai asli sisi yang dipilih, bukan boolean                   | **3**      | belum             |
-| 2026-11-08 | CONCEPT | "kiri true dan kanan false, JS hanya membaca yang true"         | `&&` WAJIB periksa kanan kalau kiri truthy; berhenti hanya kalau kiri falsy      | 1          | belum             |
-| 2026-11-08 | CONCEPT | perbaikan crash: "ganti `.nama` jadi string"                    | memperbaiki data ≠ memperbaiki kode; guard ditaruh sebelum akses properti        | 1          | belum             |
-| 2026-11-08 | CONCEPT | `if` gagal disangka menjalankan `default` di dalam switch       | `default` bagian dari `switch`; kalau `if` gagal, switch tidak jalan sama sekali | **3**      | belum             |
-| 2026-11-08 | READING | membaca `sudahLogin` (boolean `false`) sebagai teks kosong `""` | periksa tipe nilai sebelum menyimpulkan                                          | 1          | belum             |
-| 2026-11-08 | READING | menjawab "tidak tercetak apapun" padahal kode punya `else`      | baca seluruh struktur `if/else` sebelum menjawab                                 | 1          | belum             |
+Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
+
+- **2026-11-06** · CONCEPT · ke-1 · belum
+  - Salah: jawab `0 == ""` itu `false`
+  - Konsep benar: `==` mengubah tipe sebelum membandingkan
+- **2026-11-06** · CONCEPT · ke-1 · belum
+  - Salah: jawab soal 4 outputnya `D`
+  - Konsep benar: tipe data menentukan hasil perbandingan
+- **2026-11-06** · READING · ke-1 · belum
+  - Salah: tulis `subtotal + promo` padahal instruksinya potong
+  - Konsep benar: membaca instruksi sampai selesai
+- **2026-11-06** · CONCEPT · ke-1 · belum
+  - Salah: tidak bisa jelaskan kenapa `if (stok)` untuk `0` salah
+  - Konsep benar: truthy/falsy untuk angka
+- **2026-11-07** · CONCEPT · ke-1 · belum
+  - Salah: alasan `NaN == NaN` ditulis "string sama string"
+  - Konsep benar: NaN itu number, dan tidak sama dengan apa pun
+- **2026-11-07** · SYNTAX · ke-1 · ya
+  - Salah: menulis `>+` bukan `>=`
+  - Konsep benar: operator perbandingan
+- **2026-11-07** · CONCEPT · ke-1 · ya
+  - Salah: menjawab `"90" < "100"` itu `true`
+  - Konsep benar: perbandingan teks huruf per huruf
+- **2026-11-07** · READING · ke-1 · ya
+  - Salah: pakai `stokTiket` sebagai jumlah beli
+  - Konsep benar: membaca nama variabel sesuai maksudnya
+- **2026-11-08** · CONCEPT · ke-1 · ya
+  - Salah: alasan ternary: "karena tiket falsy"
+  - Konsep benar: yang diperiksa `tiket > 0`, bukan `tiket`
+- **2026-11-08** · READING · ke-1 · ya
+  - Salah: melihat `!` padahal kode tidak punya `!`
+  - Konsep benar: membaca simbol satu per satu sebelum menjawab
+- **2026-11-08** · CONCEPT · ke-1 · ya
+  - Salah: mengira `switch` melakukan looping
+  - Konsep benar: `switch` berjalan sekali, fallthrough hanya ke bawah
+- **2026-11-08** · CONCEPT · ke-**2** · belum
+  - Salah: `diskon = 20` disangka mencetak 20
+  - Konsep benar: `=` menugaskan, `console.log` mencetak
+- **2026-11-08** · CONCEPT · ke-1 · belum
+  - Salah: `case 2` dikira sama dengan `case "2"`
+  - Konsep benar: `switch` membandingkan dengan `===`, tipe harus sama
+- **2026-11-08** · CONCEPT · ke-1 · ya
+  - Salah: jawab "berhenti di case B" tanpa sebut `break`
+  - Konsep benar: `break` yang menghentikan, bukan kecocokan `case`
+- **2026-11-08** · CONCEPT · ke-1 · ya
+  - Salah: output dijawab "reguler" padahal yang tercetak angka 72000
+  - Konsep benar: nama `case` itu label, yang tercetak adalah nilai variabel
+- **2026-11-08** · CONCEPT · ke-**3** · belum
+  - Salah: `&&` disangka mengembalikan `true`
+  - Konsep benar: `&&` mengembalikan nilai asli sisi yang dipilih, bukan boolean
+- **2026-11-08** · CONCEPT · ke-1 · belum
+  - Salah: "kiri true dan kanan false, JS hanya membaca yang true"
+  - Konsep benar: `&&` WAJIB periksa kanan kalau kiri truthy; berhenti hanya kalau kiri falsy
+- **2026-11-08** · CONCEPT · ke-1 · belum
+  - Salah: perbaikan crash: "ganti `.nama` jadi string"
+  - Konsep benar: memperbaiki data ≠ memperbaiki kode; guard ditaruh sebelum akses properti
+- **2026-11-08** · CONCEPT · ke-**3** · belum
+  - Salah: `if` gagal disangka menjalankan `default` di dalam switch
+  - Konsep benar: `default` bagian dari `switch`; kalau `if` gagal, switch tidak jalan sama sekali
+- **2026-11-08** · READING · ke-1 · belum
+  - Salah: membaca `sudahLogin` (boolean `false`) sebagai teks kosong `""`
+  - Konsep benar: periksa tipe nilai sebelum menyimpulkan
+- **2026-11-08** · READING · ke-1 · belum
+  - Salah: menjawab "tidak tercetak apapun" padahal kode punya `else`
+  - Konsep benar: baca seluruh struktur `if/else` sebelum menjawab
 
 ---
 

@@ -38,49 +38,67 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 ### Bahasa dasar
 
-| Konsep                                     | Status | Bukti                                                                                           | Minggu | Catatan |
-|--------------------------------------------|--------|-------------------------------------------------------------------------------------------------|--------|---------|
-| `let` / `const` / `var`, scope             | 3      | `01_Variables.js`, `02_Challenge.js` ditulis tanpa AI                                           | 1      |         |
-| Tipe data & `typeof`                       | 3      | `01_Variables.js`, `04_TypeConversion.js`                                                       | 1      |         |
-| Template literal                           | 3      | `01_Variables.js`; bug kutip ditemukan & diperbaiki sendiri                                     | 1      |         |
-| Konversi tipe (`Number`, `parseInt`)       | 3      | `04_TypeConversion.js`, gate Day 2.5                                                            | 2      |         |
-| `==` vs `===`                              | 3      | gate Lubang 2, 2/2                                                                              | 2      |         |
-| `NaN` & `Number.isNaN`                     | 3      | gate Lubang 2, alasan dikoreksi                                                                 | 2      |         |
-| Truthy / falsy                             | 3      | gate Day 2.5, 3/3                                                                               | 2      |         |
-| Operator aritmatika & jebakan `+`          | 3      | `04_TypeConversion.js`, `05_Challenge.js`                                                       | 2      |         |
-| `if` / `else if` / `else`, urutan kondisi  | 3      | Gate Log #3 (MEDIUM), 90 vs `>` vs `>=`                                                         | 3      |         |
-| Ternary                                    | 3      | Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol                                         | 3      |         |
-| `switch` & `break`                         | 3      | Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18)       | 3      |         |
-| `&&` `\|\|` `!` & short-circuit            | 3      | Gate Log #40-#48 (`&&` `\|\|`), #49-#59 (`!`). Semua 4 level PASS                               | 3      |         |
-| `??` vs `\|\|`                             | 3      | Gate Log #60-#65: EASY, MEDIUM, HARD, WRITE semua PASS. Resolver `limit`/`diskon` diuji 4 nilai | 3      |         |
-| `for`, `while`, `do...while`               |        |                                                                                                 | 4      | belum   |
-| `break`, `continue`, nested loop           |        |                                                                                                 | 4      | belum   |
-| Fungsi, parameter, return                  |        |                                                                                                 | 2      | belum   |
-| Scope & closure                            |        |                                                                                                 | 2      | belum   |
-| Array & method (`map`, `filter`, `reduce`) |        |                                                                                                 | 3      | belum   |
-| Object, destructuring, spread              |        |                                                                                                 | 4      | belum   |
-| Reference vs value (mutability)            |        |                                                                                                 | 4      | belum   |
+| Konsep                                     | Status | Minggu                |     |     |
+|--------------------------------------------|--------|-----------------------|-----|-----|
+| `let` / `const` / `var`, scope             | 3      | 1                     |     |     |
+| Tipe data & `typeof`                       | 3      | 1                     |     |     |
+| Template literal                           | 3      | 1                     |     |     |
+| Konversi tipe (`Number`, `parseInt`)       | 3      | 2                     |     |     |
+| `==` vs `===`                              | 3      | 2                     |     |     |
+| `NaN` & `Number.isNaN`                     | 3      | 2                     |     |     |
+| Truthy / falsy                             | 3      | 2                     |     |     |
+| Operator aritmatika & jebakan `+`          | 3      | 2                     |     |     |
+| `if` / `else if` / `else`, urutan kondisi  | 3      | 3                     |     |     |
+| Ternary                                    | 3      | 3                     |     |     |
+| `switch` & `break`                         | 3      | 3                     |     |     |
+| `&&` `                                     |        | ` `!` & short-circuit | 3   | 3   |
+| `??` vs `                                  |        | `                     | 3   | 3   |
+| `for`, `while`, `do...while`               | -      | 4                     |     |     |
+| `break`, `continue`, nested loop           | -      | 4                     |     |     |
+| Fungsi, parameter, return                  | -      | 2                     |     |     |
+| Scope & closure                            | -      | 2                     |     |     |
+| Array & method (`map`, `filter`, `reduce`) | -      | 3                     |     |     |
+| Object, destructuring, spread              | -      | 4                     |     |     |
+| Reference vs value (mutability)            | -      | 4                     |     |     |
+
+**Bukti:**
+
+- **`let` / `const` / `var`, scope** — `01_Variables.js`, `02_Challenge.js` ditulis tanpa AI
+- **Tipe data & `typeof`** — `01_Variables.js`, `04_TypeConversion.js`
+- **Template literal** — `01_Variables.js`; bug kutip ditemukan & diperbaiki sendiri
+- **Konversi tipe (`Number`, `parseInt`)** — `04_TypeConversion.js`, gate Day 2.5
+- **`==` vs `===`** — gate Lubang 2, 2/2
+- **`NaN` & `Number.isNaN`** — gate Lubang 2, alasan dikoreksi
+- **Truthy / falsy** — gate Day 2.5, 3/3
+- **Operator aritmatika & jebakan `+`** — `04_TypeConversion.js`, `05_Challenge.js`
+- **`if` / `else if` / `else`, urutan kondisi** — Gate Log #3 (MEDIUM), 90 vs `>` vs `>=`
+- **Ternary** — Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol
+- **`switch` & `break`** — Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18)
+- **`&&` `||` `!` & short-circuit** — Gate Log #40-#48 (`&&` `||`), #49-#59 (`!`). Semua 4 level PASS
+- **`??` vs `||`** — Gate Log #60-#65: EASY, MEDIUM, HARD, WRITE semua PASS. Resolver `limit`/`diskon` diuji 4 nilai
+
 
 **Tambahan di luar daftar:** assignment vs output (`=` menugaskan, `console.log` mencetak) — status **2**, lulus 1 soal (#12) lalu gagal lagi (#13).
 
 ### Backend fundamental
 
-| Konsep                                 | Status | Bukti | Minggu | Catatan |
-|----------------------------------------|--------|-------|--------|---------|
-| HTTP method & status code              |        |       | 6      |         |
-| Header, body, query param              |        |       | 6      |         |
-| Request–response lifecycle             |        |       | 6      |         |
-| Node.js: `fs`, `process`, module       |        |       | 7      |         |
-| Express: routing, middleware           |        |       | 8      |         |
-| Error handling middleware              |        |       | 8      |         |
-| Async / await, Promise                 |        |       | 5      |         |
-| Callback vs Promise vs async           |        |       | 5      |         |
-| SQL: SELECT / INSERT / UPDATE / DELETE |        |       | 9      |         |
-| SQL: WHERE, ORDER BY, LIMIT            |        |       | 10     |         |
-| SQL: JOIN                              |        |       | 11     |         |
-| Normalisasi & desain tabel             |        |       | 12     |         |
-| Index & kenapa query lambat            |        |       | 12     |         |
-| Transaksi & kenapa perlu               |        |       | 12     |         |
+| Konsep                                 | Status | Minggu |
+|----------------------------------------|--------|--------|
+| HTTP method & status code              | -      | 6      |
+| Header, body, query param              | -      | 6      |
+| Request–response lifecycle             | -      | 6      |
+| Node.js: `fs`, `process`, module       | -      | 7      |
+| Express: routing, middleware           | -      | 8      |
+| Error handling middleware              | -      | 8      |
+| Async / await, Promise                 | -      | 5      |
+| Callback vs Promise vs async           | -      | 5      |
+| SQL: SELECT / INSERT / UPDATE / DELETE | -      | 9      |
+| SQL: WHERE, ORDER BY, LIMIT            | -      | 10     |
+| SQL: JOIN                              | -      | 11     |
+| Normalisasi & desain tabel             | -      | 12     |
+| Index & kenapa query lambat            | -      | 12     |
+| Transaksi & kenapa perlu               | -      | 12     |
+
 
 ---
 
@@ -154,16 +172,17 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 Delapan konsep ini **tidak bisa** dinilai dengan "tulis dari nol". Tesnya berbeda, dan buktinya ada di `Working Skills/`.
 
-| Konsep                                  | Status | Bukti | Latihan    |
-|-----------------------------------------|--------|-------|------------|
-| Membaca kode asing                      | 0      |       | `Reading/` |
-| Menulis komentar review                 | 0      |       | `Review/`  |
-| Menerima review                         | 0      |       | `Review/`  |
-| Mencari di dokumentasi                  | 0      |       | `Docs/`    |
-| Menulis bug report                      | 0      |       | `Debug/`   |
-| Debugging sistematis                    | 0      |       | `Debug/`   |
-| Membaca codebase dengan satu pertanyaan | 0      |       | `Trace.md` |
-| Menilai desain, bukan cuma sintaks      | 0      |       | `Review/`  |
+| Konsep                                  | Status | Minggu |
+|-----------------------------------------|--------|--------|
+| Membaca kode asing                      | 0      |        |
+| Menulis komentar review                 | 0      |        |
+| Menerima review                         | 0      |        |
+| Mencari di dokumentasi                  | 0      |        |
+| Menulis bug report                      | 0      |        |
+| Debugging sistematis                    | 0      |        |
+| Membaca codebase dengan satu pertanyaan | 0      |        |
+| Menilai desain, bukan cuma sintaks      | 0      |        |
+
 
 **Skala untuk working skills** (beda dari skala konsep):
 
