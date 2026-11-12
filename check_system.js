@@ -247,7 +247,12 @@ if (mainRules < 30) {
 for (const c of catatanFiles) {
     const src = fs.readFileSync(c, "utf8");
     if (!src.includes("## Gate Log")) continue;
-    const n = (src.match(/^\|\s*\d+\s*\|/gm) || []).length;
+
+    // format tabel (lama) atau format daftar (baru)
+    const tabel = (src.match(/^\|\s*\d+\s*\|/gm) || []).length;
+    const daftar = (src.match(/^\*\*#\d+\*\*/gm) || []).length;
+    const n = Math.max(tabel, daftar);
+
     if (n === 0) {
         warn(`gate log kosong: ${path.basename(path.dirname(c))}`);
     } else {

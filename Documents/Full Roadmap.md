@@ -47,12 +47,22 @@ Do not use AI while learning fundamentals. AI is for work projects, not for prac
 - Fireship - JavaScript in 100 Seconds
 - Traversy Media - JavaScript Crash Course
 
-| Week | Topic                | Practice                                            | Output                |
-|------|----------------------|-----------------------------------------------------|-----------------------|
-| 01   | Js Basic             | Variables, data types, operators, conditions, loops | Temperature converter |
-| 02   | Function Scope       | Function declaration, expression, arrow, closure    | CLI calculator        |
-| 03   | Array Methods        | map, filter, reduce, find, some, every              | Filter a concert list |
-| 04   | Object Destructuring | Objects, this, destructuring, spread, rest          | Simple inventory      |
+**Js Basic**
+- Practice: Variables, data types, operators, conditions, loops
+- Output: Temperature converter
+
+**Function Scope**
+- Practice: Function declaration, expression, arrow, closure
+- Output: CLI calculator
+
+**Array Methods**
+- Practice: map, filter, reduce, find, some, every
+- Output: Filter a concert list
+
+**Object Destructuring**
+- Practice: Objects, this, destructuring, spread, rest
+- Output: Simple inventory
+
 
 **Checkpoint:** Write a 50-100 line program without looking at references.
 
@@ -65,12 +75,22 @@ Do not use AI while learning fundamentals. AI is for work projects, not for prac
 - Hussein Nasser - HTTP Crash Course
 - MDN Web Docs - HTTP Overview
 
-| Week | Topic            | Practice                                     | Output                    |
-|------|------------------|----------------------------------------------|---------------------------|
-| 05   | Async Await      | Callbacks, promises, async/await, try-catch  | Fetch a public API        |
-| 06   | Http Fundamental | Request flow, methods, status codes, headers | Request flow diagram      |
-| 07   | Nodejs Basics    | Modules, fs, path, process                   | Read and write JSON files |
-| 08   | Express Api      | Routes, middleware, req/res                  | To-do list CRUD           |
+**Async Await**
+- Practice: Callbacks, promises, async/await, try-catch
+- Output: Fetch a public API
+
+**Http Fundamental**
+- Practice: Request flow, methods, status codes, headers
+- Output: Request flow diagram
+
+**Nodejs Basics**
+- Practice: Modules, fs, path, process
+- Output: Read and write JSON files
+
+**Express Api**
+- Practice: Routes, middleware, req/res
+- Output: To-do list CRUD
+
 
 **Checkpoint:** Build a 4-endpoint REST API without a tutorial.
 
@@ -83,12 +103,22 @@ Do not use AI while learning fundamentals. AI is for work projects, not for prac
 - Fireship - SQL in 100 Seconds
 - DB Fiddle for browser practice
 
-| Week | Topic           | Practice                                       | Output                     |
-|------|-----------------|------------------------------------------------|----------------------------|
-| 09   | Sql Crud        | CREATE, INSERT, SELECT, UPDATE, DELETE         | 10 .sql files              |
-| 10   | Sql Query       | WHERE, ORDER BY, LIMIT, LIKE, aggregates       | Concert and ticket dataset |
-| 11   | Sql Join        | INNER, LEFT, RIGHT JOIN, GROUP BY, HAVING      | 5 complex queries          |
-| 12   | Database Design | Primary key, foreign key, index, normalization | SoundWave schema in SQL    |
+**Sql Crud**
+- Practice: CREATE, INSERT, SELECT, UPDATE, DELETE
+- Output: 10 .sql files
+
+**Sql Query**
+- Practice: WHERE, ORDER BY, LIMIT, LIKE, aggregates
+- Output: Concert and ticket dataset
+
+**Sql Join**
+- Practice: INNER, LEFT, RIGHT JOIN, GROUP BY, HAVING
+- Output: 5 complex queries
+
+**Database Design**
+- Practice: Primary key, foreign key, index, normalization
+- Output: SoundWave schema in SQL
+
 
 **LeetCode starts in week 11:** 2 Easy problems per week.
 
@@ -108,12 +138,22 @@ Do not use AI while learning fundamentals. AI is for work projects, not for prac
 - Bro Code - Java Full Course
 - IntelliJ IDEA Community
 
-| Week | Topic             | Practice                                          | Output                               |
-|------|-------------------|---------------------------------------------------|--------------------------------------|
-| 13   | Java Syntax       | Variables, types, input output, conditions, loops | 7 .java files                        |
-| 14   | Java Method       | Parameters, return values, overloading            | Calculator and temperature converter |
-| 15   | Java Oop Basics   | Classes, objects, constructors, getters setters   | User, Event, Ticket models           |
-| 16   | Java Oop Advanced | Inheritance, interfaces, polymorphism             | Payment system                       |
+**Java Syntax**
+- Practice: Variables, types, input output, conditions, loops
+- Output: 7 .java files
+
+**Java Method**
+- Practice: Parameters, return values, overloading
+- Output: Calculator and temperature converter
+
+**Java Oop Basics**
+- Practice: Classes, objects, constructors, getters setters
+- Output: User, Event, Ticket models
+
+**Java Oop Advanced**
+- Practice: Inheritance, interfaces, polymorphism
+- Output: Payment system
+
 
 **Checkpoint:** Write a 200+ line object-oriented Java program.
 
@@ -126,12 +166,22 @@ Do not use AI while learning fundamentals. AI is for work projects, not for prac
 - Amigoscode - Spring Boot Tutorial
 - Java Brains - Spring Boot playlist
 
-| Week | Topic             | Practice                                  | Output                          |
-|------|-------------------|-------------------------------------------|---------------------------------|
-| 17   | Java Collection   | List, Map, Set, generics                  | Phonebook CLI                   |
-| 18   | Java Exception Io | Try-catch, custom exceptions, read CSV    | CSV data processing program     |
-| 19   | Spring Boot Get   | Project setup, RestController, GetMapping | GET /hello and /users endpoints |
-| 20   | Spring Boot Crud  | PostMapping, RequestBody, ResponseEntity  | Full CRUD API                   |
+**Java Collection**
+- Practice: List, Map, Set, generics
+- Output: Phonebook CLI
+
+**Java Exception Io**
+- Practice: Try-catch, custom exceptions, read CSV
+- Output: CSV data processing program
+
+**Spring Boot Get**
+- Practice: Project setup, RestController, GetMapping
+- Output: GET /hello and /users endpoints
+
+**Spring Boot Crud**
+- Practice: PostMapping, RequestBody, ResponseEntity
+- Output: Full CRUD API
+
 
 **Checkpoint:** A working Spring Boot API with 4 CRUD endpoints.
 
@@ -142,12 +192,22 @@ Do not use AI while learning fundamentals. AI is for work projects, not for prac
 - Docker docs Get Started
 - Amigoscode - Spring Boot Testing
 
-| Week | Topic               | Practice                                      | Output                    |
-|------|---------------------|-----------------------------------------------|---------------------------|
-| 21   | Spring Jpa Postgres | Entities, repositories, PostgreSQL connection | CRUD with a real database |
-| 22   | Docker Basics       | Dockerfile, images, containers                | Dockerized API            |
-| 23   | Docker Compose      | Spring Boot plus PostgreSQL in one command    | docker-compose.yml        |
-| 24   | Testing Junit       | JUnit, Mockito, endpoint tests                | At least 10 unit tests    |
+**Spring Jpa Postgres**
+- Practice: Entities, repositories, PostgreSQL connection
+- Output: CRUD with a real database
+
+**Docker Basics**
+- Practice: Dockerfile, images, containers
+- Output: Dockerized API
+
+**Docker Compose**
+- Practice: Spring Boot plus PostgreSQL in one command
+- Output: docker-compose.yml
+
+**Testing Junit**
+- Practice: JUnit, Mockito, endpoint tests
+- Output: At least 10 unit tests
+
 
 **LeetCode:** 3 problems per week, start attempting Medium.
 

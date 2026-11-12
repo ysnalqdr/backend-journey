@@ -19,11 +19,15 @@ Dugaan penyebab   : (dugaan) pengurangan stok ditulis dua kali dalam
 
 **Kesalahan umum di langkah ini:**
 
-| Salah                                                                 | Kenapa salah                                          |
-|-----------------------------------------------------------------------|-------------------------------------------------------|
-| "stok berkurang dua" saja                                             | tidak ada langkah, tidak bisa direproduksi orang lain |
-| menulis "karena ada `stok - jumlahBeli` dua kali" di bagian Kenyataan | itu sudah masuk analisis, bukan observasi             |
-| tidak menulis harapan                                                 | tanpa harapan, tidak ada yang tahu ini bug atau bukan |
+**"stok berkurang dua" saja**
+- Kenapa salah: tidak ada langkah, tidak bisa direproduksi orang lain
+
+**menulis "karena ada `stok - jumlahBeli` dua kali" di bagian Kenyataan**
+- Kenapa salah: itu sudah masuk analisis, bukan observasi
+
+**tidak menulis harapan**
+- Kenapa salah: tanpa harapan, tidak ada yang tahu ini bug atau bukan
+
 
 ---
 
@@ -131,11 +135,15 @@ Perbaikan bug = perubahan terkecil yang membuat bug hilang. Perapian dilakukan d
 
 Jawaban yang baik menyebut **mekanisme**, bukan niat:
 
-| Jawaban lemah     | Jawaban kuat                                                                                                         |
-|-------------------|----------------------------------------------------------------------------------------------------------------------|
-| "lebih hati-hati" | "satu fungsi hanya boleh mengubah stok sekali; kalau butuh dua, itu tanda ada dua tanggung jawab"                    |
-| "ditest dulu"     | "test: untuk 1 pembelian, stok akhir harus `stokAwal - jumlahBeli`. Test ini akan gagal kalau ada pengurangan kedua" |
-| "review kode"     | "di review, tanya tiap baris: tugasnya apa? baris tanpa tugas = hapus"                                               |
+**"lebih hati-hati"**
+- Jawaban kuat: "satu fungsi hanya boleh mengubah stok sekali; kalau butuh dua, itu tanda ada dua tanggung jawab"
+
+**"ditest dulu"**
+- Jawaban kuat: "test: untuk 1 pembelian, stok akhir harus `stokAwal - jumlahBeli`. Test ini akan gagal kalau ada pengurangan kedua"
+
+**"review kode"**
+- Jawaban kuat: "di review, tanya tiap baris: tugasnya apa? baris tanpa tugas = hapus"
+
 
 ---
 

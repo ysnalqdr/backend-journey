@@ -56,11 +56,18 @@ if (hargaAkhir < 0) {
 
 ## Ada 5 masalah
 
-| Lapisan       | Jumlah | Petunjuk                                                                                                                |
-|---------------|--------|-------------------------------------------------------------------------------------------------------------------------|
-| Design        | 2      | (1) dua sumber diskon — bagaimana seharusnya keduanya berhubungan? (2) ada nilai promo yang tidak ditangani sama sekali |
-| Functionality | 1      | satu nilai yang seharusnya dibatasi, tapi tidak                                                                         |
-| Naming        | 2      | dua nama yang menyesatkan atau tidak konsisten                                                                          |
+**Design**
+- Jumlah: 2
+- Petunjuk: (1) dua sumber diskon — bagaimana seharusnya keduanya berhubungan? (2) ada nilai promo yang tidak ditangani sama sekali
+
+**Functionality**
+- Jumlah: 1
+- Petunjuk: satu nilai yang seharusnya dibatasi, tapi tidak
+
+**Naming**
+- Jumlah: 2
+- Petunjuk: dua nama yang menyesatkan atau tidak konsisten
+
 
 **Yang BUKAN masalah** — jangan ditandai, nanti dihitung salah:
 

@@ -79,9 +79,6 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 
 Satu entri per bug. Format lengkap ada di `Working Skills/Templates/BugReport.md`.
 
-| #   | Tanggal | Judul | Langkah reproduksi | Harapan | Kenyataan | Dugaan penyebab | Akar masalah | Status |
-|-----|---------|-------|--------------------|---------|-----------|-----------------|--------------|--------|
-|     |         |       |                    |         |           |                 |              |        |
 
 **Aturan:**
 - **Dugaan penyebab** ditandai dugaan, bukan fakta

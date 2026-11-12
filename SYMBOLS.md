@@ -8,14 +8,36 @@ Kolom **Dibaca** memakai Bahasa Inggris, karena itu yang dipakai saat interview.
 
 ## 1. Tanda baca struktur
 
-| Simbol | Dibaca                                     | Fungsi                                                     | Contoh                                         |
-|--------|--------------------------------------------|------------------------------------------------------------|------------------------------------------------|
-| `( )`  | parentheses / "kurung biasa"               | membungkus parameter, kondisi, atau mengelompokkan operasi | `if (stok > 0)`, `(2 + 3) * 4`                 |
-| `{ }`  | braces / curly brackets / "kurung kurawal" | membungkus blok kode atau object                           | `if (x) { }`, `const user = { nama: "Yasin" }` |
-| `[ ]`  | brackets / square brackets / "kurung siku" | array, atau akses elemen                                   | `const list = [1, 2, 3]`, `list[0]`            |
-| `;`    | semicolon / "titik koma"                   | mengakhiri satu perintah                                   | `const x = 5;`                                 |
-| `,`    | comma / "koma"                             | memisahkan item dalam daftar                               | `console.log(a, b, c)`                         |
-| `.`    | dot / "titik"                              | mengakses properti atau memanggil method                   | `user.nama`, `console.log`                     |
+**`( )`**
+- Dibaca: parentheses / "kurung biasa"
+- Fungsi: membungkus parameter, kondisi, atau mengelompokkan operasi
+- Contoh: `if (stok > 0)`, `(2 + 3) * 4`
+
+**`{ }`**
+- Dibaca: braces / curly brackets / "kurung kurawal"
+- Fungsi: membungkus blok kode atau object
+- Contoh: `if (x) { }`, `const user = { nama: "Yasin" }`
+
+**`[ ]`**
+- Dibaca: brackets / square brackets / "kurung siku"
+- Fungsi: array, atau akses elemen
+- Contoh: `const list = [1, 2, 3]`, `list[0]`
+
+**`;`**
+- Dibaca: semicolon / "titik koma"
+- Fungsi: mengakhiri satu perintah
+- Contoh: `const x = 5;`
+
+**`,`**
+- Dibaca: comma / "koma"
+- Fungsi: memisahkan item dalam daftar
+- Contoh: `console.log(a, b, c)`
+
+**`.`**
+- Dibaca: dot / "titik"
+- Fungsi: mengakses properti atau memanggil method
+- Contoh: `user.nama`, `console.log`
+
 
 ---
 
@@ -80,12 +102,26 @@ Semua ini menghasilkan `true` atau `false`.
 
 ## 5. Operator logika
 
-| Simbol | Dibaca             | Arti                                      | Contoh                          |
-|--------|--------------------|-------------------------------------------|---------------------------------|
-| `&&`   | AND / "dan"        | benar kalau **kedua** sisi benar          | `umur >= 17 && punyaTiket`      |
-| `\|\|` | OR / "atau"        | benar kalau **salah satu** benar          | `punyaTiket \|\| punyaUndangan` |
-| `!`    | NOT / "bukan"      | membalik nilai                            | `!sudahLogin`                   |
-| `??`   | nullish coalescing | pakai kanan kalau kiri `null`/`undefined` | `stok ?? 0`                     |
+**`&&`**
+- Dibaca: AND / "dan"
+- Arti: benar kalau **kedua** sisi benar
+- Contoh: `umur >= 17 && punyaTiket`
+
+**`||`**
+- Dibaca: OR / "atau"
+- Arti: benar kalau **salah satu** benar
+- Contoh: `punyaTiket || punyaUndangan`
+
+**`!`**
+- Dibaca: NOT / "bukan"
+- Arti: membalik nilai
+- Contoh: `!sudahLogin`
+
+**`??`**
+- Dibaca: nullish coalescing
+- Arti: pakai kanan kalau kiri `null`/`undefined`
+- Contoh: `stok ?? 0`
+
 
 ### Cara membaca `!`
 

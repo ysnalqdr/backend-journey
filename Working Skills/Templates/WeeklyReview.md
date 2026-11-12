@@ -18,9 +18,8 @@ Tanpa file ini, kamu akan merasa sibuk tanpa tahu apakah benar-benar berkembang.
 
 ### 2. Apa yang tidak selesai, dan kenapa?
 
-| Yang belum | Penyebab | Jenis                                                                                                |
-|------------|----------|------------------------------------------------------------------------------------------------------|
-|            |          | kurang jelas / kurang skill / takut gagal / kelebihan beban / energi rendah / distraksi / menghindar |
+- Jenis: kurang jelas / kurang skill / takut gagal / kelebihan beban / energi rendah / distraksi / menghindar
+
 
 Penyebab yang jujur lebih berguna daripada "tidak ada waktu".
 

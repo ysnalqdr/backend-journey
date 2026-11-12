@@ -8,13 +8,25 @@ Update **setiap akhir minggu**. Jujur. Status yang terlalu tinggi merugikan diri
 
 ## Skala status
 
-| Status | Arti                                  | Tesnya                                                     |
-|--------|---------------------------------------|------------------------------------------------------------|
-| **0**  | belum pernah dengar                   | —                                                          |
-| **1**  | pernah dengar, tidak bisa pakai       | tidak bisa jelaskan tanpa buka materi                      |
-| **2**  | bisa pakai kalau ada contoh           | bisa ikuti contoh, gagal kalau contohnya dihapus           |
-| **3**  | bisa tulis dari nol                   | bisa tulis tanpa melihat contoh                            |
-| **4**  | bisa jelaskan & mengoreksi orang lain | bisa menemukan kesalahan orang lain dan menjelaskan kenapa |
+****0****
+- Arti: belum pernah dengar
+
+****1****
+- Arti: pernah dengar, tidak bisa pakai
+- Tesnya: tidak bisa jelaskan tanpa buka materi
+
+****2****
+- Arti: bisa pakai kalau ada contoh
+- Tesnya: bisa ikuti contoh, gagal kalau contohnya dihapus
+
+****3****
+- Arti: bisa tulis dari nol
+- Tesnya: bisa tulis tanpa melihat contoh
+
+****4****
+- Arti: bisa jelaskan & mengoreksi orang lain
+- Tesnya: bisa menemukan kesalahan orang lain dan menjelaskan kenapa
+
 
 **Aturan bukti:** status **3 ke atas wajib punya bukti** di kolom Bukti. Tanpa bukti, status maksimal 2.
 
@@ -186,13 +198,25 @@ Delapan konsep ini **tidak bisa** dinilai dengan "tulis dari nol". Tesnya berbed
 
 **Skala untuk working skills** (beda dari skala konsep):
 
-| Status | Arti                       | Tesnya                                                       |
-|--------|----------------------------|--------------------------------------------------------------|
-| **0**  | belum pernah               | —                                                            |
-| **1**  | bisa kalau dibantu         | menjawab dengan tutor menuntun                               |
-| **2**  | bisa sendiri, hasil kurang | jawaban ada tapi meleset di beberapa bagian                  |
-| **3**  | bisa sendiri, hasil baik   | ≥ 70% benar dan tidak ada false positive                     |
-| **4**  | bisa mengoreksi orang lain | menemukan kesalahan review orang lain dan menjelaskan kenapa |
+****0****
+- Arti: belum pernah
+
+****1****
+- Arti: bisa kalau dibantu
+- Tesnya: menjawab dengan tutor menuntun
+
+****2****
+- Arti: bisa sendiri, hasil kurang
+- Tesnya: jawaban ada tapi meleset di beberapa bagian
+
+****3****
+- Arti: bisa sendiri, hasil baik
+- Tesnya: ≥ 70% benar dan tidak ada false positive
+
+****4****
+- Arti: bisa mengoreksi orang lain
+- Tesnya: menemukan kesalahan review orang lain dan menjelaskan kenapa
+
 
 **Aturan bukti:** status 3+ wajib menyebut file latihan dan tanggal. Tanpa itu, maksimal 2.
 

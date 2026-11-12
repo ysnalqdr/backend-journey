@@ -87,12 +87,18 @@ Usulan: `pesanan.subtotal` dan `totalBayar`.
 
 ## Yang BUKAN masalah
 
-| Hal                                      | Kenapa bukan masalah                                      |
-|------------------------------------------|-----------------------------------------------------------|
-| `const` pada `potongan` dan `hargaAkhir` | sudah benar, nilainya tidak diubah                        |
-| pengecekan `hargaAkhir < 0`              | perlu sebagai jaring pengaman, walaupun bukan solusi akar |
-| `console.log` untuk output               | sesuai konteks skrip sederhana                            |
-| tidak ada fungsi                         | satu alur, belum perlu dipisah                            |
+**`const` pada `potongan` dan `hargaAkhir`**
+- Kenapa bukan masalah: sudah benar, nilainya tidak diubah
+
+**pengecekan `hargaAkhir < 0`**
+- Kenapa bukan masalah: perlu sebagai jaring pengaman, walaupun bukan solusi akar
+
+**`console.log` untuk output**
+- Kenapa bukan masalah: sesuai konteks skrip sederhana
+
+**tidak ada fungsi**
+- Kenapa bukan masalah: satu alur, belum perlu dipisah
+
 
 Kalau kamu menandai salah satu dari ini sebagai `[blocking]`, itu **false positive** — dan reviewer yang sering false positive akan diabaikan oleh penulis kode.
 

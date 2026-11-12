@@ -97,22 +97,28 @@ for (const file of walk(ROOT)) {
             const header = splitRow(block[0]);
             const rows = block.slice(2).map(splitRow);
 
-            // header kolom pertama dipakai sebagai kunci
+            // kalau kolom pertama cuma nomor (1,2,3...), pakai kolom kedua sebagai judul
+            const firstIsNumber =
+                rows.length > 0 && rows.every((r) => /^\d+$/.test((r[0] || "").trim()));
+            const titleCol = firstIsNumber ? 1 : 0;
+
             for (const r of rows) {
                 if (r.every((c) => c === "")) continue;
 
-                const key = r[0] || "";
+                const title = (r[titleCol] || "").trim();
                 const rest = [];
 
-                for (let c = 1; c < header.length; c++) {
+                for (let c = 0; c < header.length; c++) {
+                    if (c === titleCol) continue;
+                    if (firstIsNumber && c === 0) continue;
                     const val = (r[c] || "").trim();
                     const label = (header[c] || "").trim();
                     if (!val || val === "—" || val === "-") continue;
                     rest.push(`- ${label}: ${val}`);
                 }
 
-                if (key) {
-                    out.push(`**${key}**`);
+                if (title) {
+                    out.push(`**${title}**`);
                 }
                 out.push(...rest);
                 out.push("");

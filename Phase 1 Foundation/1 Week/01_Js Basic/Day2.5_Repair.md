@@ -41,13 +41,26 @@ console.log("90" - 0);
 
 ## Cara membaca hasilnya
 
-| Baris          | Hasil   | Kenapa                                                                   |
-|----------------|---------|--------------------------------------------------------------------------|
-| `90 < 100`     | `true`  | dua angka, dibandingkan sebagai nilai                                    |
-| `"90" < "100"` | `false` | dua teks, dibandingkan huruf per huruf: `"9"` vs `"1"` — `9` lebih besar |
-| `"90" < 100`   | `true`  | teks diubah jadi angka dulu karena pasangannya angka                     |
-| `"9" < "60"`   | `false` | teks vs teks → `"9"` vs `"6"` → `9` lebih besar                          |
-| `"2" > "10"`   | `true`  | teks vs teks → `"2"` vs `"1"` → `2` lebih besar                          |
+**`90 < 100`**
+- Hasil: `true`
+- Kenapa: dua angka, dibandingkan sebagai nilai
+
+**`"90" < "100"`**
+- Hasil: `false`
+- Kenapa: dua teks, dibandingkan huruf per huruf: `"9"` vs `"1"` — `9` lebih besar
+
+**`"90" < 100`**
+- Hasil: `true`
+- Kenapa: teks diubah jadi angka dulu karena pasangannya angka
+
+**`"9" < "60"`**
+- Hasil: `false`
+- Kenapa: teks vs teks → `"9"` vs `"6"` → `9` lebih besar
+
+**`"2" > "10"`**
+- Hasil: `true`
+- Kenapa: teks vs teks → `"2"` vs `"1"` → `2` lebih besar
+
 
 **Ini sebabnya penilaian mahasiswa bisa rusak:** nilai `"90"` dapat D, nilai `"100"` dapat A. Tidak ada error. Aplikasi jalan. Datanya salah.
 

@@ -11,38 +11,82 @@ Master plan. Kalau ada aturan yang bentrok dengan README, file ini yang menang.
 
 ## 1. Keputusan yang sudah dikunci
 
-| No  | Keputusan                                                        | Alasan                                                                                                                                         |
-|-----|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1   | Java jadi senjata utama, bukan sejajar dengan JS dan Go          | Perbankan/fintech Indonesia hampir seluruhnya Java. Java juga mengajarkan OOP, DI, transaction boundary — kosakata yang ditanya saat interview |
-| 2   | Go setelah Java                                                  | Java → Go itu turun tangga (3–4 minggu). Go → Java naik tangga (2–3 bulan)                                                                     |
-| 3   | JS bukan senjata, tapi jalan masuk                               | Minggu 6–12 (HTTP, Express, SQL) transfer ~90% ke Java dan Go                                                                                  |
-| 4   | Phase 3 = port Soundwave ke Spring, bukan aplikasi baru          | Kompleksitasnya sudah nyata: reservasi stok, webhook idempotency, promo. Aplikasi baru dari nol tidak akan punya itu dalam 8 minggu            |
-| 5   | Materi tidak dipotong, tapi ada gerbang kelulusan                | Pemahaman di atas kecepatan. Hari boleh molor jadi 2 hari                                                                                      |
-| 6   | TypeScript, Python, frontend, AI engineering masuk daftar tunggu | Anggaran waktu 720–960 jam sudah terpakai ±685 jam                                                                                             |
+**Java jadi senjata utama, bukan sejajar dengan JS dan Go**
+- Alasan: Perbankan/fintech Indonesia hampir seluruhnya Java. Java juga mengajarkan OOP, DI, transaction boundary — kosakata yang ditanya saat interview
+
+**Go setelah Java**
+- Alasan: Java → Go itu turun tangga (3–4 minggu). Go → Java naik tangga (2–3 bulan)
+
+**JS bukan senjata, tapi jalan masuk**
+- Alasan: Minggu 6–12 (HTTP, Express, SQL) transfer ~90% ke Java dan Go
+
+**Phase 3 = port Soundwave ke Spring, bukan aplikasi baru**
+- Alasan: Kompleksitasnya sudah nyata: reservasi stok, webhook idempotency, promo. Aplikasi baru dari nol tidak akan punya itu dalam 8 minggu
+
+**Materi tidak dipotong, tapi ada gerbang kelulusan**
+- Alasan: Pemahaman di atas kecepatan. Hari boleh molor jadi 2 hari
+
+**TypeScript, Python, frontend, AI engineering masuk daftar tunggu**
+- Alasan: Anggaran waktu 720–960 jam sudah terpakai ±685 jam
+
 
 ---
 
 ## 2. Fase
 
-| Fase | Minggu | Tanggal              | Isi                                               | Deliverable                             |
-|------|--------|----------------------|---------------------------------------------------|-----------------------------------------|
-| 1    | 1–12   | 9 Nov 26 – 31 Jan 27 | JS + HTTP + Node + Express + SQL                  | 12 folder selesai, 12 trace, 12 bug log |
-| 2    | 13–24  | 1 Feb – 25 Apr 27    | Java + Spring + JPA + PostgreSQL + Docker + JUnit | API latihan jalan di lokal + Docker     |
-| 3    | 25–32  | 26 Apr – 20 Jun 27   | Port Soundwave ke Spring + deploy + docs          | **Portfolio siap 20 Juni**              |
-| 4    | 33–40  | 21 Jun – 15 Agu 27   | Go (4 mgg) + DSA sprint + interview prep + CV     | 5 cerita STAR, 1 writeup teknis         |
-| 5    | 41–48  | 16 Agu – 10 Okt 27   | Lamaran, mock interview, iterasi                  | 15+ lamaran, 3 referral                 |
+**1–12**
+- Tanggal: 9 Nov 26 – 31 Jan 27
+- Isi: JS + HTTP + Node + Express + SQL
+- Deliverable: 12 folder selesai, 12 trace, 12 bug log
+
+**13–24**
+- Tanggal: 1 Feb – 25 Apr 27
+- Isi: Java + Spring + JPA + PostgreSQL + Docker + JUnit
+- Deliverable: API latihan jalan di lokal + Docker
+
+**25–32**
+- Tanggal: 26 Apr – 20 Jun 27
+- Isi: Port Soundwave ke Spring + deploy + docs
+- Deliverable: **Portfolio siap 20 Juni**
+
+**33–40**
+- Tanggal: 21 Jun – 15 Agu 27
+- Isi: Go (4 mgg) + DSA sprint + interview prep + CV
+- Deliverable: 5 cerita STAR, 1 writeup teknis
+
+**41–48**
+- Tanggal: 16 Agu – 10 Okt 27
+- Isi: Lamaran, mock interview, iterasi
+- Deliverable: 15+ lamaran, 3 referral
+
 
 ---
 
 ## 3. Ritme harian
 
-| Blok                 | Durasi    | Isi                                                              | README |
-|----------------------|-----------|------------------------------------------------------------------|--------|
-| A — Baca kode        | 20 mnt    | 1 file asing 20–30 baris, jawab dari membaca saja, baru jalankan | #29    |
-| B — Materi + latihan | 60–90 mnt | Materi hari itu. Tulis sendiri dulu, baru tanya                  | —      |
-| C — Review kode      | 15 mnt    | Bergantian: review kode berisi bug, atau kode sendiri direview   | #30    |
-| D — Gerbang          | 15 mnt    | 4 level (lihat bagian 4)                                         | —      |
-| E — Catat            | 5 mnt     | Bug report + What I learned                                      | #32    |
+**A — Baca kode**
+- Durasi: 20 mnt
+- Isi: 1 file asing 20–30 baris, jawab dari membaca saja, baru jalankan
+- README: #29
+
+**B — Materi + latihan**
+- Durasi: 60–90 mnt
+- Isi: Materi hari itu. Tulis sendiri dulu, baru tanya
+
+**C — Review kode**
+- Durasi: 15 mnt
+- Isi: Bergantian: review kode berisi bug, atau kode sendiri direview
+- README: #30
+
+**D — Gerbang**
+- Durasi: 15 mnt
+- Isi: 4 level (lihat bagian 4)
+
+**E — Catat**
+- Durasi: 5 mnt
+- Isi: Bug report + What I learned
+- README: #32
+
 
 Kalau waktu cuma 60 menit: kerjakan A, B, D. Blok C dan E boleh dilewat sehari, tapi tidak boleh dua hari berturut.
 
@@ -102,13 +146,26 @@ Gerbang ini yang menggantikan "target jam". Kamu tidak dinilai dari berapa lama 
 
 1 file per minggu, naik level seiring fase. **Aturan #33 berlaku: baca untuk menjawab satu pertanyaan, bukan untuk "memahami seluruh file".**
 
-| Level | Kapan               | Yang dibaca                         | Pertanyaan yang harus dijawab                                                              |
-|-------|---------------------|-------------------------------------|--------------------------------------------------------------------------------------------|
-| 1     | Fase 1, minggu 1–6  | 20–30 baris, satu alur              | Input apa, output apa, ada `if` atau tidak, tipe datanya apa, baris mana yang paling rapuh |
-| 2     | Fase 1, minggu 7–12 | 30–50 baris, satu file utuh         | Alur eksekusi, apa yang terjadi kalau input salah, di mana tipe tidak cocok                |
-| 3     | Fase 2              | File backend kecil (Express/Spring) | Endpoint apa, validasi di mana, apa yang disimpan ke database                              |
-| 4     | Fase 3              | Beberapa file sekaligus             | Dependency antar file, siapa memanggil siapa, error ditangani di mana                      |
-| 5     | Fase 3–4            | Sistem (Soundwave penuh)            | Lapisan layer, di mana kebenaran data dipegang, titik risiko                               |
+**Fase 1, minggu 1–6**
+- Yang dibaca: 20–30 baris, satu alur
+- Pertanyaan yang harus dijawab: Input apa, output apa, ada `if` atau tidak, tipe datanya apa, baris mana yang paling rapuh
+
+**Fase 1, minggu 7–12**
+- Yang dibaca: 30–50 baris, satu file utuh
+- Pertanyaan yang harus dijawab: Alur eksekusi, apa yang terjadi kalau input salah, di mana tipe tidak cocok
+
+**Fase 2**
+- Yang dibaca: File backend kecil (Express/Spring)
+- Pertanyaan yang harus dijawab: Endpoint apa, validasi di mana, apa yang disimpan ke database
+
+**Fase 3**
+- Yang dibaca: Beberapa file sekaligus
+- Pertanyaan yang harus dijawab: Dependency antar file, siapa memanggil siapa, error ditangani di mana
+
+**Fase 3–4**
+- Yang dibaca: Sistem (Soundwave penuh)
+- Pertanyaan yang harus dijawab: Lapisan layer, di mana kebenaran data dipegang, titik risiko
+
 
 **Lima pertanyaan tetap level 1** (README #29):
 1. Apa yang masuk ke kode ini?
@@ -152,11 +209,18 @@ Target: 20 entri dalam sebulan pertama. Setelah itu kamu akan mulai melihat pola
 
 ## 8. Protokol AI
 
-| Mode          | Boleh?                       | Contoh                                                                           |
-|---------------|------------------------------|----------------------------------------------------------------------------------|
-| **Tutor**     | Bebas                        | "jelaskan kenapa di sini pakai async", "apa yang salah kalau pakai pendekatan X" |
-| **Reviewer**  | Bebas, setelah tulis sendiri | "review kode saya, sebutkan yang salah dan alasannya. Jangan tulis ulang."       |
-| **Generator** | Dibatasi                     | hanya config, boilerplate, setup — bukan logika yang sedang dipelajari           |
+****Tutor****
+- Boleh?: Bebas
+- Contoh: "jelaskan kenapa di sini pakai async", "apa yang salah kalau pakai pendekatan X"
+
+****Reviewer****
+- Boleh?: Bebas, setelah tulis sendiri
+- Contoh: "review kode saya, sebutkan yang salah dan alasannya. Jangan tulis ulang."
+
+****Generator****
+- Boleh?: Dibatasi
+- Contoh: hanya config, boilerplate, setup — bukan logika yang sedang dipelajari
+
 
 **Aturan keras:**
 
@@ -209,13 +273,26 @@ Hasilnya bukan "Soundwave versi Java" tapi **"Soundwave v2"** — cerita intervi
 
 ## 12. Checkpoint
 
-| Kapan           | Yang harus sudah ada                                        | Kalau meleset                                                           |
-|-----------------|-------------------------------------------------------------|-------------------------------------------------------------------------|
-| Akhir Jan 2027  | Fase 1 selesai, 12 trace, bisa baca 1 file JS tanpa bantuan | Potong minggu 4 (object destructuring) jadi 3 hari, jangan potong SQL   |
-| Akhir Apr 2027  | API Spring jalan lokal + Docker, paham DI dan transaction   | Potong Docker Compose, jangan potong JPA/transaction                    |
-| **20 Jun 2027** | Portfolio siap: Soundwave v2 deploy + README + writeup      | Kalau molor 2 minggu, deploy tanpa fitur tambahan. Jangan geser tanggal |
-| Akhir Agu 2027  | CV, 5 cerita STAR, 1 writeup, DSA 150 soal                  | Kurangi Go jadi 2 minggu                                                |
-| Sep–Okt 2027    | 15+ lamaran terkirim, 3 referral diminta                    | Lamar dengan apa yang ada. Jangan tunggu sempurna                       |
+**Akhir Jan 2027**
+- Yang harus sudah ada: Fase 1 selesai, 12 trace, bisa baca 1 file JS tanpa bantuan
+- Kalau meleset: Potong minggu 4 (object destructuring) jadi 3 hari, jangan potong SQL
+
+**Akhir Apr 2027**
+- Yang harus sudah ada: API Spring jalan lokal + Docker, paham DI dan transaction
+- Kalau meleset: Potong Docker Compose, jangan potong JPA/transaction
+
+****20 Jun 2027****
+- Yang harus sudah ada: Portfolio siap: Soundwave v2 deploy + README + writeup
+- Kalau meleset: Kalau molor 2 minggu, deploy tanpa fitur tambahan. Jangan geser tanggal
+
+**Akhir Agu 2027**
+- Yang harus sudah ada: CV, 5 cerita STAR, 1 writeup, DSA 150 soal
+- Kalau meleset: Kurangi Go jadi 2 minggu
+
+**Sep–Okt 2027**
+- Yang harus sudah ada: 15+ lamaran terkirim, 3 referral diminta
+- Kalau meleset: Lamar dengan apa yang ada. Jangan tunggu sempurna
+
 
 **Aturan meleset:** kalau satu minggu meleset, jangan kejar semua. Pilih satu — trace berikutnya, atau gerbang hari itu. Dua hal itu yang paling berdampak.
 

@@ -18,9 +18,14 @@ Konsep baru dianggap lulus hanya kalau ada minimal 1 MEDIUM yang PASS.
 
 ## Sesi
 
-| Tanggal    | Konsep  | Soal | PASS | FAIL | Level tertinggi lulus | Waktu | Catatan                                                    |
-|------------|---------|------|------|------|-----------------------|-------|------------------------------------------------------------|
-| 2026-11-07 | ternary | 1    | 0    | 1    | —                     | 20s   | alasan salah sasaran: diperiksa `tiket > 0`, bukan `tiket` |
+**2026-11-07**
+- Konsep: ternary
+- Soal: 1
+- PASS: 0
+- FAIL: 1
+- Waktu: 20s
+- Catatan: alasan salah sasaran: diperiksa `tiket > 0`, bukan `tiket`
+
 
 ---
 

@@ -10,12 +10,22 @@ Kesalahan **berpikir**, bukan kesalahan kode. Bug log mencatat kode yang rusak; 
 
 Setiap baris wajib diberi **Jenis**. Penanganannya berbeda — ini yang membuat file ini berguna.
 
-| Jenis       | Ciri                         | Penanganan                                           |
-|-------------|------------------------------|------------------------------------------------------|
-| **CONCEPT** | Tidak paham idenya           | Ajar ulang dengan analogi **berbeda**, bukan diulang |
-| **READING** | Salah baca instruksi         | Latih membaca sampai selesai sebelum menjawab        |
-| **SYNTAX**  | Typo, simbol salah           | Drill simbol itu 5×                                  |
-| **LOGIC**   | Ide benar, urutan/alur salah | Telusuri langkah per langkah                         |
+****CONCEPT****
+- Ciri: Tidak paham idenya
+- Penanganan: Ajar ulang dengan analogi **berbeda**, bukan diulang
+
+****READING****
+- Ciri: Salah baca instruksi
+- Penanganan: Latih membaca sampai selesai sebelum menjawab
+
+****SYNTAX****
+- Ciri: Typo, simbol salah
+- Penanganan: Drill simbol itu 5×
+
+****LOGIC****
+- Ciri: Ide benar, urutan/alur salah
+- Penanganan: Telusuri langkah per langkah
+
 
 **Kenapa dipisah:** kesalahan READING tidak sembuh dengan belajar konsep. Kesalahan SYNTAX tidak sembuh dengan penjelasan ulang. Kalau semua diperlakukan sama, kamu berlatih hal yang salah.
 

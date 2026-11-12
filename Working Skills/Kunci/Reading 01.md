@@ -111,12 +111,22 @@ Rapuh karena **menimpa** nilai sebelumnya, bukan membandingkan. Kalau urutan `if
 
 ## Jawaban 5 — Nama yang harus diganti
 
-| Nama sekarang | Masalah                                                                                          | Usulan                |
-|---------------|--------------------------------------------------------------------------------------------------|-----------------------|
-| `hargaTiket`  | menjelaskan **asal** (tiket), bukan maksud. Kalau dipakai untuk merchandise juga, namanya salah. | `hargaSatuan`         |
-| `jumlahBeli`  | terdengar seperti perintah/aksi, bukan jumlah.                                                   | `jumlahItem`          |
-| `valid`       | terlalu umum. Valid untuk apa?                                                                   | `dataPesananValid`    |
-| `label`       | tidak menjelaskan label apa                                                                      | `labelNilaiPembelian` |
+**`hargaTiket`**
+- Masalah: menjelaskan **asal** (tiket), bukan maksud. Kalau dipakai untuk merchandise juga, namanya salah.
+- Usulan: `hargaSatuan`
+
+**`jumlahBeli`**
+- Masalah: terdengar seperti perintah/aksi, bukan jumlah.
+- Usulan: `jumlahItem`
+
+**`valid`**
+- Masalah: terlalu umum. Valid untuk apa?
+- Usulan: `dataPesananValid`
+
+**`label`**
+- Masalah: tidak menjelaskan label apa
+- Usulan: `labelNilaiPembelian`
+
 
 Nama yang baik menjelaskan **maksud**, bukan tipe dan bukan asal.
 
