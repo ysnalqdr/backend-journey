@@ -92,6 +92,34 @@ Dikerjakan 2026-11-12, tanpa buka materi.
    cara yang salah. Sekarang paham cara membacanya, dan paham juga membaca kode secara
    keseluruhan.
 
+### Koreksi setelah diperiksa
+
+Diperiksa 2026-11-12. Nomor 2 dan 3 benar. Nomor 1 dan 4 diperbaiki di bawah, jawaban lama
+tidak dihapus.
+
+**Nomor 1, arahnya terbalik.** Bukan ternary yang masuk ke if, tapi sebaliknya: if tidak bisa
+masuk ke mana-mana karena if itu pernyataan, bukan nilai. Ternary itu ekspresi, jadi dia yang
+bisa masuk ke variabel, argumen fungsi, dan template literal.
+
+```javascript
+const label = nilai >= 70 ? "lulus" : "gagal";   // boleh
+const salah = if (nilai >= 70) { "lulus" };      // SyntaxError
+```
+
+**Nomor 4, alasannya belum kena.** Saat nilainya `null` atau `undefined`, `??` dan `||`
+hasilnya sama. Yang membedakan justru `0`, `""`, dan `false`:
+
+| Nilai   | `??`    | `\|\|`  |
+|---------|---------|---------|
+| `0`     | `0`     | diganti |
+| `""`    | `""`    | diganti |
+| `false` | `false` | diganti |
+| `null`  | diganti | diganti |
+
+Jadi `??` dipakai bukan karena nilainya `null`, tapi karena `0`, `""`, dan `false` adalah nilai
+sah yang tidak boleh diganti. Stok `0` artinya habis, bukan kosong. Kalau pakai `||`, stok `0`
+berubah jadi `10` dan gudang dikira masih penuh.
+
 ## Bug log
 
 Satu entri per bug. Format lengkap ada di `Working Skills/Templates/BugReport.md`.
