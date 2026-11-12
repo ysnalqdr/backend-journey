@@ -86,12 +86,14 @@ A learning log for my path to becoming a backend engineer.
     Rule of thumb: if the answer would still be true for a different input, it is not
     an explanation.
 19. **Error taxonomy.** Classify every mistake before fixing it:
-    | Type    | Symptom                         | Treatment                                    |
-    |---------|---------------------------------|----------------------------------------------|
-    | CONCEPT | Does not understand the idea    | Re-teach with a new analogy                  |
-    | READING | Misread the instruction         | Practise reading to the end before answering |
-    | SYNTAX  | Typo, wrong symbol              | Drill that symbol 5 times                    |
-    | LOGIC   | Right idea, wrong order or flow | Trace it step by step                        |
+
+    | Type    | Symptom                      | Treatment                        |
+    |---------|------------------------------|----------------------------------|
+    | CONCEPT | Does not understand the idea | Re-teach with a new analogy      |
+    | READING | Misread the instruction      | Read to the end before answering |
+    | SYNTAX  | Typo, wrong symbol           | Drill that symbol 5 times        |
+    | LOGIC   | Right idea, wrong order      | Trace it step by step            |
+
     Different errors need different fixes. Do not treat a reading error as a concept error.
 20. **Spaced re-check.** Every concept at status 3 is re-tested 2 days later. If it fails,
     the status drops to 2 and the remediation loop applies again. The schedule lives in

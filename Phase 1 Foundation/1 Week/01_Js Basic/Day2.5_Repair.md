@@ -154,12 +154,12 @@ if (saldoA !== undefined) console.log("C: saldo diketahui");
 
 ## Cara berpikirnya
 
-| Yang kamu mau tahu   | Jangan tulis | Tulis                                                     |
-|----------------------|--------------|-----------------------------------------------------------|
-| stok masih ada?      | `if (stok)`  | `if (stok > 0)`                                           |
-| stok habis?          | `if (!stok)` | `if (stok === 0)`                                         |
-| data ada atau tidak? | `if (nilai)` | `if (nilai !== undefined)` atau `??`                      |
-| teks kosong?         | —            | `if (!teks)` ← ini boleh, karena `""` memang tidak berisi |
+| Yang kamu mau tahu   | Jangan tulis | Tulis                                    |
+|----------------------|--------------|------------------------------------------|
+| stok masih ada?      | `if (stok)`  | `if (stok > 0)`                          |
+| stok habis?          | `if (!stok)` | `if (stok === 0)`                        |
+| data ada atau tidak? | `if (nilai)` | `if (nilai !== undefined)` atau `??`     |
+| teks kosong?         | —            | `if (!teks)` ← boleh, `""` memang kosong |
 
 Untuk **teks dan object**, truthy/falsy aman. Untuk **angka**, selalu bandingkan eksplisit.
 
@@ -179,11 +179,13 @@ Tulis ulang tiga kondisi ini dengan benar, tanpa melihat contoh di atas:
 
 Lulus kalau **2 dari 3** tes di atas benar tanpa buka catatan.
 
-| Hasil        | Tindakan                                                                          |
-|--------------|-----------------------------------------------------------------------------------|
-| 3/3          | Lanjut Day 3 hari ini juga. Fondasi sudah rapat                                   |
-| 2/3          | Lanjut Day 3, tapi ulangi lubang yang gagal besok pagi (15 menit)                 |
-| 1/3 atau 0/3 | Ulangi Day 2.5 besok. Tulis di `Catatan.md` bagian mana yang paling membingungkan |
+## Hasil gerbang
+
+| Hasil            | Tindakan                                               |
+|------------------|--------------------------------------------------------|
+| **3/3**          | Lanjut Day 3 hari ini juga. Fondasi rapat.             |
+| **2/3**          | Lanjut Day 3, ulangi lubang yang gagal besok (15 mnt). |
+| **1/3 atau 0/3** | Ulangi Day 2.5 besok. Catat bagian yang membingungkan. |
 
 Setelah lulus, tulis di `Catatan.md`:
 

@@ -533,15 +533,15 @@ Ketiganya akan terasa mudah setelah `for` biasa dikuasai, karena konsepnya sama:
 
 Dipakai saat membaca kode loop orang lain, atau kode sendiri setelah 2 minggu.
 
-| #   | Periksa                                          | Kenapa                                |
-|-----|--------------------------------------------------|---------------------------------------|
-| 1   | Mulai dari mana?                                 | menentukan nilai pertama              |
-| 2   | Kondisinya `<` atau `<=`?                        | sumber off-by-one                     |
-| 3   | Perubahan menuju arah yang benar?                | kalau salah arah → tak berujung       |
-| 4   | Ada `break`? Keluar dari loop mana?              | di nested loop, hanya loop dalam      |
-| 5   | Ada `continue`? Apakah perubahan terlewat?       | jebakan di `while`                    |
-| 6   | Berapa putaran total?                            | hitung manual, cocokkan dengan output |
-| 7   | Apa yang terjadi kalau kondisi langsung `false`? | loop 0 putaran, apakah itu benar?     |
+| #   | Periksa                             | Kenapa                      |
+|-----|-------------------------------------|-----------------------------|
+| 1   | Mulai dari mana?                    | nilai pertama               |
+| 2   | `<` atau `<=`?                      | sumber off-by-one           |
+| 3   | Arah perubahan benar?               | kalau salah → tak berujung  |
+| 4   | Ada `break`? Keluar dari loop mana? | di nested, hanya loop dalam |
+| 5   | Ada `continue`? Perubahan terlewat? | jebakan di `while`          |
+| 6   | Berapa putaran total?               | cocokkan dengan output      |
+| 7   | Kalau kondisi langsung `false`?     | loop 0 putaran, benar?      |
 
 Tujuh pertanyaan ini menjawab 90% bug loop.
 

@@ -61,16 +61,16 @@ const c = `halo ${nama}`;    // template literal, bisa sisipkan variabel
 
 Semua simbol ini artinya **"isi dengan"**, bukan **"sama dengan"**.
 
-| Simbol | Dibaca                 | Arti                  | Contoh      | Hasil                   |
-|--------|------------------------|-----------------------|-------------|-------------------------|
-| `=`    | equals / "sama dengan" | isi variabel          | `let x = 5` | x berisi 5              |
-| `+=`   | plus equals            | tambahkan lalu simpan | `x += 3`    | sama dengan `x = x + 3` |
-| `-=`   | minus equals           | kurangi lalu simpan   | `x -= 3`    | sama dengan `x = x - 3` |
-| `*=`   | times equals           | kalikan lalu simpan   | `x *= 2`    | sama dengan `x = x * 2` |
-| `/=`   | divide equals          | bagi lalu simpan      | `x /= 2`    | sama dengan `x = x / 2` |
-| `%=`   | modulo equals          | sisa bagi lalu simpan | `x %= 3`    | sama dengan `x = x % 3` |
-| `++`   | increment              | tambah satu           | `x++`       | sama dengan `x += 1`    |
-| `--`   | decrement              | kurang satu           | `x--`       | sama dengan `x -= 1`    |
+| Simbol | Dibaca        | Arti                  | Contoh      | Hasil       |
+|--------|---------------|-----------------------|-------------|-------------|
+| `=`    | equals        | isi variabel          | `let x = 5` | x berisi 5  |
+| `+=`   | plus equals   | tambah lalu simpan    | `x += 3`    | `x = x + 3` |
+| `-=`   | minus equals  | kurang lalu simpan    | `x -= 3`    | `x = x - 3` |
+| `*=`   | times equals  | kali lalu simpan      | `x *= 2`    | `x = x * 2` |
+| `/=`   | divide equals | bagi lalu simpan      | `x /= 2`    | `x = x / 2` |
+| `%=`   | modulo equals | sisa bagi lalu simpan | `x %= 3`    | `x = x % 3` |
+| `++`   | increment     | tambah satu           | `x++`       | `x += 1`    |
+| `--`   | decrement     | kurang satu           | `x--`       | `x -= 1`    |
 
 **Penting:** `=` bukan "sama dengan". `=` artinya "isi". Untuk bertanya "sama dengan", pakai `===`.
 
@@ -85,16 +85,16 @@ if (x === 5) { }    // TANYA: apakah x sama dengan 5?
 
 Semua ini menghasilkan `true` atau `false`.
 
-| Simbol | Dibaca                         | Arti                       | Contoh      | Hasil   |
-|--------|--------------------------------|----------------------------|-------------|---------|
-| `===`  | triple equals / strictly equal | sama nilai **dan** tipe    | `5 === 5`   | `true`  |
-| `!==`  | strictly not equal             | beda nilai atau tipe       | `5 !== "5"` | `true`  |
-| `==`   | double equals / loosely equal  | sama setelah konversi tipe | `5 == "5"`  | `true`  |
-| `!=`   | not equal                      | beda setelah konversi tipe | `5 != "5"`  | `false` |
-| `>`    | greater than                   | lebih besar                | `10 > 5`    | `true`  |
-| `<`    | less than                      | lebih kecil                | `5 < 10`    | `true`  |
-| `>=`   | greater than or equal          | lebih besar atau sama      | `5 >= 5`    | `true`  |
-| `<=`   | less than or equal             | lebih kecil atau sama      | `5 <= 5`    | `true`  |
+| Simbol | Dibaca             | Arti                    | Contoh      | Hasil   |
+|--------|--------------------|-------------------------|-------------|---------|
+| `===`  | triple equals      | sama nilai **dan** tipe | `5 === 5`   | `true`  |
+| `!==`  | strictly not equal | beda nilai atau tipe    | `5 !== "5"` | `true`  |
+| `==`   | double equals      | sama setelah konversi   | `5 == "5"`  | `true`  |
+| `!=`   | not equal          | beda setelah konversi   | `5 != "5"`  | `false` |
+| `>`    | greater than       | lebih besar             | `10 > 5`    | `true`  |
+| `<`    | less than          | lebih kecil             | `5 < 10`    | `true`  |
+| `>=`   | greater or equal   | lebih besar atau sama   | `5 >= 5`    | `true`  |
+| `<=`   | less or equal      | lebih kecil atau sama   | `5 <= 5`    | `true`  |
 
 **Aturan: pakai `===` dan `!==`. Jangan `==` dan `!=`.**
 
@@ -212,12 +212,12 @@ Nama lengkapnya **logical AND operator** dan **logical OR operator**.
 
 ## 7. Simbol khusus
 
-| Simbol | Dibaca                      | Fungsi                    | Contoh                   |
-|--------|-----------------------------|---------------------------|--------------------------|
-| `//`   | comment / "komentar"        | catatan, tidak dijalankan | `// ini catatan`         |
-| `${ }` | template placeholder        | menyisipkan nilai ke teks | `` `Halo ${nama}` ``     |
-| `? :`  | ternary / conditional       | pilih satu dari dua nilai | `x > 0 ? "ya" : "tidak"` |
-| `?:`   | dibaca "if true then, else" | lihat contoh              | —                        |
+| Simbol | Dibaca               | Fungsi                    | Contoh                   |
+|--------|----------------------|---------------------------|--------------------------|
+| `//`   | comment              | catatan, tidak dijalankan | `// ini catatan`         |
+| `${ }` | template placeholder | menyisipkan nilai ke teks | `` `Halo ${nama}` ``     |
+| `? :`  | ternary              | pilih satu dari dua nilai | `x > 0 ? "ya" : "tidak"` |
+| `?:`   | if-true-then, else   | lihat contoh              | —                        |
 
 ### Cara membaca ternary
 
@@ -266,11 +266,11 @@ Belum dipelajari, tapi akan muncul. Jangan dihafal dulu.
 
 ## Kesalahan membaca yang paling sering
 
-| Ditulis   | Sering dibaca sebagai         | Sebenarnya                                      |
-|-----------|-------------------------------|-------------------------------------------------|
-| `x = 5`   | "x sama dengan 5"             | "isi x dengan 5"                                |
-| `x == 5`  | "x sama dengan 5"             | "apakah x sama dengan 5, setelah konversi tipe" |
-| `x === 5` | "x sama dengan sama dengan 5" | "apakah x sama dengan 5, tanpa konversi"        |
-| `!x`      | "tidak x"                     | "kebalikan dari x"                              |
-| `x != y`  | "x tidak sama dengan y"       | "apakah x beda dengan y, setelah konversi"      |
-| `x !== y` | —                             | "apakah x beda dengan y, tanpa konversi"        |
+| Ditulis   | Sering dibaca sebagai       | Sebenarnya                      |
+|-----------|-----------------------------|---------------------------------|
+| `x = 5`   | "x sama dengan 5"           | "isi x dengan 5"                |
+| `x == 5`  | "x sama dengan 5"           | "apakah sama, setelah konversi" |
+| `x === 5` | "sama dengan sama dengan 5" | "apakah sama, tanpa konversi"   |
+| `!x`      | "tidak x"                   | "kebalikan dari x"              |
+| `x != y`  | "x tidak sama dengan y"     | "apakah beda, setelah konversi" |
+| `x !== y` | —                           | "apakah beda, tanpa konversi"   |
