@@ -8,24 +8,17 @@ Update **setiap akhir minggu**. Jujur. Status yang terlalu tinggi merugikan diri
 
 ## Skala status
 
-****0****
-- Arti: belum pernah dengar
+**Status 0**, belum pernah dengar.
 
-****1****
-- Arti: pernah dengar, tidak bisa pakai
-- Tesnya: tidak bisa jelaskan tanpa buka materi
+**Status 1**, pernah dengar tapi tidak bisa pakai. Tesnya: tidak bisa jelaskan tanpa buka materi.
 
-****2****
-- Arti: bisa pakai kalau ada contoh
-- Tesnya: bisa ikuti contoh, gagal kalau contohnya dihapus
+**Status 2**, bisa pakai kalau ada contoh. Tesnya: bisa ikuti contoh, gagal kalau contohnya
+dihapus.
 
-****3****
-- Arti: bisa tulis dari nol
-- Tesnya: bisa tulis tanpa melihat contoh
+**Status 3**, bisa tulis dari nol. Tesnya: bisa tulis tanpa melihat contoh.
 
-****4****
-- Arti: bisa jelaskan & mengoreksi orang lain
-- Tesnya: bisa menemukan kesalahan orang lain dan menjelaskan kenapa
+**Status 4**, bisa jelaskan dan mengoreksi orang lain. Tesnya: bisa menemukan kesalahan orang
+lain dan menjelaskan kenapa.
 
 
 **Aturan bukti:** status **3 ke atas wajib punya bukti** di kolom Bukti. Tanpa bukti, status maksimal 2.
@@ -50,28 +43,28 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 ### Bahasa dasar
 
-| Konsep                                     | Status | Minggu                |     |     |
-|--------------------------------------------|--------|-----------------------|-----|-----|
-| `let` / `const` / `var`, scope             | 3      | 1                     |     |     |
-| Tipe data & `typeof`                       | 3      | 1                     |     |     |
-| Template literal                           | 3      | 1                     |     |     |
-| Konversi tipe (`Number`, `parseInt`)       | 3      | 2                     |     |     |
-| `==` vs `===`                              | 3      | 2                     |     |     |
-| `NaN` & `Number.isNaN`                     | 3      | 2                     |     |     |
-| Truthy / falsy                             | 3      | 2                     |     |     |
-| Operator aritmatika & jebakan `+`          | 3      | 2                     |     |     |
-| `if` / `else if` / `else`, urutan kondisi  | 3      | 3                     |     |     |
-| Ternary                                    | 3      | 3                     |     |     |
-| `switch` & `break`                         | 3      | 3                     |     |     |
-| `&&` `                                     |        | ` `!` & short-circuit | 3   | 3   |
-| `??` vs `                                  |        | `                     | 3   | 3   |
-| `for`, `while`, `do...while`               | -      | 4                     |     |     |
-| `break`, `continue`, nested loop           | -      | 4                     |     |     |
-| Fungsi, parameter, return                  | -      | 2                     |     |     |
-| Scope & closure                            | -      | 2                     |     |     |
-| Array & method (`map`, `filter`, `reduce`) | -      | 3                     |     |     |
-| Object, destructuring, spread              | -      | 4                     |     |     |
-| Reference vs value (mutability)            | -      | 4                     |     |     |
+| Konsep                                     | Status | Minggu |     |     |
+|--------------------------------------------|--------|--------|-----|-----|
+| `let` / `const` / `var`, scope             | 3      | 1      |     |     |
+| Tipe data & `typeof`                       | 3      | 1      |     |     |
+| Template literal                           | 3      | 1      |     |     |
+| Konversi tipe (`Number`, `parseInt`)       | 3      | 2      |     |     |
+| `==` vs `===`                              | 3      | 2      |     |     |
+| `NaN` & `Number.isNaN`                     | 3      | 2      |     |     |
+| Truthy / falsy                             | 3      | 2      |     |     |
+| Operator aritmatika & jebakan `+`          | 3      | 2      |     |     |
+| `if` / `else if` / `else`, urutan kondisi  | 3      | 3      |     |     |
+| Ternary                                    | 3      | 3      |     |     |
+| `switch` & `break`                         | 3      | 3      |     |     |
+| `&&`, `\|\|`, `!` & short-circuit          | 3      | 3      |     |     |
+| `??` vs `\|\|`                             | 3      | 3      |     |     |
+| `for`, `while`, `do...while`               | -      | 4      |     |     |
+| `break`, `continue`, nested loop           | -      | 4      |     |     |
+| Fungsi, parameter, return                  | -      | 2      |     |     |
+| Scope & closure                            | -      | 2      |     |     |
+| Array & method (`map`, `filter`, `reduce`) | -      | 3      |     |     |
+| Object, destructuring, spread              | -      | 4      |     |     |
+| Reference vs value (mutability)            | -      | 4      |     |     |
 
 **Bukti:**
 
@@ -198,24 +191,17 @@ Delapan konsep ini **tidak bisa** dinilai dengan "tulis dari nol". Tesnya berbed
 
 **Skala untuk working skills** (beda dari skala konsep):
 
-****0****
-- Arti: belum pernah
+**Status 0**, belum pernah.
 
-****1****
-- Arti: bisa kalau dibantu
-- Tesnya: menjawab dengan tutor menuntun
+**Status 1**, bisa kalau dibantu. Tesnya: menjawab dengan tutor menuntun.
 
-****2****
-- Arti: bisa sendiri, hasil kurang
-- Tesnya: jawaban ada tapi meleset di beberapa bagian
+**Status 2**, bisa sendiri tapi hasil kurang. Tesnya: jawaban ada tapi meleset di beberapa bagian.
 
-****3****
-- Arti: bisa sendiri, hasil baik
-- Tesnya: ≥ 70% benar dan tidak ada false positive
+**Status 3**, bisa sendiri dengan hasil baik. Tesnya: 70 persen benar atau lebih dan tidak ada
+false positive.
 
-****4****
-- Arti: bisa mengoreksi orang lain
-- Tesnya: menemukan kesalahan review orang lain dan menjelaskan kenapa
+**Status 4**, bisa mengoreksi orang lain. Tesnya: menemukan kesalahan review orang lain dan
+menjelaskan kenapa.
 
 
 **Aturan bukti:** status 3+ wajib menyebut file latihan dan tanggal. Tanpa itu, maksimal 2.

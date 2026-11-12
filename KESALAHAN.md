@@ -10,21 +10,16 @@ Kesalahan **berpikir**, bukan kesalahan kode. Bug log mencatat kode yang rusak; 
 
 Setiap baris wajib diberi **Jenis**. Penanganannya berbeda — ini yang membuat file ini berguna.
 
-****CONCEPT****
-- Ciri: Tidak paham idenya
-- Penanganan: Ajar ulang dengan analogi **berbeda**, bukan diulang
+**CONCEPT**, cirinya tidak paham idenya. Penanganan: ajar ulang dengan analogi berbeda, bukan
+diulang.
 
-****READING****
-- Ciri: Salah baca instruksi
-- Penanganan: Latih membaca sampai selesai sebelum menjawab
+**READING**, cirinya salah baca instruksi. Penanganan: latih membaca sampai selesai sebelum
+menjawab.
 
-****SYNTAX****
-- Ciri: Typo, simbol salah
-- Penanganan: Drill simbol itu 5×
+**SYNTAX**, cirinya typo atau simbol salah. Penanganan: drill simbol itu 5 kali.
 
-****LOGIC****
-- Ciri: Ide benar, urutan/alur salah
-- Penanganan: Telusuri langkah per langkah
+**LOGIC**, cirinya ide benar tapi urutan atau alurnya salah. Penanganan: telusuri langkah per
+langkah.
 
 
 **Kenapa dipisah:** kesalahan READING tidak sembuh dengan belajar konsep. Kesalahan SYNTAX tidak sembuh dengan penjelasan ulang. Kalau semua diperlakukan sama, kamu berlatih hal yang salah.

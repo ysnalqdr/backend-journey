@@ -209,17 +209,14 @@ Target: 20 entri dalam sebulan pertama. Setelah itu kamu akan mulai melihat pola
 
 ## 8. Protokol AI
 
-****Tutor****
-- Boleh?: Bebas
-- Contoh: "jelaskan kenapa di sini pakai async", "apa yang salah kalau pakai pendekatan X"
+**Tutor**, boleh dipakai bebas. Contoh: "jelaskan kenapa di sini pakai async", "apa yang salah
+kalau pakai pendekatan X".
 
-****Reviewer****
-- Boleh?: Bebas, setelah tulis sendiri
-- Contoh: "review kode saya, sebutkan yang salah dan alasannya. Jangan tulis ulang."
+**Reviewer**, boleh dipakai bebas setelah tulis sendiri. Contoh: "review kode saya, sebutkan yang
+salah dan alasannya. Jangan tulis ulang."
 
-****Generator****
-- Boleh?: Dibatasi
-- Contoh: hanya config, boilerplate, setup — bukan logika yang sedang dipelajari
+**Generator**, dibatasi. Hanya untuk config, boilerplate, dan setup, bukan logika yang sedang
+dipelajari.
 
 
 **Aturan keras:**
@@ -281,9 +278,9 @@ Hasilnya bukan "Soundwave versi Java" tapi **"Soundwave v2"** — cerita intervi
 - Yang harus sudah ada: API Spring jalan lokal + Docker, paham DI dan transaction
 - Kalau meleset: Potong Docker Compose, jangan potong JPA/transaction
 
-****20 Jun 2027****
-- Yang harus sudah ada: Portfolio siap: Soundwave v2 deploy + README + writeup
-- Kalau meleset: Kalau molor 2 minggu, deploy tanpa fitur tambahan. Jangan geser tanggal
+**20 Jun 2027**
+- Yang harus sudah ada: portfolio siap, Soundwave v2 deploy, README, dan writeup
+- Kalau meleset: kalau molor 2 minggu, deploy tanpa fitur tambahan. Jangan geser tanggal.
 
 **Akhir Agu 2027**
 - Yang harus sudah ada: CV, 5 cerita STAR, 1 writeup, DSA 150 soal
