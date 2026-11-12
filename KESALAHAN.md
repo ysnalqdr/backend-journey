@@ -111,6 +111,9 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 - **2026-11-08** · READING · ke-1 · belum
   - Salah: menjawab "tidak tercetak apapun" padahal kode punya `else`
   - Konsep benar: baca seluruh struktur `if/else` sebelum menjawab
+- **2026-11-12** · CONCEPT · ke-4 · belum
+  - Salah: `user.alamat = null` disangka menyebabkan error
+  - Konsep benar: kondisi falsy ≠ error; `&&` berhenti sebelum menyentuh properti
 
 ---
 

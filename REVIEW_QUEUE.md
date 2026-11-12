@@ -17,21 +17,36 @@ Kalau gagal: status turun ke 2, masuk antrean lagi 2 hari kemudian.
 
 ## Antrean
 
-| Concept                   | Passed on  | Re-check due   | Result | Status after |
-|---------------------------|------------|----------------|--------|--------------|
-| Ternary                   | 2026-11-08 | 2026-11-10     |        |              |
-| `switch` + `break`        | 2026-11-08 | 2026-11-10     |        |              |
-| `&&` `\|\|` short-circuit | 2026-11-08 | **2026-11-10** |        |              |
-| `!` logical not           | 2026-11-08 | **2026-11-10** |        |              |
-| `??` vs `\|\|`            | 2026-11-08 | **2026-11-10** |        |              |
+Format: **konsep** · lulus → jatuh tempo · hasil · status
+
+**Ternary** · 2026-11-08 → 2026-11-10 · **PASS 2026-11-12** · status 3
+- 3/3: `>=` yang menentukan, `0 >= 0` true → ambil kiri, `-5` → ambil kanan
+
+**`switch` + `break`** · 2026-11-08 → 2026-11-10 · **PASS 2026-11-12** · status 3
+- 3/3: 2 baris (admin + user), fallthrough karena tidak ada `break`, guest 1 baris
+
+**`&&` `\|\|` short-circuit** · 2026-11-08 → 2026-11-10 · **PASS 2026-11-12** · status 3
+- 2/3: berhenti di `user.alamat` alasan falsy benar; sempat sebut "ada error", pulih di cek kecil
+
+**`!` logical not** · 2026-11-08 → 2026-11-10 · **PASS 2026-11-12** · status 3
+- 2/3: `!false` → `true` benar; salah sebut tipe hasil `\|\|` sebagai string, pulih di cek kecil
+
+**`??` vs `\|\|`** · 2026-11-08 → 2026-11-10 · **PASS 2026-11-12** · status 3
+- 3/3: `a`=0 karena nullish, `b`="tanpa nama", `c`=100 karena `\|\|` ganti falsy
+
+**Kosong.** Semua item sudah direview 2026-11-12.
 
 ---
 
 ## Sudah direview
 
-| Concept | Reviewed on | Result | Status | Note |
-|---------|-------------|--------|--------|------|
-|         |             |        |        |      |
+- **Ternary** · 2026-11-12 · PASS · status 3
+- **`switch` + `break`** · 2026-11-12 · PASS · status 3
+- **`&&` `\|\|` short-circuit** · 2026-11-12 · PASS · status 3
+- **`!` logical not** · 2026-11-12 · PASS · status 3
+- **`??` vs `\|\|`** · 2026-11-12 · PASS · status 3
+
+**Jatuh tempo berikutnya:** 2026-11-14.
 
 ---
 
