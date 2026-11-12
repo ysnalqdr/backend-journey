@@ -36,6 +36,19 @@ Format: **konsep** · lulus → jatuh tempo · hasil · status
 
 **Kosong.** Semua item sudah direview 2026-11-12.
 
+### Masuk antrean baru
+
+Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya belum stabil, jadi
+dijadwalkan ulang 2026-11-14, bukan langsung dianggap lulus.
+
+**`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · status 2
+- Yang diuji: kenapa `??` dipakai padahal untuk `null` hasilnya sama dengan `\|\|`
+- Salah kemarin: dijelaskan sebagai pengganti `null` dan `undefined`
+
+**pernyataan vs ekspresi** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · status 2
+- Yang diuji: mana yang bisa jadi nilai, `if` atau ternary
+- Salah kemarin: arahnya dibalik, dikira ternary masuk ke dalam `if`
+
 ---
 
 ## Sudah direview
