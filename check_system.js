@@ -247,6 +247,28 @@ if (overdue.length) {
     ok(`review queue: ${pending} item menunggu, tidak ada yang terlewat`);
 }
 
+// ---------- 10b. Item antrean berbentuk daftar juga dipantau ----------
+{
+    const daftar = [];
+    const reItem = /^\*\*(.+?)\*\*\s*·\s*(?:muncul\s*)?(\d{4}-\d{2}-\d{2})\s*→\s*jatuh tempo\s*(\d{4}-\d{2}-\d{2})/;
+
+    for (const line of rq.split(/\r?\n/)) {
+        const m = line.match(reItem);
+        if (!m) continue;
+        const [, konsep, muncul, due] = m;
+        const d = new Date(due + "T00:00:00");
+        if (d < today) {
+            daftar.push(`${konsep.trim()} (jatuh tempo ${due})`);
+        }
+    }
+
+    if (daftar.length) {
+        daftar.forEach((o) => warn(`re-check terlewat: ${o}`));
+    } else {
+        ok("antrean daftar: tidak ada yang terlewat");
+    }
+}
+
 // ---------- 11. Setiap .js latihan punya .md pendamping ----------
 const wsDir = path.join(ROOT, "Working Skills");
 if (fs.existsSync(wsDir)) {
