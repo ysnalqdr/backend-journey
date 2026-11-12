@@ -38,16 +38,17 @@ Format: **konsep** · lulus → jatuh tempo · hasil · status
 
 ### Masuk antrean baru
 
-Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya belum stabil, jadi
-dijadwalkan ulang 2026-11-14, bukan langsung dianggap lulus.
+Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji ulang
+2026-11-12 dan lulus, tapi cara lulusnya berbeda, jadi jadwalnya dibedakan.
 
-**`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · status 2
-- Yang diuji: kenapa `??` dipakai padahal untuk `null` hasilnya sama dengan `\|\|`
-- Salah kemarin: dijelaskan sebagai pengganti `null` dan `undefined`
+**`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS 2026-11-12 · status 3
+- 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0
+- Catatan: sempat menawarkan solusi tanpa cadangan, yang hanya aman kalau kolom wajib isi
 
-**pernyataan vs ekspresi** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · status 2
-- Yang diuji: mana yang bisa jadi nilai, `if` atau ternary
-- Salah kemarin: arahnya dibalik, dikira ternary masuk ke dalam `if`
+**pernyataan vs ekspresi** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS bersyarat · status 2
+- Lulus hanya setelah bentuk jawabannya dipersempit jadi `? ______ : ______`
+- Tiga kali menulis `if` di kanan `=`, sekali menyalin variabel lain
+- Wajib diuji ulang tanpa dipersempit
 
 ---
 

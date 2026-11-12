@@ -122,6 +122,10 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
   - Salah: arah ternary dan `if` dibalik, dikira ternary bisa masuk ke dalam `if`
   - Konsep benar: `if` itu pernyataan, ternary itu ekspresi. Yang bisa jadi nilai hanya
     ekspresi; `if` tidak bisa ditaruh di variabel sama sekali
+- **2026-11-12** · CONCEPT · ke-**2** · belum
+  - Salah: `if` ditulis di kanan `=` empat kali berturut-turut, lalu menyalin variabel lain
+  - Konsep benar: `if` tidak menghasilkan nilai, jadi tidak bisa jadi isi variabel. Yang
+    menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
 
 ---
 
