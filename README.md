@@ -103,6 +103,9 @@ A learning log for my path to becoming a backend engineer.
 22. **Gate log is mandatory.** Every question asked, every answer given, and every verdict is
     written into `Catatan.md` under `## Gate Log`. A gate that exists only in conversation
     leaves no evidence and cannot be reviewed.
+
+    **Spaced re-checks are logged the same way**, in `Recheck/YYYY-MM-DD.md` plus
+    `Recheck/YYYY-MM-DD_recheck.js`. A re-check that lives only in chat did not happen.
 22b. **Gate log economy.** Log every FAIL. Log a PASS only if it is MEDIUM or HARD — an EASY
     pass carries no information. More than 20 questions in one day means the session is too
     broad: cut scope, do not cut logging.
@@ -153,7 +156,9 @@ A learning log for my path to becoming a backend engineer.
     - 2-space indent
 
     Forbidden in both: `====` separators or any divider lines, a notes block separated from
-    its question, and notes outnumbering the questions.
+    its question, and notes outnumbering the questions. Also forbidden: uppercase shouting
+    for emphasis and decorative symbols. Write like a person taking notes, short sentences,
+    natural punctuation. `check_system.js` enforces this on every `.js` file.
 27. **Question presentation format — locked.** Every question asked in chat uses these four
     sections, in this order, with nothing added or removed:
 
@@ -288,6 +293,7 @@ Working Skills/
   Review/
   Docs/
   Debug/
+Recheck/
 check_system.js
 ```
 

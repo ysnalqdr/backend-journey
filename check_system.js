@@ -101,6 +101,34 @@ for (const [soal, kunci] of LATIHAN) {
     }
 }
 
+// ---------- 3b. Setiap re-check punya .md dan .js berpasangan ----------
+{
+    const rdir = path.join(ROOT, "Recheck");
+    if (!fs.existsSync(rdir)) {
+        err("folder Recheck/ tidak ada");
+    } else {
+        const names = fs.readdirSync(rdir).filter((f) => f.endsWith(".md") && f !== "README.md");
+        const jsNames = fs.readdirSync(rdir).filter((f) => f.endsWith(".js"));
+        const pairs = [];
+
+        for (const md of names) {
+            const base = md.replace(/\.md$/, "");
+            const js = base + "_recheck.js";
+            if (!jsNames.includes(js)) {
+                err(`re-check ${md} tidak punya ${js}`);
+            } else {
+                pairs.push(base);
+            }
+        }
+
+        if (pairs.length) {
+            ok(`re-check: ${pairs.length} sesi lengkap (.md + .js)`);
+        } else if (names.length === 0) {
+            warn("belum ada sesi re-check");
+        }
+    }
+}
+
 // ---------- 4. Referensi file di dokumen tidak menggantung ----------
 const FUTURE = new Set(["API-CONTRACT.md", "ONBOARDING.md"]);
 const DOCS = ["README.md", "PLAN.md", "SKILLS.md", "Working Skills/README.md"];
@@ -121,6 +149,7 @@ for (const d of DOCS) {
 
         if (seen.has(ref)) continue;
         if (ref.startsWith("NN_")) continue;
+        if (/\bYYYY\b/.test(ref)) continue;
         if (FUTURE.has(path.basename(ref))) continue;
         seen.add(ref);
 
@@ -377,6 +406,36 @@ if (dirty) {
         if (tooWide.length > 3) warn(`... dan ${tooWide.length - 3} tabel lebar lainnya`);
     } else {
         ok("tabel: semua muat di lebar editor");
+    }
+}
+
+// ---------- 17. Tidak ada pemisah ==== di file latihan ----------
+{
+    const bad = [];
+    // Aturan #26 berlaku untuk file latihan dan re-check, bukan dokumentasi markdown
+    // (markdown pakai --- sebagai garis bagian, itu standar).
+    const targets = [...walk(ROOT, ".js")].filter((f) => {
+        const r = rel(f);
+        if (r.startsWith("Documents/")) return false;
+        if (r.startsWith("check_system") || r.startsWith("format_tables") || r.startsWith("verify_tables") || r.startsWith("convert_wide")) return false;
+        return true;
+    });
+
+    for (const f of targets) {
+        const lines = fs.readFileSync(f, "utf8").split(/\r?\n/);
+        lines.forEach((line, i) => {
+            // garis pemisah di dalam file .js: 3+ karakter = - * _ berdiri sendiri
+            if (/^\s*\/\/\s*[=\-*_]{3,}\s*$/.test(line)) {
+                bad.push(`${rel(f)}:${i + 1}`);
+            }
+        });
+    }
+
+    if (bad.length) {
+        bad.slice(0, 5).forEach((b) => err(`garis pemisah dilarang: ${b}`));
+        if (bad.length > 5) err(`... dan ${bad.length - 5} lainnya`);
+    } else {
+        ok("tidak ada garis pemisah ==== di file .js");
     }
 }
 
