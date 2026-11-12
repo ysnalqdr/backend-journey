@@ -439,6 +439,48 @@ if (dirty) {
     }
 }
 
+// ---------- 18. Pertanyaan tidak membocorkan jawaban ----------
+{
+    // Aturan 27b. Berlaku untuk file soal di Working Skills dan Recheck.
+    // Yang dicari: kalimat tanya yang menyebut nilai salah, perbandingan,
+    // atau pertanyaan ya/tidak pada hal yang sedang diuji.
+    const POLA = [
+        [/kenapa bukan/i, "bocor negatif (kenapa bukan)"],
+        [/mengapa bukan/i, "bocor negatif (mengapa bukan)"],
+        [/kenapa tidak (sampai|masuk|jalan|tercetak|error)/i, "bocor negatif (kenapa tidak)"],
+        [/kenapa beda|kenapa berbeda|mengapa berbeda/i, "bocor perbandingan"],
+        [/apakah (kode ini |program ini )?(error|salah|jalan)/i, "bocor ya atau tidak"],
+        [/apakah sesuai (keinginan|harapan)/i, "bocor ya atau tidak"],
+    ];
+
+    const soalDirs = ["Working Skills/Reading", "Working Skills/Review", "Working Skills/Docs", "Working Skills/Debug", "Recheck"];
+    const temuan = [];
+
+    for (const d of soalDirs) {
+        const dir = path.join(ROOT, d);
+        if (!fs.existsSync(dir)) continue;
+        for (const f of fs.readdirSync(dir)) {
+            if (!f.endsWith(".md") || f === "README.md") continue;
+            const p = path.join(dir, f);
+            const lines = fs.readFileSync(p, "utf8").split(/\r?\n/);
+            lines.forEach((line, i) => {
+                // lewati baris yang menandai kesalahan dengan sengaja (koreksi)
+                if (/koreksi|salah:|contoh salah|dilarang/i.test(line)) return;
+                for (const [re, label] of POLA) {
+                    if (re.test(line)) temuan.push(`${d}/${f}:${i + 1} ${label}`);
+                }
+            });
+        }
+    }
+
+    if (temuan.length) {
+        temuan.slice(0, 6).forEach((t) => warn(`pertanyaan bocor: ${t}`));
+        if (temuan.length > 6) warn(`... dan ${temuan.length - 6} lainnya`);
+    } else {
+        ok("pertanyaan bebas bocoran (aturan 27b)");
+    }
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);

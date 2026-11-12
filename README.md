@@ -174,6 +174,15 @@ A learning log for my path to becoming a backend engineer.
     question countable. Without the third section the learner spends attention on what
     the code contains instead of how it behaves.
 
+27b. **A question never contains its answer.** Three leaks are forbidden, all of them:
+     (a) naming a wrong value, "why not 100"; (b) saying two things differ, "why is it
+     different from `a`"; (c) yes/no on the point being tested, "is there an error".
+     All three remove the retrieval the question exists to measure. Input values may be
+     stated, the result may not. A question sent in a leaking state is withdrawn and
+     marked VOID in the Gate Log.
+
+     Full standard, the five-rung ladder, and the research behind it:
+     `QUESTION_STANDARD.md`. Applies to chat questions and to `Working Skills/`.
 28. **Never use a symbol without naming it first.** When introducing or using any operator or
     punctuation the learner has not been taught, write its full name in the same message:
     `?? (nullish coalescing operator)`, `&& (logical AND)`, `! (logical NOT)`, `\|\| (logical OR)`.
