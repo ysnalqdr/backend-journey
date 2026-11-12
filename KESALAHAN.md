@@ -118,14 +118,17 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
   - Salah: `??` dijelaskan sebagai pengganti untuk `null` dan `undefined`
   - Konsep benar: untuk `null`, `??` dan `||` hasilnya sama. `??` dipakai justru karena
     `0`, `""`, dan `false` adalah nilai sah yang tidak boleh diganti `||`
-- **2026-11-12** · CONCEPT · ke-1 · belum
+  - Pulih 2026-11-12: diuji dengan kasus `stokMinimum = 0`, menjawab benar 3/3
+- **2026-11-12** · CONCEPT · ke-1 · sudah
   - Salah: arah ternary dan `if` dibalik, dikira ternary bisa masuk ke dalam `if`
   - Konsep benar: `if` itu pernyataan, ternary itu ekspresi. Yang bisa jadi nilai hanya
     ekspresi; `if` tidak bisa ditaruh di variabel sama sekali
-- **2026-11-12** · CONCEPT · ke-**2** · belum
+  - Pulih 2026-11-12: diuji ulang tanpa dipersempit, jawaban tepat
+- **2026-11-12** · CONCEPT · ke-**2** · sudah
   - Salah: `if` ditulis di kanan `=` empat kali berturut-turut, lalu menyalin variabel lain
   - Konsep benar: `if` tidak menghasilkan nilai, jadi tidak bisa jadi isi variabel. Yang
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
+  - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
 ---
 

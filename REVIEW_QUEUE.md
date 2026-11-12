@@ -45,10 +45,11 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0
 - Catatan: sempat menawarkan solusi tanpa cadangan, yang hanya aman kalau kolom wajib isi
 
-**pernyataan vs ekspresi** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS bersyarat · status 2
-- Lulus hanya setelah bentuk jawabannya dipersempit jadi `? ______ : ______`
-- Tiga kali menulis `if` di kanan `=`, sekali menyalin variabel lain
-- Wajib diuji ulang tanpa dipersempit
+**pernyataan vs ekspresi** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · **PASS 2026-11-12** · status 3
+- Nomor 1 tepat tanpa dipersempit: `if` itu pernyataan, bukan ekspresi
+- Nomor 3 keliru: mengira `=` penyebabnya, padahal `=` ada di kedua versi
+- Nomor 4 arah benar, tapi menyebut "versi 1" yang justru versi error
+- Lulus karena inti konsep dijawab tepat tanpa bantuan
 
 ---
 
