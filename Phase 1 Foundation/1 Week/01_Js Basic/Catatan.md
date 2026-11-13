@@ -501,6 +501,15 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Catatan: yang akhirnya bekerja adalah tabel dengan kolom "nilai sebelum" diisi dari hasil baris
   sebelumnya, bukan dari angka awal. Ini teknik yang harus dipakai untuk semua soal akumulasi.
 
+**#72** · DRILL · akumulasi, 5 soal · PASS 5/5
+- Soal: `total += i`, `total += 5`, `sisa -= i`, `total += i * i`, `tabungan += i * 1000`
+- Jawab: `6`, `15`, `7`, `14`, `10000` — kelima benar
+- Catatan: nomor 2 sempat dijawab `16` (salah tekan), nomor 4 di-trace sendiri dengan benar
+  (`1+4=5`, lalu `5+9=14`) — menumpuk, bukan dari awal
+- Bukti penumpukan sudah otomatis: nomor 5 dijawab langsung tanpa tabel
+- Cara menjawab masih mengganti isi kode dengan angka (`console.log(10000)`), perlu diingatkan
+  agar menulis jawaban terpisah dan membiarkan kode utuh
+
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 
