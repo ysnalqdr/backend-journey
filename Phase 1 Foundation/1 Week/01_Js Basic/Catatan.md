@@ -510,6 +510,20 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Cara menjawab masih mengganti isi kode dengan angka (`console.log(10000)`), perlu diingatkan
   agar menulis jawaban terpisah dan membiarkan kode utuh
 
+**#73** · MEDIUM batch · `for` variatif, 6 soal · FAIL 1/6
+- Soal: M1 `i *= 2`, M2 `i += 5` sampai 25, M3 kondisi tidak pernah true, M4 mundur kuadrat,
+  M5 `i * 100`, M6 langkah 2
+- Jawab: `342`, `65`, `0`, `15`, `11000`, `4`
+- Benar: `4`, `75`, `0`, `14`, `1000`, `5` — hanya M3 yang tepat
+- Catatan: semua bagian `for` dibaca benar (berlipat, turun, naik dua, kuadrat). Yang meleset
+  penjumlahan di akhir, dikerjakan di kepala. Sesi dihentikan karena kualitas turun, bukan karena
+  konsep tidak dipahami
+- Tindakan: masuk `Deferred`, sesi berikutnya maksimal 3 soal per batch dan wajib trace tertulis
+
+**#74** · VOID · batch pertama
+- Alasan: soal berisi nested loop, `break`, dan `continue` yang belum diajarkan
+- Dicabut atas permintaan learner, diganti batch murni `for`
+
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 
@@ -553,11 +567,30 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 
 Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
-| Concept | Question that broke it | Date |
-|---------|------------------------|------|
-|         |                        |      |
+| Concept               | Question that broke it | Date       |
+|-----------------------|------------------------|------------|
+| Akumulasi dalam `for` | Batch M1-M6            | 2026-11-12 |
 
-**Kosong.** Konsep `&&` HARD yang sempat ditunda (#37) sudah pulih pada 2026-11-08 lewat drill terpisah `if`/`else` (Gate Log #40-#47). Soal yang sama (#46) kini dijawab benar tanpa bantuan.
+**Isi Deferred:**
+
+Enam soal MEDIUM dikerjakan 2026-11-12, hasil 1 benar dari 6. Yang gagal bukan pembacaan
+`for` — `i *= 2`, `i--`, `i += 2`, `i * i` semuanya dibaca benar. Yang gagal adalah
+**penjumlahan di akhir**, karena dikerjakan di kepala tanpa menulis baris per baris.
+
+Satu soal sebelumnya (drill #72) lulus 5 dari 5. Jadi kemampuan dasarnya ada, tapi belum stabil
+saat lelah.
+
+**Rencana sesi berikutnya, urut:**
+
+1. Satu soal akumulasi sebagai pemanasan, wajib dengan tiga baris trace tertulis
+2. Ulang M1, M2, M4, M5, M6 satu per satu — bukan sebagai batch
+3. Aturan sementara: **tulis tiga baris trace sebelum menjawab, tidak boleh di kepala**
+4. Baru lanjut HARD setelah minimal 4 dari 5 benar berturut-turut
+
+**Catatan pengajar:** batch 6 soal sekaligus terlalu banyak untuk sesi yang sudah panjang.
+Lain kali maksimal 3 soal per batch, dan berhenti kalau dua berturut-turut salah.
+
+**Kosong sebelumnya.** Konsep `&&` HARD yang sempat ditunda (#37) sudah pulih pada 2026-11-08 lewat drill terpisah `if`/`else` (Gate Log #40-#47). Soal yang sama (#46) kini dijawab benar tanpa bantuan.
 
 **Cara pemulihannya:** konsep dipisah dulu — 5 drill `if`/`else` tanpa `switch` dan tanpa `&&`, lalu 1 drill `switch` tanpa `if`, baru digabung. Mencampur keduanya sejak awal adalah penyebab kegagalan.
 

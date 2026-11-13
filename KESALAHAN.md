@@ -126,6 +126,11 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 - **2026-11-12** · CONCEPT · ke-2 · belum
   - Salah: `jumlah += i` dijawab sebagai jumlah putaran (`3`), bukan jumlah nilai (`12`)
   - Konsep benar: `x++` menghitung berapa kali, `x += i` menjumlahkan nilai `i`
+- **2026-11-12** · LOGIC · ke-1 · belum
+  - Salah: batch 6 soal `for`, 5 salah karena penjumlahan di akhir dikerjakan di kepala
+    (`65` vs `75`, `15` vs `14`, `11000` vs `1000`, `4` vs `5`)
+  - Konsep benar: bagian `for` dibaca benar; yang perlu dibiasakan adalah menulis tiga baris
+    trace sebelum menjawab, bukan menjumlahkan di kepala
 - **2026-11-12** · CONCEPT · ke-**2** · sudah
   - Salah: `if` ditulis di kanan `=` empat kali berturut-turut, lalu menyalin variabel lain
   - Konsep benar: `if` tidak menghasilkan nilai, jadi tidak bisa jadi isi variabel. Yang
