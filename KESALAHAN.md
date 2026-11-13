@@ -119,6 +119,13 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
   - Konsep benar: `if` itu pernyataan, ternary itu ekspresi. Yang bisa jadi nilai hanya
     ekspresi; `if` tidak bisa ditaruh di variabel sama sekali
   - Pulih 2026-11-12: diuji ulang tanpa dipersempit, jawaban tepat
+- **2026-11-12** · READING · ke-1 · belum
+  - Salah: menghitung `saldo -= i * 2` tanpa melihat `let saldo = 50` di atas loop
+  - Konsep benar: baca variabel yang dideklarasikan di atas loop sebelum menelusuri;
+    nilainya berubah tiap putaran, bukan tetap
+- **2026-11-12** · CONCEPT · ke-2 · belum
+  - Salah: `jumlah += i` dijawab sebagai jumlah putaran (`3`), bukan jumlah nilai (`12`)
+  - Konsep benar: `x++` menghitung berapa kali, `x += i` menjumlahkan nilai `i`
 - **2026-11-12** · CONCEPT · ke-**2** · sudah
   - Salah: `if` ditulis di kanan `=` empat kali berturut-turut, lalu menyalin variabel lain
   - Konsep benar: `if` tidak menghasilkan nilai, jadi tidak bisa jadi isi variabel. Yang

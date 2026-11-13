@@ -462,6 +462,45 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Jawab: `limitDariDb ?? 10`, `diskonDariDb ?? 0`
 - Catatan: diuji 4 nilai (null, 0, 25, undefined) untuk dua variabel — semua benar
 
+**#66** · EASY · `for` mundur · VOID
+- Soal: `for (let i = 3; i > 0; i--)`, berapa baris dan apa isi terakhir
+- Alasan VOID: `i--` belum pernah diberi contoh di materi, hanya disebut sebagai "arah yang salah".
+  Melanggar aturan materi-sebelum-soal. Dicabut, materi `i--` dan `i -= 2` ditulis dulu.
+
+**#67** · EASY · `for` mundur `i -= 2` · PASS
+- Soal: `for (let i = 10; i > 0; i -= 2)`, berapa baris dan isi terakhir
+- Jawab: 5 baris, terakhir `2`. Benar.
+- Catatan: sempat tidak paham "tanda perbandingan harus dibalik kalau mundur", dijelaskan dengan
+  tiga kasus (`i < 0` vs `i > 0` vs `i < 3`), lalu paham
+
+**#68** · EASY · `for` dengan `data.length` · PASS
+- Soal: pagination `i < data.length` dengan langkah 3, apa yang berubah kalau jadi `<=`
+- Jawab: 4 baris (`0,3,6,9`), terakhir `9`, `<=` tidak mengubah apa pun. Benar.
+- Catatan: alasan awal "karena langkahnya 3" belum lengkap; ditambahkan bahwa `<` dan `<=` hanya
+  berbeda kalau `i` mendarat tepat di batas. Diuji tiga kasus pembanding.
+
+**#69** · MEDIUM · `for` off-by-one · PASS (percobaan kedua)
+- Soal: `i <= jumlahPelanggan` membuat `terkirim` jadi 6 padahal pelanggan 5
+- Percobaan 1 FAIL: menjawab output sebagai daftar `0,1,2,3,4,5`, menunjuk `terkirim++` sebagai
+  masalah, dan mengusulkan empat bagian di `for`
+- Percobaan 2 PASS: `5` dan `6`, masalah di `<=`, perbaikan `i < jumlahPelanggan`
+- Catatan: sebelum percobaan kedua, materi `+=` dan `++` diulang karena akumulasi belum dipahami
+
+**#70** · MEDIUM · `let` ganda di dalam loop · FAIL
+- Soal: `let totalJam = 0` di dalam loop menutupi variabel luar, hasil `0` bukan `20`
+- Jawab: `8`, masalah ditunjuk di baris `console.log`, perbaikan `jumlah hari`
+- Catatan: tidak melihat `let` kedua sebagai penyebab. Pola sama dengan #69: membaca isi loop,
+  tidak membaca deklarasi di atasnya
+
+**#71** · DRILL · akumulasi `-=` dengan perkalian · PASS setelah 4 percobaan
+- Soal: `saldo -= i * 2` dari `50`, lalu `n -= i * 2` dari `10`
+- Percobaan 1: hanya menghitung `i * 2`, tidak mengurangi
+- Percobaan 2: mengurangi, tapi tidak melihat `let saldo = 50` di atas loop
+- Percobaan 3: mengurangi 1 tiap putaran, bukan `i`; urutan tulis `1 - 20` terbalik
+- Percobaan 4: PASS, `-2`, dan bisa menjelaskan urutan berpikirnya sendiri
+- Catatan: yang akhirnya bekerja adalah tabel dengan kolom "nilai sebelum" diisi dari hasil baris
+  sebelumnya, bukan dari angka awal. Ini teknik yang harus dipakai untuk semua soal akumulasi.
+
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 
