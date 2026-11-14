@@ -555,6 +555,16 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
+**#78** · MEDIUM · `%` selain 2 dan `break` · PASS 3/4
+- S4 ulang (`break` + `% 3`): `3` — benar setelah dikoreksi
+- S8 (`break` + `% 5`): `10` — benar dengan trace lengkap
+- S9 (`continue` + `% 3`): `37` — **FAIL**, dijawab `9`. Menambahkan `1` dan `2` bergantian,
+  bukan nilai `i` (`4, 5, 7, 8, 10`). Juga berhenti menjumlah di `i=8`
+- Cek cepat `total += i * 2`: `30` — benar, menambahkan `2, 4, 6, 8, 10`
+- Catatan: pola "angka yang ditambahkan" masih goyah. Aturannya: lihat huruf setelah `+=`
+- Tindakan: `% 3` dan `% 5` dicabut dari `REVIEW_QUEUE`. Sisa satu hal yang dipantau:
+  angka yang ditambahkan pada `+=`
+
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 

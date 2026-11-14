@@ -47,10 +47,15 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Aturan yang membuat lulus: tulis deret sampai angka gagal, tabel empat kolom untuk akumulasi
 - Jatuh tempo berikutnya: 2026-11-14
 
-**`%` dengan angka selain 2** · muncul 2026-11-12 → jatuh tempo 2026-11-15 · status 1
-- S4 dijawab `19`, seharusnya `3`. `i % 3` dibaca sebagai "ganjil"
-- `% 2` sudah benar (S3, S5), yang belum stabil `% 3` dan `%` dengan pembagi lain
-- Butuh drill: `% 3`, `% 5`, dan kombinasi `break` dengan modulus
+**`%` dengan angka selain 2** · muncul 2026-11-12 → **PASS 2026-11-12** · status 3
+- Gate Log #78: S4 (`% 3` dengan `break`) `3` benar, S8 (`% 5`) `10` benar
+- S9 (`% 3` dengan `continue`) gagal karena angka yang ditambahkan, bukan karena `%`
+- Jatuh tempo berikutnya: 2026-11-16
+
+**angka yang ditambahkan pada `+=`** · muncul 2026-11-12 → jatuh tempo 2026-11-15 · status 1
+- S9 dijawab `9`, seharusnya `37`. Menambahkan `1` dan `2` bergantian, bukan nilai `i`
+- Cek cepat setelahnya (`total += i * 2`) benar `30`
+- Aturan yang harus dipakai: lihat huruf setelah `+=`, itu yang ditambahkan
 
 **nested loop** · muncul 2026-11-12 → **PASS 2026-11-12** · status 3
 - Gate Log #77: 3 dari 3 benar

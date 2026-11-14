@@ -137,6 +137,12 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     (S4 dijawab `19`, seharusnya `3`)
   - Konsep benar: `% 3` itu kelipatan 3, bukan ganjil. `break` menghentikan seluruh loop,
     jadi putaran setelahnya tidak pernah terjadi
+  - Pulih 2026-11-12: S4 dan S8 dijawab benar
+- **2026-11-12** · LOGIC · ke-**2** · belum
+  - Salah: `total += i` dijawab dengan menambahkan `1` dan `2` bergantian, bukan nilai `i`
+    (S9 dijawab `9`, seharusnya `37`)
+  - Konsep benar: yang ditambahkan adalah huruf setelah `+=`. `total += i` menambahkan nilai
+    `i` saat itu (`4, 5, 7, 8, 10`), bukan angka tetap
 - **2026-11-12** · CONCEPT · ke-1 · sudah
   - Salah: `===` dibaca sebagai operasi pengurangan (`i === 2` dijawab `1,0,1,2,1,2`)
   - Konsep benar: `===` hanya membandingkan, hasilnya `true` atau `false`
