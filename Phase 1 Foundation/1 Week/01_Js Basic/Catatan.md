@@ -546,9 +546,14 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Catatan umum: `%` belum pernah diajarkan, dan `===` sempat dibaca sebagai pengurangan.
   Keduanya butuh drill terpisah
 
-**#77** · MEDIUM · nested loop · belum diuji
-- Materi sudah diberikan dan diverifikasi (N1 `12`, N2 enam pasangan, N3 `18`)
-- Soal N1-N3 belum dijawab, dicatat sebagai utang
+**#77** · MEDIUM · nested loop · PASS 3/3
+- Q1 hitung `3 × 4`: `12` — benar, setelah sempat menjawab `4` (hanya menghitung satu putaran luar)
+- Q2 isi array `i + "-" + j`: enam elemen berurutan — benar
+- Q3 `j <= i` dengan akumulasi: `10` — benar, setelah sempat `45` (mengira `j` selalu tiga)
+- Catatan: struktur `i1 j1 | i2 j1j2 | i3 j1j2j3` dijelaskan benar sebelum hitungannya benar.
+  Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
+- Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
+- Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**

@@ -52,8 +52,11 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - `% 2` sudah benar (S3, S5), yang belum stabil `% 3` dan `%` dengan pembagi lain
 - Butuh drill: `% 3`, `% 5`, dan kombinasi `break` dengan modulus
 
-**nested loop** · muncul 2026-11-12 → jatuh tempo 2026-11-15 · status 0
-- Materi sudah diberikan, soal N1-N3 belum dijawab
+**nested loop** · muncul 2026-11-12 → **PASS 2026-11-12** · status 3
+- Gate Log #77: 3 dari 3 benar
+- Q1 `12` (sempat `4`), Q2 array enam elemen, Q3 `10` (sempat `45`)
+- Struktur dipahami sebelum hitungannya benar. Teknik: tulis jumlah baris dulu
+- Jatuh tempo berikutnya: 2026-11-16
 
 **`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS 2026-11-12 · status 3
 - 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0
