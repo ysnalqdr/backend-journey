@@ -359,8 +359,13 @@ Working Skills/
   Review/
   Docs/
   Debug/
+  Cara Membaca Kode.md
+  Latihan Memecah Masalah.md
+  status.json
 Recheck/
 check_system.js
+working_skills.js
+BUG_TAXONOMY.md
 ```
 
 Naming pattern:

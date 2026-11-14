@@ -78,6 +78,16 @@ lebih dari 7 hari. `check_system.js` ikut memeriksanya, jadi tidak bisa diabaika
 
 Aturannya ada di README #41.
 
+## Materi pendukung
+
+Dibaca sekali, lalu dipakai setiap kali mengerjakan blok:
+
+| File                         | Isi                                                    |
+|------------------------------|--------------------------------------------------------|
+| `Cara Membaca Kode.md`       | empat langkah membaca, close reading, apa yang dicatat |
+| `Latihan Memecah Masalah.md` | 3 soal merancang tanpa kode, dengan kunci              |
+| `../BUG_TAXONOMY.md`         | enam jenis bug yang tidak melempar error               |
+
 ## Isi `status.json`
 
 | Field       | Arti                                    |

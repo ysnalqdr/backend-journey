@@ -56,6 +56,41 @@ gagal" dan "tabel empat kolom" diterapkan. Cara kerja lebih menentukan daripada 
 
 ---
 
+## Rencana sesi berikutnya
+
+**2026-11-15 — belum dikerjakan**
+
+| #   | Blok              | Waktu  | Isi                         |
+|-----|-------------------|--------|-----------------------------|
+| 1   | Re-check `+=`     | 5 mnt  | satu soal, trace tertulis   |
+| 2   | Reading 01        | 30 mnt | blok Working Skills pertama |
+| 3   | `12_For.js` HARD  | 15 mnt | H1 dan H2                   |
+| 4   | `12_For.js` WRITE | 10 mnt | `hitungTotal`               |
+| 5   | Catat             | 5 mnt  | Gate Log, TRAIN_LOG, commit |
+
+Kalau waktu cuma 40 menit: poin 1 dan 2 saja.
+
+**Yang tidak dikerjakan:** `while`, `do...while`, `15_Nested` HARD, dan semua perubahan sistem.
+
+**Audit 2026-11-14, jarak ke tujuan:**
+
+| Yang diminta          | Yang dilatih sekarang        | Jarak           |
+|-----------------------|------------------------------|-----------------|
+| Kritis soal kode      | gerbang menanya "apa output" | jauh            |
+| Review kode           | 1 file, belum dibuka         | jauh            |
+| Solve problem         | tidak ada latihan merancang  | **tidak ada**   |
+| Lihat bug tersembunyi | 1 file debug, belum dibuka   | jauh            |
+| Mastering backend     | belum sampai HTTP            | wajar, minggu 1 |
+
+**Temuan audit:** tidak ada satu pun latihan memecah masalah baru. Semua soal punya kode jadi.
+Ditambahkan `Working Skills/Latihan Memecah Masalah.md` sebagai penutup lubang itu.
+
+**Peringatan untuk diri sendiri:** 2026-11-14 menghabiskan satu sesi penuh membangun sistem
+(5 aturan, 4 pemeriksaan, 2 skrip, 3 bug sendiri) sementara blok Working Skills tetap 0 dari 6.
+Sisa minggu ini: nol perubahan sistem kecuali yang menghalangi belajar.
+
+---
+
 ## Aturan
 
 1. Isi **setelah** sesi selesai, bukan di tengah
