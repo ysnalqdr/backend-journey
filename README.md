@@ -284,6 +284,34 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     the files; all of it was visible to a script. The script is written in Node, not Python,
     because this is a JavaScript repository and Node is already installed.
 
+38. **Re-check intervals expand, they do not stay fixed.** A concept that passes cleanly waits
+    longer before the next check than one that needed several attempts.
+
+    | Result                   | Next interval |
+    |--------------------------|---------------|
+    | passed first try         | 4 days        |
+    | passed after corrections | 2 days        |
+    | failed                   | 1 day         |
+
+    Why: the SM-2 scheduler used by Anki expands the interval after each success and resets it
+    after a failure. A fixed 2-day interval re-tests strong concepts too often and weak ones too
+    slowly. Both cost the same minutes; only one of them teaches.
+
+39. **Re-checks must interleave, not repeat one concept.** A re-check session mixes the due
+    concept with at least one concept that is not due.
+
+    Why: blocked practice — one topic until it is finished — produces better results on an
+    immediate test and worse retention weeks later. Interleaved practice reverses that. The
+    blocked form is right for first acquisition; the interleaved form is right for review.
+
+40. **Every answer records confidence before the answer.** Say "sure" or "unsure" before
+    answering, and log it next to the verdict.
+
+    Why: retrieval practice improves metacognition — the accuracy of judging what you actually
+    know. Without a confidence record, a wrong answer and a wrong-but-confident answer look
+    identical in the log, and they need different treatment. A confident error is corrected
+    strongly by immediate feedback; an unsure error needs the material again.
+
 ---
 
 ## Structure

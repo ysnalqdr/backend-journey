@@ -138,6 +138,33 @@ Yang wajib ada dalam koreksi: apa yang salah, kenapa salah, dan apa yang benar.
 
 ---
 
+## Level dan definisinya
+
+Empat level gerbang punya definisi tetap. Label yang tidak sesuai definisi harus diperbaiki,
+bukan dibiarkan.
+
+| Level  | Bentuk soal              | Contoh                                 |
+|--------|--------------------------|----------------------------------------|
+| EASY   | prediksi output          | "apa yang tercetak"                    |
+| MEDIUM | temukan bug              | "di mana masalahnya, dan kenapa"       |
+| HARD   | gabung konsep sebelumnya | "loop + `break` + `%` dalam satu soal" |
+| WRITE  | tulis dari nol           | "tulis loop yang ... tanpa contoh"     |
+
+Padanannya dengan tangga lima tingkat:
+
+| Tangga            | Level gerbang |
+|-------------------|---------------|
+| 1 prediksi hasil  | EASY          |
+| 2 telusuri alasan | EASY          |
+| 3 cari yang salah | MEDIUM        |
+| 4 ubah konteks    | HARD          |
+| 5 tulis dari nol  | WRITE         |
+
+**Kesalahan yang pernah terjadi:** 10 soal prediksi output di Gate Log #75 dicatat sebagai
+MEDIUM, padahal menurut definisi itu EASY. Dicatat sebagai koreksi, tidak dihapus.
+
+---
+
 ## Cek sebelum kirim
 
 Baca ulang bagian `## Yang ditanyakan` dan periksa enam hal.

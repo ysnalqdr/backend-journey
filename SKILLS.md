@@ -58,8 +58,8 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 | `switch` & `break`                         | 3      | 3      |     |     |
 | `&&`, `\|\|`, `!` & short-circuit          | 3      | 3      |     |     |
 | `??` vs `\|\|`                             | 3      | 3      |     |     |
-| `for`, `while`, `do...while`               | -      | 4      |     |     |
-| `break`, `continue`, nested loop           | -      | 4      |     |     |
+| `for`, `while`, `do...while`               | 2      | 4      |     |     |
+| `break`, `continue`, nested loop           | 2      | 4      |     |     |
 | Fungsi, parameter, return                  | -      | 2      |     |     |
 | Scope & closure                            | -      | 2      |     |     |
 | Array & method (`map`, `filter`, `reduce`) | -      | 3      |     |     |
@@ -79,6 +79,12 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 - **`if` / `else if` / `else`, urutan kondisi** — Gate Log #3 (MEDIUM), 90 vs `>` vs `>=`
 - **Ternary** — Gate Log #2,#4,#6,#7 — 2 PASS + MEDIUM + tulis dari nol
 - **`switch` & `break`** — Gate Log #15-#20: EASY, MEDIUM, HARD, WRITE semua PASS. Bug laten ditemukan sendiri (#18)
+- **`for`, `while`, `do...while`** — status 2, bukan 3. Bukti: Gate Log #67-#75, `10_ForBuild.js`
+  dijawab 10/10, `11_BreakContinue.js` dijawab benar semua. **Belum HARD dan WRITE**, dan `while`
+  serta `do...while` belum disentuh. Status 2 karena baru bisa dipakai dengan contoh, belum
+  dibuktikan tanpa contoh
+- **`break`, `continue`, nested loop** — status 2, bukan 3. Bukti: Gate Log #76-#78, `11_BreakContinue.js`
+  (S1-S9, Q1-Q3). **Belum HARD dan WRITE**. Satu utang: angka yang ditambahkan pada `+=`
 - **`&&` `||` `!` & short-circuit** — Gate Log #40-#48 (`&&` `||`), #49-#59 (`!`). Semua 4 level PASS
 - **`??` vs `||`** — Gate Log #60-#65: EASY, MEDIUM, HARD, WRITE semua PASS. Resolver `limit`/`diskon` diuji 4 nilai
 

@@ -503,6 +503,52 @@ if (dirty) {
     }
 }
 
+// ---------- 19. Setiap jawaban punya catatan keyakinan ----------
+{
+    // Aturan 40. Entri Gate Log baru wajib menyebut yakin atau ragu.
+    const c = path.join(ROOT, "Phase 1 Foundation/1 Week/01_Js Basic/Catatan.md");
+    const src = fs.readFileSync(c, "utf8");
+    const blok = src.split("## Gate Log")[1] || "";
+    const entri = blok.split(/\*\*#\d+\*\*/).slice(1);
+
+    // hanya periksa entri setelah aturan 40 berlaku (2026-11-14 ke atas)
+    const baru = entri.filter((e) => /2026-11-1[4-9]|2026-1[2]-\d\d/.test(e.slice(0, 300)));
+    const tanpaKeyakinan = baru.filter((e) => !/yakin|ragu/i.test(e.slice(0, 400)));
+
+    if (baru.length === 0) {
+        ok("keyakinan: belum ada entri baru setelah aturan 40");
+    } else if (tanpaKeyakinan.length) {
+        warn(`keyakinan belum dicatat di ${tanpaKeyakinan.length} entri Gate Log baru`);
+    } else {
+        ok(`keyakinan tercatat di ${baru.length} entri Gate Log baru`);
+    }
+}
+
+// ---------- 20. Antrean re-check memakai interval yang benar ----------
+{
+    const isi = read("REVIEW_QUEUE.md");
+    const daftar = [];
+    const reItem = /^\*\*(.+?)\*\*\s*·\s*(?:muncul\s*)?(\d{4}-\d{2}-\d{2})\s*→\s*(?:jatuh tempo\s*)?(\d{4}-\d{2}-\d{2})/;
+
+    for (const line of isi.split(/\r?\n/)) {
+        const m = line.match(reItem);
+        if (!m) continue;
+        const [, konsep, muncul, due] = m;
+        const selisih = Math.round(
+            (new Date(due + "T00:00:00") - new Date(muncul + "T00:00:00")) / 86400000
+        );
+        if (selisih < 1 || selisih > 14) {
+            daftar.push(`${konsep.trim()} (${selisih} hari)`);
+        }
+    }
+
+    if (daftar.length) {
+        daftar.forEach((d) => warn(`interval re-check di luar 1-14 hari: ${d}`));
+    } else {
+        ok("interval re-check dalam rentang 1-14 hari");
+    }
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);
