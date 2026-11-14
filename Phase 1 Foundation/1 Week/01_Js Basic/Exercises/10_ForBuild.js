@@ -12,7 +12,7 @@ console.log("=== Konsep A - bentuk perubahan ===");
         hitung++;
     }
 
-    const jawab = null;
+    const jawab = 4;
 
     if (jawab === null) {
         console.log("A1: belum dijawab");
@@ -30,7 +30,7 @@ console.log("=== Konsep A - bentuk perubahan ===");
         hitung++;
     }
 
-    const jawab = null;
+    const jawab = 5;
 
     if (jawab === null) {
         console.log("A2: belum dijawab");
@@ -48,7 +48,7 @@ console.log("=== Konsep A - bentuk perubahan ===");
         hitung++;
     }
 
-    const jawab = null;
+    const jawab = 4;
 
     if (jawab === null) {
         console.log("A3: belum dijawab");
@@ -69,7 +69,7 @@ console.log("=== Konsep B - batas dan jumlah putaran ===");
         total += i;
     }
 
-    const jawab = null;
+    const jawab = 75;
 
     if (jawab === null) {
         console.log("B1: belum dijawab");
@@ -87,7 +87,7 @@ console.log("=== Konsep B - batas dan jumlah putaran ===");
         hitung++;
     }
 
-    const jawab = null;
+    const jawab = 5;
 
     if (jawab === null) {
         console.log("B2: belum dijawab");
@@ -105,7 +105,7 @@ console.log("=== Konsep B - batas dan jumlah putaran ===");
         total += i;
     }
 
-    const jawab = null;
+    const jawab = 0;
 
     if (jawab === null) {
         console.log("B3: belum dijawab");
@@ -123,7 +123,7 @@ console.log("=== Konsep B - batas dan jumlah putaran ===");
         hitung++;
     }
 
-    const jawab = null;
+    const jawab = 3;
 
     if (jawab === null) {
         console.log("B4: belum dijawab");
@@ -144,7 +144,7 @@ console.log("=== Konsep C - akumulasi nilai ===");
         total += i * i;
     }
 
-    const jawab = null;
+    const jawab = 14;
 
     if (jawab === null) {
         console.log("C1: belum dijawab");
@@ -162,7 +162,7 @@ console.log("=== Konsep C - akumulasi nilai ===");
         total += i * 100;
     }
 
-    const jawab = null;
+    const jawab = 1000;
 
     if (jawab === null) {
         console.log("C2: belum dijawab");
@@ -180,7 +180,7 @@ console.log("=== Konsep C - akumulasi nilai ===");
         total += i * 10;
     }
 
-    const jawab = null;
+    const jawab = 200;
 
     if (jawab === null) {
         console.log("C3: belum dijawab");

@@ -47,6 +47,14 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Aturan yang membuat lulus: tulis deret sampai angka gagal, tabel empat kolom untuk akumulasi
 - Jatuh tempo berikutnya: 2026-11-14
 
+**`%` dengan angka selain 2** · muncul 2026-11-12 → jatuh tempo 2026-11-15 · status 1
+- S4 dijawab `19`, seharusnya `3`. `i % 3` dibaca sebagai "ganjil"
+- `% 2` sudah benar (S3, S5), yang belum stabil `% 3` dan `%` dengan pembagi lain
+- Butuh drill: `% 3`, `% 5`, dan kombinasi `break` dengan modulus
+
+**nested loop** · muncul 2026-11-12 → jatuh tempo 2026-11-15 · status 0
+- Materi sudah diberikan, soal N1-N3 belum dijawab
+
 **`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS 2026-11-12 · status 3
 - 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0
 - Catatan: sempat menawarkan solusi tanpa cadangan, yang hanya aman kalau kolom wajib isi

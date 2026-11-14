@@ -533,6 +533,23 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Bukti perubahan cara kerja: dari 1/6 (batch #73) jadi 10/10 dengan aturan trace tertulis
 - Tindakan: `Deferred` akumulasi dicabut, siap naik ke HARD
 
+**#76** · MEDIUM · `break`, `continue`, `%` · PASS 6/7
+- S1 `break` di `i===4`: `6` — percobaan pertama salah (`3`), lalu benar
+- S2 `continue` di `i===3`: `12` — benar
+- S3 `% 2` ganjil saja: `[1,3,5]` — benar
+- S4 `break` dengan `% 3`: `3` — **FAIL**, dijawab `19`
+- S5 `continue` dengan `% 2 === 1`: `20` — benar
+- S6 dua `if` (`continue` lalu `break`): `[1,3,4]` — benar setelah satu kali ulang
+- S7 soal pendek setelah koreksi: `[1,2,4,5]` — benar
+- Catatan S4: dua kekeliruan sekaligus — `i % 3` disangka "ganjil", dan `break` disangka
+  `continue`. Perlu diulang
+- Catatan umum: `%` belum pernah diajarkan, dan `===` sempat dibaca sebagai pengurangan.
+  Keduanya butuh drill terpisah
+
+**#77** · MEDIUM · nested loop · belum diuji
+- Materi sudah diberikan dan diverifikasi (N1 `12`, N2 enam pasangan, N3 `18`)
+- Soal N1-N3 belum dijawab, dicatat sebagai utang
+
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 

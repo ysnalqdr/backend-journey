@@ -132,6 +132,20 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
   - Konsep benar: bagian `for` dibaca benar; yang perlu dibiasakan adalah menulis tiga baris
     trace sebelum menjawab, bukan menjumlahkan di kepala
   - Pulih 2026-11-12: 10 soal per konsep dijawab 10/10 dengan deret dan tabel tertulis
+- **2026-11-12** · CONCEPT · ke-1 · belum
+  - Salah: `i % 3 === 0` dibaca sebagai "ganjil", dan `break` dijawab seperti `continue`
+    (S4 dijawab `19`, seharusnya `3`)
+  - Konsep benar: `% 3` itu kelipatan 3, bukan ganjil. `break` menghentikan seluruh loop,
+    jadi putaran setelahnya tidak pernah terjadi
+- **2026-11-12** · CONCEPT · ke-1 · sudah
+  - Salah: `===` dibaca sebagai operasi pengurangan (`i === 2` dijawab `1,0,1,2,1,2`)
+  - Konsep benar: `===` hanya membandingkan, hasilnya `true` atau `false`
+  - Pulih 2026-11-12: soal S7 dijawab benar (`[1,2,4,5]`)
+- **2026-11-12** · CONCEPT · ke-1 · sudah
+  - Salah: `%` disangka butuh pembagian, dan dikira tidak bisa dihitung
+  - Konsep benar: `%` dihitung dengan pengurangan berulang, dan `% 2` cukup dilihat
+    genap atau ganjil
+  - Pulih 2026-11-12: S3 dan S5 dijawab benar
 - **2026-11-12** · CONCEPT · ke-**2** · sudah
   - Salah: `if` ditulis di kanan `=` empat kali berturut-turut, lalu menyalin variabel lain
   - Konsep benar: `if` tidak menghasilkan nilai, jadi tidak bisa jadi isi variabel. Yang
