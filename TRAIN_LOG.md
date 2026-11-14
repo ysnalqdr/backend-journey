@@ -62,5 +62,18 @@ gagal" dan "tabel empat kolom" diterapkan. Cara kerja lebih menentukan daripada 
 2. Konsep dengan 3 FAIL di hari yang sama → pindah ke `## Deferred` di `Catatan.md` (README 17b)
 3. Konsep yang lulus → tambahkan ke `REVIEW_QUEUE.md`. Interval mengikuti README #38:
    lulus bersih 4 hari, lulus setelah koreksi 2 hari, gagal 1 hari
-4. Kalau level tertinggi masih EASY setelah 3 sesi, konsep itu belum dikuasai. Jangan naik
-   status di `SKILLS.md`.
+4. Kalau level tertinggi masih EASY setelah 3 sesi, konsep itu belum dikuasai — jangan naik
+   status di `SKILLS.md`
+
+---
+
+## Pemakaian `--no-verify`
+
+Hook `pre-commit` menolak commit selama belum ada blok Working Skills dikerjakan. Jalur darurat
+`git commit --no-verify` dicatat di sini setiap kali dipakai.
+
+| Tanggal    | Commit                                                       | Alasan                                                       |
+|------------|--------------------------------------------------------------|--------------------------------------------------------------|
+| 2026-11-14 | `docs: require one working skills block per session`         | perubahan aturan sistem, bukan sesi belajar                  |
+| 2026-11-14 | `feat: charge working skills blocks every session by script` | membangun mekanisme penagih, belum ada blok untuk dikerjakan |
+| 2026-11-14 | `chore: add working skills pre-commit hook`                  | hook belum ada saat perubahan dibuat                         |

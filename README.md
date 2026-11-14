@@ -252,6 +252,10 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
 35. **Every session opens with the same four checks, in this order.** No material starts until
     all four are done. Two minutes total.
 
+    **The assistant runs step 1, not the learner.** Before answering anything else, the first
+    action of every session is `node working_skills.js`. Report which block is charged, then
+    continue with whatever was asked.
+
     1. **`node working_skills.js`** — which Working Skills block is being charged this session?
        That block runs before the daily gate (rule 41).
     2. **`## Deferred`** in the week's `Catatan.md` — is anything waiting? If yes, that concept
@@ -263,6 +267,11 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     Why: without this, a due re-check silently expires, a Deferred concept is forgotten, and the
     working-skills block never happens. All three failures were observed: the re-check went two
     days late, and eight Working Skills stayed at status 0 for two weeks.
+
+    Why the assistant runs it: a rule that depends on the learner remembering fails exactly when
+    remembering is the problem. Two weeks and 78 gate entries passed with every Working Skill at
+    zero, under four separate safeguards that all relied on the same memory. The trigger has to
+    sit with whoever does not forget.
 
 36. **Every session closes with three writes.** Not optional, not "later".
 
