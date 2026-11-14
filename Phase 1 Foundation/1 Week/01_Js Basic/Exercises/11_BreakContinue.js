@@ -155,47 +155,108 @@ console.log("=== Soal break dan continue ===");
     periksa("S7", jawab, hasil, "array");
 }
 
+// S8. break dengan % 5.
+{
+    let total = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        if (i % 5 === 0) break;
+        total += i;
+    }
+
+    // Jawabanku: 10, dengan trace 0+1, 1+2, 3+3, 6+4
+    const jawab = 10;
+
+    periksa("S8", jawab, total, "total");
+}
+
+// S9. continue dengan % 3. Ini yang salah.
+{
+    let total = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        if (i % 3 === 0) continue;
+        total += i;
+    }
+
+    // Jawabanku: 9 (salah, menambahkan 1 dan 2 bergantian, bukan nilai i,
+    //            dan berhenti menjumlah di i=8)
+    // Benar: 1 + 2 + 4 + 5 + 7 + 8 + 10 = 37
+    const jawab = 37;
+
+    periksa("S9", jawab, total, "total");
+}
+
+// Cek cepat setelah koreksi S9.
+{
+    let total = 0;
+
+    for (let i = 1; i <= 5; i++) {
+        total += i * 2;
+    }
+
+    // Jawabanku: 30, dengan trace 0+2, 2+4, 6+6, 12+8, 20+10
+    const jawab = 30;
+
+    periksa("cek", jawab, total, "total");
+}
+
 console.log("");
-console.log("=== Nested loop (belum diuji) ===");
+console.log("=== Nested loop ===");
 
 // Nested loop
 //
 // Loop dalam jalan penuh setiap kali loop luar jalan satu kali.
 // Total putaran = jumlah luar x jumlah dalam.
 // break di loop dalam hanya keluar dari loop dalam, loop luar tetap jalan.
+// Kalau batas loop dalam memakai variabel loop luar (j <= i), jumlah kolom
+// mengikuti nomor baris.
 
+// Q1. Hitung berapa putaran.
 {
     let hitung = 0;
 
-    for (let i = 1; i <= 4; i++) {
-        for (let j = 1; j <= 3; j++) {
+    for (let i = 1; i <= 3; i++) {
+        for (let j = 1; j <= 4; j++) {
             hitung++;
         }
     }
 
-    console.log("N1: " + hitung + " putaran (4 x 3)");
+    // Jawabanku: 12, setelah sempat menjawab 4 (hanya satu putaran luar)
+    const jawab = 12;
+
+    periksa("Q1", jawab, hitung, "putaran");
 }
 
+// Q2. Apa isi array daftar.
 {
-    const hasil = [];
+    const daftar = [];
 
-    for (let i = 1; i <= 3; i++) {
-        for (let j = 1; j <= 2; j++) {
-            hasil.push(i + "-" + j);
+    for (let i = 1; i <= 2; i++) {
+        for (let j = 1; j <= 3; j++) {
+            daftar.push(i + "-" + j);
         }
     }
 
-    console.log("N2: " + JSON.stringify(hasil));
+    // Jawabanku: ["1-1", "1-2", "1-3", "2-1", "2-2", "2-3"]
+    const jawab = ["1-1", "1-2", "1-3", "2-1", "2-2", "2-3"];
+
+    periksa("Q2", jawab, daftar, "array");
 }
 
+// Q3. Berapa nilai total, dengan batas loop dalam memakai i.
 {
     let total = 0;
 
     for (let i = 1; i <= 3; i++) {
-        for (let j = 1; j <= 2; j++) {
-            total += i * j;
+        for (let j = 1; j <= i; j++) {
+            total += j;
         }
     }
 
-    console.log("N3: " + total);
+    // Jawabanku: 10, setelah sempat menjawab 45 (mengira j selalu tiga)
+    // Asumsi developer: jumlah kolom mengikuti nomor baris, bukan lebar tetap
+    const jawab = 10;
+
+    periksa("Q3", jawab, total, "total");
 }
