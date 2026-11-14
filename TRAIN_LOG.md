@@ -72,8 +72,8 @@ gagal" dan "tabel empat kolom" diterapkan. Cara kerja lebih menentukan daripada 
 Hook `pre-commit` menolak commit selama belum ada blok Working Skills dikerjakan. Jalur darurat
 `git commit --no-verify` dicatat di sini setiap kali dipakai.
 
-| Tanggal    | Commit                                                       | Alasan                                                       |
-|------------|--------------------------------------------------------------|--------------------------------------------------------------|
-| 2026-11-14 | `docs: require one working skills block per session`         | perubahan aturan sistem, bukan sesi belajar                  |
-| 2026-11-14 | `feat: charge working skills blocks every session by script` | membangun mekanisme penagih, belum ada blok untuk dikerjakan |
-| 2026-11-14 | `chore: add working skills pre-commit hook`                  | hook belum ada saat perubahan dibuat                         |
+| Tanggal    | Commit          | Alasan                    |
+|------------|-----------------|---------------------------|
+| 2026-11-14 | aturan #41      | aturan sistem, bukan sesi |
+| 2026-11-14 | skrip penagih   | membangun mekanisme       |
+| 2026-11-14 | hook pre-commit | hook belum ada            |
