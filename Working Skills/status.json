@@ -1,0 +1,72 @@
+{
+  "keterangan": "Status tiap blok Working Skills. Diperiksa otomatis oleh check_system.js.",
+  "aturan": "Setiap sesi wajib mengerjakan blok berstatus belum atau sedang. Blok yang tertunda lebih dari 7 hari muncul sebagai peringatan.",
+  "blok": [
+    {
+      "id": "reading-01",
+      "nama": "Baca kode asing, level 1",
+      "folder": "Working Skills/Reading",
+      "soal": "Working Skills/Reading/01_Total Pembayaran.md",
+      "kunci": "Working Skills/Kunci/Reading 01.md",
+      "kemampuan": ["Membaca kode asing"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "Belum pernah dibuka."
+    },
+    {
+      "id": "reading-02",
+      "nama": "Baca kode asing, level 2",
+      "folder": "Working Skills/Reading",
+      "soal": "Working Skills/Reading/02_Simulasi Stok.md",
+      "kunci": "Working Skills/Kunci/Reading 02.md",
+      "kemampuan": ["Membaca kode asing", "Membaca codebase dengan satu pertanyaan"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "Disiapkan 2026-11-14. Jembatan ke loop."
+    },
+    {
+      "id": "review-01",
+      "nama": "Menulis komentar review",
+      "folder": "Working Skills/Review",
+      "soal": "Working Skills/Review/01_Kode Review.md",
+      "kunci": "Working Skills/Kunci/Review 01.md",
+      "kemampuan": ["Menulis komentar review", "Menilai desain, bukan cuma sintaks"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "5 bug ditanam. Wajib pakai label blocking dan nit."
+    },
+    {
+      "id": "review-02",
+      "nama": "Menerima review",
+      "folder": "Working Skills/Review",
+      "soal": "Working Skills/Review/01_Kode Review.md",
+      "kunci": "Working Skills/Kunci/Review 01.md",
+      "kemampuan": ["Menerima review"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "Bagian kedua file yang sama. Menilai komentar mana yang diterima dan ditolak."
+    },
+    {
+      "id": "docs-01",
+      "nama": "Mencari di dokumentasi",
+      "folder": "Working Skills/Docs",
+      "soal": "Working Skills/Docs/01_Cari Sendiri di MDN.md",
+      "kunci": "Working Skills/Kunci/Docs 01.md",
+      "kemampuan": ["Mencari di dokumentasi"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "5 tugas pencarian. Tidak ketemu adalah jawaban sah."
+    },
+    {
+      "id": "debug-01",
+      "nama": "Menulis bug report dan debugging",
+      "folder": "Working Skills/Debug",
+      "soal": "Working Skills/Debug/01_Stok Berkurang Dua Kali.md",
+      "kunci": "Working Skills/Kunci/Debug 01.md",
+      "kemampuan": ["Menulis bug report", "Debugging sistematis"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "Lima langkah wajib. Bug report dulu, perbaikan kemudian."
+    }
+  ]
+}

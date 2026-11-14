@@ -252,17 +252,17 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
 35. **Every session opens with the same four checks, in this order.** No material starts until
     all four are done. Two minutes total.
 
-    1. **`## Deferred`** in the week's `Catatan.md` — is anything waiting? If yes, that concept
+    1. **`node working_skills.js`** — which Working Skills block is being charged this session?
+       That block runs before the daily gate (rule 41).
+    2. **`## Deferred`** in the week's `Catatan.md` — is anything waiting? If yes, that concept
        comes first, not new material (rule 25).
-    2. **`REVIEW_QUEUE.md`** — anything due today? Re-check it before new material (rule 20).
-    3. **Today's block** from the rotation in PLAN.md §3 — reading, review, docs, or own-code
-       review? Do that block before the daily gate.
+    3. **`REVIEW_QUEUE.md`** — anything due today? Re-check it before new material (rule 20).
     4. **`## Explain back`** — is yesterday's entry still empty? If yes, that is the first task,
        not the last.
 
     Why: without this, a due re-check silently expires, a Deferred concept is forgotten, and the
-    working-skills rotation never happens. Three of the four failures found in the system audit
-    came from having no opening protocol.
+    working-skills block never happens. All three failures were observed: the re-check went two
+    days late, and eight Working Skills stayed at status 0 for two weeks.
 
 36. **Every session closes with three writes.** Not optional, not "later".
 
@@ -313,16 +313,20 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     strongly by immediate feedback; an unsure error needs the material again.
 
 41. **Every session includes one Working Skills block.** Not weekly, not "when there is time".
-    One block per session, taken from the rotation in `Working Skills/README.md`: Reading,
-    Review, Docs, or own-code review. It runs before the daily gate, as part of rule 35 step 3.
+    One block per session, chosen by `node working_skills.js` from `Working Skills/status.json`.
+    It runs before the daily gate, as part of rule 35 step 3.
 
-    Sunday is the catch-up day. Any block missed Monday to Friday runs first on Sunday, before
-    anything else.
+    The block is chosen by the script, not by the day of the week. A day-based rotation loses a
+    block whenever that day is missed, and study sessions do not always land on the same weekday.
+    The script picks whichever block has gone longest untouched and warns about anything pending
+    more than seven days. `check_system.js` checks the same file, so a block cannot be quietly
+    skipped.
 
     Why: eight Working Skills sat at status 0 across two weeks while 78 gate entries
     accumulated. The gate trains recall of a concept. It does not train reading unfamiliar
     code, writing a review comment, or finding a bug in someone else's file — and those are
-    what the job asks for. A skill only moves when it is scheduled.
+    what the job asks for. A skill only moves when it is scheduled, and only stays scheduled
+    when something asks for it every session.
 
 ---
 

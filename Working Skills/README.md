@@ -61,15 +61,48 @@ Kalau langkah 3 dilewati, latihan ini tidak mengukur apa pun.
 
 ---
 
-## Rotasi mingguan
+## Blok yang ditagih
 
-| Hari   | Blok                       | Folder     |
-|--------|----------------------------|------------|
-| Senin  | Baca kode                  | `Reading/` |
-| Selasa | Review kode orang lain     | `Review/`  |
-| Rabu   | Baca dokumentasi sendiri   | `Docs/`    |
-| Kamis  | Kode sendiri direview      | `Review/`  |
-| Jumat  | Weekly review + `Trace.md` | —          |
+Rotasi berbasis hari sudah dihapus. Alasannya: kalau Senin terlewat, blok Reading hilang tanpa
+ada yang menagihnya. Belajar tidak selalu jatuh di hari yang sama.
+
+Gantinya, setiap blok punya status sendiri di `status.json`, dan ditagih setiap sesi.
+
+```bash
+node working_skills.js                  # apa yang harus dikerjakan sekarang
+node working_skills.js --selesai <id>   # tandai satu blok selesai
+```
+
+Skrip itu memilih blok yang paling lama tidak disentuh, dan memperingatkan blok yang tertunda
+lebih dari 7 hari. `check_system.js` ikut memeriksanya, jadi tidak bisa diabaikan.
+
+Aturannya ada di README #41.
+
+## Isi `status.json`
+
+| Field       | Arti                                    |
+|-------------|-----------------------------------------|
+| `id`        | nama pendek untuk menandai selesai      |
+| `nama`      | judul blok                              |
+| `soal`      | file pertanyaan                         |
+| `kunci`     | file jawaban                            |
+| `kemampuan` | Working Skill yang dilatih              |
+| `status`    | `belum`, `sedang`, atau `selesai`       |
+| `terakhir`  | tanggal terakhir dikerjakan             |
+| `catatan`   | hal yang perlu diingat saat mengerjakan |
+
+## Urutan yang disarankan
+
+Bukan wajib, tapi ini urutan yang paling masuk akal:
+
+| Urutan | Blok         | Alasan                                |
+|--------|--------------|---------------------------------------|
+| 1      | `reading-01` | paling dasar, hanya membaca           |
+| 2      | `reading-02` | membaca kode dengan loop, materi baru |
+| 3      | `review-01`  | mulai menilai kode orang              |
+| 4      | `review-02`  | menerima penilaian                    |
+| 5      | `docs-01`    | mencari jawaban sendiri               |
+| 6      | `debug-01`   | paling sulit, butuh semua di atas     |
 
 ---
 

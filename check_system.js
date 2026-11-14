@@ -257,6 +257,8 @@ if (overdue.length) {
         const m = line.match(reItem);
         if (!m) continue;
         const [, konsep, muncul, due] = m;
+        // lewati kalau baris itu sudah menyebut PASS
+        if (/PASS/i.test(line)) continue;
         const d = new Date(due + "T00:00:00");
         if (d < today) {
             daftar.push(`${konsep.trim()} (jatuh tempo ${due})`);
@@ -547,6 +549,54 @@ if (dirty) {
         daftar.forEach((d) => warn(`interval re-check di luar 1-14 hari: ${d}`));
     } else {
         ok("interval re-check dalam rentang 1-14 hari");
+    }
+}
+
+// ---------- 21. Working Skills ditagih setiap sesi ----------
+{
+    // Aturan 41. Status dibaca dari Working Skills/status.json.
+    const f = path.join(ROOT, "Working Skills/status.json");
+
+    if (!fs.existsSync(f)) {
+        err("Working Skills/status.json tidak ada");
+    } else {
+        const data = JSON.parse(fs.readFileSync(f, "utf8"));
+        const semua = data.blok || [];
+        const belum = semua.filter((b) => b.status === "belum");
+        const sedang = semua.filter((b) => b.status === "sedang");
+        const selesai = semua.filter((b) => b.status === "selesai");
+
+        // setiap blok wajib punya soal dan kunci yang benar-benar ada
+        const hilang = [];
+        for (const b of semua) {
+            if (!fs.existsSync(path.join(ROOT, b.soal))) hilang.push(b.id + " soal");
+            if (!fs.existsSync(path.join(ROOT, b.kunci))) hilang.push(b.id + " kunci");
+        }
+
+        if (hilang.length) {
+            hilang.forEach((h) => err(`Working Skills: file hilang (${h})`));
+        } else if (selesai.length === 0) {
+            warn(`Working Skills: 0 dari ${semua.length} blok pernah dikerjakan. Jalankan node working_skills.js`);
+        } else if (belum.length || sedang.length) {
+            warn(`Working Skills: ${belum.length + sedang.length} blok menunggu, ${selesai.length} selesai`);
+        } else {
+            ok(`Working Skills: ${selesai.length} dari ${semua.length} blok selesai`);
+        }
+
+        // blok yang tertunda lebih dari 7 hari
+        const kini = new Date();
+        kini.setHours(0, 0, 0, 0);
+        const tertunda = semua
+            .filter((b) => b.status !== "selesai" && b.terakhir)
+            .map((b) => ({
+                nama: b.nama,
+                umur: Math.round((kini - new Date(b.terakhir + "T00:00:00")) / 86400000),
+            }))
+            .filter((b) => b.umur > 7);
+
+        if (tertunda.length) {
+            tertunda.forEach((b) => warn(`Working Skills tertunda ${b.umur} hari: ${b.nama}`));
+        }
     }
 }
 

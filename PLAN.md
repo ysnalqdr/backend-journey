@@ -90,17 +90,20 @@ Master plan. Kalau ada aturan yang bentrok dengan README, file ini yang menang.
 
 Kalau waktu cuma 60 menit: kerjakan A, B, D. Blok C dan E boleh dilewat sehari, tapi tidak boleh dua hari berturut.
 
-**Rotasi mingguan** — supaya tidak ada yang terlupa:
+**Blok Working Skills** — ditagih setiap sesi, bukan per hari:
 
-| Hari   | Blok tambahan                                                   |
-|--------|-----------------------------------------------------------------|
-| Senin  | Baca kode (A) — file baru                                       |
-| Selasa | Review kode orang lain (C)                                      |
-| Rabu   | Baca dokumentasi sendiri (C) — tugas dari MDN, bukan dari tutor |
-| Kamis  | Kode sendiri direview (C)                                       |
-| Jumat  | Weekly review + isi `Trace.md`                                  |
+```bash
+node working_skills.js
+```
 
-**DSA** 20 mnt terpisah, mulai minggu 10. **Debugging** (README #34) tidak dijadwalkan — dipakai saat benar-benar macet.
+Skrip memilih blok yang paling lama tidak disentuh dari `Working Skills/status.json`, dan
+memperingatkan yang tertunda lebih dari 7 hari. Aturannya di README #41.
+
+Rotasi berbasis hari sudah dihapus: kalau harinya terlewat, bloknya hilang tanpa ada yang
+menagih.
+
+**DSA** 20 mnt terpisah, mulai minggu 10. **Debugging** (README #34) tidak dijadwalkan —
+dipakai saat benar-benar macet.
 
 ---
 
