@@ -86,6 +86,7 @@ for (const [file, flag] of Object.entries(GUARDS)) {
 // ---------- 3. File latihan punya kunci ----------
 const LATIHAN = [
     ["Working Skills/Reading/01_Total Pembayaran.md", "Working Skills/Kunci/Reading 01.md"],
+    ["Working Skills/Reading/02_Simulasi Stok.md", "Working Skills/Kunci/Reading 02.md"],
     ["Working Skills/Review/01_Kode Review.md", "Working Skills/Kunci/Review 01.md"],
     ["Working Skills/Docs/01_Cari Sendiri di MDN.md", "Working Skills/Kunci/Docs 01.md"],
     ["Working Skills/Debug/01_Stok Berkurang Dua Kali.md", "Working Skills/Kunci/Debug 01.md"],

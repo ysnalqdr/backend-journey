@@ -321,6 +321,10 @@ Phase 1 Foundation/
   1 Week/
     01_Js Basic/
       Exercises/
+        12_For.js
+        13_While.js
+        14_DoWhile.js
+        15_Nested.js
       Catatan.md
     Trace.md
 Working Skills/

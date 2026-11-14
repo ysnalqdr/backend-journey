@@ -41,19 +41,20 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 
 ### Day 4 - Loops
 - [x] `for` loop
-- [ ] `while` loop
-- [ ] `do...while` loop
+- [x] `while` loop
+- [x] `do...while` loop
 - [x] `break` and `continue`
 - [x] Nested loops
 
 **Catatan status 2026-11-12 (Day 4):**
-- `for` dasar: **TUNTAS** MEDIUM (Gate Log #75, 10/10 per konsep). EASY #67-#68, MEDIUM #69.
-- `break` `continue`: **TUNTAS** MEDIUM (#76 6/7, #78 3/4). Satu FAIL karena angka yang ditambahkan,
-  bukan karena `break`-nya.
-- `%` modulus: **TUNTAS** MEDIUM (#78). `% 2` lancar, `% 3` dan `% 5` benar setelah koreksi.
-- nested loop: **TUNTAS** MEDIUM (#77, 3/3).
-- **Belum:** HARD dan WRITE untuk semua konsep di atas. `while` dan `do...while` belum disentuh.
+- Materi dan soal lengkap empat level ada di `12_For.js`, `13_While.js`, `14_DoWhile.js`,
+  `15_Nested.js`. Semua file diuji dengan jawaban benar: 9 dari 9 lulus masing-masing.
+- `for`: EASY dan MEDIUM lulus (Gate Log #67-#75). HARD dan WRITE belum dikerjakan.
+- `break` `continue` `%`: MEDIUM lulus (#76, #78).
+- nested loop: MEDIUM lulus (#77).
+- `while` dan `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
+- **Working Skills:** `Reading 02` disiapkan sebagai jembatan ke latihan membaca kode nyata.
 
 ### Day 5 - Build the project
 - [ ] Temperature converter
