@@ -40,11 +40,20 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - **Day 3 SELESAI.** Semua 6 topik tuntas.
 
 ### Day 4 - Loops
-- [ ] `for` loop
+- [x] `for` loop
 - [ ] `while` loop
 - [ ] `do...while` loop
-- [ ] `break` and `continue`
-- [ ] Nested loops
+- [x] `break` and `continue`
+- [x] Nested loops
+
+**Catatan status 2026-11-12 (Day 4):**
+- `for` dasar: **TUNTAS** MEDIUM (Gate Log #75, 10/10 per konsep). EASY #67-#68, MEDIUM #69.
+- `break` `continue`: **TUNTAS** MEDIUM (#76 6/7, #78 3/4). Satu FAIL karena angka yang ditambahkan,
+  bukan karena `break`-nya.
+- `%` modulus: **TUNTAS** MEDIUM (#78). `% 2` lancar, `% 3` dan `% 5` benar setelah koreksi.
+- nested loop: **TUNTAS** MEDIUM (#77, 3/3).
+- **Belum:** HARD dan WRITE untuk semua konsep di atas. `while` dan `do...while` belum disentuh.
+- **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 
 ### Day 5 - Build the project
 - [ ] Temperature converter
