@@ -312,6 +312,18 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     identical in the log, and they need different treatment. A confident error is corrected
     strongly by immediate feedback; an unsure error needs the material again.
 
+41. **Every session includes one Working Skills block.** Not weekly, not "when there is time".
+    One block per session, taken from the rotation in `Working Skills/README.md`: Reading,
+    Review, Docs, or own-code review. It runs before the daily gate, as part of rule 35 step 3.
+
+    Sunday is the catch-up day. Any block missed Monday to Friday runs first on Sunday, before
+    anything else.
+
+    Why: eight Working Skills sat at status 0 across two weeks while 78 gate entries
+    accumulated. The gate trains recall of a concept. It does not train reading unfamiliar
+    code, writing a review comment, or finding a bug in someone else's file — and those are
+    what the job asks for. A skill only moves when it is scheduled.
+
 ---
 
 ## Structure
