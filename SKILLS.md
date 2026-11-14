@@ -181,18 +181,48 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 
 ## Working Skills — kemampuan kerja
 
-Delapan konsep ini **tidak bisa** dinilai dengan "tulis dari nol". Tesnya berbeda, dan buktinya ada di `Working Skills/`.
+Dua kelompok. **Soft skill** dinilai dari alasan yang bisa dipertahankan. **Hard skill** dinilai
+benar atau salah. Keduanya tidak bisa diuji dengan "tulis dari nol", jadi buktinya ada di
+`Working Skills/`.
 
-| Konsep                                  | Status | Minggu |
-|-----------------------------------------|--------|--------|
-| Membaca kode asing                      | 0      |        |
-| Menulis komentar review                 | 0      |        |
-| Menerima review                         | 0      |        |
-| Mencari di dokumentasi                  | 0      |        |
-| Menulis bug report                      | 0      |        |
-| Debugging sistematis                    | 0      |        |
-| Membaca codebase dengan satu pertanyaan | 0      |        |
-| Menilai desain, bukan cuma sintaks      | 0      |        |
+### Soft skill
+
+| Konsep                             | Status | Minggu | Blok                       |
+|------------------------------------|--------|--------|----------------------------|
+| Membaca kode asing                 | 0      | 1      | `reading-01`, `reading-02` |
+| Menulis komentar review            | 0      | 1      | `review-01`                |
+| Menerima review                    | 0      | 1      | `review-02`                |
+| Mencari di dokumentasi             | 0      | 1      | `docs-01`                  |
+| Menulis bug report                 | 0      | 1      | `debug-01`                 |
+| Debugging sistematis               | 0      | 1      | `debug-01`                 |
+| Menelusuri alur data               | 0      | 1      | `reading-02`               |
+| Menilai desain, bukan cuma sintaks | 0      | 1      | `review-01`                |
+| Memecah masalah jadi rencana       | 0      | 1      | `memecah-01`               |
+
+### Hard skill
+
+| Konsep                         | Status | Mulai  | Alasan urutan             |
+|--------------------------------|--------|--------|---------------------------|
+| Membaca stack trace            | 0      | **1**  | error sudah muncul hari 1 |
+| Menulis test kecil             | 0      | **2**  | butuh fungsi              |
+| Trace jadi rumus               | 0      | **3**  | butuh loop dan array      |
+| Membaca dokumentasi API        | 0      | **6**  | butuh HTTP                |
+| Merancang endpoint             | 0      | **8**  | butuh Express             |
+| Functional dependency          | 0      | **11** | wajib sebelum normalisasi |
+| Merancang skema data           | 0      | **12** | setelah dependency        |
+| Performa query dan index       | 0      | **12** | dasar di 12, dalam di 25+ |
+| Failure mode dan system design | 0      | **39** | butuh proyek nyata        |
+
+**Kenapa functional dependency sebelum skema:** riset pada pemula normalisasi database (ACM 2024)
+menemukan siswa gagal karena pengetahuan rapuh pada konsep paling awal. Mereka tidak paham
+dependency, jadi proses normalisasi tidak bisa dipelajari. Urutannya tidak bisa dibalik.
+
+**Kenapa trace jadi rumus di minggu 3:** riset kesulitan kompleksitas (ACM 2021) menemukan
+mahasiswa bisa menelusuri kode dengan benar tapi gagal mengubah hasil telusur menjadi bentuk
+umum. Langkah itu yang dilatih, bukan hafalan O(n).
+
+**Kenapa membaca stack trace di minggu 1:** ini hard skill termurah. Tidak butuh materi baru,
+dan error sudah muncul di latihan sendiri sejak hari pertama.
 
 
 **Skala untuk working skills** (beda dari skala konsep):
@@ -210,9 +240,9 @@ false positive.
 menjelaskan kenapa.
 
 
-**Aturan bukti:** status 3+ wajib menyebut file latihan dan tanggal. Tanpa itu, maksimal 2.
+**Target sebelum melamar:** semua soft skill minimal status 3, dan semua hard skill minimal status 2.
 
-**Target sebelum melamar:** kelima working skills minimal status 3.
+**Aturan bukti:** status 3+ wajib menyebut file latihan dan tanggal. Tanpa itu, maksimal 2.
 
 ---
 
@@ -222,6 +252,7 @@ menjelaskan kenapa.
 2. **Akhir minggu:** update status. Naik 2 tingkat dalam seminggu itu normal di awal, melambat di level 3→4
 3. **Sebelum interview:** filter status ≤ 2, itu daftar latihanmu
 4. **Sebelum gerbang:** kalau status masih 2, jangan lulus gerbang. Status 2 artinya masih butuh contoh
+5. **Hard skill:** hanya dilatih mulai minggu yang tertulis di tabel. Sebelum itu belum ada soalnya, dan itu disengaja — prasyaratnya belum ada
 
 ---
 

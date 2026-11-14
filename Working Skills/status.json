@@ -19,7 +19,7 @@
       "folder": "Working Skills/Reading",
       "soal": "Working Skills/Reading/02_Simulasi Stok.md",
       "kunci": "Working Skills/Kunci/Reading 02.md",
-      "kemampuan": ["Membaca kode asing", "Membaca codebase dengan satu pertanyaan"],
+      "kemampuan": ["Membaca kode asing", "Menelusuri alur data"],
       "status": "belum",
       "terakhir": null,
       "catatan": "Disiapkan 2026-11-14. Jembatan ke loop."
@@ -56,6 +56,17 @@
       "status": "belum",
       "terakhir": null,
       "catatan": "5 tugas pencarian. Tidak ketemu adalah jawaban sah."
+    },
+    {
+      "id": "memecah-01",
+      "nama": "Memecah masalah jadi rencana",
+      "folder": "Working Skills",
+      "soal": "Working Skills/Latihan Memecah Masalah.md",
+      "kunci": "Working Skills/Latihan Memecah Masalah.md",
+      "kemampuan": ["Memecah masalah"],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "3 soal tanpa kode. Tulis rencana 4 baris, bukan kode. Bagian kasus aneh yang paling sering dilewatkan."
     },
     {
       "id": "debug-01",

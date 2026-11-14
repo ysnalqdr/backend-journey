@@ -366,6 +366,7 @@ Recheck/
 check_system.js
 working_skills.js
 BUG_TAXONOMY.md
+HARD_SKILL.md
 ```
 
 Naming pattern:
