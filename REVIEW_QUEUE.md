@@ -41,11 +41,11 @@ Format: **konsep** · lulus → jatuh tempo · hasil · status
 Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji ulang
 2026-11-12 dan lulus, tapi cara lulusnya berbeda, jadi jadwalnya dibedakan.
 
-**akumulasi di dalam `for`** · muncul 2026-11-12 → jatuh tempo 2026-11-13 · status 1
-- Batch M1-M6 hasil 1/6. Bagian `for` dibaca benar, penjumlahan akhir dikerjakan di kepala
-- Aturan wajib sesi berikutnya: tulis tiga baris trace sebelum menjawab
-- Maksimal 3 soal per batch, berhenti kalau dua berturut-turut salah
-- Bukti status 1: belum bisa dipakai tanpa menulis trace
+**akumulasi di dalam `for`** · muncul 2026-11-12 → **PASS 2026-11-12** · status 3
+- Diuji ulang dengan 10 soal per konsep (Gate Log #75): 10 dari 10 benar
+- Bagian A (bentuk perubahan), B (batas dan putaran), C (akumulasi) semuanya lulus
+- Aturan yang membuat lulus: tulis deret sampai angka gagal, tabel empat kolom untuk akumulasi
+- Jatuh tempo berikutnya: 2026-11-14
 
 **`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS 2026-11-12 · status 3
 - 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0

@@ -524,6 +524,15 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Alasan: soal berisi nested loop, `break`, dan `continue` yang belum diajarkan
 - Dicabut atas permintaan learner, diganti batch murni `for`
 
+**#75** · MEDIUM · `for` per konsep, 10 soal · PASS 10/10
+- Konsep A bentuk perubahan (A1-A3): `4`, `5`, `4` — ketiga benar, deret ditulis
+- Konsep B batas dan putaran (B1-B4): `75`, `5`, `0`, `3` — keempat benar, angka gagal ditulis
+- Konsep C akumulasi (C1-C3): `14`, `1000`, `200` — ketiga benar, tabel empat kolom ditulis
+- Catatan: A3 deret kehilangan angka awal (`10`), tapi hitungannya benar. B3 alasan masih
+  menyisakan anggapan `i++` jalan dulu, dikoreksi
+- Bukti perubahan cara kerja: dari 1/6 (batch #73) jadi 10/10 dengan aturan trace tertulis
+- Tindakan: `Deferred` akumulasi dicabut, siap naik ke HARD
+
 
 **Catatan pemulihan `&&` `\|\|` (2026-11-08, sesi ketiga):**
 
@@ -567,9 +576,13 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 
 Konsep yang gagal 3× dan ditunda. Sertakan soal yang mematahkannya.
 
-| Concept               | Question that broke it | Date       |
-|-----------------------|------------------------|------------|
-| Akumulasi dalam `for` | Batch M1-M6            | 2026-11-12 |
+| Concept                   | Question that broke it | Date       |
+|---------------------------|------------------------|------------|
+| ~~Akumulasi dalam `for`~~ | Batch M1-M6            | 2026-11-12 |
+
+**Status: dicabut 2026-11-12.** Diuji ulang dengan 10 soal per konsep (Gate Log #75), hasil 10/10.
+Penyebab kegagalan sebelumnya bukan pemahaman, tapi menghitung di kepala. Aturan trace tertulis
+sudah terbukti bekerja dan tetap dipakai.
 
 **Isi Deferred:**
 
