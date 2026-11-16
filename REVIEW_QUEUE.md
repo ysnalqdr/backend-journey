@@ -52,12 +52,16 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - S9 (`% 3` dengan `continue`) gagal karena angka yang ditambahkan, bukan karena `%`
 - Jatuh tempo berikutnya: 2026-11-16
 
-**angka yang ditambahkan pada `+=`** · muncul 2026-11-12 → diuji 2026-11-15 · **GAGAL** · status 1
-- Soal memakai `penjualan[i]` (array, materi minggu 3) padahal minggu 1. Soal tidak sah.
-- Jawaban benar untuk 2 hal: `total` = `4`, dan `1` itu angka tetap yang salah
-- Meleset: usul perbaikan `total += i` → `6`, seharusnya `penjualan[i]` → `22`
-- Konsep yang belum: **posisi vs isi** — `i` itu nomor urut, `penjualan[i]` itu isinya
-- Diulang 2026-11-16 dengan soal tanpa array
+**angka yang ditambahkan pada `+=`** · muncul 2026-11-12 → **PASS 2026-11-15** · status 2
+- Uji ulang dengan soal tanpa array: menjawab `harga`, bukan `i` — tepat
+- Nilai akhir dijawab `750000` (seharusnya `500000`), tapi itu pola lain, bukan `+=`
+- Diuji lagi 2026-11-17 bersama item lain
+
+**jumlah baris tidak cocok dengan jumlah putaran** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
+- Menulis 2 putaran, lalu menjumlahkan 3 kali → `750000`
+- Pola sama dengan M2, M6, S9
+- Aturan yang dipakai: hitung putaran dulu, tulis angkanya, lalu tulis persis
+  sebanyak itu baris penjumlahan
 - S9 dijawab `9`, seharusnya `37`. Menambahkan `1` dan `2` bergantian, bukan nilai `i`
 - Cek cepat setelahnya (`total += i * 2`) benar `30`
 - Aturan yang harus dipakai: lihat huruf setelah `+=`, itu yang ditambahkan

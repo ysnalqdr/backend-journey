@@ -158,6 +158,20 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-15** · SYNTAX · ke-1 · sudah
+  - Salah: menulis `if ( let i = 1; i <= n; i++)` bukan `for (...)`
+  - Konsep benar: `if` minta pertanyaan di dalam kurung, `for` minta tiga bagian
+    dipisah titik koma. Logika benar (`28`) tapi kode tidak pernah jalan
+  - Pulih 2026-11-15: setelah diganti `for`, hasil `28`, lulus 5 dari 5 kasus
+  - Pelajaran: `SyntaxError: Unexpected identifier` menunjuk posisi tepat. Baca
+    `file:baris:kolom`, jangan menebak
+
+- **2026-11-15** · LOGIC · ke-**3** · belum
+  - Salah: menulis "ada 2 putaran" lalu menjumlahkan 3 kali (`750000`)
+  - Konsep benar: jumlah baris penjumlahan harus sama dengan jumlah putaran
+  - Muncul ke-1 di M2/M6, ke-2 di S9, ke-3 di sini
+  - Belum ditangani dengan pendekatan berbeda. Wajib dibahas sebelum `while`
+
 - **2026-11-15** · READING · ke-**2** · belum
   - Salah: `!Number.isNaN(0)` dijawab `false`. Tanda `!` (logical NOT) dibaca sebagai bagian
     dari nama fungsi, bukan sebagai pembalik

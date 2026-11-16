@@ -52,6 +52,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `for`: EASY dan MEDIUM lulus (Gate Log #67-#75). HARD dan WRITE belum dikerjakan.
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop: MEDIUM lulus (#77).
+- `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
 - `while` dan `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
@@ -565,6 +566,18 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#80** · HARD + WRITE · `for` tuntas · 2026-11-15 · keyakinan: yakin
+- H1 (`break` + `continue` + `% 7`): `12` — **benar**, trace lengkap
+- H2 (ternary di dalam loop): `[1,20,3,40,5]` — **benar**, tanpa dituntun
+- W1: **benar 5 dari 5 kasus** setelah satu perbaikan
+- Kesalahan W1: menulis `if ( let i = 1; ... )` bukan `for`
+  - `SyntaxError: Unexpected identifier 'i'` di baris 4 kolom 10
+  - Logika benar (`28`), tapi kode tidak pernah jalan
+  - Sebab: `if` minta pertanyaan, bukan deklarasi. `for` punya dua titik koma
+- Catatan: menyebut "ada 20 putaran" padahal berhenti di putaran 7. Tidak
+  mempengaruhi jawaban, tapi pola "sebut batas bukan jumlah nyata" masih ada
+- Soal W1 asli meminta fungsi (materi minggu 2). Diganti jadi loop. README #42
 
 **#79** · Working Skills · `reading-01` Baca kode asing · 2026-11-15 · keyakinan: ragu
 - Blok Working Skills **pertama** yang dikerjakan, dari 7 yang terdaftar

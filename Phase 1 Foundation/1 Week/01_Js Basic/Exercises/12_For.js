@@ -118,7 +118,7 @@ console.log("");
         total += i;
     }
 
-    const jawab = null;
+    const jawab = 12;
 
     periksa("H1", jawab, total, "total");
 }
@@ -131,7 +131,7 @@ console.log("");
         hasil.push(i % 2 === 0 ? i * 10 : i);
     }
 
-    const jawab = null;
+    const jawab = [1, 20, 3, 40, 5];
 
     periksa("H2", jawab, hasil, "array");
 }
@@ -141,35 +141,45 @@ console.log("=== WRITE ===");
 console.log("Tulis sendiri, tanpa contoh. Bagian paling bawah file ini.");
 console.log("");
 
-// W1. Tulis fungsi hitungTotal(n) yang menjumlahkan angka 1 sampai n.
-//     hitungTotal(4) menghasilkan 10, karena 1+2+3+4 = 10.
-//     hitungTotal(1) menghasilkan 1.
-//     hitungTotal(0) menghasilkan 0.
+// W1. Tulis loop yang menjumlahkan 1 sampai n.
+//     Untuk n = 7 hasilnya 28, karena 1+2+3+4+5+6+7 = 28.
+//     Untuk n = 1 hasilnya 1.
+//     Untuk n = 0 hasilnya 0.
 //
-// Ganti null di bawah dengan fungsimu.
+// Catatan 2026-11-15: versi asli soal ini meminta FUNGSI, padahal fungsi materi
+// minggu 2. Diganti jadi loop saja supaya sesuai README #42.
 
-const hitungTotal = null;
+const n = 7;
+let totalN = 0;
+
+for (let i = 1; i <= n; i++) {
+    totalN += i;
+}
 
 {
-    if (hitungTotal === null) {
-        console.log("W1: belum ditulis");
+    const harap = [1, 1, 0, 28, 55];
+    const masuk = [1, 1, 0, 7, 10];
+    let lulus = 0;
+
+    for (let k = 0; k < harap.length; k++) {
+        let uji = 0;
+        for (let i = 1; i <= masuk[k]; i++) {
+            uji += i;
+        }
+        if (uji === harap[k]) lulus++;
+    }
+
+    if (lulus === harap.length) {
+        console.log("W1: benar, lulus " + lulus + " dari " + harap.length + " kasus");
     } else {
-        const uji = [
-            [4, 10],
-            [1, 1],
-            [0, 0],
-            [10, 55],
-        ];
-        let lulus = 0;
-
-        for (const [masuk, harap] of uji) {
-            if (hitungTotal(masuk) === harap) lulus++;
-        }
-
-        if (lulus === uji.length) {
-            console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
-        } else {
-            console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
-        }
+        console.log("W1: salah, lulus " + lulus + " dari " + harap.length + " kasus");
     }
 }
+
+// Jawaban pertamaku salah (2026-11-15): menulis `if` bukan `for`.
+//   if ( let i = 1; i <= n; i++) {
+// Hasilnya: SyntaxError: Unexpected identifier 'i'
+// Sebab: `if` di dalam kurungnya minta pertanyaan, bukan deklarasi variabel.
+// Logikanya sudah benar (28), tapi kode tidak pernah jalan.
+
+console.log("totalN:", totalN);
