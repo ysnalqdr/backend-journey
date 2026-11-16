@@ -158,6 +158,20 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-15** · READING · ke-**2** · belum
+  - Salah: `!Number.isNaN(0)` dijawab `false`. Tanda `!` (logical NOT) dibaca sebagai bagian
+    dari nama fungsi, bukan sebagai pembalik
+  - Konsep benar: `Number.isNaN(0)` itu `false` karena `0` bukan NaN. `!` membalik jadi `true`
+  - Muncul ke-1: 2026-11-12, salah menyebut tipe `||` sebagai string
+
+- **2026-11-15** · CONCEPT · ke-1 · belum
+  - Salah: ditanya nilai, dijawab tipe. Tiga kali berturut-turut: ekspresi, lalu tipe, lalu
+    `true` tanpa dihitung
+  - Konsep benar: nilai itu hasil, tipe itu jenis. `parseInt("0")` punya nilai `0` dan tipe
+    `number`
+  - Catatan: sebagian karena pertanyaan guru yang ambigu, bukan hanya salah baca
+
+
 ---
 
 ## Review bulanan

@@ -8,10 +8,12 @@
       "folder": "Working Skills/Reading",
       "soal": "Working Skills/Reading/01_Total Pembayaran.md",
       "kunci": "Working Skills/Kunci/Reading 01.md",
-      "kemampuan": ["Membaca kode asing"],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "Belum pernah dibuka."
+      "kemampuan": [
+        "Membaca kode asing"
+      ],
+      "status": "selesai",
+      "terakhir": "2026-11-15",
+      "catatan": "Selesai 2026-11-15. 8/8 output benar. Yang meleset: alasan belum bisa dipertahankan, asal data belum, valid tidak dipakai terlewat."
     },
     {
       "id": "reading-02",
@@ -19,7 +21,10 @@
       "folder": "Working Skills/Reading",
       "soal": "Working Skills/Reading/02_Simulasi Stok.md",
       "kunci": "Working Skills/Kunci/Reading 02.md",
-      "kemampuan": ["Membaca kode asing", "Menelusuri alur data"],
+      "kemampuan": [
+        "Membaca kode asing",
+        "Menelusuri alur data"
+      ],
       "status": "belum",
       "terakhir": null,
       "catatan": "Disiapkan 2026-11-14. Jembatan ke loop."
@@ -30,7 +35,10 @@
       "folder": "Working Skills/Review",
       "soal": "Working Skills/Review/01_Kode Review.md",
       "kunci": "Working Skills/Kunci/Review 01.md",
-      "kemampuan": ["Menulis komentar review", "Menilai desain, bukan cuma sintaks"],
+      "kemampuan": [
+        "Menulis komentar review",
+        "Menilai desain, bukan cuma sintaks"
+      ],
       "status": "belum",
       "terakhir": null,
       "catatan": "5 bug ditanam. Wajib pakai label blocking dan nit."
@@ -41,7 +49,9 @@
       "folder": "Working Skills/Review",
       "soal": "Working Skills/Review/01_Kode Review.md",
       "kunci": "Working Skills/Kunci/Review 01.md",
-      "kemampuan": ["Menerima review"],
+      "kemampuan": [
+        "Menerima review"
+      ],
       "status": "belum",
       "terakhir": null,
       "catatan": "Bagian kedua file yang sama. Menilai komentar mana yang diterima dan ditolak."
@@ -52,7 +62,9 @@
       "folder": "Working Skills/Docs",
       "soal": "Working Skills/Docs/01_Cari Sendiri di MDN.md",
       "kunci": "Working Skills/Kunci/Docs 01.md",
-      "kemampuan": ["Mencari di dokumentasi"],
+      "kemampuan": [
+        "Mencari di dokumentasi"
+      ],
       "status": "belum",
       "terakhir": null,
       "catatan": "5 tugas pencarian. Tidak ketemu adalah jawaban sah."
@@ -63,7 +75,9 @@
       "folder": "Working Skills",
       "soal": "Working Skills/Latihan Memecah Masalah.md",
       "kunci": "Working Skills/Latihan Memecah Masalah.md",
-      "kemampuan": ["Memecah masalah"],
+      "kemampuan": [
+        "Memecah masalah"
+      ],
       "status": "belum",
       "terakhir": null,
       "catatan": "3 soal tanpa kode. Tulis rencana 4 baris, bukan kode. Bagian kasus aneh yang paling sering dilewatkan."
@@ -74,7 +88,10 @@
       "folder": "Working Skills/Debug",
       "soal": "Working Skills/Debug/01_Stok Berkurang Dua Kali.md",
       "kunci": "Working Skills/Kunci/Debug 01.md",
-      "kemampuan": ["Menulis bug report", "Debugging sistematis"],
+      "kemampuan": [
+        "Menulis bug report",
+        "Debugging sistematis"
+      ],
       "status": "belum",
       "terakhir": null,
       "catatan": "Lima langkah wajib. Bug report dulu, perbaikan kemudian."

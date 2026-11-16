@@ -52,7 +52,12 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - S9 (`% 3` dengan `continue`) gagal karena angka yang ditambahkan, bukan karena `%`
 - Jatuh tempo berikutnya: 2026-11-16
 
-**angka yang ditambahkan pada `+=`** · muncul 2026-11-12 → jatuh tempo 2026-11-15 · status 1
+**angka yang ditambahkan pada `+=`** · muncul 2026-11-12 → diuji 2026-11-15 · **GAGAL** · status 1
+- Soal memakai `penjualan[i]` (array, materi minggu 3) padahal minggu 1. Soal tidak sah.
+- Jawaban benar untuk 2 hal: `total` = `4`, dan `1` itu angka tetap yang salah
+- Meleset: usul perbaikan `total += i` → `6`, seharusnya `penjualan[i]` → `22`
+- Konsep yang belum: **posisi vs isi** — `i` itu nomor urut, `penjualan[i]` itu isinya
+- Diulang 2026-11-16 dengan soal tanpa array
 - S9 dijawab `9`, seharusnya `37`. Menambahkan `1` dan `2` bergantian, bukan nilai `i`
 - Cek cepat setelahnya (`total += i * 2`) benar `30`
 - Aturan yang harus dipakai: lihat huruf setelah `+=`, itu yang ditambahkan
@@ -62,6 +67,15 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Q1 `12` (sempat `4`), Q2 array enam elemen, Q3 `10` (sempat `45`)
 - Struktur dipahami sebelum hitungannya benar. Teknik: tulis jumlah baris dulu
 - Jatuh tempo berikutnya: 2026-11-16
+
+**alasan yang bisa dipertahankan** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
+- Reading 01 pertanyaan 4 dijawab "bisa bikin berantakan", bukan alasannya
+- Alasan yang dibutuhkan: apa yang rusak, dan kenapa tidak ketahuan
+- Diuji dengan: satu potong kode, sebutkan satu risiko dan satu alasan
+
+**posisi vs isi** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
+- `i` itu posisi, `penjualan[i]` itu isi
+- Belum diajarkan (array minggu 3), jadi dijadwalkan setelah array masuk
 
 **`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS 2026-11-12 · status 3
 - 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0
@@ -83,7 +97,7 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - **`!` logical not** · 2026-11-12 · PASS · status 3
 - **`??` vs `\|\|`** · 2026-11-12 · PASS · status 3
 
-**Jatuh tempo berikutnya:** 2026-11-14.
+**Jatuh tempo berikutnya:** 2026-11-16 (`+=` tanpa array), lalu 2026-11-17 (alasan).
 
 ---
 

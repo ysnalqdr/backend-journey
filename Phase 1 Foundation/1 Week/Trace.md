@@ -12,17 +12,23 @@ Satu alur per minggu, dilacak manual. Template: `Working Skills/Templates/CodeRe
 
 File: `Working Skills/Reading/reading_01.js`
 
-| #   | Pertanyaan          | Dugaanku | Kenyataan | Cocok? |
-|-----|---------------------|----------|-----------|--------|
-| 1   | Apa yang masuk?     |          |           |        |
-| 2   | Apa yang keluar?    |          |           |        |
-| 3   | Kalau input salah?  |          |           |        |
-| 4   | Baris paling rapuh? |          |           |        |
-| 5   | Nama yang diganti?  |          |           |        |
+| #   | Pertanyaan          | Dugaanku            | Kenyataan                      | Cocok?   |
+|-----|---------------------|---------------------|--------------------------------|----------|
+| 1   | Apa yang masuk?     | 3 string, 1 boolean | sama                           | ya       |
+| 2   | Apa yang keluar?    | 8 nilai             | sama                           | ya       |
+| 3   | Kalau input salah?  | `valid` = `true`    | `valid` = `false`              | tidak    |
+| 4   | Baris paling rapuh? | "bisa berantakan"   | promo baru diabaikan diam-diam | setengah |
+| 5   | Nama yang diganti?  | `harga`, `jumlah`   | benar, kunci tidak menyebutnya | ya       |
 
 **Yang meleset:**
+- `!Number.isNaN(0)` dijawab `false`. `!` (logical NOT) terlewat. Kejadian ke-2.
+- Pertanyaan 4 dijawab perasaan, bukan alasan
+- `valid` dihitung lalu tidak dipakai, terlewat saat membaca
 
 **Yang masih tidak kupahami:**
+- Asal data: form web vs sesi login. Semua dari form selalu string.
+
+Hasil lengkap: `Working Skills/Reading/01_Hasil.md`
 
 ---
 

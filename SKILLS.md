@@ -189,13 +189,13 @@ benar atau salah. Keduanya tidak bisa diuji dengan "tulis dari nol", jadi buktin
 
 | Konsep                             | Status | Minggu | Blok                       |
 |------------------------------------|--------|--------|----------------------------|
-| Membaca kode asing                 | 0      | 1      | `reading-01`, `reading-02` |
+| Membaca kode asing                 | 2      | 1      | `reading-01`, `reading-02` |
 | Menulis komentar review            | 0      | 1      | `review-01`                |
 | Menerima review                    | 0      | 1      | `review-02`                |
 | Mencari di dokumentasi             | 0      | 1      | `docs-01`                  |
 | Menulis bug report                 | 0      | 1      | `debug-01`                 |
 | Debugging sistematis               | 0      | 1      | `debug-01`                 |
-| Menelusuri alur data               | 0      | 1      | `reading-02`               |
+| Menelusuri alur data               | 1      | 1      | `reading-02`               |
 | Menilai desain, bukan cuma sintaks | 0      | 1      | `review-01`                |
 | Memecah masalah jadi rencana       | 0      | 1      | `memecah-01`               |
 
@@ -243,6 +243,12 @@ menjelaskan kenapa.
 **Target sebelum melamar:** semua soft skill minimal status 3, dan semua hard skill minimal status 2.
 
 **Aturan bukti:** status 3+ wajib menyebut file latihan dan tanggal. Tanpa itu, maksimal 2.
+
+**Bukti status:**
+
+| Konsep             | Status | Bukti                                            |
+|--------------------|--------|--------------------------------------------------|
+| Membaca kode asing | 2      | Reading 01, 2026-11-15. Output 8/8, alasan belum |
 
 ---
 

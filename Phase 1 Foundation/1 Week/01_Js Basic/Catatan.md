@@ -54,7 +54,8 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - nested loop: MEDIUM lulus (#77).
 - `while` dan `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
-- **Working Skills:** `Reading 02` disiapkan sebagai jembatan ke latihan membaca kode nyata.
+- **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
+  `Working Skills/Reading/01_Hasil.md`. `reading-02` jadi blok berikutnya.
 
 ### Day 5 - Build the project
 - [ ] Temperature converter
@@ -564,6 +565,17 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#79** · Working Skills · `reading-01` Baca kode asing · 2026-11-15 · keyakinan: ragu
+- Blok Working Skills **pertama** yang dikerjakan, dari 7 yang terdaftar
+- Pertanyaan 2 (delapan baris output): **8 dari 8 benar**, tanpa menjalankan kode
+- Pertanyaan 5 (nama variabel): menjawab `harga` dan `jumlah` terlalu umum. Kunci tidak
+  menyebut keduanya, jadi jawabannya melebihi kunci
+- Pertanyaan 3: benar setelah dituntun lima langkah kecil
+- Meleset: `!Number.isNaN(0)` dijawab `false` (ke-2); alasan pertanyaan 4 masih perasaan
+- Bug ditemukan: `valid` dihitung lalu tidak dipakai. Jenis ke-7 di `BUG_TAXONOMY.md`
+- Keyakinan: yakin di pertanyaan 2 (output), ragu di pertanyaan 3 dan 5
+- Waktu: 45 menit, jauh lebih lama dari 30 menit yang direncanakan
 
 **#78** · MEDIUM · `%` selain 2 dan `break` · PASS 3/4
 - S4 ulang (`break` + `% 3`): `3` — benar setelah dikoreksi

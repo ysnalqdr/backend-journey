@@ -1,7 +1,7 @@
 # BUG_TAXONOMY.md
 
-Enam jenis bug yang sudah muncul di latihan sendiri. Setiap kali membaca kode orang, periksa
-keenamnya. Orang tidak bisa menemukan jenis bug yang tidak punya nama untuknya.
+Tujuh jenis bug yang sudah muncul di latihan sendiri. Setiap kali membaca kode orang, periksa
+ketujuhnya. Orang tidak bisa menemukan jenis bug yang tidak punya nama untuknya.
 
 Sumber: Gate Log dan `KESALAHAN.md`, 2026-11-12 sampai 2026-11-14.
 
@@ -157,7 +157,28 @@ total += i;
 | batas tidak diperiksa | tidak error, hanya `undefined`           |
 | nilai salah           | hasilnya angka, jadi terasa masuk akal   |
 
-Keenamnya **tidak melempar error**. Itu sebabnya orang lain tidak melihatnya.
+## 7. Nilai dihitung lalu dibuang
+
+Hasil perhitungan tidak pernah dibaca siapa pun. Kodenya terlihat bekerja, padahal sia-sia.
+
+```javascript
+const valid = !Number.isNaN(harga) && !Number.isNaN(jumlah) && jumlah > 0;
+
+// lalu valid tidak dipakai di mana pun
+```
+
+**Kapan muncul:** saat menambah pemeriksaan lalu lupa memakainya. Barisnya panjang dan
+terlihat penting, jadi mata melewatinya.
+
+**Cara memeriksa:** untuk setiap variabel baru, cari namanya sekali lagi. Kalau hanya muncul
+di baris pembuatannya, dia tidak berguna.
+
+**Bukti:** Reading 01, `valid` bernilai `false` untuk `jumlahBeli = "0"` tapi tidak ada
+`if (!valid)` yang menghentikan proses. Output tetap keluar, pembeli melihat total `0`.
+
+---
+
+Ketujuhnya **tidak melempar error**. Itu sebabnya orang lain tidak melihatnya.
 
 ---
 
@@ -166,6 +187,6 @@ Keenamnya **tidak melempar error**. Itu sebabnya orang lain tidak melihatnya.
 | File                    | Isi                                                      |
 |-------------------------|----------------------------------------------------------|
 | `KESALAHAN.md`          | kesalahan **berpikir** (CONCEPT, READING, SYNTAX, LOGIC) |
-| `BUG_TAXONOMY.md`       | kesalahan **kode** (enam jenis di atas)                  |
-| `Working Skills/Debug/` | latihan menerapkan keenamnya                             |
+| `BUG_TAXONOMY.md`       | kesalahan **kode** (tujuh jenis di atas)                 |
+| `Working Skills/Debug/` | latihan menerapkan ketujuhnya                            |
 | `Catatan.md` Bug log    | bug nyata yang ditemukan sendiri                         |
