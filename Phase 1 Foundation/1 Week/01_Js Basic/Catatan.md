@@ -53,7 +53,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop: MEDIUM lulus (#77).
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
-- `while`: per konsep A-D (#81), EASY (#82), MEDIUM (#83). HARD/WRITE belum.
+- `while`: per konsep A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84). WRITE belum.
 - `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
@@ -567,6 +567,16 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#84** · HARD · `while` · 2026-11-17 · keyakinan: yakin
+- H1 (`break` + `continue` + `% 9` + `% 4`): `24` — benar, tanpa dituntun
+  - Kunci: `i = 4` -> `i++` jadi 5 lalu `continue`, jadi 4 dilewati tapi 5 masuk
+  - `i = 9` -> `break` sebelum `total += 9`
+  - Nilai yang dijumlahkan: 1, 2, 3, 5, 6, 7
+- H2 (`Math.floor` bagi dua): `6` — benar, tabel lengkap
+  - 100 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1
+  - `Math.floor` bekerja di 25/2 = 12.5 -> 12, dan 3/2 = 1.5 -> 1
+- Catatan: H1 dan H2 dijawab tanpa salah, pertama kali di level HARD
 
 **#83** · MEDIUM · `while` · 2026-11-17 · keyakinan: yakin
 - M1 (infinite loop): `"tak berujung"` — benar setelah 3 kali penjelasan

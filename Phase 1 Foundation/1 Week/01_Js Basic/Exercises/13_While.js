@@ -164,7 +164,13 @@ console.log("");
         i++;
     }
 
-    const jawab = null;
+    // i = 4  -> i++ jadi 5, continue, total += 4 dilewati
+    // i = 5  -> masuk, karena i sudah jadi 5
+    // i = 8  -> i++ jadi 9, continue
+    // i = 9  -> 9 % 9 === 0, break sebelum total += 9
+    // Nilai yang dijumlahkan: 1, 2, 3, 5, 6, 7
+    // 1+2+3+5+6+7 = 24
+    const jawab = 24;
 
     periksa("H1", jawab, total, "total");
 }
@@ -179,7 +185,11 @@ console.log("");
         langkah++;
     }
 
-    const jawab = null;
+    // 100 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1
+    // Math.floor membuang pecahan: 25/2 = 12.5 -> 12, 3/2 = 1.5 -> 1
+    // Berhenti saat i = 1, karena 1 > 1 itu false
+    // 6 langkah
+    const jawab = 6;
 
     periksa("H2", jawab, langkah, "langkah");
 }
