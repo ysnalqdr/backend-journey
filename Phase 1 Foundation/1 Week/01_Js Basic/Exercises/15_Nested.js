@@ -155,36 +155,100 @@ console.log("=== WRITE ===");
 console.log("Tulis sendiri, tanpa contoh. Bagian paling bawah file ini.");
 console.log("");
 
-// W1. Tulis fungsi segitiga(n) yang mengembalikan array berisi teks.
-//     Baris ke-i berisi bintang sebanyak i, diakhiri nomor baris.
-//     segitiga(3) menghasilkan ["*1", "**2", "***3"].
-//     segitiga(1) menghasilkan ["*1"].
-//     segitiga(0) menghasilkan [].
+// W1. Tulis dua loop bersarang yang menghasilkan array pola segitiga.
+//     Untuk n = 3 hasilnya ["*1", "**2", "***3"].
+//     Untuk n = 1 hasilnya ["*1"].
+//     Untuk n = 0 hasilnya [].
 //
-// Wajib memakai dua loop bersarang.
-
-const segitiga = null;
+// Catatan 2026-11-17: versi asli soal ini meminta FUNGSI, padahal fungsi materi
+// minggu 2. Diganti jadi loop saja supaya sesuai README #42.
 
 {
-    if (segitiga === null) {
-        console.log("W1: belum ditulis");
+    const n = 3;
+    const hasil = [];
+
+    for (let i = 1; i <= n; i++) {
+        let bintang = "";
+        for (let j = 1; j <= i; j++) {
+            bintang += "*";
+        }
+        hasil.push(bintang + i);
+    }
+
+    console.log("W1 hasil untuk n = 3: " + JSON.stringify(hasil));
+
+    const uji = [
+        [3, ["*1", "**2", "***3"]],
+        [1, ["*1"]],
+        [0, []],
+        [4, ["*1", "**2", "***3", "****4"]],
+    ];
+    let lulus = 0;
+
+    for (const [masuk, harap] of uji) {
+        const keluar = [];
+        for (let i = 1; i <= masuk; i++) {
+            let b = "";
+            for (let j = 1; j <= i; j++) b += "*";
+            keluar.push(b + i);
+        }
+        if (JSON.stringify(keluar) === JSON.stringify(harap)) lulus++;
+    }
+
+    if (lulus === uji.length) {
+        console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
     } else {
-        const uji = [
-            [3, ["*1", "**2", "***3"]],
-            [1, ["*1"]],
-            [0, []],
-            [4, ["*1", "**2", "***3", "****4"]],
-        ];
-        let lulus = 0;
-
-        for (const [masuk, harap] of uji) {
-            if (JSON.stringify(segitiga(masuk)) === JSON.stringify(harap)) lulus++;
-        }
-
-        if (lulus === uji.length) {
-            console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
-        } else {
-            console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
-        }
+        console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
     }
 }
+
+console.log("");
+console.log("=== VERIFY ===");
+console.log("Kode di bawah ditulis AI. Ada satu bug. Temukan dulu.");
+console.log("");
+
+// V1. AI menulis ini untuk "hitung total putaran nested 3 x 4".
+//
+//   let hitung = 0;
+//
+//   for (let i = 1; i <= 3; i++) {
+//       for (let j = 1; j <= 4; j++) {
+//           hitung++;
+//       }
+//   }
+//   console.log(hitung);
+//
+// AI mengaku hasilnya 7, karena "3 + 4".
+//
+// Yang ditanyakan: berapa hasil sebenarnya?
+
+{
+    const jawab = 12;
+    periksa("V1 total putaran", jawab, 12, "putaran");
+
+    // Alasan: loop luar 3, loop dalam 4, jadi 3 x 4 = 12, bukan 3 + 4.
+    // Loop dalam jalan PENUH setiap kali loop luar jalan sekali.
+}
+
+console.log("");
+console.log("=== EXPLAIN ===");
+console.log("Tulis komentar review maksimal 3 kalimat.");
+console.log("");
+
+// E1. Tulis komentar review untuk kode ini.
+//
+//   const hasil = [];
+//
+//   for (let i = 1; i <= 3; i++) {
+//       for (let j = 1; j <= 3; j++) {
+//           hasil.push(i + "-" + j);
+//       }
+//   }
+//
+// Kode ini BENAR. Tapi ada yang perlu dikomentari: apa yang terjadi
+// kalau i naik ke 2, dan berapa total isi array?
+//
+// Ini latihan menulis komentar untuk kode yang tidak rusak —
+// bagian tersulit dari review.
+
+console.log("E1: tulis komentarmu di Working Skills/Review/03_Komentar Nested.md");

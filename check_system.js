@@ -658,6 +658,124 @@ if (dirty) {
     }
 }
 
+
+// ---------- 25. File latihan yang error harus bertanda SENGAJA-ERROR ----------
+{
+    const dir = "Phase 1 Foundation/1 Week/01_Js Basic/Exercises";
+    const files = fs.existsSync(path.join(ROOT, dir))
+        ? fs.readdirSync(path.join(ROOT, dir)).filter((f) => f.endsWith(".js"))
+        : [];
+
+    const gagalTakBertanda = [];
+    const bertanda = [];
+
+    for (const f of files) {
+        const full = path.join(ROOT, dir, f);
+        const src = fs.readFileSync(full, "utf8");
+        const bertandaError = src.includes("SENGAJA-ERROR");
+
+        let error = false;
+        try {
+            execSync(`node "${full}"`, {
+                timeout: 15000,
+                stdio: ["ignore", "ignore", "ignore"],
+            });
+        } catch {
+            error = true;
+        }
+
+        if (error && !bertandaError) gagalTakBertanda.push(f);
+        if (error && bertandaError) bertanda.push(f);
+    }
+
+    if (gagalTakBertanda.length) {
+        gagalTakBertanda.forEach((f) =>
+            warn(`${f} error saat dijalankan tanpa tanda SENGAJA-ERROR`));
+    } else {
+        ok(`file latihan: ${files.length} file, ${bertanda.length} sengaja error dan bertanda`);
+    }
+}
+
+
+// ---------- 26. Setiap level VERIFY punya jawaban dan kunci ----------
+{
+    const dir = "Phase 1 Foundation/1 Week/01_Js Basic/Exercises";
+    const files = fs.existsSync(path.join(ROOT, dir))
+        ? fs.readdirSync(path.join(ROOT, dir)).filter((f) => f.endsWith(".js"))
+        : [];
+
+    const bermasalah = [];
+    let diperiksa = 0;
+
+    for (const f of files) {
+        const src = fs.readFileSync(path.join(ROOT, dir, f), "utf8");
+        if (!src.includes("=== VERIFY ===")) continue;
+        diperiksa++;
+
+        const blokVerify = src.split("=== VERIFY ===")[1].split("=== EXPLAIN ===")[0] || "";
+
+        // harus ada periksa(...) di dalam blok VERIFY
+        if (!/periksa\(/.test(blokVerify)) {
+            bermasalah.push(`${f}: VERIFY tanpa periksa()`);
+        }
+        // jawaban tidak boleh null
+        if (/const jawab\w* = null/.test(blokVerify)) {
+            bermasalah.push(`${f}: VERIFY masih null`);
+        }
+    }
+
+    if (diperiksa === 0) {
+        warn("belum ada level VERIFY di file latihan");
+    } else if (bermasalah.length) {
+        bermasalah.forEach((m) => warn(m));
+    } else {
+        ok(`level VERIFY: ${diperiksa} file, semua ada jawaban dan penjaga`);
+    }
+}
+
+// ---------- 27. Setiap level EXPLAIN menunjuk file review ----------
+{
+    const dir = "Phase 1 Foundation/1 Week/01_Js Basic/Exercises";
+    const files = fs.existsSync(path.join(ROOT, dir))
+        ? fs.readdirSync(path.join(ROOT, dir)).filter((f) => f.endsWith(".js"))
+        : [];
+
+    const hilang = [];
+    let diperiksa = 0;
+
+    for (const f of files) {
+        const src = fs.readFileSync(path.join(ROOT, dir, f), "utf8");
+        if (!src.includes("=== EXPLAIN ===")) continue;
+        diperiksa++;
+
+        const m = src.match(/Working Skills\/Review\/([^"\n]+\.md)/);
+        if (!m) {
+            hilang.push(`${f}: EXPLAIN tidak menunjuk file review`);
+        } else if (!exists(`Working Skills/Review/${m[1]}`)) {
+            hilang.push(`${f}: file review tidak ada (${m[1]})`);
+        }
+    }
+
+    if (diperiksa === 0) {
+        warn("belum ada level EXPLAIN di file latihan");
+    } else if (hilang.length) {
+        hilang.forEach((h) => warn(h));
+    } else {
+        ok(`level EXPLAIN: ${diperiksa} file, semua menunjuk file review yang ada`);
+    }
+}
+
+// ---------- 28. Nomor aturan README berurutan ----------
+{
+    const nos = [...readme.matchAll(/^(\d+)\. \*\*/gm)].map((m) => parseInt(m[1], 10));
+    let loncat = null;
+    for (let i = 1; i < nos.length; i++) {
+        if (nos[i] < nos[i - 1]) { loncat = `#${nos[i - 1]} lalu #${nos[i]}`; break; }
+    }
+    if (loncat) warn(`nomor aturan README tidak berurutan: ${loncat}`);
+    else ok(`nomor aturan README berurutan (${nos.length} aturan bernomor)`);
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);

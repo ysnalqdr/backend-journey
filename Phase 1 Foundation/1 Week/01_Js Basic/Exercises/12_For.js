@@ -183,3 +183,58 @@ for (let i = 1; i <= n; i++) {
 // Logikanya sudah benar (28), tapi kode tidak pernah jalan.
 
 console.log("totalN:", totalN);
+
+console.log("");
+console.log("=== VERIFY ===");
+console.log("Kode di bawah ditulis AI. Ada satu bug. Temukan dulu, jangan diperbaiki.");
+console.log("");
+
+// V1. AI menulis ini untuk "jumlahkan semua isi array".
+//
+//   const angka = [10, 20, 30];
+//   let total = 0;
+//
+//   for (let i = 1; i <= angka.length; i++) {
+//       total += angka[i];
+//   }
+//   console.log(total);
+//
+// AI mengaku hasilnya 60.
+//
+// Yang ditanyakan:
+//   a) Berapa hasil sebenarnya? (satu nilai, atau tulis "NaN")
+//   b) Ada DUA hal salah. Sebut keduanya.
+
+{
+    const jawabA = "NaN";
+    periksa("V1a hasil sebenarnya", jawabA, "NaN", "nilai");
+
+    // Dua kesalahan:
+    // 1. i mulai dari 1, bukan 0 -> angka[0] terlewat
+    // 2. i <= angka.length -> putaran terakhir angka[3] = undefined
+    //    undefined masuk ke += -> total jadi NaN
+    //
+    // Perbaikan: i = 0 dan i < angka.length.
+    // Bug jenis 1 (off-by-one) dan 5 (batas tidak diperiksa).
+}
+
+console.log("");
+console.log("=== EXPLAIN ===");
+console.log("Tulis komentar review maksimal 3 kalimat.");
+console.log("");
+
+// E1. Tulis komentar review untuk kode ini.
+//
+//   let total = 0;
+//
+//   for (let i = 1; i <= 5; i++) {
+//       total += i * i;
+//   }
+//
+// Kode ini BENAR.
+// Tiga hal wajib: apa yang dilakukan, hasil akhirnya berapa, dan
+// kenapa total harus dideklarasikan DI LUAR loop.
+//
+// Tulis di Working Skills/Review/04_Komentar For.md
+
+console.log("E1: tulis komentarmu di Working Skills/Review/04_Komentar For.md");

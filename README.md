@@ -338,6 +338,34 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     when something asks for it every session.
 
 
+42. **A question may only use material already taught.** No forward references, not even as a
+    "small" example. If the answer needs a concept from a later week, the question is wrong,
+    not the answer.
+
+    Why: on 2026-11-15 a re-check asked about `penjualan[i]`, which is week 3 array indexing,
+    while the learner was in week 1. The answer was graded as a failure before the learner
+    could possibly have known it. A question that cannot be answered teaches nothing except
+    that the system is unfair, and an unfair system gets abandoned.
+
+43. **Ask for a value, not a type, and show the format first.** When a question asks "what is
+    `jumlah`", state whether the answer is a value, a type, or an expression, and give one
+    filled example row before asking.
+
+    Why: one question was answered three different wrong ways in a row — first with an
+    expression, then with a type, then with a guess. The concept was not the problem; the
+    question was ambiguous. Three failed attempts is the signal to change the question format,
+    not to repeat it louder.
+
+44. **A computed value that nobody reads is a bug.** Every new variable must be read somewhere
+    after it is created. If its name appears only on the line that creates it, either the
+    check is missing or the line is dead.
+
+    Why: Reading 01 computes `valid`, gets `false` for a zero quantity, and then ignores it.
+    The program prints `total: 0` and gives no warning. It is bug type 7 in `BUG_TAXONOMY.md`,
+    and it is invisible to anyone who only runs the code.
+
+---
+
 45. **Every concept has six levels, not four.** EASY, MEDIUM, HARD, WRITE, VERIFY, EXPLAIN.
     The order matters: you cannot verify what you cannot write.
 
@@ -385,33 +413,6 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     performance, while deliberate-practice research shows gains come from feedback quality,
     a specific goal, and focus on weakness — none of which more repetitions supply. A day of
     39 questions already produced worse quality than a day of 10.
-
----
-42. **A question may only use material already taught.** No forward references, not even as a
-    "small" example. If the answer needs a concept from a later week, the question is wrong,
-    not the answer.
-
-    Why: on 2026-11-15 a re-check asked about `penjualan[i]`, which is week 3 array indexing,
-    while the learner was in week 1. The answer was graded as a failure before the learner
-    could possibly have known it. A question that cannot be answered teaches nothing except
-    that the system is unfair, and an unfair system gets abandoned.
-
-43. **Ask for a value, not a type, and show the format first.** When a question asks "what is
-    `jumlah`", state whether the answer is a value, a type, or an expression, and give one
-    filled example row before asking.
-
-    Why: one question was answered three different wrong ways in a row — first with an
-    expression, then with a type, then with a guess. The concept was not the problem; the
-    question was ambiguous. Three failed attempts is the signal to change the question format,
-    not to repeat it louder.
-
-44. **A computed value that nobody reads is a bug.** Every new variable must be read somewhere
-    after it is created. If its name appears only on the line that creates it, either the
-    check is missing or the line is dead.
-
-    Why: Reading 01 computes `valid`, gets `false` for a zero quantity, and then ignores it.
-    The program prints `total: 0` and gives no warning. It is bug type 7 in `BUG_TAXONOMY.md`,
-    and it is invisible to anyone who only runs the code.
 
 ---
 

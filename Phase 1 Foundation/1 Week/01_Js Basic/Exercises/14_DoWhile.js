@@ -152,38 +152,96 @@ console.log("=== WRITE ===");
 console.log("Tulis sendiri, tanpa contoh. Bagian paling bawah file ini.");
 console.log("");
 
-// W1. Tulis fungsi ulangSampai(n) yang mengembalikan array berisi
-//     angka mulai dari 1, ditambah 3 terus, sampai nilainya melewati n.
-//     Angka yang melewati n TIDAK dimasukkan.
-//     ulangSampai(7) menghasilkan [1, 4, 7].
-//     ulangSampai(8) menghasilkan [1, 4, 7].
-//     ulangSampai(0) menghasilkan [1].
+// W1. Tulis do...while yang mengisi array dengan angka 1, 4, 7, ...
+//     sampai nilainya >= n.
+//     Untuk n = 7 hasilnya [1, 4, 7].
+//     Untuk n = 8 hasilnya [1, 4, 7].
+//     Untuk n = 0 hasilnya [1]  <- minimal satu angka, itu sifat do...while.
+//     Untuk n = 13 hasilnya [1, 4, 7, 10, 13].
 //
-// Perhatikan kasus terakhir: minimal satu angka selalu masuk,
-// karena itulah sifat do...while. Wajib memakai do...while.
-
-const ulangSampai = null;
+// Catatan 2026-11-17: versi asli soal ini meminta FUNGSI, padahal fungsi materi
+// minggu 2. Diganti jadi loop saja supaya sesuai README #42.
 
 {
-    if (ulangSampai === null) {
-        console.log("W1: belum ditulis");
+    const n = 7;
+    const hasil = [];
+    let i = 1;
+
+    do {
+        hasil.push(i);
+        i += 3;
+    } while (i <= n);
+
+    console.log("W1 hasil untuk n = 7: " + JSON.stringify(hasil));
+
+    const uji = [
+        [7, [1, 4, 7]],
+        [8, [1, 4, 7]],
+        [0, [1]],
+        [13, [1, 4, 7, 10, 13]],
+    ];
+    let lulus = 0;
+
+    for (const [masuk, harap] of uji) {
+        let j = 1;
+        const keluar = [];
+        do {
+            keluar.push(j);
+            j += 3;
+        } while (j <= masuk);
+        if (JSON.stringify(keluar) === JSON.stringify(harap)) lulus++;
+    }
+
+    if (lulus === uji.length) {
+        console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
     } else {
-        const uji = [
-            [7, [1, 4, 7]],
-            [8, [1, 4, 7]],
-            [0, [1]],
-            [13, [1, 4, 7, 10, 13]],
-        ];
-        let lulus = 0;
-
-        for (const [masuk, harap] of uji) {
-            if (JSON.stringify(ulangSampai(masuk)) === JSON.stringify(harap)) lulus++;
-        }
-
-        if (lulus === uji.length) {
-            console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
-        } else {
-            console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
-        }
+        console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
     }
 }
+
+console.log("");
+console.log("=== VERIFY ===");
+console.log("Kode di bawah ditulis AI. Ada satu bug. Temukan dulu.");
+console.log("");
+
+// V1. AI menulis ini untuk "tampilkan menu minimal sekali".
+//
+//   let pilihan = "keluar";
+//
+//   while (pilihan !== "keluar") {
+//       console.log("menu tampil");
+//   }
+//
+// Yang ditanyakan:
+//   a) Berapa kali "menu tampil" tercetak? (satu nilai)
+//   b) Kenapa berbeda dari yang diminta?
+
+{
+    const jawabA = 0;
+    periksa("V1a menu tercetak", jawabA, 0, "kali");
+
+    // Alasan: while memeriksa kondisi SEBELUM badan. pilihan sudah "keluar",
+    // jadi kondisi langsung false dan badan tidak pernah jalan.
+    // Untuk "minimal sekali" harus do...while, bukan while.
+}
+
+console.log("");
+console.log("=== EXPLAIN ===");
+console.log("Tulis komentar review maksimal 3 kalimat.");
+console.log("");
+
+// E1. Tulis komentar review untuk kode ini.
+//
+//   let i = 1;
+//   let total = 0;
+//
+//   do {
+//       if (i === 4) continue;
+//       total += i;
+//       i++;
+//   } while (i <= 6);
+//
+// Tiga hal wajib: apa rusak, kapan, bagaimana memperbaiki.
+// Tulis di Working Skills/Review/02_Komentar While.md bagian kedua.
+
+console.log("E1: tulis komentarmu di Working Skills/Review/02_Komentar While.md");

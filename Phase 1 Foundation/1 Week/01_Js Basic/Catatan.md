@@ -568,6 +568,21 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
+**#86** · sistem · level VERIFY dan EXPLAIN + pattern drill · 2026-11-17 · keyakinan: yakin
+- Dasar riset: uji acak pembentukan skill (2026) — AI menurunkan pemahaman konsep,
+  membaca kode, dan debugging sebesar 17% skor (d = 0.738, p = 0.010)
+- Tiga dari enam pola pemakaian AI tetap membangun skill, semuanya melibatkan
+  keterlibatan kognitif. VERIFY melatih pola itu
+- Level baru: VERIFY (audit kode AI) dan EXPLAIN (komentar review)
+- Pattern drill: 20 potongan, 5 menit, klasifikasi jenis bug
+- **Audit menemukan 5 masalah nyata**, semuanya diperbaiki:
+  1. `14_DoWhile.js` dan `15_Nested.js` masih 4 level → jadi 6
+  2. W1 di kedua file masih meminta FUNGSI (materi minggu 2) → diganti loop
+  3. `03_Error.js` error saat dijalankan tanpa penanda → ditandai `SENGAJA-ERROR`
+  4. Nomor aturan README tidak berurutan (45-50 muncul sebelum 42-44) → dirapikan
+  5. Blok VERIFY di `13_While.js` hanya placeholder → jadi penjaga sungguhan
+- Pemeriksaan `check_system.js` bertambah dari 24 jadi 28
+
 **#85** · WRITE · `while` · 2026-11-17 · keyakinan: yakin
 - W1 (isi array dengan angka turun): **benar 4 dari 4 kasus**
 - Tiga kesalahan di percobaan pertama:

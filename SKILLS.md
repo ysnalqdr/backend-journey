@@ -201,6 +201,26 @@ benar atau salah. Keduanya tidak bisa diuji dengan "tulis dari nol", jadi buktin
 | Mengenali pola bug                 | 0      | 1      | `pattern-01`               |
 | Menjelaskan alasan (EXPLAIN)       | 0      | 1      | `review-02`                |
 
+### Enam level gerbang
+
+Setiap konsep diuji lewat enam level, bukan empat. Urutannya tidak boleh dibalik.
+
+| #   | Level   | Yang diuji            | Dinilai                     |
+|-----|---------|-----------------------|-----------------------------|
+| 1   | EASY    | prediksi hasil        | benar/salah                 |
+| 2   | MEDIUM  | cari bug              | benar/salah                 |
+| 3   | HARD    | gabungan konsep       | benar/salah                 |
+| 4   | WRITE   | tulis dari nol        | lulus kasus uji             |
+| 5   | VERIFY  | audit kode AI         | menemukan + menjelaskan     |
+| 6   | EXPLAIN | tulis komentar review | orang lain bisa memperbaiki |
+
+**Kenapa VERIFY sebelum EXPLAIN:** kamu tidak bisa memverifikasi apa yang tidak bisa kamu
+tulis. Dan tidak bisa menjelaskan apa yang tidak bisa kamu temukan.
+
+**Kenapa EXPLAIN paling akhir:** komunikasi adalah kompetensi yang paling lemah pada
+reviewer. Survei 105 reviewer (CSCW 2023) menemukan mereka merasa kurang percaya diri
+menyampaikan umpan balik, padahal menganggapnya sama penting dengan kemampuan teknis.
+
 ### Hard skill
 
 | Konsep                         | Status | Mulai  | Alasan urutan             |
