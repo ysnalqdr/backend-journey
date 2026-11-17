@@ -66,11 +66,10 @@ for (let i = 0; i <= data.length; i++) {
 }`,
 
     // 9
-    `let i = 1;
+    `// maksudnya: jumlahkan 1 sampai 5
 let total = 0;
-while (i <= 5) {
+for (let i = 1; i < 5; i++) {
     total += i;
-    if (i === 99) i++;
 }`,
 
     // 10
@@ -170,7 +169,7 @@ const kunci = [
     7,  // 6  valid dihitung lalu tidak dipakai
     0,  // 7  BENAR
     5,  // 8  i <= data.length -> data[3] = undefined -> NaN
-    1,  // 9  i++ terkunci di if yang tidak pernah true -> tak berujung
+    1,  // 9  i < 5 padahal maksudnya 1..5 -> 5 tidak masuk, off-by-one
     0,  // 10 BENAR, 10
     0,  // 11 BENAR, 60
     6,  // 12 i++ sebelum total += i -> menambahkan 2,3,4,5,6
