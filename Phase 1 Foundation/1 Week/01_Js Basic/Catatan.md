@@ -53,7 +53,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop: MEDIUM lulus (#77).
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
-- `while`: per konsep A-D lulus (#81), EASY lulus (#82). MEDIUM/HARD/WRITE belum.
+- `while`: per konsep A-D (#81), EASY (#82), MEDIUM (#83). HARD/WRITE belum.
 - `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
@@ -567,6 +567,22 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#83** · MEDIUM · `while` · 2026-11-17 · keyakinan: yakin
+- M1 (infinite loop): `"tak berujung"` — benar setelah 3 kali penjelasan
+  - Awalnya menjawab `15`, karena menghitung `total` padahal loop tak berhenti
+  - Kebingungan: mengira `if` false menghentikan loop. Padahal `if` false hanya
+    melewati bloknya
+  - Kunci: satu-satunya `i++` ada di dalam `if (i === 99)` yang selalu false
+  - Rantai benar: if false -> i++ tidak jalan -> i tetap 1 -> kondisi selalu true
+- M2 (kondisi tidak pernah benar): `0` — benar
+- M3 (dua `i++` satu putaran): `17` — benar setelah satu koreksi
+  - Awalnya `22`, karena `5` dihitung dua kali (deret `1,2,3,5,5,6`)
+  - Kunci: dua `i++` jalan di putaran yang sama, `i` melompat `4 -> 5 -> 6`
+  - Pola "jumlah baris tidak cocok" ke-**5**
+- Tambahan yang ditanyakan: apakah `total` terus bertambah? Ya, sampai
+  `Number.MAX_SAFE_INTEGER` (9007199254740991), lalu penambahan berhenti
+  berpengaruh tapi loop tetap jalan
 
 **#82** · EASY · `while` · 2026-11-17 · keyakinan: yakin
 - E1: `15` — benar, 5 baris untuk 5 putaran

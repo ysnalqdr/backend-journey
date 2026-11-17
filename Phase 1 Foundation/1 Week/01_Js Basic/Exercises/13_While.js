@@ -93,7 +93,12 @@ console.log("");
 //   }
 //
 {
-    const jawab = null;
+    // i++ satu-satunya ada di dalam if (i === 99), dan if itu selalu false.
+    // Jadi i tetap 1, kondisi 1 <= 5 selalu true, loop tidak pernah berhenti.
+    // if yang false TIDAK menghentikan loop. Dia hanya melewati bloknya.
+    // Rantai: if false -> i++ tidak jalan -> i tetap 1 -> kondisi selalu true
+    //         -> berulang tanpa henti.
+    const jawab = "tak berujung";
 
     periksa("M1", jawab, "tak berujung", "keterangan");
 }
@@ -108,7 +113,9 @@ console.log("");
         i++;
     }
 
-    const jawab = null;
+    // 5 < 3 sudah false. while memeriksa kondisi SEBELUM badan.
+    // 0 putaran, total tetap 0.
+    const jawab = 0;
 
     periksa("M2", jawab, total, "total");
 }
@@ -126,7 +133,13 @@ console.log("");
         i++;
     }
 
-    const jawab = null;
+    // Dua i++ jalan di putaran yang SAMA saat i = 4.
+    // i: 4 -> 5 (dari if), lalu total += 5, lalu i: 5 -> 6.
+    // Jadi i melompat 4 -> 6, tidak berhenti di 5.
+    // Nilai yang dijumlahkan: 1, 2, 3, 5, 6
+    // 0+1, 1+2, 3+3, 6+5, 11+6 = 17
+    // Jawaban pertama salah (22) karena 5 dihitung dua kali.
+    const jawab = 17;
 
     periksa("M3", jawab, total, "total");
 }
