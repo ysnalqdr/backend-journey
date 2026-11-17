@@ -56,6 +56,45 @@ gagal" dan "tabel empat kolom" diterapkan. Cara kerja lebih menentukan daripada 
 
 ---
 
+## Jadwal blok Working Skills sampai 2026-11-26
+
+Ditetapkan 2026-11-17. Satu blok per sesi, digabung dengan gerbang supaya tidak ada sesi
+yang isinya cuma sistem.
+
+| Sesi   | Isi                                          | Waktu  |
+|--------|----------------------------------------------|--------|
+| 18 Nov | `pattern-01` ulang + `do...while` per konsep | 25 mnt |
+| 19 Nov | `reading-02`                                 | 30 mnt |
+| 20 Nov | `do...while` EASY + MEDIUM                   | 25 mnt |
+| 21 Nov | `memecah-01` + `do...while` HARD             | 35 mnt |
+| 22 Nov | `docs-01` + `do...while` WRITE               | 35 mnt |
+| 23 Nov | `review-01`                                  | 30 mnt |
+| 24 Nov | nested per konsep                            | 25 mnt |
+| 25 Nov | `review-02` + nested EASY/MEDIUM             | 40 mnt |
+| 26 Nov | `debug-01`                                   | 30 mnt |
+
+**Kenapa urutan ini:**
+
+| Blok         | Alasan posisi                                                              |
+|--------------|----------------------------------------------------------------------------|
+| `pattern-01` | termurah, mengukur apakah temuan 17 Nov masuk                              |
+| `reading-02` | sebelum `review-01`, karena tidak bisa menilai kode yang belum bisa dibaca |
+| `memecah-01` | tidak butuh prasyarat, menambal lubang audit                               |
+| `docs-01`    | langsung berguna, tidak butuh prasyarat                                    |
+| `review-01`  | butuh `reading-02`                                                         |
+| `review-02`  | butuh `review-01`                                                          |
+| `debug-01`   | butuh bug nyata + kemampuan membaca kode                                   |
+
+**Aturan selama jadwal ini berjalan:**
+
+1. Jangan menambah blok ke-9. Ide baru ditulis di `IMPROVEMENTS.md`, tidak dikerjakan.
+2. Jangan mengganti blok yang terasa membosankan dengan sistem baru. Itu pola yang sudah
+   tiga kali terjadi.
+3. Kalau satu sesi terlewat, lanjut ke sesi berikutnya. Jangan menumpuk dua blok.
+4. Satu blok per sesi. Yang kedua selalu jadi tidak dikerjakan.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
@@ -120,17 +159,4 @@ Total 55 menit. Kalau cuma 30 menit: poin 1 dan 2 saja.
 3. Konsep yang lulus → tambahkan ke `REVIEW_QUEUE.md`. Interval mengikuti README #38:
    lulus bersih 4 hari, lulus setelah koreksi 2 hari, gagal 1 hari
 4. Kalau level tertinggi masih EASY setelah 3 sesi, konsep itu belum dikuasai — jangan naik
-   status di `SKILLS.md`
-
----
-
-## Pemakaian `--no-verify`
-
-Hook `pre-commit` menolak commit selama belum ada blok Working Skills dikerjakan. Jalur darurat
-`git commit --no-verify` dicatat di sini setiap kali dipakai.
-
-| Tanggal    | Commit          | Alasan                    |
-|------------|-----------------|---------------------------|
-| 2026-11-14 | aturan #41      | aturan sistem, bukan sesi |
-| 2026-11-14 | skrip penagih   | membangun mekanisme       |
-| 2026-11-14 | hook pre-commit | hook belum ada            |
+   status di `SKIL
