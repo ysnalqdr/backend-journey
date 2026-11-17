@@ -600,6 +600,64 @@ if (dirty) {
     }
 }
 
+
+// ---------- 22. Pattern drill utuh dan kuncinya sah ----------
+{
+    const f = "Working Skills/Pattern Drill/pattern_drill_01.js";
+    if (!exists(f)) {
+        warn("pattern drill 01 belum ada");
+    } else {
+        const src = read(f);
+        const nPotongan = (src.match(/^\s{4}\/\/ \d+$/gm) || []).length;
+        const kunciBlok = src.split("const kunci = [")[1] || "";
+        const kunciIsi = kunciBlok.split("];")[0] || "";
+        const nKunci = (kunciIsi.match(/^\s*\d+,/gm) || []).length;
+        const nJawab = ((src.split("const jawab = [")[1] || "").split("];")[0].match(/null,/g) || []).length;
+
+        const sah = (kunciIsi.match(/^\s*(\d+),/gm) || []).map((m) => parseInt(m, 10));
+        const diLuar = sah.filter((v) => v < 0 || v > 7);
+
+        if (nPotongan !== 20) warn(`pattern drill: ${nPotongan} potongan, seharusnya 20`);
+        else if (nKunci !== 20) warn(`pattern drill: ${nKunci} kunci, seharusnya 20`);
+        else if (nJawab !== 20) warn(`pattern drill: ${nJawab} slot jawab, seharusnya 20`);
+        else if (diLuar.length) warn(`pattern drill: kunci di luar 0-7: ${diLuar.join(",")}`);
+        else ok(`pattern drill utuh: 20 potongan, 20 kunci, kunci sah 0-7`);
+    }
+}
+
+// ---------- 23. Level VERIFY dan EXPLAIN ada ----------
+{
+    const enam = ["EASY", "MEDIUM", "HARD", "WRITE", "VERIFY", "EXPLAIN"];
+    const files = walk(path.join(ROOT, "Phase 1 Foundation"), ".js")
+        .filter((f) => f.includes("Exercises") && /^\d\d_/.test(path.basename(f)));
+
+    const lengkap = files.filter((f) => {
+        const src = fs.readFileSync(f, "utf8");
+        return enam.every((lv) => src.includes(`=== ${lv} ===`));
+    });
+
+    if (lengkap.length === 0) {
+        warn("belum ada file latihan dengan enam level (aturan 45)");
+    } else {
+        ok(`enam level: ${lengkap.length} file (${lengkap.map((f) => path.basename(f)).join(", ")})`);
+    }
+}
+
+// ---------- 24. Semua blok Working Skills punya file soal ----------
+{
+    const d = JSON.parse(read("Working Skills/status.json"));
+    const hilang = d.blok.filter((b) => !exists(b.soal));
+    const kunciHilang = d.blok.filter((b) => b.kunci && !exists(b.kunci));
+
+    if (hilang.length) {
+        hilang.forEach((b) => err(`blok ${b.id}: file soal tidak ada (${b.soal})`));
+    } else if (kunciHilang.length) {
+        kunciHilang.forEach((b) => err(`blok ${b.id}: file kunci tidak ada (${b.kunci})`));
+    } else {
+        ok(`blok Working Skills: ${d.blok.length} blok, semua file ada`);
+    }
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);

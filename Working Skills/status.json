@@ -3,6 +3,19 @@
   "aturan": "Setiap sesi wajib mengerjakan blok berstatus belum atau sedang. Blok yang tertunda lebih dari 7 hari muncul sebagai peringatan.",
   "blok": [
     {
+      "id": "pattern-01",
+      "nama": "Mengenali pola bug",
+      "folder": "Working Skills/Pattern Drill",
+      "soal": "Working Skills/Pattern Drill/pattern_drill_01.js",
+      "kunci": "Working Skills/Pattern Drill/pattern_drill_01.js",
+      "kemampuan": [
+        "Mengenali pola bug"
+      ],
+      "status": "belum",
+      "terakhir": null,
+      "catatan": "20 potong kode, 5 menit, klasifikasi jenis bug. Tidak menghitung, hanya mengenali. Lulus kalau 20/20."
+    },
+    {
       "id": "reading-01",
       "nama": "Baca kode asing, level 1",
       "folder": "Working Skills/Reading",
@@ -47,14 +60,15 @@
       "id": "review-02",
       "nama": "Menerima review",
       "folder": "Working Skills/Review",
-      "soal": "Working Skills/Review/01_Kode Review.md",
-      "kunci": "Working Skills/Kunci/Review 01.md",
+      "soal": "Working Skills/Review/02_Komentar While.md",
+      "kunci": "Working Skills/Review/02_Komentar While.md",
       "kemampuan": [
-        "Menerima review"
+        "Menerima review",
+        "Menjelaskan alasan"
       ],
       "status": "belum",
       "terakhir": null,
-      "catatan": "Bagian kedua file yang sama. Menilai komentar mana yang diterima dan ditolak."
+      "catatan": "Level EXPLAIN. Tulis komentar review maks 3 kalimat. Dinilai: apakah orang lain bisa memperbaiki kode hanya dari komentarmu."
     },
     {
       "id": "docs-01",

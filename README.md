@@ -338,6 +338,55 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     when something asks for it every session.
 
 
+45. **Every concept has six levels, not four.** EASY, MEDIUM, HARD, WRITE, VERIFY, EXPLAIN.
+    The order matters: you cannot verify what you cannot write.
+
+    Why: a randomized trial on skill formation (2026) found AI use reduced conceptual
+    understanding, code reading, and debugging by 17% of evaluation score (d = 0.738,
+    p = 0.010). But three of six usage patterns preserved learning — all three involved
+    staying cognitively engaged. VERIFY trains exactly that pattern: the AI writes, you audit.
+
+46. **VERIFY: the AI writes, the learner finds the bug.** The code is given, working, and
+    wrong. No fixing until the bug is found and named. A bug that cannot be named cannot be
+    reported, and a bug that cannot be reported cannot be fixed by anyone else.
+
+    Why: 66% of 49,000 developers named "AI solutions that are almost right, but not quite"
+    as their biggest frustration, and 45% said debugging AI-generated code takes more time.
+    "Almost right" is the failure mode of this decade, and it is invisible to anyone who
+    only runs the code.
+
+47. **EXPLAIN: a review comment must name what breaks, when, and how to fix it.** Maximum
+    three sentences. Scored by one test: can someone else fix the code using only your
+    comment, without asking you anything?
+
+    Why: a survey of 105 reviewers across 27 competencies found reviewers feel *less*
+    confident about communicating clearly and giving constructive feedback than about the
+    technical work, while rating both equally essential. The bottleneck is transmission,
+    not detection.
+
+48. **A wrong answer must name its bug type.** Every miss is filed against one of the seven
+    types in `BUG_TAXONOMY.md`. "I was careless" is not a type. "Off-by-one" is.
+
+    Why: people cannot find a category of bug they have no name for. Naming turns a vague
+    feeling of wrongness into a checklist item that can be run deliberately next time.
+
+49. **Pattern drill: five minutes, twenty snippets, classification only.** No computing, no
+    running, no fixing. Name the bug type. This is separate from the daily gate and is not
+    a replacement for it.
+
+    Why: expertise research finds experts spot typical errors "incredibly fast" because they
+    have abstracted the comprehension process — they recognise shapes, not recompute them.
+    Recognition is built by seeing many examples, which the gate cannot do at 3-6 questions
+    per session. The drill gets 20 examples into 5 minutes.
+
+50. **Do not increase question count to increase skill.** Add levels and variety instead.
+
+    Why: overlearning research shows diminishing returns past the point of correct
+    performance, while deliberate-practice research shows gains come from feedback quality,
+    a specific goal, and focus on weakness — none of which more repetitions supply. A day of
+    39 questions already produced worse quality than a day of 10.
+
+---
 42. **A question may only use material already taught.** No forward references, not even as a
     "small" example. If the answer needs a concept from a later week, the question is wrong,
     not the answer.
@@ -386,6 +435,7 @@ Working Skills/
   Review/
   Docs/
   Debug/
+  Pattern Drill/
   Cara Membaca Kode.md
   Latihan Memecah Masalah.md
   status.json

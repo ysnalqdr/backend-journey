@@ -78,6 +78,24 @@ lebih dari 7 hari. `check_system.js` ikut memeriksanya, jadi tidak bisa diabaika
 
 Aturannya ada di README #41.
 
+## Pattern drill — 5 menit tiap sesi
+
+Latihan terpisah dari gerbang. Bukan pengganti, tapi pelengkap.
+
+|              | Gerbang         | Pattern drill |
+|--------------|-----------------|---------------|
+| Waktu        | 15-30 menit     | 5 menit       |
+| Jumlah       | 3-6 soal        | 20 potongan   |
+| Yang ditanya | berapa hasilnya | jenis bug apa |
+| Menghitung   | wajib           | tidak         |
+
+Gerbang melatih **menghitung**. Drill melatih **mengenali**. Dua keterampilan berbeda, dan
+yang kedua tidak bisa dilatih oleh gerbang karena gerbang terlalu lambat memberi contoh.
+
+Mulai: `node "Working Skills/Pattern Drill/pattern_drill_01.js"`
+
+Aturan lengkap: README #49.
+
 ## Materi pendukung
 
 Dibaca sekali, lalu dipakai setiap kali mengerjakan blok:

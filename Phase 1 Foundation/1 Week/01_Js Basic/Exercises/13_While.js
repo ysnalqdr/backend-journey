@@ -264,3 +264,62 @@ console.log("");
 // Revisi berikutnya masih salah batasnya:
 //   while (n >= 0) -> [5,4,3,2,1,0], dan untuk n = 0 jadi [0]
 // Seharusnya `n > 0`. Off-by-one.
+
+console.log("");
+console.log("=== VERIFY ===");
+console.log("Kode di bawah ditulis AI. Ada satu bug. Temukan, jangan diperbaiki dulu.");
+console.log("");
+
+// V1. AI menulis ini untuk "cetak angka 5 sampai 1".
+//
+//   let i = 5;
+//
+//   while (i >= 0) {
+//       console.log(i);
+//       i--;
+//   }
+//
+// Yang ditanyakan:
+//   a) Berapa angka yang tercetak? (satu nilai)
+//   b) Angka mana yang seharusnya TIDAK ikut tercetak?
+//
+// Jawab a di `jawab`, lalu isi alasannya di komentar bawah.
+{
+    // Hitung sendiri, jangan dijalankan dulu.
+    const jawab = null;
+
+    periksa("V1a", jawab, 6, "angka");
+
+    // Tulis jawaban b di sini sebagai teks, ganti null:
+    // const jawabB = null;
+    // if (jawabB === "0") { console.log("V1b: benar"); }
+    // else { console.log("V1b: belum/salah"); }
+}
+
+console.log("");
+console.log("=== EXPLAIN ===");
+console.log("Tulis komentar review maksimal 3 kalimat. Tanpa menjalankan kode.");
+console.log("");
+
+// E1. Tulis komentar review untuk kode ini.
+//
+//   let total = 0;
+//   let i = 1;
+//
+//   while (i <= 10) {
+//       if (i === 5) continue;
+//       total += i;
+//       i++;
+//   }
+//
+// Komentarmu WAJIB menyebut tiga hal:
+//   1. Apa yang rusak
+//   2. Kapan rusak (kondisi apa yang memicunya)
+//   3. Bagaimana memperbaikinya
+//
+// Dinilai: apakah orang lain bisa memperbaiki kode ini HANYA dari komentarmu.
+//
+// Tulis di Working Skills/Review/02_Komentar While.md
+{
+    console.log("E1: tulis komentarmu di Working Skills/Review/02_Komentar While.md");
+}
