@@ -27,7 +27,9 @@ console.log("");
         i++;
     }
 
-    const jawab = null;
+    // Trace: 0+1, 1+2, 3+3, 6+4, 10+5 = 15
+    // 5 baris, 5 putaran, 5 penjumlahan.
+    const jawab = 15;
 
     periksa("E1", jawab, total, "total");
 }
@@ -42,7 +44,9 @@ console.log("");
         i++;
     }
 
-    const jawab = null;
+    // 10 < 5 sudah false, jadi badan tidak pernah jalan.
+    // while memeriksa kondisi SEBELUM badan.
+    const jawab = 0;
 
     periksa("E2", jawab, jalan, "kali jalan");
 }
@@ -57,7 +61,13 @@ console.log("");
         i -= 7;
     }
 
-    const jawab = null;
+    // i: 20 -> 13 -> 6 -> -1
+    // periksa 1: 20 > 0 ya, hitung 1
+    // periksa 2: 13 > 0 ya, hitung 2
+    // periksa 3:  6 > 0 ya, hitung 3
+    // periksa 4: -1 > 0 tidak, berhenti
+    // i boleh negatif. Justru -1 yang menghentikan loop.
+    const jawab = 3;
 
     periksa("E3", jawab, hitung, "putaran");
 }

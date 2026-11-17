@@ -53,7 +53,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop: MEDIUM lulus (#77).
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
-- `while`: per konsep A-D lulus (#81). Gerbang EASY/MEDIUM/HARD/WRITE belum.
+- `while`: per konsep A-D lulus (#81), EASY lulus (#82). MEDIUM/HARD/WRITE belum.
 - `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
@@ -567,6 +567,15 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#82** · EASY · `while` · 2026-11-17 · keyakinan: yakin
+- E1: `15` — benar, 5 baris untuk 5 putaran
+- E2: `0` — benar, dengan alasan (kondisi diperiksa sebelum badan)
+- E3: `3` — benar, trace `20 -> 13 -> 6 -> -1`, memeriksa kondisi tiap putaran
+- Konsep yang belum: mengira `i` "menghitung 1..21". `i` bukan penghitung,
+  hanya variabel. `i -= 7` membuat `i` turun 7, bukan naik 1
+- Dijelaskan: kalau `i > 0` tapi `i++`, hasilnya infinite loop. Arah gerak harus
+  sejalan dengan tanda perbandingan
 
 **#81** · `while` per konsep · 2026-11-17 · keyakinan: yakin
 - Konsep A (`while` = `for`): `21` — benar setelah satu revisi
