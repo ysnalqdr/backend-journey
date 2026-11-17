@@ -158,6 +158,18 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-17** · CONCEPT · ke-1 · belum
+  - Salah: tidak bisa menyebut nama tujuh jenis bug sama sekali
+  - Konsep benar: tiap jenis punya nama Inggris dan ciri 3 detik. Tanpa nama, pola tidak
+    bisa dicari — hanya bisa "dirasakan"
+  - Tindakan: materi `Tujuh Jenis Bug.md` ditulis, lalu drill diulang
+
+- **2026-11-17** · READING · ke-1 · belum
+  - Salah: jenis bug yang sama dikenali di kode 4 baris, terlewat di kode 8 baris
+  - Konsep benar: periksa satu jenis satu per satu, bukan sekaligus. Perhatian habis
+    sebelum sampai baris yang bermasalah
+  - Bukti: nomor 6 (jenis 7) benar, nomor 18 (jenis 7) salah. Bedanya panjang kode
+
 - **2026-11-17** · SYNTAX · ke-1 · sudah
   - Salah: `hasil -= n` untuk memasukkan nilai ke array
   - Konsep benar: `-=` itu subtraction assignment, mengurangi angka. Untuk array

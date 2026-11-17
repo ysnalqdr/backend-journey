@@ -91,6 +91,28 @@ Sisa minggu ini: nol perubahan sistem kecuali yang menghalangi belajar.
 
 ---
 
+## Rencana sesi berikutnya
+
+**2026-11-18**
+
+| #   | Blok                          | Waktu  | Isi                                  |
+|-----|-------------------------------|--------|--------------------------------------|
+| 1   | Pattern drill 02              | 5 mnt  | 20 potongan baru, target 20/20       |
+| 2   | Re-check 3 item               | 10 mnt | jenis bug 1 vs 5, dead store, alasan |
+| 3   | `14_DoWhile.js` per konsep    | 20 mnt | konsep A-D                           |
+| 4   | `14_DoWhile.js` EASY + MEDIUM | 15 mnt | kalau per konsep lulus               |
+| 5   | Catat                         | 5 mnt  | Gate Log, commit                     |
+
+Total 55 menit. Kalau cuma 30 menit: poin 1 dan 2 saja.
+
+**Yang TIDAK dikerjakan besok:** array (belum waktunya), `15_Nested` gerbang, perubahan sistem.
+
+**Peringatan untuk diri sendiri:** 2026-11-17 menghabiskan sesi penuh membangun sistem
+(2 level baru, 1 drill, 4 pemeriksaan, 1 audit) sementara blok Working Skills masih
+1 dari 8. Sisa minggu ini: nol perubahan sistem kecuali yang menghalangi belajar.
+
+---
+
 ## Aturan
 
 1. Isi **setelah** sesi selesai, bukan di tengah

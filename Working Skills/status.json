@@ -11,9 +11,9 @@
       "kemampuan": [
         "Mengenali pola bug"
       ],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "20 potong kode, 5 menit, klasifikasi jenis bug. Tidak menghitung, hanya mengenali. Lulus kalau 20/20."
+      "status": "sedang",
+      "terakhir": "2026-11-17",
+      "catatan": "Dikerjakan 2026-11-17: 16 dari 19 soal sah. Belum lulus (target 20/20). Ulangi 2026-11-18 dengan 20 potongan baru. Hasil di 01_Hasil.md."
     },
     {
       "id": "reading-01",

@@ -72,6 +72,16 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Struktur dipahami sebelum hitungannya benar. Teknik: tulis jumlah baris dulu
 - Jatuh tempo berikutnya: 2026-11-16
 
+**memisahkan jenis bug 1 dan 5** · muncul 2026-11-17 → jatuh tempo 2026-11-18 · status 1
+- Salah di nomor 13 dan 19: tidak bisa memisahkan off-by-one dari batas tidak diperiksa
+- Kunci: tanya "ada `[i]`?" — ada berarti 5, tidak ada berarti 1
+- Diuji dengan: 5 potongan campuran jenis 1 dan 5
+
+**menemukan dead store di kode panjang** · muncul 2026-11-17 → jatuh tempo 2026-11-18 · status 1
+- Nomor 6 (4 baris) benar, nomor 18 (8 baris) salah. Jenis sama
+- Kunci: cari nama variabel dua kali, satu per satu
+- Diuji dengan: potongan 8+ baris dengan satu variabel terbuang
+
 **alasan yang bisa dipertahankan** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
 - Reading 01 pertanyaan 4 dijawab "bisa bikin berantakan", bukan alasannya
 - Alasan yang dibutuhkan: apa yang rusak, dan kenapa tidak ketahuan

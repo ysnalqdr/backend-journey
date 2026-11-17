@@ -568,6 +568,20 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
+**#87** · Working Skills · `pattern-01` Pattern drill · 2026-11-17 · keyakinan: ragu
+- Skor **16 dari 19** soal sah. Belum lulus (target 20/20)
+- Waktu: ~25 menit, bukan 5 menit seperti rancangan
+- Salah: nomor 13 (jenis 5), 18 (jenis 7), 19 (jenis 1)
+- **Pola penting:** jenis yang sama benar di kode pendek, salah di kode panjang
+  - nomor 6 (jenis 7, 4 baris) benar; nomor 18 (jenis 7, 8 baris) salah
+  - nomor 8 (jenis 5, 5 baris) benar; nomor 13 (jenis 5, 5 baris) salah
+  - Kesimpulan: bukan masalah pemahaman jenis, tapi perhatian habis
+- Awalnya tidak paham sebutan jenis bug sama sekali. Materi `Tujuh Jenis Bug.md` ditulis
+- Nomor 9 cacat (infinite loop tidak ada di tujuh daftar) → diganti off-by-one
+- **Pelanggaran aturan #42:** drill memakai array (materi minggu 3) di 6 soal.
+  Learner memutuskan lanjut, array dikejar saat waktunya
+- Hasil lengkap: `Working Skills/Pattern Drill/01_Hasil.md`
+
 **#86** · sistem · level VERIFY dan EXPLAIN + pattern drill · 2026-11-17 · keyakinan: yakin
 - Dasar riset: uji acak pembentukan skill (2026) — AI menurunkan pemahaman konsep,
   membaca kode, dan debugging sebesar 17% skor (d = 0.738, p = 0.010)
