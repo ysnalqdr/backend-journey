@@ -199,36 +199,68 @@ console.log("=== WRITE ===");
 console.log("Tulis sendiri, tanpa contoh. Bagian paling bawah file ini.");
 console.log("");
 
-// W1. Tulis fungsi hitungMundur(n) yang mengembalikan array
-//     berisi angka dari n turun sampai 1.
-//     hitungMundur(3) menghasilkan [3, 2, 1].
-//     hitungMundur(1) menghasilkan [1].
-//     hitungMundur(0) menghasilkan [].
+// W1. Tulis while yang mengisi array dengan angka dari n turun sampai 1.
+//     Untuk n = 5 hasilnya [5, 4, 3, 2, 1].
+//     Untuk n = 1 hasilnya [1].
+//     Untuk n = 0 hasilnya [] (array kosong).
+//     Wajib memakai while, bukan for.
 //
-// Wajib memakai while, bukan for.
-
-const hitungMundur = null;
+// Catatan 2026-11-17: versi asli soal ini meminta FUNGSI, padahal fungsi materi
+// minggu 2. Diganti jadi loop saja supaya sesuai README #42.
 
 {
-    if (hitungMundur === null) {
-        console.log("W1: belum ditulis");
+    const n = 5;
+    let i = n;
+    const hasil = [];
+
+    // i > 0, bukan i >= 0.
+    // Dengan i >= 0, 0 ikut masuk -> [5,4,3,2,1,0], dan untuk n = 0 jadi [0].
+    // Ini off-by-one, bug jenis ke-1 di BUG_TAXONOMY.md.
+    while (i > 0) {
+        hasil.push(i);
+        i--;
+    }
+
+    const uji = [
+        [5, [5, 4, 3, 2, 1]],
+        [1, [1]],
+        [0, []],
+        [3, [3, 2, 1]],
+    ];
+    let lulus = 0;
+
+    for (const [masuk, harap] of uji) {
+        let j = masuk;
+        const keluar = [];
+        while (j > 0) {
+            keluar.push(j);
+            j--;
+        }
+        if (JSON.stringify(keluar) === JSON.stringify(harap)) lulus++;
+    }
+
+    if (lulus === uji.length) {
+        console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
     } else {
-        const uji = [
-            [3, [3, 2, 1]],
-            [1, [1]],
-            [0, []],
-            [5, [5, 4, 3, 2, 1]],
-        ];
-        let lulus = 0;
-
-        for (const [masuk, harap] of uji) {
-            if (JSON.stringify(hitungMundur(masuk)) === JSON.stringify(harap)) lulus++;
-        }
-
-        if (lulus === uji.length) {
-            console.log("W1: benar, lulus " + lulus + " dari " + uji.length + " kasus");
-        } else {
-            console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
-        }
+        console.log("W1: salah, lulus " + lulus + " dari " + uji.length + " kasus");
     }
 }
+
+// Jawaban pertamaku salah (2026-11-17):
+//
+//   const n = 5;
+//   const hasil = [];
+//   while (n >= 0) {
+//       hasil -= n;      // -= mengurangi angka, bukan menambah isi array
+//       n--;             // const n tidak bisa diubah: TypeError
+//       console.log(hasil);
+//   }
+//
+// Tiga kesalahan:
+// 1. `-=` bukan cara memasukkan nilai ke array. Yang benar `push`.
+// 2. `const n` tidak boleh diubah. Perlu variabel lain (`let i = n`).
+// 3. `console.log` di dalam loop -> mencetak tiap putaran, bukan sekali di akhir.
+//
+// Revisi berikutnya masih salah batasnya:
+//   while (n >= 0) -> [5,4,3,2,1,0], dan untuk n = 0 jadi [0]
+// Seharusnya `n > 0`. Off-by-one.

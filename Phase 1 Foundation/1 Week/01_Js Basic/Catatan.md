@@ -53,7 +53,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop: MEDIUM lulus (#77).
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
-- `while`: per konsep A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84). WRITE belum.
+- `while` **tuntas**: A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84), WRITE (#85).
 - `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
@@ -567,6 +567,17 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#85** · WRITE · `while` · 2026-11-17 · keyakinan: yakin
+- W1 (isi array dengan angka turun): **benar 4 dari 4 kasus**
+- Tiga kesalahan di percobaan pertama:
+  - `hasil -= n` — `-=` mengurangi angka, bukan menambah isi array
+  - `n--` pada `const n` → `TypeError: Assignment to constant variable`
+  - `console.log` di dalam loop → mencetak tiap putaran
+- Revisi kedua masih salah batas: `n >= 0` → `[5,4,3,2,1,0]`, `n = 0` → `[0]`
+  - Ditemukan sendiri sebagai off-by-one, bug jenis ke-1
+- Konsep baru yang dipelajari: `push` untuk memasukkan nilai ke array
+- `while` **TUNTAS** empat level (#82 EASY, #83 MEDIUM, #84 HARD, #85 WRITE)
 
 **#84** · HARD · `while` · 2026-11-17 · keyakinan: yakin
 - H1 (`break` + `continue` + `% 9` + `% 4`): `24` — benar, tanpa dituntun

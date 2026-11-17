@@ -158,6 +158,24 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-17** · SYNTAX · ke-1 · sudah
+  - Salah: `hasil -= n` untuk memasukkan nilai ke array
+  - Konsep benar: `-=` itu subtraction assignment, mengurangi angka. Untuk array
+    pakai `push`. `[] - 5` menghasilkan `-5`, array-nya hilang
+  - Pulih 2026-11-17: memakai `hasil.push(i)` dengan benar
+
+- **2026-11-17** · CONCEPT · ke-1 · sudah
+  - Salah: `n--` pada `const n` → `TypeError: Assignment to constant variable`
+  - Konsep benar: `const` melarang mengganti variabelnya, bukan isinya. Array
+    `const` boleh di-`push`, angka `const` tidak boleh di-`n--`
+  - Pulih 2026-11-17: memakai `let i = n` sebagai salinan
+
+- **2026-11-17** · LOGIC · ke-1 · sudah
+  - Salah: `while (n >= 0)` untuk mengisi array turun sampai 1
+  - Konsep benar: `0` ikut masuk → `[5,4,3,2,1,0]`, dan `n = 0` jadi `[0]`.
+    Batas yang benar `n > 0`. Ini off-by-one, bug jenis ke-1
+  - Pulih 2026-11-17: diuji 4 kasus (`5`, `1`, `0`, `3`), semua benar
+
 - **2026-11-17** · READING · ke-**3** · belum
   - Salah: nilai awal `i` dibaca `0` (diambil dari `total`), sehingga trace punya
     7 baris untuk 6 putaran. Jawaban `21` tetap benar karena `0+0` tidak mengubah
