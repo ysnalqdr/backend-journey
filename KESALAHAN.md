@@ -158,6 +158,14 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-17** · READING · ke-**3** · belum
+  - Salah: nilai awal `i` dibaca `0` (diambil dari `total`), sehingga trace punya
+    7 baris untuk 6 putaran. Jawaban `21` tetap benar karena `0+0` tidak mengubah
+  - Konsep benar: dua variabel punya nilai awal berbeda. `i` mulai `1`, `total`
+    mulai `0`. Baris pertama trace selalu dari `i`
+  - Muncul ke-1 M2/M6, ke-2 S9, ke-3 re-check `+=`, ke-4 di sini
+  - Tindakan: tabel pemeriksaan wajib. Mata bisa salah, kertas tidak
+
 - **2026-11-15** · SYNTAX · ke-1 · sudah
   - Salah: menulis `if ( let i = 1; i <= n; i++)` bukan `for (...)`
   - Konsep benar: `if` minta pertanyaan di dalam kurung, `for` minta tiga bagian

@@ -53,7 +53,8 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop: MEDIUM lulus (#77).
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
-- `while` dan `do...while`: materi ditulis, soal belum dikerjakan.
+- `while`: per konsep A-D lulus (#81). Gerbang EASY/MEDIUM/HARD/WRITE belum.
+- `do...while`: materi ditulis, soal belum dikerjakan.
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
   `Working Skills/Reading/01_Hasil.md`. `reading-02` jadi blok berikutnya.
@@ -566,6 +567,20 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#81** · `while` per konsep · 2026-11-17 · keyakinan: yakin
+- Konsep A (`while` = `for`): `21` — benar setelah satu revisi
+- Konsep B (kondisi gagal sejak awal): `0` — benar, **dengan alasan**
+- Konsep C (bentuk perubahan, `i * 10`): `100` — benar, urutan kali-dulu benar
+- Konsep D (deteksi bug): `20` vs `15` — **benar ketiga bagian**, termasuk
+  menulis sendiri versi perbaikannya
+- Kesalahan: nilai awal `i` dibaca `0` (dari `total`), sehingga trace punya 7 baris
+  untuk 6 putaran. Jawaban tetap benar karena `0+0` tidak mengubah jumlah.
+  Ini pola "jumlah baris tidak cocok" ke-**4**
+- Catatan penting: D dijawab dengan kualitas review, bukan cuma nilai. Menyebut
+  posisi `i++` sebagai sebab, lalu membuktikan versi benarnya
+- Jebakan ditemukan saat verifikasi: `while (i) { i -= 2 }` dari `5` tidak pernah
+  menyentuh `0`, jadi infinite loop. Masuk materi, tidak dijadikan soal aktif
 
 **#80** · HARD + WRITE · `for` tuntas · 2026-11-15 · keyakinan: yakin
 - H1 (`break` + `continue` + `% 7`): `12` — **benar**, trace lengkap
