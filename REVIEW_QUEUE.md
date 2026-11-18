@@ -9,20 +9,19 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 ## Terbuka
 
-| Item                                       | Jenis   | Muncul     | Jatuh tempo         | Status             |
-|--------------------------------------------|---------|------------|---------------------|--------------------|
-| alasan yang bisa dipertahankan             | konsep  | 2026-11-15 | **2026-11-19**      | 1                  |
-| posisi vs isi                              | konsep  | 2026-11-15 | menunggu array      | 1                  |
-| memisahkan jenis bug 1 dan 5               | pola    | 2026-11-17 | 2026-11-19          | 5 stabil, 1 kosong |
-| menemukan dead store di kode panjang       | pola    | 2026-11-17 | **PASS 2026-11-18** | 2                  |
-| pattern drill 20 dari 20                   | blok    | 2026-11-17 | 2026-11-18          | sedang             |
-| `do...while` gerbang enam level            | gerbang | 2026-11-17 | 2026-11-18          | 0 dari 6           |
-| nested loop gerbang enam level             | gerbang | 2026-11-17 | 2026-11-19          | 0 dari 6           |
-| empat file EXPLAIN masih kosong            | level   | 2026-11-17 | 2026-11-19          | 0 dari 4           |
-| array dasar belum diajarkan                | materi  | 2026-11-17 | minggu 3            | belum              |
-| hook pre-commit menolak blok belum selesai | sistem  | 2026-11-17 | 2026-11-20          | belum              |
+| Item                 | Jenis   | Muncul     | Jatuh tempo    | Status         |
+|----------------------|---------|------------|----------------|----------------|
+| alasan dipertahankan | konsep  | 2026-11-15 | **2026-11-19** | 1              |
+| posisi vs isi        | konsep  | 2026-11-15 | tunggu array   | 1              |
+| jenis bug 1 dan 5    | pola    | 2026-11-17 | 2026-11-19     | 5 ok, 1 kosong |
+| pattern drill 20/20  | blok    | 2026-11-17 | 2026-11-19     | 15/20          |
+| `do...while` gerbang | gerbang | 2026-11-17 | **2026-11-18** | 0 dari 6       |
+| nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19     | 0 dari 6       |
+| empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19     | 0 dari 4       |
+| array dasar          | materi  | 2026-11-17 | minggu 3       | belum          |
+| hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20     | belum          |
 
-**Yang paling mendesak:** dua item jatuh tempo 18 Nov, dan `do...while` belum digerbang.
+**Yang paling mendesak:** `do...while` gerbang, jatuh tempo hari ini.
 
 ---
 
@@ -30,6 +29,7 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 | Item                             | Hasil | Tanggal |
 |----------------------------------|-------|---------|
+| dead store panjang               | PASS  | 18 Nov  |
 | jumlah baris = jumlah putaran    | PASS  | 17 Nov  |
 | angka yang ditambahkan pada `+=` | PASS  | 15 Nov  |
 | `??` alasan pemakaian            | PASS  | 12 Nov  |
