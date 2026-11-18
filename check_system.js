@@ -813,17 +813,19 @@ if (dirty) {
 
 // ---------- 30. Jumlah commit hari ini tidak melewati alarm ----------
 {
-    const hariIni = new Date().toISOString().slice(0, 10);
+    // Ambil semua tanggal commit, filter di JS.
+    // Catatan 2026-11-18: `git log --since=<hari ini>` mengembalikan kosong
+    // di Windows, jadi cara itu tidak bisa dipakai.
     let log = "";
     try {
-        log = execSync(
-            "git log --since=" + hariIni + " --date=short --pretty=format:%ad",
-            { encoding: "utf8" }
-        );
+        log = execSync("git log --date=format:%Y-%m-%d --pretty=format:%ad", {
+            encoding: "utf8",
+        });
     } catch {
         log = "";
     }
 
+    const hariIni = new Date().toLocaleDateString("en-CA");
     const n = log.trim() ? log.trim().split("\n").filter((d) => d === hariIni).length : 0;
 
     if (n > 8) {
