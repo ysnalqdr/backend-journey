@@ -364,7 +364,6 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     The program prints `total: 0` and gives no warning. It is bug type 7 in `BUG_TAXONOMY.md`,
     and it is invisible to anyone who only runs the code.
 
----
 
 45. **Every concept has six levels, not four.** EASY, MEDIUM, HARD, WRITE, VERIFY, EXPLAIN.
     The order matters: you cannot verify what you cannot write.
@@ -415,6 +414,58 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     39 questions already produced worse quality than a day of 10.
 
 ---
+
+51. **One commit = one artifact.** An artifact is something that can be reverted on its own
+    without leaving a file half-finished. "Record while easy gate answers" is not an
+    artifact, because reverting it leaves `13_While.js` half-answered. "Complete while all
+    six levels" is an artifact.
+
+    Why: commit history is an audit trail for understanding *how and why* code changed
+    (ICSE 2022, ~44% of commit messages in active OSS projects could be improved). Four
+    commits for one gate answer "what", never "why", and make the history unreadable.
+
+52. **Maximum two commits per session.** A session is one sitting, not one day. A free day
+    with four sittings may have eight commits; a work day with one sitting has two.
+
+    Why: the cap is not a law, it is an alarm. The real test is rule 51. If six commits are
+    genuinely six revertable artifacts, commit six. If they are one artifact split into six
+    pieces, group them.
+
+53. **Unfinished work may still be committed.** Use `wip:` when no artifact is complete.
+    A commit is a checkpoint, not a declaration that the work is done.
+
+    Why: conflating commit with "finished" is why Day 4 stretched over three days with
+    nothing committed. Git was built for work in progress.
+
+54. **Work directly on `main`.** Do not use a work branch for daily study.
+
+    Why: GitHub only counts commits on the default branch or `gh-pages`. Commits on a side
+    branch do not appear on the contribution graph until merged, so a week of work on a
+    branch produces a week of grey squares.
+
+55. **Pull requests only for system changes.** Rules, scripts, hooks, and data structure.
+    Not study content, not answers, not materials.
+
+    Why: a system change alters how every later session runs, so it deserves a review
+    checkpoint. A material file affects one file. Opening a PR every day would also mean
+    changing the system every day, which is the "building machines instead of lifting
+    weights" pattern this repo has already fallen into twice.
+
+56. **Issues for code or system defects. Not for understanding defects.** A wrong answer
+    belongs in `KESALAHAN.md`; a broken hook belongs in an issue.
+
+    Why: the two are handled differently. A defect is fixed and closed. A misunderstanding
+    needs re-teaching and repeated testing.
+
+57. **Every day has a floor, and the floor counts as passing.** The floor is one block plus
+    one commit, twenty minutes. On a day that cannot even manage that, one documentation
+    commit in five minutes.
+
+    Why: a system that only works on your best day fails in month three, when novelty is
+    gone and nobody is watching. Three previous attempts at this repo stopped for exactly
+    that reason: the entry cost was set for a good day and the bad days broke the chain.
+
+------
 
 ## Structure
 

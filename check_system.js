@@ -776,6 +776,63 @@ if (dirty) {
     else ok(`nomor aturan README berurutan (${nos.length} aturan bernomor)`);
 }
 
+
+// ---------- 29. Utang terbuka dilaporkan setiap sesi ----------
+{
+    const src = read("REVIEW_QUEUE.md");
+    const blok = (src.split("## Terbuka")[1] || "").split("## Selesai")[0];
+
+    // baris tabel: | Item | Jenis | Muncul | Jatuh tempo | Status |
+    const baris = blok
+        .split("\n")
+        .filter((l) => l.trim().startsWith("|"))
+        .map((l) => l.split("|").map((c) => c.trim()))
+        .filter((c) => c.length >= 6)
+        .filter((c) => c[1] && c[1] !== "Item" && !/^-+$/.test(c[1]));
+
+    const hari = new Date();
+    hari.setHours(0, 0, 0, 0);
+
+    const mendesak = baris.filter((c) => {
+        const m = (c[4] || "").match(/(\d{4}-\d{2}-\d{2})/);
+        if (!m) return false;
+        const t = new Date(m[1]);
+        t.setHours(0, 0, 0, 0);
+        return t <= hari;
+    });
+
+    if (baris.length === 0) {
+        ok("utang: tidak ada yang terbuka");
+    } else if (mendesak.length) {
+        mendesak.forEach((c) => warn("utang jatuh tempo: " + c[1]));
+        ok("utang: " + baris.length + " terbuka, " + mendesak.length + " jatuh tempo");
+    } else {
+        ok("utang: " + baris.length + " terbuka, tidak ada yang jatuh tempo");
+    }
+}
+
+// ---------- 30. Jumlah commit hari ini tidak melewati alarm ----------
+{
+    const hariIni = new Date().toISOString().slice(0, 10);
+    let log = "";
+    try {
+        log = execSync(
+            "git log --since=" + hariIni + " --date=short --pretty=format:%ad",
+            { encoding: "utf8" }
+        );
+    } catch {
+        log = "";
+    }
+
+    const n = log.trim() ? log.trim().split("\n").filter((d) => d === hariIni).length : 0;
+
+    if (n > 8) {
+        warn("commit hari ini: " + n + " commit (alarm > 8, aturan 52)");
+    } else {
+        ok("commit hari ini: " + n + ", di bawah alarm");
+    }
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);

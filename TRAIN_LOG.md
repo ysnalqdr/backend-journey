@@ -95,6 +95,63 @@ yang isinya cuma sistem.
 
 ---
 
+## Urutan harian dan lantai minimum
+
+Ditetapkan 2026-11-18. Tiga pola sesuai jadwal nyata, bukan satu pola untuk semua hari.
+
+### Pola A — hari libur (4 sesi)
+
+| Sesi  | Isi                               | Waktu  | Commit |
+|-------|-----------------------------------|--------|--------|
+| Pagi  | protokol buka + re-check          | 20 mnt | 1      |
+| Siang | Working Skills block              | 35 mnt | 1      |
+| Sore  | materi + gerbang per konsep       | 40 mnt | 1      |
+| Malam | gerbang EASY sampai WRITE + catat | 45 mnt | 1      |
+
+Total 2 jam 20 menit, 4 commit.
+
+### Pola B — hari kuliah (3 sesi)
+
+| Sesi  | Isi                    | Waktu  | Commit |
+|-------|------------------------|--------|--------|
+| Siang | protokol + re-check    | 20 mnt | 1      |
+| Sore  | gerbang per konsep     | 30 mnt | 1      |
+| Malam | Working Skills + catat | 35 mnt | 1      |
+
+Total 1 jam 25 menit, 3 commit.
+
+### Pola C — hari kerja (1-2 sesi)
+
+| Sesi  | Isi                           | Waktu  | Commit |
+|-------|-------------------------------|--------|--------|
+| Malam | protokol + **satu** blok saja | 30 mnt | 1-2    |
+
+Pilih satu: Working Skills **atau** gerbang. Jangan dua-duanya.
+
+### Lantai minimum (aturan 57)
+
+| Kondisi                | Lantai                   | Waktu      |
+|------------------------|--------------------------|------------|
+| Sehat, waktu penuh     | 4 sesi                   | 2 jam 20   |
+| Sibuk                  | 2 sesi                   | 1 jam      |
+| Lelah, hampir menyerah | **1 blok + 1 commit**    | **20 mnt** |
+| Sakit / tidak bisa     | **1 commit dokumentasi** | **5 mnt**  |
+
+Baris ketiga dan keempat **bukan kegagalan**. Itu bagian dari sistem. Yang tidak boleh: nol.
+
+### Yang tidak pernah berubah di ketiga pola
+
+| #   | Langkah                                      | Kenapa                           |
+|-----|----------------------------------------------|----------------------------------|
+| 1   | `node working_skills.js`                     | penagih, bukan ingatan           |
+| 2   | Lihat utang di `REVIEW_QUEUE.md` bagian atas | utang tidak boleh tersembunyi    |
+| 3   | Re-check yang jatuh tempo                    | retensi                          |
+| 4   | Baru belajar hal baru                        | jangan menumpuk sebelum melunasi |
+
+Urutan tidak boleh dibalik. Kalau dibalik, utang menumpuk dan akhirnya ditinggalkan.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**

@@ -1,21 +1,63 @@
-# Review Queue
+# Utang
 
-Konsep berstatus 3 wajib diuji ulang **2 hari kemudian**. Tanpa tanggal, re-check tidak akan pernah terjadi.
+Satu tempat untuk semua utang. Bagian atas dibaca **setiap sesi**, sebelum belajar hal baru.
+
+Aturan #57: utang wajib di-commit saat dibuka atau ditutup. Utang yang tidak terlihat akan
+terlupakan, dan utang yang terlupakan jadi utang baru.
+
+---
+
+## Terbuka
+
+| Item                                       | Jenis   | Muncul     | Jatuh tempo    | Status   |
+|--------------------------------------------|---------|------------|----------------|----------|
+| alasan yang bisa dipertahankan             | konsep  | 2026-11-15 | **2026-11-19** | 1        |
+| posisi vs isi                              | konsep  | 2026-11-15 | menunggu array | 1        |
+| memisahkan jenis bug 1 dan 5               | pola    | 2026-11-17 | **2026-11-18** | 1        |
+| menemukan dead store di kode panjang       | pola    | 2026-11-17 | **2026-11-18** | 1        |
+| pattern drill 20 dari 20                   | blok    | 2026-11-17 | 2026-11-18     | sedang   |
+| `do...while` gerbang enam level            | gerbang | 2026-11-17 | 2026-11-18     | 0 dari 6 |
+| nested loop gerbang enam level             | gerbang | 2026-11-17 | 2026-11-19     | 0 dari 6 |
+| empat file EXPLAIN masih kosong            | level   | 2026-11-17 | 2026-11-19     | 0 dari 4 |
+| array dasar belum diajarkan                | materi  | 2026-11-17 | minggu 3       | belum    |
+| hook pre-commit menolak blok belum selesai | sistem  | 2026-11-17 | 2026-11-20     | belum    |
+
+**Yang paling mendesak:** dua item jatuh tempo 18 Nov, dan `do...while` belum digerbang.
+
+---
+
+## Selesai
+
+| Item                             | Hasil | Tanggal |
+|----------------------------------|-------|---------|
+| jumlah baris = jumlah putaran    | PASS  | 17 Nov  |
+| angka yang ditambahkan pada `+=` | PASS  | 15 Nov  |
+| `??` alasan pemakaian            | PASS  | 12 Nov  |
+| pernyataan vs ekspresi           | PASS  | 12 Nov  |
+| Ternary                          | PASS  | 12 Nov  |
+| `switch` + `break`               | PASS  | 12 Nov  |
+| `&&` `\|\|` short-circuit        | PASS  | 12 Nov  |
+| `!` logical NOT                  | PASS  | 12 Nov  |
+| `%` selain 2                     | PASS  | 12 Nov  |
+| nested loop                      | PASS  | 12 Nov  |
+| akumulasi di dalam `for`         | PASS  | 12 Nov  |
 
 ---
 
 ## Cara pakai
 
-1. Setiap kali konsep lulus gerbang, tambahkan satu baris
-2. Isi `Re-check due` = tanggal lulus + 2 hari
+1. Setiap kali konsep lulus gerbang, tambahkan satu baris di **Terbuka**
+2. Isi jatuh tempo = tanggal lulus + 2 hari
 3. Saat tanggalnya tiba, uji **1 soal MEDIUM** tanpa buka materi
-4. Isi kolom `Result` dan `Status after`
+4. Kalau lulus, pindahkan ke **Selesai**. Kalau gagal, tetap di Terbuka dan tanggal dimundurkan
 
 Kalau gagal: status turun ke 2, masuk antrean lagi 2 hari kemudian.
 
 ---
 
-## Antrean
+## Rincian
+
+### Antrean
 
 Format: **konsep** · lulus → jatuh tempo · hasil · status
 
