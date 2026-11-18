@@ -57,11 +57,11 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Nilai akhir dijawab `750000` (seharusnya `500000`), tapi itu pola lain, bukan `+=`
 - Diuji lagi 2026-11-17 bersama item lain
 
-**jumlah baris tidak cocok dengan jumlah putaran** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
-- Menulis 2 putaran, lalu menjumlahkan 3 kali → `750000`
-- Pola sama dengan M2, M6, S9
-- Aturan yang dipakai: hitung putaran dulu, tulis angkanya, lalu tulis persis
-  sebanyak itu baris penjumlahan
+**jumlah baris tidak cocok dengan jumlah putaran** · muncul 2026-11-15 → **PASS 2026-11-17** · status 2
+- Diuji: `for` 1..8 dengan `if (i % 2 !== 0) continue`
+- Jawab `20`, tabel 8 baris, 4 skip dan 4 penjumlahan. Cocok
+- Pola yang salah 5 kali tidak muncul lagi
+- Re-check berikutnya 2026-11-21 (status 2, interval 4 hari)
 - S9 dijawab `9`, seharusnya `37`. Menambahkan `1` dan `2` bergantian, bukan nilai `i`
 - Cek cepat setelahnya (`total += i * 2`) benar `30`
 - Aturan yang harus dipakai: lihat huruf setelah `+=`, itu yang ditambahkan
@@ -82,14 +82,18 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Kunci: cari nama variabel dua kali, satu per satu
 - Diuji dengan: potongan 8+ baris dengan satu variabel terbuang
 
-**alasan yang bisa dipertahankan** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
-- Reading 01 pertanyaan 4 dijawab "bisa bikin berantakan", bukan alasannya
-- Alasan yang dibutuhkan: apa yang rusak, dan kenapa tidak ketahuan
-- Diuji dengan: satu potong kode, sebutkan satu risiko dan satu alasan
+**alasan yang bisa dipertahankan** · muncul 2026-11-15 → diuji 2026-11-17 · **GAGAL** · status 1
+- Diuji: tulis komentar review untuk `for` dengan `i++` di dalam loop
+- Menyebut baris yang salah (benar) dan perbaikan (benar), tapi **tidak menyebut akibat**
+- "Kapan rusak" masih kabur: tidak ada angka, tidak ada kondisi
+- Nilai: 2 dari 4. Syarat lulus 3
+- Aturan yang dibutuhkan: komentar wajib menyebut **akibat**, bukan cuma letak
+- Diulang 2026-11-19
 
-**posisi vs isi** · muncul 2026-11-15 → jatuh tempo 2026-11-17 · status 1
+**posisi vs isi** · muncul 2026-11-15 → **DITUNDA** sampai array diajarkan · status 1
 - `i` itu posisi, `penjualan[i]` itu isi
-- Belum diajarkan (array minggu 3), jadi dijadwalkan setelah array masuk
+- Array materi minggu 3. Tidak bisa diuji sekarang
+- Bukan terlewat, tapi menunggu prasyarat
 
 **`??` alasan pemakaian** · muncul 2026-11-12 → jatuh tempo 2026-11-14 · PASS 2026-11-12 · status 3
 - 3/3: `minimum`=5 karena `\|\|` ganti `0`, `toko`="Tanpa Nama", dengan `??` jadi 0, "", 0
