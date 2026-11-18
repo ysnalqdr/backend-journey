@@ -152,6 +152,54 @@ Urutan tidak boleh dibalik. Kalau dibalik, utang menumpuk dan akhirnya ditinggal
 
 ---
 
+## Ringkasan 2026-11-18
+
+| Item             | Hasil                                    |
+|------------------|------------------------------------------|
+| `do...while`     | **tuntas enam level**                    |
+| Pattern drill 03 | 15 dari 20 (belum lulus)                 |
+| Re-check         | 2 dikerjakan: 1 PASS, 1 GAGAL            |
+| Aturan baru      | #51-#57 commit discipline                |
+| Buku utang       | `REVIEW_QUEUE.md` jadi satu tempat       |
+| Utang lunas      | dead store panjang, `do...while` gerbang |
+| Utang terbuka    | 8, tidak ada yang jatuh tempo            |
+| Commit           | 10 (8 artefak sah, 2 sampah)             |
+| Health check     | 39/40 (98%)                              |
+
+**Pelanggaran yang tercatat:**
+
+- Aturan 52 dilanggar di ketiga sesi (4, 3, 3 commit; batas 2)
+- Commit #6 mengoreksi #7, seharusnya satu commit
+- Commit #9 menghapus file yang masuk di #10, seharusnya ikut #10
+- `--no-verify` dipakai 10 kali tanpa dicatat di tabel darurat
+- Soal cacat ditemukan 4 kali: M1 komentar salah, M3 ambigu, H1 angka mustahil,
+  W1 minta fungsi. Semua sudah diperbaiki
+- Alarm commit rusak (`--since` mengembalikan kosong di Windows), sudah diperbaiki
+
+---
+
+## Rencana 2026-11-19
+
+| #   | Blok                           | Waktu  | Isi                                |
+|-----|--------------------------------|--------|------------------------------------|
+| 1   | Pattern drill 04               | 10 mnt | fokus jenis 1, target 20/20        |
+| 2   | Re-check: alasan dipertahankan | 10 mnt | komentar review wajib sebut akibat |
+| 3   | Re-check: jenis bug 1 vs 5     | 5 mnt  | 5 potongan campuran                |
+| 4   | `15_Nested.js` per konsep      | 20 mnt | konsep A-D                         |
+| 5   | `15_Nested.js` EASY + MEDIUM   | 20 mnt | kalau per konsep lulus             |
+| 6   | Catat                          | 5 mnt  | Gate Log, commit                   |
+
+Total 70 menit. Kalau cuma 30 menit: poin 1 dan 2 saja.
+
+**Target commit besok: 3.** Satu per sesi, maksimal 2 per sesi.
+
+**Yang TIDAK dikerjakan besok:** array, empat file EXPLAIN, hook pre-commit, perubahan sistem.
+
+**Aturan untuk diriku sendiri:** besok tidak ada perubahan sistem. Hari ini 7 aturan baru, 2
+pemeriksaan baru, dan 1 alarm yang rusak. Itu sudah cukup untuk satu hari.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
