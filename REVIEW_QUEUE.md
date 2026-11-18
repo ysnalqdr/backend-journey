@@ -86,7 +86,11 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Diuji: tulis komentar review untuk `for` dengan `i++` di dalam loop
 - Menyebut baris yang salah (benar) dan perbaikan (benar), tapi **tidak menyebut akibat**
 - "Kapan rusak" masih kabur: tidak ada angka, tidak ada kondisi
-- Nilai: 2 dari 4. Syarat lulus 3
+- Nilai tertulis: 2 dari 4. Syarat lulus 3
+- **Setelah ditanya ulang, penjelasannya benar:** "i++ menambah lagi jadi 2x nambah,
+  putaran pertama yang tadinya 1 jadi 2"
+- Diagnosis: **paham mekanismenya, belum bisa menuliskannya langsung.** Bukan gagal konsep
+- Yang kurang: **angka**. Versi kunci punya `12` vs `15`, versinya tidak
 - Aturan yang dibutuhkan: komentar wajib menyebut **akibat**, bukan cuma letak
 - Diulang 2026-11-19
 
