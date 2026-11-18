@@ -159,4 +159,17 @@ Total 55 menit. Kalau cuma 30 menit: poin 1 dan 2 saja.
 3. Konsep yang lulus → tambahkan ke `REVIEW_QUEUE.md`. Interval mengikuti README #38:
    lulus bersih 4 hari, lulus setelah koreksi 2 hari, gagal 1 hari
 4. Kalau level tertinggi masih EASY setelah 3 sesi, konsep itu belum dikuasai — jangan naik
-   status di `SKIL
+   status di `SKILLS.md`
+
+---
+
+## Pemakaian `--no-verify`
+
+Hook `pre-commit` menolak commit selama belum ada blok Working Skills dikerjakan. Jalur darurat
+`git commit --no-verify` dicatat di sini setiap kali dipakai.
+
+| Tanggal    | Commit          | Alasan                    |
+|------------|-----------------|---------------------------|
+| 2026-11-14 | aturan #41      | aturan sistem, bukan sesi |
+| 2026-11-14 | skrip penagih   | membangun mekanisme       |
+| 2026-11-14 | hook pre-commit | hook belum ada            |
