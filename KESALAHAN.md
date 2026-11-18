@@ -158,6 +158,17 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-17** · READING · ke-1 · belum
+  - Salah: melihat `.length` lalu langsung memutuskan jenis 5, tanpa membaca tandanya
+  - Konsep benar: yang menentukan `<=` atau `<`. `i < arr.length` dari 0 itu benar
+  - Bukti: nomor 12 (`<=`) benar, nomor 19 (`<`) salah
+
+- **2026-11-17** · CONCEPT · ke-1 · belum
+  - Salah: mengira `i++` harus di atas `total += i`
+  - Konsep benar: `total += i` dulu, baru `i++`. Kalau terbalik, nilai pertama terlewat
+    dan satu nilai ekstra ikut masuk
+  - Asal kesalahan: menyimpulkan aturan umum dari satu kasus (soal D)
+
 - **2026-11-17** · CONCEPT · ke-1 · belum
   - Salah: tidak bisa menyebut nama tujuh jenis bug sama sekali
   - Konsep benar: tiap jenis punya nama Inggris dan ciri 3 detik. Tanpa nama, pola tidak

@@ -151,12 +151,12 @@ for (let i = 1; i <= 6; i++) {
 ];
 
 // Isi jawabanmu di sini. Satu angka per potongan.
-// Jawaban learner 2026-11-17. Nomor 12, 13, 18, 19 belum dijawab.
+// Jawaban learner 2026-11-17.
 const jawab = [
     5, 6, 2, 3, 5,
     7, 0, 4, 1, 7,
-    6, null, null, 4, 6,
-    7, 6, null, null, 0,
+    6, 5, 0, 4, 6,
+    7, 6, 0, 5, 0,
 ];
 
 // Kunci

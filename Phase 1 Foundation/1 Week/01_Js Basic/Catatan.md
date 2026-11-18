@@ -568,6 +568,20 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
+**#88** · Working Skills · `pattern-01` drill 02 · 2026-11-17 · keyakinan: yakin
+- Skor **17 dari 20** (drill 01: 16 dari 19). Belum lulus, target 20/20
+- Kemajuan: jenis 7 benar 3/3 (drill 01 salah), jenis 4 benar 2/2, jenis 1 benar
+- Salah: nomor 11 (dijawab 6, seharusnya 0), 13 (dijawab 0, seharusnya 3),
+  19 (dijawab 5, seharusnya 0)
+- Kelemahan 1: masih memakai "ada `.length`" sebagai penanda jenis 5, bukan tanda `<`/`<=`
+- Kelemahan 2: belum bisa memisahkan jenis 3 dari 0 saat variabel memang hanya dipakai
+  satu putaran
+- Salah paham yang dikoreksi: mengira `i++` harus di atas `total += i`. Justru
+  sebaliknya — `total += i` dulu, baru `i++`
+- Dua soal cacat ditemukan saat verifikasi (13 dan 15 tidak menyebut maksud) → diperbaiki
+- File drill 02 dibuat dengan penjaga `sudahMenjawab` seperti file Reading
+- Hasil: `Working Skills/Pattern Drill/02_Hasil.md`
+
 **#87** · Working Skills · `pattern-01` Pattern drill · 2026-11-17 · keyakinan: ragu
 - Skor **16 dari 19** soal sah. Belum lulus (target 20/20)
 - Waktu: ~25 menit, bukan 5 menit seperti rancangan
