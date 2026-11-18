@@ -158,6 +158,19 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-18** · LOGIC · ke-1 · sudah
+  - Salah: `i += 2` padahal beda antar angka 4; dan titik koma `do...while` hilang
+  - Konsep benar: baca selisih antar angka contoh, bukan angka pertamanya. Titik koma
+    wajib setelah `while (kondisi)` di `do...while`
+  - Pulih 2026-11-18: diperbaiki, lulus 4 dari 4 kasus
+
+- **2026-11-18** · CONCEPT · ke-1 · sudah
+  - Salah: `total > 12` saat `total` mendarat tepat di `12` dianggap berhenti
+  - Konsep benar: `12 > 12` itu `false`. Nilai yang mendarat tepat di batas tidak
+    menghentikan apa pun kalau tandanya `>` atau `<`
+  - Muncul 4 kali hari ini dalam bentuk berbeda. Tiga ditangkap sendiri
+  - Pulih 2026-11-18: soal baru dengan nilai beda dijawab benar
+
 - **2026-11-18** · READING · ke-1 · belum
   - Salah: memeriksa "apakah ada yang rusak" padahal jenis 1 dinilai dengan "sesuai maksud"
   - Konsep benar: jenis 1 tidak meninggalkan jejak. Tidak ada `undefined`, tidak ada error.

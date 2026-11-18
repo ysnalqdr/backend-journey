@@ -54,7 +54,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - nested loop: MEDIUM lulus (#77).
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
 - `while` **tuntas**: A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84), WRITE (#85).
-- `do...while`: materi ditulis, soal belum dikerjakan.
+- `do...while` **tuntas**: A-D (#89), EASY/MEDIUM/HARD/WRITE (#89).
 - **Utang:** angka yang ditambahkan pada `+=` (REVIEW_QUEUE, status 1).
 - **Working Skills:** `reading-01` SELESAI 2026-11-15. Blok pertama dari 7. Hasil di
   `Working Skills/Reading/01_Hasil.md`. `reading-02` jadi blok berikutnya.
@@ -567,6 +567,22 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#89** · `do...while` tuntas enam level · 2026-11-18 · keyakinan: yakin
+- Konsep A-D: A `10`, B `1` + alasan, C `4`, D `13` — semua benar
+- EASY: E1 `[0,1,2]`, E2 `1`, E3 `10` — tiga-tiganya benar, tanpa koreksi
+- MEDIUM: M1 `1`, M2 `0`, M3 `18` — benar setelah satu soal diganti
+  - M3 lama: berhenti di `total = 12` padahal `12 > 12` itu false -> seharusnya `14`
+  - Diganti dengan nilai beda (`i = 7`, batas `> 15`) -> jawab `18` benar
+- HARD: H1 `8` langkah + alasan benar, H2 `30` — benar
+  - H1 asli pakai `27` (111 langkah, mustahil manual) -> diganti `6`
+- WRITE: **benar 4 dari 4 kasus**
+  - Percobaan pertama: `i += 2` (seharusnya 4), dan titik koma hilang
+  - Struktur sudah benar sejak percobaan pertama: push dulu, naikkan, kondisi
+- **Pola batas muncul 4 kali hari ini:** `i <= 10` mendarat di 10, `i <= 12` mendarat di 12,
+  `total > 12` mendarat di 12, `total < 30` mendarat di 30. Tiga dari empat ditangkap sendiri
+- Soal cacat yang ditemukan dan diperbaiki: M1 komentar salah (bukan infinite), M3 ambigu,
+  H1 angka mustahil, W1 minta fungsi
 
 **#88** · Working Skills · `pattern-01` drill 02 · 2026-11-17 · keyakinan: yakin
 - Skor **17 dari 20** (drill 01: 16 dari 19). Belum lulus, target 20/20

@@ -27,7 +27,10 @@ console.log("");
         i++;
     } while (i < 3);
 
-    const jawab = null;
+    // push 0, i jadi 1, cek 1 < 3 ya
+    // push 1, i jadi 2, cek 2 < 3 ya
+    // push 2, i jadi 3, cek 3 < 3 tidak
+    const jawab = [0, 1, 2];
 
     periksa("E1", jawab, deret, "array");
 }
@@ -42,7 +45,8 @@ console.log("");
         i++;
     } while (i < 5);
 
-    const jawab = null;
+    // i = 10, badan jalan sekali (jalan 1, i 11), cek 11 < 5 tidak
+    const jawab = 1;
 
     periksa("E2", jawab, jalan, "kali jalan");
 }
@@ -57,7 +61,9 @@ console.log("");
         i++;
     } while (i <= 4);
 
-    const jawab = null;
+    // 0+1, 1+2, 3+3, 6+4 = 10
+    // i mendarat tepat di 4, dan 4 <= 4 ya, jadi 4 putaran
+    const jawab = 10;
 
     periksa("E3", jawab, total, "total");
 }
@@ -67,7 +73,11 @@ console.log("=== MEDIUM ===");
 console.log("Cari dulu di mana masalahnya, lalu tulis hasilnya.");
 console.log("");
 
-// M1. Perubahan tidak ada, jadi kondisinya tidak pernah berubah.
+// M1. Kondisi salah sejak awal, tapi badan tetap jalan sekali.
+//
+// Catatan 2026-11-18: komentar lama menulis "kondisinya tidak pernah berubah",
+// itu SALAH. i = 0 dan kondisi i > 0 sudah false sejak awal, jadi loop berhenti
+// setelah satu putaran. Ini bukan infinite loop, ini sifat do...while.
 {
     let i = 0;
     let hitung = 0;
@@ -76,7 +86,10 @@ console.log("");
         hitung++;
     } while (i > 0);
 
-    const jawab = null;
+    // i = 0, kondisi 0 > 0 sudah false sejak awal
+    // tapi badan tetap jalan sekali -> hitung = 1
+    // BUKAN infinite loop, karena kondisinya false, bukan selalu true
+    const jawab = 1;
 
     periksa("M1", jawab, hitung, "kali jalan");
 }
@@ -91,7 +104,8 @@ console.log("");
         i++;
     } while (i < 0);
 
-    const jawab = null;
+    // total += 0 -> tetap 0, i jadi 1, cek 1 < 0 tidak
+    const jawab = 0;
 
     periksa("M2", jawab, total, "total");
 }
@@ -107,7 +121,10 @@ console.log("");
         if (total > 12) break;
     } while (i > 0);
 
-    const jawab = null;
+    // +5=5, +4=9, +3=12, cek 12 > 12 TIDAK -> lanjut
+    // +2=14, cek 14 > 12 YA -> break
+    // i mendarat tepat di total 12, dan 12 > 12 itu false
+    const jawab = 14;
 
     periksa("M3", jawab, total, "total");
 }
@@ -118,16 +135,22 @@ console.log("do...while digabung dengan ternary, modulus, dan kondisi ganda.");
 console.log("");
 
 // H1. Deret Collatz, berhenti saat angka jadi 1.
+//
+// Catatan 2026-11-18: angka asli 27 butuh 111 langkah, tidak mungkin dilacak
+// manual. Diganti 6 supaya bisa diverifikasi: 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+// Yang diuji tetap dua hal: membaca ternary, dan tahu kondisi mana yang menghentikan.
 {
-    let angka = 27;
+    let angka = 6;
     let langkah = 0;
 
     do {
         angka = angka % 2 === 0 ? angka / 2 : angka * 3 + 1;
         langkah++;
-    } while (angka !== 1 && langkah < 200);
+    } while (angka !== 1 && langkah < 50);
 
-    const jawab = null;
+    // 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+    // 8 putaran. Berhenti karena angka === 1, bukan karena langkah
+    const jawab = 8;
 
     periksa("H1", jawab, langkah, "langkah");
 }
@@ -142,7 +165,10 @@ console.log("");
         i++;
     } while (i <= 5 && total < 30);
 
-    const jawab = null;
+    // +3=3, +6=9, +9=18, +12=30
+    // putaran ke-4 tetap jalan, kondisi diperiksa SESUDAH badan
+    // 30 < 30 itu false -> berhenti. total = 30
+    const jawab = 30;
 
     periksa("H2", jawab, total, "total");
 }
@@ -152,42 +178,43 @@ console.log("=== WRITE ===");
 console.log("Tulis sendiri, tanpa contoh. Bagian paling bawah file ini.");
 console.log("");
 
-// W1. Tulis do...while yang mengisi array dengan angka 1, 4, 7, ...
-//     sampai nilainya >= n.
-//     Untuk n = 7 hasilnya [1, 4, 7].
-//     Untuk n = 8 hasilnya [1, 4, 7].
-//     Untuk n = 0 hasilnya [1]  <- minimal satu angka, itu sifat do...while.
-//     Untuk n = 13 hasilnya [1, 4, 7, 10, 13].
+// W1. Tulis do...while yang mengisi array dengan angka 2, 6, 10, 14, ...
+//     Mulai dari 2, naik 4, sampai nilainya >= n.
+//     Untuk n = 14 hasilnya [2, 6, 10, 14].
+//     Untuk n = 22 hasilnya [2, 6, 10, 14, 18, 22].
+//     Untuk n = 3 hasilnya [2].
+//     Untuk n = 0 hasilnya [2]  <- minimal satu angka, itu sifat do...while.
 //
-// Catatan 2026-11-17: versi asli soal ini meminta FUNGSI, padahal fungsi materi
-// minggu 2. Diganti jadi loop saja supaya sesuai README #42.
+// Catatan 2026-11-18: versi asli memakai angka 1 naik 3 dan meminta FUNGSI.
+// Fungsi materi minggu 2, jadi diganti loop. Angka diubah supaya tidak sama
+// dengan contoh di materi.
 
 {
-    const n = 7;
+    const n = 14;
     const hasil = [];
-    let i = 1;
+    let i = 2;
 
     do {
         hasil.push(i);
-        i += 3;
+        i += 4;
     } while (i <= n);
 
-    console.log("W1 hasil untuk n = 7: " + JSON.stringify(hasil));
+    console.log("W1 hasil untuk n = 14: " + JSON.stringify(hasil));
 
     const uji = [
-        [7, [1, 4, 7]],
-        [8, [1, 4, 7]],
-        [0, [1]],
-        [13, [1, 4, 7, 10, 13]],
+        [14, [2, 6, 10, 14]],
+        [22, [2, 6, 10, 14, 18, 22]],
+        [3, [2]],
+        [0, [2]],
     ];
     let lulus = 0;
 
     for (const [masuk, harap] of uji) {
-        let j = 1;
+        let j = 2;
         const keluar = [];
         do {
             keluar.push(j);
-            j += 3;
+            j += 4;
         } while (j <= masuk);
         if (JSON.stringify(keluar) === JSON.stringify(harap)) lulus++;
     }
@@ -199,49 +226,12 @@ console.log("");
     }
 }
 
-console.log("");
-console.log("=== VERIFY ===");
-console.log("Kode di bawah ditulis AI. Ada satu bug. Temukan dulu.");
-console.log("");
-
-// V1. AI menulis ini untuk "tampilkan menu minimal sekali".
-//
-//   let pilihan = "keluar";
-//
-//   while (pilihan !== "keluar") {
-//       console.log("menu tampil");
-//   }
-//
-// Yang ditanyakan:
-//   a) Berapa kali "menu tampil" tercetak? (satu nilai)
-//   b) Kenapa berbeda dari yang diminta?
-
-{
-    const jawabA = 0;
-    periksa("V1a menu tercetak", jawabA, 0, "kali");
-
-    // Alasan: while memeriksa kondisi SEBELUM badan. pilihan sudah "keluar",
-    // jadi kondisi langsung false dan badan tidak pernah jalan.
-    // Untuk "minimal sekali" harus do...while, bukan while.
-}
-
-console.log("");
-console.log("=== EXPLAIN ===");
-console.log("Tulis komentar review maksimal 3 kalimat.");
-console.log("");
-
-// E1. Tulis komentar review untuk kode ini.
-//
-//   let i = 1;
-//   let total = 0;
+// Jawaban pertamaku salah (2026-11-18):
 //
 //   do {
-//       if (i === 4) continue;
-//       total += i;
-//       i++;
-//   } while (i <= 6);
+//       hasil.push(i);
+//       i += 2;        // salah: naik 2, seharusnya 4
+//   } while (i <= n)   // salah: kurang titik koma
 //
-// Tiga hal wajib: apa rusak, kapan, bagaimana memperbaiki.
-// Tulis di Working Skills/Review/02_Komentar While.md bagian kedua.
-
-console.log("E1: tulis komentarmu di Working Skills/Review/02_Komentar While.md");
+// Strukturnya sudah benar: push dulu, lalu naikkan, lalu kondisi i <= n.
+// Dua kesalahan kecil: jumlah kenaikan, dan titik koma wajib di do...while.

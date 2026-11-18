@@ -15,13 +15,12 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 | posisi vs isi        | konsep  | 2026-11-15 | tunggu array   | 1              |
 | jenis bug 1 dan 5    | pola    | 2026-11-17 | 2026-11-19     | 5 ok, 1 kosong |
 | pattern drill 20/20  | blok    | 2026-11-17 | 2026-11-19     | 15/20          |
-| `do...while` gerbang | gerbang | 2026-11-17 | **2026-11-18** | 0 dari 6       |
 | nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19     | 0 dari 6       |
 | empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19     | 0 dari 4       |
 | array dasar          | materi  | 2026-11-17 | minggu 3       | belum          |
 | hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20     | belum          |
 
-**Yang paling mendesak:** `do...while` gerbang, jatuh tempo hari ini.
+**Yang paling mendesak:** pattern drill 20/20 dan jenis bug 1, jatuh tempo 19 Nov.
 
 ---
 
@@ -29,6 +28,7 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 | Item                             | Hasil | Tanggal |
 |----------------------------------|-------|---------|
+| `do...while` gerbang             | PASS  | 18 Nov  |
 | dead store panjang               | PASS  | 18 Nov  |
 | jumlah baris = jumlah putaran    | PASS  | 17 Nov  |
 | angka yang ditambahkan pada `+=` | PASS  | 15 Nov  |
