@@ -342,6 +342,15 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     "small" example. If the answer needs a concept from a later week, the question is wrong,
     not the answer.
 
+    Questions about bug types 1, 3, and 6 must state the code's intent. All three are graded by
+    comparing the result against what the code was supposed to do, so without a stated intent
+    the question has two valid answers.
+
+    Why: this happened four times. Drill 01 item 9 had no type at all. Drill 02 items 13 and 15
+    and drill 03 items 13 and 15 each had two defensible answers, and the learner was graded
+    wrong on the one the author privately meant. An ambiguous question teaches the learner that
+    the system is arbitrary.
+
     Why: on 2026-11-15 a re-check asked about `penjualan[i]`, which is week 3 array indexing,
     while the learner was in week 1. The answer was graded as a failure before the learner
     could possibly have known it. A question that cannot be answered teaches nothing except

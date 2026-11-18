@@ -158,6 +158,17 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-18** · READING · ke-1 · belum
+  - Salah: memeriksa "apakah ada yang rusak" padahal jenis 1 dinilai dengan "sesuai maksud"
+  - Konsep benar: jenis 1 tidak meninggalkan jejak. Tidak ada `undefined`, tidak ada error.
+    Yang salah cuma jumlah: maksud `1..5`, hasil `1,2,3,4`
+  - Bukti: drill 03 nomor 2 dan 10, dua-duanya dijawab 0
+
+- **2026-11-18** · READING · ke-1 · belum
+  - Salah: `hitung++` dengan `i += 4` dianggap jenis 2, padahal tidak ada `let` di loop
+  - Konsep benar: nama variabel menunjukkan maksud. `hitung` = hitung putaran, jadi benar
+  - Bukti: drill 03 nomor 19
+
 - **2026-11-17** · READING · ke-1 · belum
   - Salah: melihat `.length` lalu langsung memutuskan jenis 5, tanpa membaca tandanya
   - Konsep benar: yang menentukan `<=` atau `<`. `i < arr.length` dari 0 itu benar
