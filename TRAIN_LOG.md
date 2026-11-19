@@ -200,6 +200,51 @@ pemeriksaan baru, dan 1 alarm yang rusak. Itu sudah cukup untuk satu hari.
 
 ---
 
+## Ringkasan 2026-11-19
+
+| Item                          | Hasil                                          |
+|-------------------------------|------------------------------------------------|
+| Re-check alasan dipertahankan | **LUNAS** setelah 3 percobaan                  |
+| Nested loop per konsep        | lulus 4 dari 4                                 |
+| Pemeriksaan #31               | penjaga bahan soal di luar jadwal              |
+| Aturan #58                    | soal tidak boleh pakai array sebelum diajarkan |
+| Utang lunas                   | alasan dipertahankan                           |
+| Utang terbuka                 | 5, dua jatuh tempo                             |
+| Health check                  | 40/43 (93%)                                    |
+| Working Skills                | 2 dari 8                                       |
+
+**Kesalahan yang berhenti:** tiga pola learner yang muncul 3x+ sudah tidak berulang.
+
+**Kesalahan yang masih berulang di sistem:** bahan soal di luar jadwal (5x), soal tanpa
+maksud (4x), `--no-verify` tidak dicatat (~50x).
+
+---
+
+## Rencana 2026-11-20 — hari libur penuh
+
+| #   | Blok                            | Waktu  |
+|-----|---------------------------------|--------|
+| 1   | Re-check nested per konsep      | 10 mnt |
+| 2   | Nested EASY + MEDIUM            | 25 mnt |
+| 3   | Nested HARD + WRITE             | 30 mnt |
+| 4   | Nested VERIFY + EXPLAIN         | 25 mnt |
+| 5   | **`review-01`** — blok tersulit | 40 mnt |
+| 6   | Catat + commit                  | 10 mnt |
+
+Total 2 jam 20 menit dengan jeda.
+
+**Target yang benar:** nested enam level lulus, DAN `review-01` dikerjakan.
+Bukan "Day 4 selesai".
+
+**Kenapa `review-01` wajib masuk:** semua blok yang selesai sejauh ini adalah yang
+paling terstruktur. Yang tersisa termasuk semua blok tanpa jawaban tunggal — dan justru
+itu yang dibutuhkan untuk "melihat bug yang orang lain tidak lihat".
+
+**Batasan:** tidak ada aturan baru, tidak ada pemeriksaan baru. Audit 2026-11-19
+mencatat rasio aturan : konsep sudah tidak sehat.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
