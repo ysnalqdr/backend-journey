@@ -568,6 +568,16 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
+**#91** · re-check · alasan dipertahankan · 2026-11-19 · keyakinan: yakin
+- Utang sejak 2026-11-15, gagal sekali 2026-11-17. **LUNAS**
+- Percobaan yang gagal: menyebut letak dan perbaikan, tapi tidak menyebut akibat atau angka
+- Soal penentu: shadowing, `let total` di dalam loop
+- Jawaban yang lulus: dua variabel nama sama, yang luar tetap `0` karena tidak tersentuh,
+  perbaikan hapus `let`, hasil `10` seharusnya
+- **Syarat ke-4 (angka) adalah yang selalu kosong.** Begitu diisi, langsung lulus
+- Soal dengan array ditolak learner (aturan #58) dan diganti versi tanpa array
+- Pelanggaran aturan #42 kelima kalinya -> pemeriksaan #31 ditambahkan sebagai penjaga
+
 **#90** · Working Skills · `pattern-01` SELESAI · 2026-11-18 · keyakinan: yakin
 - Drill 04: **20 dari 20**. Blok pertama yang selesai setelah `reading-01`
 - Jenis 1 naik dari 0/2 (drill 03) ke **8/8** (drill 04)

@@ -9,16 +9,15 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 ## Terbuka
 
-| Item                 | Jenis   | Muncul     | Jatuh tempo    | Status   |
-|----------------------|---------|------------|----------------|----------|
-| alasan dipertahankan | konsep  | 2026-11-15 | **2026-11-19** | 1        |
-| posisi vs isi        | konsep  | 2026-11-15 | tunggu array   | 1        |
-| nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19     | 0 dari 6 |
-| empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19     | 0 dari 4 |
-| array dasar          | materi  | 2026-11-17 | minggu 3       | belum    |
-| hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20     | belum    |
+| Item                 | Jenis   | Muncul     | Jatuh tempo  | Status   |
+|----------------------|---------|------------|--------------|----------|
+| posisi vs isi        | konsep  | 2026-11-15 | tunggu array | 1        |
+| nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19   | 0 dari 6 |
+| empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19   | 0 dari 4 |
+| array dasar          | materi  | 2026-11-17 | minggu 3     | belum    |
+| hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20   | belum    |
 
-**Yang paling mendesak:** re-check alasan dipertahankan, jatuh tempo 19 Nov.
+**Yang paling mendesak:** nested loop gerbang dan empat EXPLAIN kosong, jatuh tempo 19 Nov.
 
 ---
 
@@ -26,6 +25,7 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 | Item                             | Hasil | Tanggal |
 |----------------------------------|-------|---------|
+| alasan dipertahankan             | PASS  | 19 Nov  |
 | pattern drill 20/20              | PASS  | 18 Nov  |
 | jenis bug 1 dan 5                | PASS  | 18 Nov  |
 | `do...while` gerbang             | PASS  | 18 Nov  |
@@ -127,7 +127,7 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Kunci: cari nama variabel dua kali, satu per satu
 - Diuji dengan: potongan 8+ baris dengan satu variabel terbuang
 
-**alasan yang bisa dipertahankan** · muncul 2026-11-15 → diuji 2026-11-17 · **GAGAL** · status 1
+**alasan yang bisa dipertahankan** · muncul 2026-11-15 → **PASS 2026-11-19** · status 3
 - Diuji: tulis komentar review untuk `for` dengan `i++` di dalam loop
 - Menyebut baris yang salah (benar) dan perbaikan (benar), tapi **tidak menyebut akibat**
 - "Kapan rusak" masih kabur: tidak ada angka, tidak ada kondisi
@@ -137,7 +137,9 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Diagnosis: **paham mekanismenya, belum bisa menuliskannya langsung.** Bukan gagal konsep
 - Yang kurang: **angka**. Versi kunci punya `12` vs `15`, versinya tidak
 - Aturan yang dibutuhkan: komentar wajib menyebut **akibat**, bukan cuma letak
-- Diulang 2026-11-19
+- **PASS 2026-11-19:** soal shadowing dijawab lengkap. Menyebut dua variabel nama sama,
+  kenapa yang luar tetap 0, perbaikan, dan dua angka (0 sekarang, 10 seharusnya)
+- Kunci keberhasilan: syarat ke-4 (angka) dipenuhi. Sebelumnya selalu kosong
 
 **posisi vs isi** · muncul 2026-11-15 → **DITUNDA** sampai array diajarkan · status 1
 - `i` itu posisi, `penjualan[i]` itu isi

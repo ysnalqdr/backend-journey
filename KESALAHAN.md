@@ -158,6 +158,12 @@ Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
     menghasilkan nilai hanya ekspresi, dan ternary adalah bentuk ekspresi dari `if/else`
   - Pulih 2026-11-12: diuji tanpa dipersempit, menjawab "if itu pernyataan bukan ekspresi"
 
+- **2026-11-19** · CONCEPT · ke-1 · sudah
+  - Salah: menulis "total akan selalu 0" untuk kode yang reset di dalam loop
+  - Konsep benar: hasilnya `40`, bukan `0`. Reset terjadi SEBELUM penjumlahan, jadi hasil
+    putaran terakhir selamat. Kalau reset SESUDAH penjumlahan, baru hasilnya `0`
+  - Pulih 2026-11-19: soal baru, menyebut `15` untuk hasil sekarang dan `30` seharusnya
+
 - **2026-11-18** · LOGIC · ke-1 · sudah
   - Salah: `i += 2` padahal beda antar angka 4; dan titik koma `do...while` hilang
   - Konsep benar: baca selisih antar angka contoh, bukan angka pertamanya. Titik koma
