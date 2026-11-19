@@ -307,3 +307,81 @@ Hasilnya bukan "Soundwave versi Java" tapi **"Soundwave v2"** — cerita intervi
 5. Mulai proyek baru sebelum Soundwave v2 deploy
 6. Menunggu "paham semua" baru melamar
 7. Menghitung kemajuan dari jumlah jam, bukan dari gerbang yang lulus
+
+---
+
+## 14. Rencana project portofolio
+
+Dibahas 3 Nov 2026. Bagian ini **tidak mengubah fase di §2** — hanya menetapkan
+project apa yang dikerjakan, di fase mana, dan apa bukti selesainya.
+
+### Dua workspace, jangan dicampur
+
+| | `Backend Journey` | Project (repo sendiri) |
+|---|---|---|
+| Tujuan | membentuk kemampuan | menghasilkan artefak |
+| Ukuran | gerbang harian (§4) | definisi selesai |
+| Kalau macet | ulangi, jangan maju | sederhanakan lingkup |
+| Protokol AI | §8, latihan tanpa AI | boleh, dengan verifikasi |
+| Boleh ditinggal | tidak | boleh, asal sudah deploy |
+
+Folder project **tidak dibuat sekarang**. Dibuat saat project-nya mulai.
+
+### Tiga project dan posisinya
+
+| # | Project | Kapan | Bukti selesai |
+|---|---|---|---|
+| 0 | Deploy API hasil Phase 1 | minggu 10–12 (Jan 2027) | 1 URL publik di README |
+| 1 | Soundwave v2 (port ke Spring) | Phase 3, minggu 25–32 | sudah diatur di §2 dan §10 |
+| 2 | Webhook Delivery Service (Spring + Go) | Phase 4, minggu 33–40 | angka load test + URL publik |
+
+**Project #0 bukan proyek baru.** API-nya sudah dibuat di minggu 8–11 (Express + SQL);
+yang ditambahkan hanya deploy. Ini tidak melanggar larangan §13 no. 5.
+
+Alasan #0 tidak boleh ditunda: lubang portofolio saat ini bukan "kurang project",
+tapi **belum ada satu pun yang bisa dicoba dari internet**. Biayanya 1–2 hari.
+
+### Project #2 — kenapa webhook, bukan aplikasi baru
+
+Kamu sudah jadi **penerima** webhook di Soundwave (verifikasi SHA512). Project ini
+membangun **sisi pengirimnya**: apa yang terjadi kalau 10.000 webhook dikirim dan
+separuh endpoint penerima mati.
+
+Yang dibuktikan, dan belum ada di portofolio mana pun:
+
+| Kemampuan | Bentuk nyata |
+|---|---|
+| Queue & worker | Go worker mengonsumsi dari Redis Streams |
+| Retry + backoff | gagal → 5 percobaan dengan jeda membesar → DLQ |
+| Idempotency | event sama dikirim 2× tidak menghasilkan 2 pengiriman |
+| Signature | HMAC-SHA256, penerima bisa verifikasi |
+| Observability | structured log + endpoint `/metrics` |
+| Bukti beban | k6: 1.000 event/detik, catat p95 dan error rate |
+
+Bentuk sistem: **Spring Boot API** (daftar endpoint, publish event, replay DLQ) →
+**queue** → **Go worker** (consume, tanda tangan, kirim, retry, DLQ).
+Java dan Go dalam satu sistem — bukan dua project terpisah.
+
+**Go masuk di tengah project, bukan di awal.** Minggu 33–35 Spring + queue dulu;
+Go worker ditambahkan minggu 36–38. Ini menggantikan "Go 4 minggu" di §2 dengan
+Go yang dipakai untuk sesuatu yang nyata.
+
+### Kalau waktu Phase 4 tidak cukup
+
+Potong berurutan dari bawah, jangan dibalik:
+
+1. Dashboard metrik → cukup endpoint `/metrics`
+2. Multi-tenant → satu tenant dulu
+3. Rate limiting per penerima
+
+**Jangan dipotong:** retry + backoff, DLQ, idempotency, HMAC. Empat itu inti
+ceritanya; tanpa itu project ini jadi CRUD biasa.
+
+### Definisi selesai Project #2
+
+- [ ] 1.000 event/detik publish, p95 < 50 ms
+- [ ] Endpoint penerima dimatikan → 5 percobaan backoff → masuk DLQ
+- [ ] Replay dari DLQ berhasil, tidak menggandakan pengiriman
+- [ ] Contoh kode verifikasi signature ada di README
+- [ ] `/metrics` bisa di-scrape
+- [ ] Punya URL publik
