@@ -9,18 +9,16 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 ## Terbuka
 
-| Item                 | Jenis   | Muncul     | Jatuh tempo    | Status         |
-|----------------------|---------|------------|----------------|----------------|
-| alasan dipertahankan | konsep  | 2026-11-15 | **2026-11-19** | 1              |
-| posisi vs isi        | konsep  | 2026-11-15 | tunggu array   | 1              |
-| jenis bug 1 dan 5    | pola    | 2026-11-17 | 2026-11-19     | 5 ok, 1 kosong |
-| pattern drill 20/20  | blok    | 2026-11-17 | 2026-11-19     | 15/20          |
-| nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19     | 0 dari 6       |
-| empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19     | 0 dari 4       |
-| array dasar          | materi  | 2026-11-17 | minggu 3       | belum          |
-| hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20     | belum          |
+| Item                 | Jenis   | Muncul     | Jatuh tempo    | Status   |
+|----------------------|---------|------------|----------------|----------|
+| alasan dipertahankan | konsep  | 2026-11-15 | **2026-11-19** | 1        |
+| posisi vs isi        | konsep  | 2026-11-15 | tunggu array   | 1        |
+| nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19     | 0 dari 6 |
+| empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19     | 0 dari 4 |
+| array dasar          | materi  | 2026-11-17 | minggu 3       | belum    |
+| hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20     | belum    |
 
-**Yang paling mendesak:** pattern drill 20/20 dan jenis bug 1, jatuh tempo 19 Nov.
+**Yang paling mendesak:** re-check alasan dipertahankan, jatuh tempo 19 Nov.
 
 ---
 
@@ -28,6 +26,8 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 | Item                             | Hasil | Tanggal |
 |----------------------------------|-------|---------|
+| pattern drill 20/20              | PASS  | 18 Nov  |
+| jenis bug 1 dan 5                | PASS  | 18 Nov  |
 | `do...while` gerbang             | PASS  | 18 Nov  |
 | dead store panjang               | PASS  | 18 Nov  |
 | jumlah baris = jumlah putaran    | PASS  | 17 Nov  |
@@ -114,12 +114,15 @@ Dua kesalahan ditemukan saat memeriksa explain back Day 3. Keduanya sudah diuji 
 - Struktur dipahami sebelum hitungannya benar. Teknik: tulis jumlah baris dulu
 - Jatuh tempo berikutnya: 2026-11-16
 
-**memisahkan jenis bug 1 dan 5** · muncul 2026-11-17 → jatuh tempo 2026-11-18 · status 1
+**memisahkan jenis bug 1 dan 5** · muncul 2026-11-17 → **PASS 2026-11-18** · status 3
 - Salah di nomor 13 dan 19: tidak bisa memisahkan off-by-one dari batas tidak diperiksa
 - Kunci: tanya "ada `[i]`?" — ada berarti 5, tidak ada berarti 1
 - Diuji dengan: 5 potongan campuran jenis 1 dan 5
+- **PASS 2026-11-18:** drill 04 dijawab 20/20. Jenis 1 8/8, jenis 5 4/4
+- Kunci perubahan: pertanyaan diganti dari "apakah ada yang rusak" jadi
+  "apakah hasilnya sesuai maksud"
 
-**menemukan dead store di kode panjang** · muncul 2026-11-17 → jatuh tempo 2026-11-18 · status 1
+**menemukan dead store di kode panjang** · muncul 2026-11-17 → **PASS 2026-11-18** · status 2
 - Nomor 6 (4 baris) benar, nomor 18 (8 baris) salah. Jenis sama
 - Kunci: cari nama variabel dua kali, satu per satu
 - Diuji dengan: potongan 8+ baris dengan satu variabel terbuang

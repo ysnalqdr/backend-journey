@@ -568,6 +568,15 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
 
+**#90** · Working Skills · `pattern-01` SELESAI · 2026-11-18 · keyakinan: yakin
+- Drill 04: **20 dari 20**. Blok pertama yang selesai setelah `reading-01`
+- Jenis 1 naik dari 0/2 (drill 03) ke **8/8** (drill 04)
+- Kunci perubahan: pertanyaannya diganti dari "apakah ada yang rusak" jadi
+  "apakah hasilnya sesuai maksud"
+- Jenis 5: 4/4. Jenis 7: 2/2. Jenis 2, 6: masing-masing 1/1
+- Perjalanan empat seri: 16/19, 17/20, 15/20, 20/20
+- Semua soal jenis 1, 3, 6 di seri ini menyebut maksud (aturan #24c)
+
 **#89** · `do...while` tuntas enam level · 2026-11-18 · keyakinan: yakin
 - Konsep A-D: A `10`, B `1` + alasan, C `4`, D `13` — semua benar
 - EASY: E1 `[0,1,2]`, E2 `1`, E3 `10` — tiga-tiganya benar, tanpa koreksi

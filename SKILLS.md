@@ -198,7 +198,7 @@ benar atau salah. Keduanya tidak bisa diuji dengan "tulis dari nol", jadi buktin
 | Menelusuri alur data               | 1      | 1      | `reading-02`               |
 | Menilai desain, bukan cuma sintaks | 0      | 1      | `review-01`                |
 | Memecah masalah jadi rencana       | 0      | 1      | `memecah-01`               |
-| Mengenali pola bug                 | 2      | 1      | `pattern-01`               |
+| Mengenali pola bug                 | 3      | 1      | `pattern-01`               |
 | Menjelaskan alasan (EXPLAIN)       | 0      | 1      | `review-02`                |
 
 ### Enam level gerbang
