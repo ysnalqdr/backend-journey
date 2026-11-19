@@ -835,6 +835,54 @@ if (dirty) {
     }
 }
 
+// ---------- 31. Soal tidak memakai bahan yang belum diajarkan ----------
+{
+    const skills = read("SKILLS.md");
+
+    // cari baris array di tabel konsep, ambil nomor minggunya
+    const barisArray = skills.split("\n").find((l) => /Array & method/.test(l));
+    let mingguArray = 99;
+    if (barisArray) {
+        const kolom = barisArray.split("|").map((c) => c.trim());
+        const angka = kolom.map((c) => parseInt(c, 10)).filter((n) => !isNaN(n));
+        if (angka.length) mingguArray = angka[0];
+    }
+
+    // kalau array sudah lewat (minggu sekarang >= minggu array), tidak perlu dicek
+    const mingguSekarang = 1;
+    if (mingguArray <= mingguSekarang) {
+        ok("bahan soal: array sudah diajarkan, tidak perlu dicek");
+    } else {
+        // file soal yang lahir di minggu 1
+        const kandidat = walk(path.join(ROOT, "Recheck"), ".js")
+            .concat(walk(path.join(ROOT, "Working Skills"), ".js"));
+
+        const pelanggar = [];
+        for (const f of kandidat) {
+            const src = fs.readFileSync(f, "utf8");
+            // hanya periksa file soal, bukan file hasil/kunci
+            if (!/soal|recheck|drill/i.test(path.basename(f))) continue;
+            // lewati file yang sudah diterima learner sebagai bahan di luar jadwal
+            if (src.includes("BAHAN-DILUAR-JADWAL")) continue;
+
+            const pakaiIndeks = /\[i\]/.test(src);
+            const pakaiLength = /\.length/.test(src);
+            const pakaiPush = /\.push\(/.test(src);
+
+            if (pakaiIndeks || pakaiLength || pakaiPush) {
+                pelanggar.push(rel(f));
+            }
+        }
+
+        if (pelanggar.length) {
+            pelanggar.forEach((f) => warn("soal pakai array padahal array minggu " +
+                mingguArray + ": " + f));
+        } else {
+            ok("bahan soal: tidak ada yang memakai array di luar jadwal");
+        }
+    }
+}
+
 // ---------- Laporan ----------
 const line = "=".repeat(64);
 console.log(line);

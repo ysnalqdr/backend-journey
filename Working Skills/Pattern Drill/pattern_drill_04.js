@@ -1,3 +1,7 @@
+// BAHAN-DILUAR-JADWAL: seri ini memakai array, materi minggu 3.
+// Dipakai di minggu 1 atas keputusan learner 2026-11-17: lanjutkan drill,
+// array dikejar saat waktunya. Penjaga #31 melewati file dengan penanda ini.
+
 // Pattern Drill 04 — fokus jenis 1 (off-by-one) vs jenis 5 (batas tidak diperiksa)
 //
 // Cara pakai:

@@ -466,6 +466,16 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     Why: the two are handled differently. A defect is fixed and closed. A misunderstanding
     needs re-teaching and repeated testing.
 
+58. **No question may use an array until arrays are taught.** Checked automatically by
+    `check_system.js` #31. A file may opt out only with a `BAHAN-DILUAR-JADWAL` header
+    recording the learner's explicit decision.
+
+    Why: this happened five times — W1 exercises asking for functions, a re-check using
+    `penjualan[i]`, and four pattern drill series built on arrays. Each time the learner
+    could still answer, so nothing broke loudly. That is exactly what makes it dangerous:
+    a question built on untaught material is graded as a failure of understanding when it
+    is a failure of the question.
+
 57. **Every day has a floor, and the floor counts as passing.** The floor is one block plus
     one commit, twenty minutes. On a day that cannot even manage that, one documentation
     commit in five minutes.
