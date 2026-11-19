@@ -51,7 +51,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
   `15_Nested.js`. Semua file diuji dengan jawaban benar: 9 dari 9 lulus masing-masing.
 - `for`: EASY dan MEDIUM lulus (Gate Log #67-#75). HARD dan WRITE belum dikerjakan.
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
-- nested loop: MEDIUM lulus (#77).
+- nested loop: per konsep lulus (#92). Gerbang enam level belum.
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
 - `while` **tuntas**: A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84), WRITE (#85).
 - `do...while` **tuntas**: A-D (#89), EASY/MEDIUM/HARD/WRITE (#89).
@@ -567,6 +567,18 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#92** · nested loop per konsep · 2026-11-19 · keyakinan: yakin
+- A (batas tetap): `12` — benar, tanpa koreksi
+- B (batas ikut `i`): `15` — benar, tahu tidak boleh dikali
+- C (`break` di dalam): `6` — benar
+- D (akumulasi `i * j`): `36` — benar setelah satu koreksi
+- Kesalahan D: memakai `i = 1` di semua baris, padahal `i` berubah `1, 2, 3`
+- Konsep yang diperbaiki: `break` itu perbuatan sekali, bukan keadaan yang menetap.
+  Di setiap putaran luar, loop dalam mulai dari `j = 1` lagi dan `break` terjadi lagi
+  kalau syaratnya terpenuhi
+- Catatan: jawaban learner soal `break` awalnya kubaca salah. Maksudnya benar,
+  kalimatku yang kurang jelas
 
 **#91** · re-check · alasan dipertahankan · 2026-11-19 · keyakinan: yakin
 - Utang sejak 2026-11-15, gagal sekali 2026-11-17. **LUNAS**
