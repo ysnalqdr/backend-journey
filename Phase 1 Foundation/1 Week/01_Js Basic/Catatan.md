@@ -51,7 +51,8 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
   `15_Nested.js`. Semua file diuji dengan jawaban benar: 9 dari 9 lulus masing-masing.
 - `for`: EASY dan MEDIUM lulus (Gate Log #67-#75). HARD dan WRITE belum dikerjakan.
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
-- nested loop: per konsep lulus (#92). Gerbang enam level belum.
+- nested loop **tuntas**: per konsep (#92), enam level (#93).
+- **Day 4 SELESAI**: for, while, do...while, nested semuanya tuntas.
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
 - `while` **tuntas**: A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84), WRITE (#85).
 - `do...while` **tuntas**: A-D (#89), EASY/MEDIUM/HARD/WRITE (#89).
@@ -567,6 +568,21 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#93** · nested loop TUNTAS enam level · 2026-11-20 · keyakinan: yakin
+- Re-check: `10` dan `3` — dua-duanya benar, termasuk `i` yang berubah di `i=2`
+- EASY: E1 `15`, E2 `[11,12,21,22]`, E3 `30` — tiga-tiganya benar
+  - E3 sempat dijawab `10`, karena mengira `total += i` jalan sekali per putaran luar
+  - Kunci: `total += i` ada di DALAM loop dalam, jadi `i` dijumlahkan sepanjang barisnya
+  - `i=3` bukan "3 sekali", tapi "3 tiga kali"
+- MEDIUM: M1 `["11","21","22","31","32","33"]`, M2 `15`, M3 `0` — benar
+  - M1 sempat kurang `"11"`; `1 > 1` itu false, jadi tidak break
+- HARD: H1 `22`, H2 enam elemen — benar
+- WRITE: **4 dari 4 kasus**, diselesaikan dengan satu kosong (`j <= i`)
+- VERIFY: `12`, dan tahu AI salah karena menjumlahkan batas (`3+4`) bukan mengalikan
+- EXPLAIN: kode benar, 9 elemen, `j` kembali ke `1` — lulus
+- **`for`, `while`, `do...while`, nested: SEMUA TUNTAS**
+- Kesalahanku: dua kali membaca jawaban learner terlalu sempit (`break`, `j kembali ke 1`)
 
 **#92** · nested loop per konsep · 2026-11-19 · keyakinan: yakin
 - A (batas tetap): `12` — benar, tanpa koreksi

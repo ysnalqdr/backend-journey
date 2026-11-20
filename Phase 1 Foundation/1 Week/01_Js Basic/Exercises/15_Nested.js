@@ -27,7 +27,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = 15;
 
     periksa("E1", jawab, hitung, "putaran");
 }
@@ -42,7 +42,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = [11, 12, 21, 22];
 
     periksa("E2", jawab, deret, "array");
 }
@@ -57,7 +57,10 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    // i dijumlahkan sebanyak panjang barisnya:
+    // i=1 -> +1 (1 kali), i=2 -> +2,+2 (2 kali), i=3 -> +3,+3,+3, i=4 -> +4 x4
+    // 1 + 4 + 9 + 16 = 30
+    const jawab = 30;
 
     periksa("E3", jawab, total, "total");
 }
@@ -78,7 +81,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = ["11", "21", "22", "31", "32", "33"];
 
     periksa("M1", jawab, deret, "array");
 }
@@ -94,7 +97,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = 15;
 
     periksa("M2", jawab, total, "total");
 }
@@ -109,7 +112,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = 0;
 
     periksa("M3", jawab, total, "total");
 }
@@ -130,7 +133,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = 22;
 
     periksa("H1", jawab, total, "total");
 }
@@ -145,7 +148,7 @@ console.log("");
         }
     }
 
-    const jawab = null;
+    const jawab = ["1-ganjil", "1-genap", "1-ganjil", "2-ganjil", "2-genap", "2-ganjil"];
 
     periksa("H2", jawab, deret, "array");
 }

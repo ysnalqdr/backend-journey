@@ -317,23 +317,23 @@ project apa yang dikerjakan, di fase mana, dan apa bukti selesainya.
 
 ### Dua workspace, jangan dicampur
 
-| | `Backend Journey` | Project (repo sendiri) |
-|---|---|---|
-| Tujuan | membentuk kemampuan | menghasilkan artefak |
-| Ukuran | gerbang harian (§4) | definisi selesai |
-| Kalau macet | ulangi, jangan maju | sederhanakan lingkup |
-| Protokol AI | §8, latihan tanpa AI | boleh, dengan verifikasi |
-| Boleh ditinggal | tidak | boleh, asal sudah deploy |
+|                 | `Backend Journey`    | Project (repo sendiri)   |
+|-----------------|----------------------|--------------------------|
+| Tujuan          | membentuk kemampuan  | menghasilkan artefak     |
+| Ukuran          | gerbang harian (§4)  | definisi selesai         |
+| Kalau macet     | ulangi, jangan maju  | sederhanakan lingkup     |
+| Protokol AI     | §8, latihan tanpa AI | boleh, dengan verifikasi |
+| Boleh ditinggal | tidak                | boleh, asal sudah deploy |
 
 Folder project **tidak dibuat sekarang**. Dibuat saat project-nya mulai.
 
 ### Tiga project dan posisinya
 
-| # | Project | Kapan | Bukti selesai |
-|---|---|---|---|
-| 0 | Deploy API hasil Phase 1 | minggu 10–12 (Jan 2027) | 1 URL publik di README |
-| 1 | Soundwave v2 (port ke Spring) | Phase 3, minggu 25–32 | sudah diatur di §2 dan §10 |
-| 2 | Webhook Delivery Service (Spring + Go) | Phase 4, minggu 33–40 | angka load test + URL publik |
+| #   | Project             | Kapan               | Bukti selesai          |
+|-----|---------------------|---------------------|------------------------|
+| 0   | Deploy API Phase 1  | minggu 10–12 (2027) | 1 URL publik di README |
+| 1   | Soundwave v2 Spring | Phase 3, minggu 25  | sudah diatur §2, §10   |
+| 2   | Webhook Delivery    | Phase 4, minggu 33  | load test + URL publik |
 
 **Project #0 bukan proyek baru.** API-nya sudah dibuat di minggu 8–11 (Express + SQL);
 yang ditambahkan hanya deploy. Ini tidak melanggar larangan §13 no. 5.
@@ -349,14 +349,14 @@ separuh endpoint penerima mati.
 
 Yang dibuktikan, dan belum ada di portofolio mana pun:
 
-| Kemampuan | Bentuk nyata |
-|---|---|
-| Queue & worker | Go worker mengonsumsi dari Redis Streams |
-| Retry + backoff | gagal → 5 percobaan dengan jeda membesar → DLQ |
-| Idempotency | event sama dikirim 2× tidak menghasilkan 2 pengiriman |
-| Signature | HMAC-SHA256, penerima bisa verifikasi |
-| Observability | structured log + endpoint `/metrics` |
-| Bukti beban | k6: 1.000 event/detik, catat p95 dan error rate |
+| Kemampuan       | Bentuk nyata                                          |
+|-----------------|-------------------------------------------------------|
+| Queue & worker  | Go worker mengonsumsi dari Redis Streams              |
+| Retry + backoff | gagal → 5 percobaan dengan jeda membesar → DLQ        |
+| Idempotency     | event sama dikirim 2× tidak menghasilkan 2 pengiriman |
+| Signature       | HMAC-SHA256, penerima bisa verifikasi                 |
+| Observability   | structured log + endpoint `/metrics`                  |
+| Bukti beban     | k6: 1.000 event/detik, catat p95 dan error rate       |
 
 Bentuk sistem: **Spring Boot API** (daftar endpoint, publish event, replay DLQ) →
 **queue** → **Go worker** (consume, tanda tangan, kirim, retry, DLQ).

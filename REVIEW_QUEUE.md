@@ -9,15 +9,14 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 ## Terbuka
 
-| Item                 | Jenis   | Muncul     | Jatuh tempo  | Status   |
-|----------------------|---------|------------|--------------|----------|
-| posisi vs isi        | konsep  | 2026-11-15 | tunggu array | 1        |
-| nested loop gerbang  | gerbang | 2026-11-17 | 2026-11-19   | 0 dari 6 |
-| empat EXPLAIN kosong | level   | 2026-11-17 | 2026-11-19   | 0 dari 4 |
-| array dasar          | materi  | 2026-11-17 | minggu 3     | belum    |
-| hook pre-commit      | sistem  | 2026-11-17 | 2026-11-20   | belum    |
+| Item                 | Jenis  | Muncul     | Jatuh tempo  | Status   |
+|----------------------|--------|------------|--------------|----------|
+| posisi vs isi        | konsep | 2026-11-15 | tunggu array | 1        |
+| empat EXPLAIN kosong | level  | 2026-11-17 | 2026-11-21   | 1 dari 4 |
+| array dasar          | materi | 2026-11-17 | minggu 3     | belum    |
+| hook pre-commit      | sistem | 2026-11-17 | 2026-11-20   | belum    |
 
-**Yang paling mendesak:** nested loop gerbang dan empat EXPLAIN kosong, jatuh tempo 19 Nov.
+**Yang paling mendesak:** empat file EXPLAIN, satu sudah terpakai (nested).
 
 ---
 
@@ -25,6 +24,7 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 | Item                             | Hasil | Tanggal |
 |----------------------------------|-------|---------|
+| nested loop gerbang              | PASS  | 20 Nov  |
 | alasan dipertahankan             | PASS  | 19 Nov  |
 | pattern drill 20/20              | PASS  | 18 Nov  |
 | jenis bug 1 dan 5                | PASS  | 18 Nov  |
