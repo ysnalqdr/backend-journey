@@ -138,11 +138,18 @@ console.log("  Setelah selesai, tandai:");
 console.log("    node working_skills.js --selesai " + utama.id);
 console.log("");
 
-// blok belum pernah dikerjakan sama sekali = peringatan keras
-const belumPernah = semua.filter((b) => b.status === "belum" && !b.terakhir).length;
-if (belumPernah === semua.length) {
-    console.log("  PERINGATAN: tidak ada satu pun blok Working Skills yang pernah dikerjakan.");
-    console.log("  Gerbang harian melatih mengingat konsep. Ini melatih yang diminta di kerja.");
+// aturan 41: setiap sesi wajib satu blok Working Skills.
+// Hook pre-commit memakai exit 1 untuk menolak commit, jadi blok yang belum
+// dikerjakan sesi ini harus membuat skrip ini keluar dengan kode 1.
+const hariIni = new Date().toISOString().slice(0, 10);
+const dikerjakanHariIni = semua.filter((b) => b.terakhir === hariIni).length;
+
+if (dikerjakanHariIni === 0) {
+    console.log("  BELUM ADA blok Working Skills yang dikerjakan hari ini.");
+    console.log("  Aturan #41: setiap sesi wajib satu blok.");
+    console.log("");
+    console.log("  Kerjakan: " + utama.id + "  " + utama.nama);
+    console.log("  Lalu tandai: node working_skills.js --selesai " + utama.id);
     console.log("");
     process.exit(1);
 }

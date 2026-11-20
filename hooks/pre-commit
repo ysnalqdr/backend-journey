@@ -1,0 +1,37 @@
+#!/bin/sh
+# pre-commit — menolak commit kalau belum ada satu pun blok Working Skills dikerjakan.
+#
+# Aturan 41: setiap sesi wajib satu blok Working Skills.
+# Hook ini menjaga saat belajar tanpa chat, ketika tidak ada yang mengingatkan.
+#
+# Kalau perlu commit mendesak tanpa mengerjakan blok, pakai:
+#   git commit --no-verify -m "..."
+# Tapi setiap kali dipakai, tulis alasannya di TRAIN_LOG.md.
+
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+if [ ! -f "working_skills.js" ]; then
+    exit 0
+fi
+
+if command -v node >/dev/null 2>&1; then
+    node working_skills.js >/dev/null 2>&1
+    status=$?
+
+    if [ "$status" -eq 1 ]; then
+        echo ""
+        echo "COMMIT DITOLAK: belum ada satu pun blok Working Skills yang dikerjakan."
+        echo ""
+        node working_skills.js | sed -n '1,20p'
+        echo ""
+        echo "Kerjakan satu blok dulu, lalu tandai:"
+        echo "  node working_skills.js --selesai <id>"
+        echo ""
+        echo "Untuk memaksa: git commit --no-verify -m \"...\""
+        echo "Sertakan alasannya di TRAIN_LOG.md."
+        echo ""
+        exit 1
+    fi
+fi
+
+exit 0

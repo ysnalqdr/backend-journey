@@ -680,3 +680,14 @@ A running list of things I do not want to forget.
 - The first line of an error shows the file and line number
 - Everything starting with `at Module...` is internal Node.js, ignore it
 - When an error happens, JavaScript stops and the rest of the file never runs
+
+59. **Hooks live in the repo, and one script installs them.** The folder `.git/` is never
+    committed, so a hook that only lives in `.git/hooks/` disappears on a fresh clone and
+    nobody notices. Hooks are kept in `hooks/`, and `sh install_hooks.sh` copies them into
+    `.git/hooks/`. After cloning, run the installer before the first commit.
+
+60. **The pre-commit hook is verified, not assumed.** On 2026-11-20 the hook was found dead:
+    `working_skills.js` always exited `0` because its guard only fired when *no* block had
+    ever been done. It had been silent since the first block was completed. A hook that
+    never rejects anything is worse than no hook, because it looks like protection.
+
