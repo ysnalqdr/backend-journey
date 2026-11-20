@@ -52,9 +52,9 @@
         "Menulis komentar review",
         "Menilai desain, bukan cuma sintaks"
       ],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "5 bug ditanam. Wajib pakai label blocking dan nit."
+      "status": "sedang",
+      "terakhir": "2026-11-20",
+      "catatan": "Sedang dikerjakan 2026-11-20. Lapisan Design LULUS: D1 diskonPersen ditimpa (HEMAT+member bayar 240000, seharusnya 210000), D2 promo selain HEMAT tidak dikenali (bayar 300000, tanpa error dan tanpa log). Satu false positive di awal (console.log gratis) lalu ditinggalkan. Sisa: Functionality 1 temuan, Naming 2 temuan."
     },
     {
       "id": "review-02",

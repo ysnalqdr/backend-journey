@@ -12,24 +12,22 @@ if (!sudahReview) {
     console.log("Baru ubah sudahReview jadi true.");
 } else {
 
-    const pesanan = {
-        total: 300000,
-        kodePromo: "HEMAT",
-        member: false
-    };
+    const totalPesanan = 300000;
+    const kodePromo = "HEMAT";
+    const member = false;
 
     let diskonPersen = 0;
 
-    if (pesanan.kodePromo === "HEMAT") {
+    if (kodePromo === "HEMAT") {
         diskonPersen = 10;
     }
 
-    if (pesanan.member) {
+    if (member) {
         diskonPersen = 20;
     }
 
-    const potongan = pesanan.total * diskonPersen / 100;
-    const hargaAkhir = pesanan.total - potongan;
+    const potongan = totalPesanan * diskonPersen / 100;
+    const hargaAkhir = totalPesanan - potongan;
 
     if (hargaAkhir < 0) {
         console.log("gratis");

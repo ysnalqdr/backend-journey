@@ -245,6 +245,43 @@ mencatat rasio aturan : konsep sudah tidak sehat.
 
 ---
 
+## Ringkasan 2026-11-20
+
+| Item                   | Hasil                                       |
+|------------------------|---------------------------------------------|
+| Nested loop enam level | **TUNTAS**                                  |
+| Day 4                  | **SELESAI** (for, while, do-while, nested)  |
+| Hook pre-commit        | **ditemukan mati**, diperbaiki              |
+| Aturan #59, #60        | hook di repo + installer + verifikasi       |
+| `review-01`            | Design lulus, Functionality dan Naming sisa |
+| Health check           | 39/41 (95%)                                 |
+
+**Bug sistem yang ditemukan hari ini:** `working_skills.js` selalu exit 0 karena
+penjaganya hanya menyala kalau BELUM ADA satu pun blok dikerjakan. Hook-nya mati sejak
+blok pertama selesai. Hook yang tidak pernah menolak lebih buruk daripada tidak ada hook,
+karena terlihat seperti perlindungan.
+
+**Utang dilunasi:** hook pre-commit.
+
+**Sisa utang:** empat file EXPLAIN (1 dari 4), posisi vs isi dan array dasar (minggu 3).
+
+---
+
+## Rencana 2026-11-21
+
+| #   | Blok                                             | Waktu  |
+|-----|--------------------------------------------------|--------|
+| 1   | Re-check nested (jeda 1 hari)                    | 10 mnt |
+| 2   | `review-01` Functionality                        | 15 mnt |
+| 3   | `review-01` Naming                               | 15 mnt |
+| 4   | Jalankan `review_01.js` untuk membuktikan temuan | 5 mnt  |
+| 5   | Tandai `review-01` selesai, commit               | 10 mnt |
+| 6   | Day 5 — materi fungsi                            | 40 mnt |
+
+Total sekitar 1 jam 35 menit.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**

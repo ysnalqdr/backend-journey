@@ -17,6 +17,10 @@
 
 ## Konteks
 
+Catatan: soal ini semula memakai objek (`pesanan.total`), materi minggu 4.
+Diganti jadi variabel biasa pada 2026-11-20 supaya sesuai aturan #58.
+Kelima bug tidak berubah.
+
 Kode ini menghitung harga akhir pesanan tiket. Ada dua sumber diskon: kode promo dan status member.
 
 Kode ini sudah berjalan di produksi dua minggu. Tidak ada laporan bug.
@@ -26,24 +30,22 @@ Kode ini sudah berjalan di produksi dua minggu. Tidak ada laporan bug.
 ## Kode
 
 ```javascript
-const pesanan = {
-    total: 300000,
-    kodePromo: "HEMAT",
-    member: false
-};
+const totalPesanan = 300000;
+const kodePromo = "HEMAT";
+const member = false;
 
 let diskonPersen = 0;
 
-if (pesanan.kodePromo === "HEMAT") {
+if (kodePromo === "HEMAT") {
     diskonPersen = 10;
 }
 
-if (pesanan.member) {
+if (member) {
     diskonPersen = 20;
 }
 
-const potongan = pesanan.total * diskonPersen / 100;
-const hargaAkhir = pesanan.total - potongan;
+const potongan = totalPesanan * diskonPersen / 100;
+const hargaAkhir = totalPesanan - potongan;
 
 if (hargaAkhir < 0) {
     console.log("gratis");

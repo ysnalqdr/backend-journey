@@ -9,11 +9,11 @@ Jangan dibuka sebelum menulis komentar review.
 ### D1 — `[blocking]` Dua sumber diskon saling menimpa, bukan digabung
 
 ```javascript
-if (pesanan.kodePromo === "HEMAT") {
+if (kodePromo === "HEMAT") {
     diskonPersen = 10;
 }
 
-if (pesanan.member) {
+if (member) {
     diskonPersen = 20;      // ← MENIMPA 10
 }
 ```
@@ -71,11 +71,11 @@ Pengecekan `hargaAkhir < 0` menutupi gejala, bukan mencegah penyebab.
 
 ### N1 — `[nit]` `hargaAkhir` vs `potongan` vs `total`
 
-Objeknya bernama `pesanan.total`, tapi hasil akhirnya `hargaAkhir`. Dua istilah untuk hal yang mirip: `total` dan `hargaAkhir`.
+Variabelnya bernama `totalPesanan`, tapi hasil akhirnya `hargaAkhir`. Dua istilah untuk hal yang mirip: `total` dan `hargaAkhir`.
 
 **Kenapa nit:** tidak menyebabkan bug, tapi membaca kode ini butuh satu detik ekstra untuk memastikan `total` dan `hargaAkhir` bukan hal yang sama.
 
-Usulan: `pesanan.subtotal` dan `totalBayar`.
+Usulan: `subtotal` dan `totalBayar`.
 
 ### N2 — `[nit]` `diskonPersen` sebenarnya menyimpan **persen**, bukan rupiah — nama sudah benar, tapi `potongan` menyimpan rupiah tanpa penanda
 
