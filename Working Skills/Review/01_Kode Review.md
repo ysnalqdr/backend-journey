@@ -92,6 +92,36 @@ Alasan: <kenapa>
 
 ---
 
+## Komentarku
+
+> **[blocking] baris 11-13** — `diskonPersen` ditimpa. HEMAT + member bayar 240000,
+> sama dengan member saja, jadi kode promo HEMAT tidak berguna. Seharusnya 210000
+> kalau dua diskon ditambahkan. Kode harus memilih aturan (ditambah, diambil terbesar,
+> atau tidak digabung); sekarang hanya kebetulan mengambil yang terakhir ditulis.
+>
+> **[blocking] baris 7-9** — promo selain `"HEMAT"` tidak dikenali, `diskonPersen`
+> tetap 0 dan pembeli bayar penuh 300000. Tidak ada error, tidak ada log, jadi tidak
+> ada yang tahu promo itu gagal.
+>
+> **[blocking] baris 15** — `diskonPersen` tidak dibatasi 0-100. Kalau berisi 150,
+> `potongan` jadi 450000, `hargaAkhir` jadi -150000, lalu tercetak `gratis` —
+> data rusak berubah jadi pesanan gratis tanpa satu pun error.
+>
+> **[nit] baris 15** — `potongan` tidak menyebut satuannya. `diskonPersen` jelas
+> memakai persen, `potongan` bisa rupiah atau persen. Usulan: `potonganRupiah`.
+
+Dikerjakan 2026-11-21.
+
+**False positive:** sempat menandai `console.log("gratis")` dan mengusulkan ganti nama
+`totalPesanan`. Keduanya sudah dinyatakan bukan masalah di soal. Yang pertama
+diperbaiki sendiri; yang kedua tetap terjadi.
+
+**Catatan cacat soal:** kunci N1 menyebut `totalPesanan` vs `hargaAkhir` sebagai masalah,
+padahal daftar bukan-masalah menyebut `totalPesanan` sudah jelas. Dua pernyataan itu
+bertentangan.
+
+---
+
 ## Setelah menulis komentar
 
 1. Ubah `sudahReview` jadi `true`
