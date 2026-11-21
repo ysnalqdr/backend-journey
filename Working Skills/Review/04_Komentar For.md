@@ -51,7 +51,13 @@ Tulis komentar review. Maksimal 3 kalimat. Wajib menyebut:
 
 ## Komentarku
 
-> BELUM DIJAWAB.
+> Kode ini menghitung `i * 5` di setiap putaran lalu mengakumulasikannya ke `total`,
+> jadi hasil akhirnya `5 + 10 + 15` = **30**.
+> `total` harus dideklarasikan di luar loop karena kalau ditulis di dalam, variabelnya
+> dibuat baru setiap putaran sehingga nilai putaran sebelumnya ter-reset dan hanya
+> putaran terakhir yang tersisa.
+
+Dijawab 2026-11-21.
 
 
 ---
