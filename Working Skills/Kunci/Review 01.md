@@ -69,13 +69,23 @@ Pengecekan `hargaAkhir < 0` menutupi gejala, bukan mencegah penyebab.
 
 ## Naming (2 temuan)
 
-### N1 — `[nit]` `hargaAkhir` vs `potongan` vs `total`
+### N1 — `[nit]` `member` adalah boolean, tapi namanya seperti kata benda
 
-Variabelnya bernama `totalPesanan`, tapi hasil akhirnya `hargaAkhir`. Dua istilah untuk hal yang mirip: `total` dan `hargaAkhir`.
+```javascript
+const member = false;
 
-**Kenapa nit:** tidak menyebabkan bug, tapi membaca kode ini butuh satu detik ekstra untuk memastikan `total` dan `hargaAkhir` bukan hal yang sama.
+if (member) {
+    diskonPersen = 20;
+}
+```
 
-Usulan: `subtotal` dan `totalBayar`.
+`member` menyimpan `true`/`false`, tapi namanya tidak memberi tahu itu. Membaca `if (member)` menimbulkan pertanyaan: member apa? Objeknya mana?
+
+**Kenapa nit:** tidak menyebabkan bug. Tapi nama boolean sebaiknya terbaca sebagai pertanyaan ya/tidak.
+
+Usulan: `adalahMember` atau `isMember`, sehingga `if (isMember)` terbaca "kalau dia member".
+
+**Catatan:** `totalPesanan` **bukan** temuan. Nama itu sudah jelas dan tidak boleh ditandai.
 
 ### N2 — `[nit]` `diskonPersen` sebenarnya menyimpan **persen**, bukan rupiah — nama sudah benar, tapi `potongan` menyimpan rupiah tanpa penanda
 

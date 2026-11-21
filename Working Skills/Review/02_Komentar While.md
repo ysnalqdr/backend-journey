@@ -68,7 +68,28 @@ Tulis komentar review-mu di bawah ini. Maksimal 3 kalimat.
 
 ## Komentarku
 
->
+> `continue` di baris `if (i === 5)` melompat ke atas sebelum `i++` sempat jalan, jadi
+> saat `i` mencapai 5 nilainya tidak pernah bertambah dan loop berputar selamanya di 5.
+> Perbaikannya: tambahkan `i++` di dalam `if` sebelum `continue`, dan bungkus dengan
+> kurung kurawal supaya `continue` tidak jalan di putaran lain.
+
+Dijawab 2026-11-21.
+
+**Catatan:** perbaikan pertama yang ditulis learner membungkus `if` tanpa `{ }`, sehingga
+`continue` jalan di setiap putaran dan loop berhenti di `i = 1`, bukan `5`. Blok `{ }`
+sesudah `while` juga bukan badan loop. Yang benar:
+
+```javascript
+while (i <= 10) {
+    if (i === 5) {
+        i++;
+        continue;
+    }
+    total += i;
+    i++;
+}
+```
+
 
 ---
 

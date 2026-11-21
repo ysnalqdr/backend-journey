@@ -68,7 +68,8 @@ if (hargaAkhir < 0) {
 
 **Naming**
 - Jumlah: 2
-- Petunjuk: dua nama yang menyesatkan atau tidak konsisten
+- Petunjuk: (1) satu variabel menyimpan `true`/`false`, tapi namanya tidak memberi tahu itu
+  (2) satu nama tidak menyebut satuannya, padahal ada dua satuan berbeda di kode ini
 
 
 **Yang BUKAN masalah** — jangan ditandai, nanti dihitung salah:
@@ -116,9 +117,10 @@ Dikerjakan 2026-11-21.
 `totalPesanan`. Keduanya sudah dinyatakan bukan masalah di soal. Yang pertama
 diperbaiki sendiri; yang kedua tetap terjadi.
 
-**Catatan cacat soal:** kunci N1 menyebut `totalPesanan` vs `hargaAkhir` sebagai masalah,
-padahal daftar bukan-masalah menyebut `totalPesanan` sudah jelas. Dua pernyataan itu
-bertentangan.
+**Cacat soal yang ditemukan 2026-11-21, sudah diperbaiki:** kunci N1 semula menyebut
+`totalPesanan` vs `hargaAkhir` sebagai masalah, padahal daftar bukan-masalah menyebut
+`totalPesanan` sudah jelas. N1 diganti jadi `member` yang boolean tapi dinamai kata benda.
+Tidak ada lagi yang bertentangan.
 
 ---
 
