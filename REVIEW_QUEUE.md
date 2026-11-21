@@ -12,7 +12,8 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 | Item                 | Jenis  | Muncul     | Jatuh tempo  | Status   |
 |----------------------|--------|------------|--------------|----------|
 | posisi vs isi        | konsep | 2026-11-15 | tunggu array | 1        |
-| empat EXPLAIN kosong | level  | 2026-11-17 | 2026-11-21   | 1 dari 4 |
+| empat EXPLAIN kosong | level  | 2026-11-17 | 2026-11-24   | 2 dari 4 |
+| cacat soal review-01 | soal   | 2026-11-21 | 2026-11-24   | N1 lawan bukan-masalah |
 | array dasar          | materi | 2026-11-17 | minggu 3     | belum    |
 
 **Yang paling mendesak:** empat file EXPLAIN, satu sudah terpakai (nested).

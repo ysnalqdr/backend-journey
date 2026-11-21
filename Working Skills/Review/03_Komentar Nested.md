@@ -67,7 +67,12 @@ Tulis komentar review. Maksimal 3 kalimat. Wajib menyebut:
 
 ## Komentarku
 
->
+> Kode ini benar, tidak ada bug. Dia mencetak semua pasangan `i` dan `j` sebagai teks:
+> `"1-1" "1-2" "1-3" "2-1" "2-2" "2-3" "3-1" "3-2" "3-3"`, jadi total isi `hasil` ada 9.
+> Saat `i` naik ke 2, `j` kembali menghitung dari `j1` lalu `j2` dan seterusnya, karena
+> `let j = 1` ditulis di dalam loop luar sehingga `j` dibuat baru setiap putaran.
+
+Dijawab 2026-11-20, dicatat ke file 2026-11-21.
 
 ---
 

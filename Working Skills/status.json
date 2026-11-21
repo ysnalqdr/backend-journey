@@ -52,9 +52,9 @@
         "Menulis komentar review",
         "Menilai desain, bukan cuma sintaks"
       ],
-      "status": "sedang",
-      "terakhir": "2026-11-20",
-      "catatan": "Sedang dikerjakan 2026-11-20. Lapisan Design LULUS: D1 diskonPersen ditimpa (HEMAT+member bayar 240000, seharusnya 210000), D2 promo selain HEMAT tidak dikenali (bayar 300000, tanpa error dan tanpa log). Satu false positive di awal (console.log gratis) lalu ditinggalkan. Sisa: Functionality 1 temuan, Naming 2 temuan."
+      "status": "selesai",
+      "terakhir": "2026-11-21",
+      "catatan": "Selesai 2026-11-21. D1 diskonPersen ditimpa (240000 vs 210000), D2 promo selain HEMAT tidak dikenali (300000, tanpa error/log), F1 diskonPersen tidak dibatasi (150 -> tercetak 'gratis', bukan -150000), N2 potongan tanpa satuan. Satu false positive: mengusulkan ganti nama totalPesanan padahal sudah dinyatakan bukan masalah. Cacat soal: kunci N1 bertentangan dengan daftar bukan-masalah."
     },
     {
       "id": "review-02",
