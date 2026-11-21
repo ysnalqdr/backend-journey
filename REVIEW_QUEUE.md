@@ -14,8 +14,8 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 | posisi vs isi | konsep | 2026-11-15 | tunggu array | 1      |
 | array dasar   | materi | 2026-11-17 | minggu 3     | belum  |
 
-**Yang paling mendesak:** empat file EXPLAIN, satu sudah terpakai (nested).
-Dua sisanya menunggu array (minggu 3), tidak bisa dilunasi sekarang.
+**Yang tersisa hanya dua, dan dua-duanya menunggu materi minggu 3.** Tidak ada utang
+yang bisa dilunasi sekarang.
 
 ---
 
