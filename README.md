@@ -511,6 +511,10 @@ Working Skills/
   Latihan Memecah Masalah.md
   status.json
 Recheck/
+Audit/
+  YYYY-MM-DD.md
+Rencana/
+  YYYY-MM-DD.md
 check_system.js
 working_skills.js
 BUG_TAXONOMY.md

@@ -240,7 +240,7 @@ Bukan "Day 4 selesai".
 paling terstruktur. Yang tersisa termasuk semua blok tanpa jawaban tunggal — dan justru
 itu yang dibutuhkan untuk "melihat bug yang orang lain tidak lihat".
 
-**Batasan:** tidak ada aturan baru, tidak ada pemeriksaan baru. Audit 2026-11-19
+**Batasan:** tidak ada aturan baru, tidak ada pemeriksaan baru. `Audit/2026-11-19.md`
 mencatat rasio aturan : konsep sudah tidak sehat.
 
 ---
@@ -298,7 +298,7 @@ Kalau waktu cuma 40 menit: poin 1 dan 2 saja.
 
 **Yang tidak dikerjakan:** `while`, `do...while`, `15_Nested` HARD, dan semua perubahan sistem.
 
-**Audit 2026-11-14, jarak ke tujuan:**
+**`Audit/2026-11-14.md`, jarak ke tujuan:**
 
 | Yang diminta          | Yang dilatih sekarang        | Jarak           |
 |-----------------------|------------------------------|-----------------|
