@@ -38,9 +38,9 @@
         "Membaca kode asing",
         "Menelusuri alur data"
       ],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "Disiapkan 2026-11-14. Jembatan ke loop."
+      "status": "selesai",
+      "terakhir": "2026-11-22",
+      "catatan": "Selesai 2026-11-22. Awal 57%, di bawah batas 70%. Uji ulang terarah pada konsep nomor 3 (sebuah nilai hanya mempengaruhi baris yang memakainya) menjawab tepat -> 74%. Yang dikuasai: telusur break dan continue, empat baris output. Yang masih rapuh: const dikira bisa berubah; catatan++ di dalam if dikira jalan tiap putaran."
     },
     {
       "id": "review-01",
