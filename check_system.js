@@ -854,22 +854,26 @@ if (dirty) {
         ok("bahan soal: array sudah diajarkan, tidak perlu dicek");
     } else {
         // file soal yang lahir di minggu 1
+        // Pattern Drill dikecualikan: isinya potongan kode sebagai TEKS soal
+        // (di dalam template literal), bukan kode yang dijalankan learner.
         const kandidat = walk(path.join(ROOT, "Recheck"), ".js")
-            .concat(walk(path.join(ROOT, "Working Skills"), ".js"));
+            .concat(walk(path.join(ROOT, "Working Skills"), ".js"))
+            .filter((f) => !rel(f).includes("Pattern Drill"));
 
         const pelanggar = [];
         for (const f of kandidat) {
             const src = fs.readFileSync(f, "utf8");
             // hanya periksa file soal, bukan file hasil/kunci
-            if (!/soal|recheck|drill/i.test(path.basename(f))) continue;
+            if (!/soal|recheck|drill|reading|review|debug/i.test(path.basename(f))) continue;
             // lewati file yang sudah diterima learner sebagai bahan di luar jadwal
             if (src.includes("BAHAN-DILUAR-JADWAL")) continue;
 
             const pakaiIndeks = /\[i\]/.test(src);
             const pakaiLength = /\.length/.test(src);
             const pakaiPush = /\.push\(/.test(src);
+            const pakaiArray = /=\s*\[/.test(src);
 
-            if (pakaiIndeks || pakaiLength || pakaiPush) {
+            if (pakaiIndeks || pakaiLength || pakaiPush || pakaiArray) {
                 pelanggar.push(rel(f));
             }
         }

@@ -19,9 +19,9 @@ File JS punya penjaga: kalau `sudahMenjawab` masih `false`, ia hanya mencetak ST
 
 ## Konteks
 
-Gudang punya stok 10. Setiap hari ada permintaan yang berbeda. Kalau stok tidak cukup,
-yang dilayani hanya sebisanya. Kode ini mencatat berapa total yang terlayani dan kapan
-stok habis.
+Gudang punya stok 10. Setiap hari ada permintaan yang berbeda: hari 1 minta 3,
+hari 2 minta 4, dan seterusnya naik satu. Kalau stok tidak cukup, yang dilayani
+hanya sebisanya. Kode ini mencatat berapa total yang terlayani dan kapan stok habis.
 
 ---
 
@@ -29,17 +29,18 @@ stok habis.
 
 ### 1. Apa yang masuk ke kode ini?
 
-> Sebutkan tipe tiap nilai: `stokAwal`, `permintaanHarian`, `batasKritis`.
+> Sebutkan tipe tiap nilai: `stokAwal`, `batasKritis`, `minta`.
 > Mana yang berubah selama program jalan, mana yang tetap?
 
 ### 2. Apa yang keluar?
 
-> Ada empat baris yang dicetak di akhir (tiga `console.log` terakhir, plus satu peringatan
-> di tengah). Sebutkan isinya. Kalau kamu yakin hanya tiga baris, jelaskan kenapa.
+> Ada empat baris yang dicetak. Tiga `console.log` terakhir, plus satu peringatan
+> di tengah. Sebutkan isinya, dan sebutkan **hari ke berapa** peringatan itu muncul.
 
-### 3. Kalau `permintaanHarian` diubah jadi `[1, 1, 1, 1, 1]`, apa yang berubah?
+### 3. Kalau `batasKritis` diubah dari 4 jadi 2, apa yang berubah?
 
-> Sebutkan nilai `stok akhir`, `total terlayani`, dan `hari kehabisan`.
+> Sebutkan nilai `stok akhir`, `total terlayani`, `hari kehabisan`,
+> dan apa yang terjadi pada peringatan "stok menipis".
 
 ### 4. Baris mana yang paling rapuh kalau syarat berubah?
 
@@ -49,8 +50,8 @@ stok habis.
 
 ### 5. Apa yang akan kamu ganti namanya, dan kenapa?
 
-> Ada satu nama yang menjelaskan **satuan** tapi tidak menjelaskan **maksud**. Sebutkan,
-> dan usulkan nama penggantinya.
+> Ada satu nama yang menjelaskan **jenis** tapi tidak menjelaskan **isi**-nya.
+> Sebutkan, dan usulkan nama penggantinya.
 
 ---
 
@@ -68,6 +69,6 @@ stok habis.
 |--------------------------------------------------|------------|
 | membaca tipe dan peran variabel                  | 1          |
 | melacak akumulasi dan pencetakan bersyarat       | 2          |
-| memprediksi dampak perubahan data                | 3          |
+| memprediksi dampak perubahan nilai               | 3          |
 | membedakan `break` dan `continue` dari posisinya | 4          |
 | menilai kualitas nama                            | 5          |

@@ -18,15 +18,14 @@ if (!sudahMenjawab) {
     // kode yang harus dibaca
 
     const stokAwal = 10;
-    const permintaanHarian = [3, 4, 2, 5, 1];
-    const batasKritis = 3;
+    const batasKritis = 4;
 
     let stok = stokAwal;
     let hariKehabisan = 0;
     let totalTerlayani = 0;
 
-    for (let i = 0; i < permintaanHarian.length; i++) {
-        const minta = permintaanHarian[i];
+    for (let i = 1; i <= 5; i++) {
+        const minta = i + 2;
 
         if (stok <= 0) {
             break;
@@ -35,7 +34,7 @@ if (!sudahMenjawab) {
         if (minta > stok) {
             totalTerlayani += stok;
             stok = 0;
-            hariKehabisan = i + 1;
+            hariKehabisan = i;
             continue;
         }
 
@@ -43,11 +42,11 @@ if (!sudahMenjawab) {
         totalTerlayani += minta;
 
         if (stok < batasKritis) {
-            console.log(`hari ${i + 1}: stok menipis, sisa ${stok}`);
+            console.log(`hari ${i}: stok menipis, sisa ${stok}`);
         }
     }
 
-    console.log(`stok akhir    : ${stok}`);
+    console.log(`stok akhir     : ${stok}`);
     console.log(`total terlayani: ${totalTerlayani}`);
     console.log(`hari kehabisan : ${hariKehabisan}`);
 }
