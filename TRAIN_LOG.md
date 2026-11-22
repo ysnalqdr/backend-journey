@@ -298,6 +298,54 @@ atau #57 dihapus.
 
 ---
 
+## Ringkasan 2026-11-22
+
+| Item                  | Hasil                                        |
+|-----------------------|----------------------------------------------|
+| Bug sistem ditemukan  | 2 (array di `reading-02`, penjaga #31 buta)  |
+| `reading-02`          | **selesai** — 57% lalu 74% setelah uji ulang |
+| Working Skills        | **4 dari 8**                                 |
+| `pattern_drill_05.js` | dibuat, 15 potongan soal posisi baris        |
+| Health check          | 40/41 (98%)                                  |
+| Commit                | 4                                            |
+
+**Dua bug sistem:**
+1. `reading_02.js` memakai array (`[3,4,2,5,1]`, `.length`, `[i]`) — materi minggu 3
+2. Penjaga #31 tidak memeriksa folder `Reading/` karena filternya hanya
+   `/soal|recheck|drill/`, dan tidak mendeteksi pola `= [`. Sudah diperbaiki
+
+**Dua pola kesalahan learner yang dicatat di `KESALAHAN.md`:**
+- CONCEPT ke-1: `const` dikira bisa berubah
+- LOGIC ke-2: baris di dalam `{ }` dikira jalan tiap putaran
+
+Pola kedua ini **sama** dengan `total += i` di nested loop. Muncul dua kali di hari
+berbeda, jadi dibuatkan drill khusus: `pattern_drill_05.js`.
+
+---
+
+## Rencana 2026-11-23
+
+| #   | Blok                                                                         | Waktu  |
+|-----|------------------------------------------------------------------------------|--------|
+| 1   | Re-check `reading-02` (jeda 1 hari)                                          | 10 mnt |
+| 2   | `pattern_drill_05` — 15 potongan posisi baris                                | 15 mnt |
+| 3   | Day 5 materi konsep 1-3 (kenapa fungsi, deklarasi, parameter)                | 20 mnt |
+| 4   | Soal per konsep 1-3                                                          | 20 mnt |
+| 5   | Day 5 materi konsep 4-7 (`return`, tanpa return, scope, fungsi dalam fungsi) | 20 mnt |
+| 6   | Soal per konsep 4-7                                                          | 20 mnt |
+| 7   | Gerbang EASY sampai EXPLAIN                                                  | 60 mnt |
+| 8   | Commit                                                                       | 10 mnt |
+
+Total sekitar 2 jam 35 menit.
+
+**Target:** `16_Function.js` dengan enam level lulus, dan dua pola kesalahan 22 Nov
+tidak berulang di drill.
+
+**Sumber yang sudah disiapkan:** `Rencana/Sesi Mandiri Fungsi.md` (sembilan pertanyaan
+mandiri) dan `Rencana/Analisa Video Belajar.md` (PZN 4:49:29–6:06:36).
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**

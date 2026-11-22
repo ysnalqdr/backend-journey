@@ -43,6 +43,18 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 
 Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 
+- **2026-11-22** · CONCEPT · ke-1 · belum
+  - `const` dikira bisa berubah
+  - Salah: `stokAwal` dan `batasKritis` dijawab "akan berubah" padahal dua-duanya `const`
+  - Konsep benar: `const` mengunci variabelnya, bukan isinya. Angka `const` tidak pernah
+    berubah; objek/array `const` boleh diubah isinya tapi tidak boleh ditugaskan ulang
+  - Pelajaran: lihat kata di depan variabelnya. `const` = tetap, `let` = berubah
+- **2026-11-22** · LOGIC · ke-2 · belum
+  - Baris di dalam `{ }` dikira jalan tiap putaran
+  - Salah: `catatan++` di dalam `if` dijawab `4` untuk 4 putaran, seharusnya `1`
+  - Konsep benar: baris di dalam kurung hanya jalan kalau syaratnya terpenuhi
+  - Pola sama dengan `total += i` di nested loop yang dijawab `10` padahal `30`
+  - Tindakan: `pattern_drill_05.js` dibuat khusus untuk pola ini (15 potongan)
 - **2026-11-06** · CONCEPT · ke-1 · belum
   - Salah: jawab `0 == ""` itu `false`
   - Konsep benar: `==` mengubah tipe sebelum membandingkan
