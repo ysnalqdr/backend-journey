@@ -515,6 +515,11 @@ Audit/
   YYYY-MM-DD.md
 Rencana/
   YYYY-MM-DD.md
+Course/
+  Dicoding/
+    README.md
+    Jadwal 60 Hari.md
+    Progress.md
 check_system.js
 working_skills.js
 BUG_TAXONOMY.md
