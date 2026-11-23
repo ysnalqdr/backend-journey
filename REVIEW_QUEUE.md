@@ -9,13 +9,19 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 ## Terbuka
 
-| Item          | Jenis  | Muncul     | Jatuh tempo  | Status |
-|---------------|--------|------------|--------------|--------|
-| posisi vs isi | konsep | 2026-11-15 | tunggu array | 1      |
-| array dasar   | materi | 2026-11-17 | minggu 3     | belum  |
+| Item                         | Jenis  | Muncul     | Jatuh tempo  | Status         |
+|------------------------------|--------|------------|--------------|----------------|
+| posisi vs isi                | konsep | 2026-11-15 | tunggu array | 1              |
+| array dasar                  | materi | 2026-11-17 | minggu 3     | belum          |
+| commit dipecah terlalu kecil | sistem | 2026-11-23 | 2026-11-25   | 9 dalam sehari |
 
 **Yang tersisa hanya dua, dan dua-duanya menunggu materi minggu 3.** Tidak ada utang
 yang bisa dilunasi sekarang.
+
+**Utang baru 23 Nov:** 9 commit dalam satu hari, 7 di antaranya kerja sistem yang
+seharusnya digabung jadi satu. Penyebabnya bukan learner — assistant langsung commit
+setiap kali learner bertanya. Perbaikan: kerja sistem dikumpulkan dulu, commit
+sekali di akhir sesi.
 
 ---
 
