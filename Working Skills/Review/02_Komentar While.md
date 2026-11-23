@@ -156,3 +156,31 @@ Orang lain tetap tidak tahu harus memperbaiki apa.
 | 4     | tiga hal lengkap, orang lain bisa langsung memperbaiki |
 
 Target: **3 ke atas**. Untuk lulus blok, minimal 3.
+
+---
+
+## Jawaban 2026-11-23 — ditulis sebagai satu komentar utuh
+
+> Baris `if (i === 5) continue;` membuat `i++` di bawahnya terlewati, sehingga saat
+> `i` mencapai 5 nilainya tidak pernah bertambah dan loop berputar selamanya di 5.
+> Perbaikannya: tambahkan `i++` di dalam blok `if` sebelum `continue`, dan bungkus
+> `if` dengan kurung kurawal supaya `continue` tidak jalan di putaran lain.
+
+**Perbaikan yang ditulis learner:**
+
+```javascript
+while (i <= 10) {
+    if (i === 5) {
+        i++;
+        continue;
+    }
+    total += i;
+    i++;
+}
+```
+
+Isinya benar. Ada satu `{` nyasar yang membuat file tidak bisa dijalankan
+(`SyntaxError: Unexpected end of input`) — sudah dijelaskan, dan learner
+menghapusnya.
+
+Hasil: `total = 50`.

@@ -43,6 +43,13 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 
 Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 
+- **2026-11-23** · SYNTAX · ke-1 · belum
+  - Kurung kurawal tidak berpasangan
+  - Salah: menulis `{` tambahan sebelum `total += i`, sehingga file tidak bisa
+    dijalankan (`SyntaxError: Unexpected end of input`)
+  - Konsep benar: setiap `{` wajib punya `}` pasangan. Hitung jumlah keduanya,
+    kalau beda berarti ada yang salah
+  - Alat bantu: di VS Code, arahkan kursor ke `{` dan pasangannya disorot otomatis
 - **2026-11-23** · READING · ke-1 · belum
   - `i !== 1` dibaca sebagai "i sama dengan 2"
   - Salah: P12 drill 05 dijawab `2`, seharusnya `4`

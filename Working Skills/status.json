@@ -66,9 +66,9 @@
         "Menerima review",
         "Menjelaskan alasan"
       ],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "Level EXPLAIN. Tulis komentar review maks 3 kalimat. Dinilai: apakah orang lain bisa memperbaiki kode hanya dari komentarmu."
+      "status": "selesai",
+      "terakhir": "2026-11-23",
+      "catatan": "Selesai 2026-11-23. Diagnosis E1 tepat: continue melewati i++ sehingga infinite loop di i=5. Perbaikan benar (i++ di dalam if + kurung kurawal), tapi ditulis dengan satu `{` nyasar yang membuat SyntaxError. Pola baru dicatat: kurung kurawal tidak berpasangan."
     },
     {
       "id": "docs-01",
