@@ -411,6 +411,33 @@ Total ±2 jam 5 menit.
 
 ---
 
+## 2026-11-23 — kerja sistem, drill, dan mulai Dicoding
+
+| Item                     | Hasil                               |
+|--------------------------|-------------------------------------|
+| Re-check `reading-02`    | lulus setelah 3 percobaan           |
+| `pattern_drill_05`       | **14/15** — dua pola lama pulih     |
+| `review-02`              | selesai                             |
+| Working Skills           | **5 dari 8**                        |
+| Folder `Course/Dicoding` | dibuat, 3 file                      |
+| Jadwal 60 hari           | direvisi sesuai struktur modul asli |
+| Dicoding hari 1          | modul 4.1 dimulai                   |
+| Health check             | 40/41 (98%)                         |
+
+**Pola yang pulih:** `const` dikira bisa berubah, dan baris di dalam `{ }` dikira
+jalan tiap putaran. Dua-duanya diuji di drill 05 dan dijawab benar.
+
+**Pola baru tercatat:** `i !== 1` dibaca sebagai "i sama dengan 2" (P12),
+dan kurung kurawal tidak berpasangan (`SyntaxError: Unexpected end of input`).
+
+**Keputusan:** dua kelas Dicoding dipilih — JavaScript (46 jam) dan SQL (11 jam).
+Alasan: JS sama dengan materi Journey tapi bersertifikat; SQL dipakai tiap hari
+di backend. AWS dan Python ditolak.
+
+**Rencana besok:** lihat `Rencana/2026-11-24.md`.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
