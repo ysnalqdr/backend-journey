@@ -346,6 +346,71 @@ mandiri) dan `Rencana/Analisa Video Belajar.md` (PZN 4:49:29–6:06:36).
 
 ---
 
+## Ringkasan 2026-11-23
+
+| Item                  | Hasil                                                    |
+|-----------------------|----------------------------------------------------------|
+| Re-check `reading-02` | **lulus** setelah 3 percobaan                            |
+| `pattern_drill_05`    | **14/15** (93%)                                          |
+| `review-02`           | **selesai**                                              |
+| Working Skills        | **5 dari 8**                                             |
+| Day 5 konsep 1        | **BELUM lulus** — nomor 1 dijawab 1 tempat, seharusnya 4 |
+| Health check          | 40/41 (98%)                                              |
+| Commit                | 2                                                        |
+
+**Pola yang pulih:** `const` dikira bisa berubah, dan baris di dalam `{ }` dikira
+jalan tiap putaran. Dua-duanya sudah benar di drill 05.
+
+**Pola baru:** `i !== 1` dibaca sebagai "i sama dengan 2" (P12), dan kurung kurawal
+tidak berpasangan (`SyntaxError`).
+
+**Keputusan:** Day 5 konsep 1 diulang besok. Bukan dilanjutkan — karena kalau
+konsep 1 belum masuk, konsep 2 (parameter) tidak akan masuk juga.
+
+---
+
+## Perubahan rencana: Dicoding mulai 24 November
+
+Folder `Course/Dicoding/` sudah ada sejak `d581655` dengan jadwal 60 hari.
+Beban: 1 jam 26 menit/hari untuk JS (32 hari), 24 menit/hari untuk SQL (28 hari).
+
+**Dampak:** mulai besok ada dua sumber. Harus diputuskan mana yang jadi input.
+
+| Sumber                   | Peran                                     |
+|--------------------------|-------------------------------------------|
+| **Dicoding**             | input materi (menggantikan video YouTube) |
+| **Gerbang Journey**      | latihan dan uji paham                     |
+| ~~YouTube PZN~~          | **dibatalkan** — duplikat dengan Dicoding |
+| ~~9 pertanyaan ChatGPT~~ | **dibatalkan** — duplikat dengan Dicoding |
+
+Alasan: Dicoding JS mengajarkan topik yang sama. Menonton video 50 menit untuk
+topik yang diajarkan besok = kerja dua kali untuk satu hasil. Audit 2026-11-19
+sudah memperingatkan soal menambah sumber tanpa menambah hasil.
+
+**Kabar baik:** hari 1-10 Dicoding isinya semua yang sudah dikuasai (variabel,
+operator, `if`, loop). Jadi sepuluh hari pertama cukup kuis, modulnya dilewati.
+Beban berat baru mulai hari 11 (fungsi) — dan itu sudah ditangani Day 5 Journey.
+
+---
+
+## Rencana 2026-11-24
+
+| #   | Blok                                                        | Waktu  |
+|-----|-------------------------------------------------------------|--------|
+| 1   | Dicoding hari 1: buka kelas, cek modul, kerjakan yang perlu | 40 mnt |
+| 2   | Day 5 konsep 1 — ulang, soal baru                           | 15 mnt |
+| 3   | Day 5 konsep 2-3 (deklarasi, parameter)                     | 40 mnt |
+| 4   | Working Skills `docs-01`                                    | 20 mnt |
+| 5   | Catat di `Course/Dicoding/Progress.md` + commit             | 10 mnt |
+
+Total ±2 jam 5 menit.
+
+**Target:** konsep 1-3 lulus, dan Dicoding hari 1 tercatat.
+
+**Yang tidak dikerjakan:** video YouTube, 9 pertanyaan ChatGPT. Dibatalkan.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
