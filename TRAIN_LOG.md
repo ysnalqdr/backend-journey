@@ -387,9 +387,14 @@ Alasan: Dicoding JS mengajarkan topik yang sama. Menonton video 50 menit untuk
 topik yang diajarkan besok = kerja dua kali untuk satu hasil. Audit 2026-11-19
 sudah memperingatkan soal menambah sumber tanpa menambah hasil.
 
-**Kabar baik:** hari 1-10 Dicoding isinya semua yang sudah dikuasai (variabel,
-operator, `if`, loop). Jadi sepuluh hari pertama cukup kuis, modulnya dilewati.
-Beban berat baru mulai hari 11 (fungsi) — dan itu sudah ditangani Day 5 Journey.
+**Kabar baik:** struktur asli Dicoding ternyata **dimulai dari modul 4 (fungsi)**,
+bukan modul 1. Modul 1-3 (variabel, operator, `if`, loop) dilewati karena sudah
+dikuasai. Jadi beban berat langsung di hari pertama — tapi topiknya persis sama
+dengan Day 5 Journey.
+
+**Koreksi 23 Nov malam:** rencana 2026-11-24 semula menulis "Dicoding 4.1-4.5".
+Itu salah — 4.1-4.3 sudah dikerjakan 23 Nov. Besok seharusnya **4.4 + 4.5**
+(parameter dan return value). Sudah diperbaiki di `Rencana/2026-11-24.md`.
 
 ---
 
