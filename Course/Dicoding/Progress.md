@@ -2,7 +2,9 @@
 
 Satu baris per hari. **Isi walau hanya satu modul.**
 
-Hari ke-1 = 2026-11-24. Hari ke-60 = 2027-01-22.
+**Modul 1-3 sudah selesai sebelum jadwal ini dimulai.** Hari ke-1 di sini = modul 4.1.
+
+Hari ke-1 jadwal ini dimulai saat kamu mengerjakan modul 4.1. Catat tanggalnya sendiri.
 
 ---
 
@@ -22,7 +24,7 @@ bukan di kepala.
 
 ---
 
-## Fase 1 — JavaScript (hari 1-32)
+## Fase 1 — JavaScript (hari 1-40)
 
 | Hari | Tanggal | Modul | Hasil | Catatan |
 |------|---------|-------|-------|---------|
@@ -61,38 +63,30 @@ bukan di kepala.
 
 ---
 
-## Fase 2 — SQL (hari 33-60)
+## Fase 2 — SQL (hari 41-60)
 
-| Hari | Tanggal | Modul | Hasil | Catatan |
-|------|---------|-------|-------|---------|
-| 33   |         |       |       |         |
-| 34   |         |       |       |         |
-| 35   |         |       |       |         |
-| 36   |         |       |       |         |
-| 37   |         |       |       |         |
-| 38   |         |       |       |         |
-| 39   |         |       |       |         |
-| 40   |         |       |       |         |
-| 41   |         |       |       |         |
-| 42   |         |       |       |         |
-| 43   |         |       |       |         |
-| 44   |         |       |       |         |
-| 45   |         |       |       |         |
-| 46   |         |       |       |         |
-| 47   |         |       |       |         |
-| 48   |         |       |       |         |
-| 49   |         |       |       |         |
-| 50   |         |       |       |         |
-| 51   |         |       |       |         |
-| 52   |         |       |       |         |
-| 53   |         |       |       |         |
-| 54   |         |       |       |         |
-| 55   |         |       |       |         |
-| 56   |         |       |       |         |
-| 57   |         |       |       |         |
-| 58   |         |       |       |         |
-| 59   |         |       |       |         |
-| 60   |         |       |       |         |
+| Hari | Tanggal | Modul                      | Hasil | Catatan |
+|------|---------|----------------------------|-------|---------|
+| 41   |         | pengantar + instalasi      |       |         |
+| 42   |         | `SELECT`                   |       |         |
+| 43   |         | `WHERE`                    |       |         |
+| 44   |         | `ORDER BY`, `LIMIT`        |       |         |
+| 45   |         | agregat                    |       |         |
+| 46   |         | `GROUP BY`, `HAVING`       |       |         |
+| 47   |         | kuis modul awal            |       |         |
+| 48   |         | `INSERT`/`UPDATE`/`DELETE` |       |         |
+| 49   |         | `NULL`                     |       |         |
+| 50   |         | `JOIN` dasar               |       |         |
+| 51   |         | `INNER JOIN`               |       |         |
+| 52   |         | `LEFT`/`RIGHT JOIN`        |       |         |
+| 53   |         | kuis modul tengah          |       |         |
+| 54   |         | subquery                   |       |         |
+| 55   |         | `CASE`                     |       |         |
+| 56   |         | index                      |       |         |
+| 57   |         | normalisasi                |       |         |
+| 58   |         | constraint                 |       |         |
+| 59   |         | latihan query              |       |         |
+| 60   |         | ujian akhir                |       |         |
 
 ---
 
