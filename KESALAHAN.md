@@ -43,6 +43,13 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 
 Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 
+- **2026-11-23** · READING · ke-1 · belum
+  - `i !== 1` dibaca sebagai "i sama dengan 2"
+  - Salah: P12 drill 05 dijawab `2`, seharusnya `4`
+  - Konsep benar: `!==` artinya **semua yang bukan** nilai itu. `i !== 1` lolos
+    untuk `i = 2` **dan** `i = 3`, bukan hanya satu
+  - Pelajaran: `!==` itu kebalikan `===`. Kalau `===` memilih satu, `!==` memilih
+    sisanya semua
 - **2026-11-22** · CONCEPT · ke-1 · belum
   - `const` dikira bisa berubah
   - Salah: `stokAwal` dan `batasKritis` dijawab "akan berubah" padahal dua-duanya `const`

@@ -8,7 +8,7 @@
 // Cara pakai: baca setiap potongan, tulis jawabanmu, baru isi kunci.
 // Jangan jalankan sebelum mengisi.
 
-const sudahMenjawab = false;
+const sudahMenjawab = true;
 
 const potongan = [
     {
@@ -212,10 +212,12 @@ if (!sudahMenjawab) {
 }
 
 // isi jawabanmu di sini, berurutan P1..P15
+// dikerjakan 2026-11-23: 14 dari 15. Yang meleset P12 (jawab 2, kunci 4)
+// karena `i !== 1` dibaca sebagai "i sama dengan 2", padahal artinya "bukan 1".
 const jawaban = [
-    null, null, null, null, null,
-    null, null, null, null, null,
-    null, null, null, null, null
+    3, 1, 4, 0, 2,
+    6, 3, 2, 2, 0,
+    6, 2, 4, 3, 6
 ];
 
 let benar = 0;
