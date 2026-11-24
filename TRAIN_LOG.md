@@ -443,6 +443,64 @@ di backend. AWS dan Python ditolak.
 
 ---
 
+## Ringkasan 2026-11-24
+
+| Item                | Hasil                                    |
+|---------------------|------------------------------------------|
+| Tujuh konsep fungsi | **lulus semua**, dengan 6 koreksi        |
+| Gerbang fungsi      | **belum dimulai** — ditunda ke 25 Nov    |
+| Dicoding            | bab 4 lulus (4.1-4.11), sekarang 5.1     |
+| Dicoding dipause    | learner mau cari materi tambahan sendiri |
+| Health check        | 39/41 (95%)                              |
+| Working Skills      | 5 dari 8                                 |
+
+**`--no-verify` dipakai sekali hari ini.** Alasannya: tidak ada blok Working Skills
+yang dikerjakan. Seluruh sesi dipakai tujuh konsep fungsi, dan itu belajar — tapi
+bukan blok Working Skills. Hook menolak dengan benar. Ini **kekurangan sesi**,
+bukan pelanggaran yang dibenarkan: aturan #41 bilang setiap sesi wajib satu blok,
+dan hari ini tidak ada.
+
+**Koreksi learner terhadap assistant (3 hal):**
+1. "aku belajar 1 perkonsep dulu biar fokus tidak terpecah"
+2. "aku ingin remedial/recheck dari 1 perkonsep hingga benar sebelum lanjut"
+3. "pertanyaan menjebak sekali, aku mana tahu kalau ada halaman produk dan lainnya"
+
+Nomor 3 paling keras: soal menyebut "di enam tempat" tanpa menampilkan daftarnya.
+Itu soal cacat, bukan kekurangan learner.
+
+**Pola kesalahan learner yang tercatat:**
+- READING ke-3: jumlah yang disebut soal tidak terbaca (5 dijawab 4, 6 dijawab 4)
+- CONCEPT ke-4: "apa yang keluar dari fungsi" belum menempel (`undefined` dikira
+  error, `12000` untuk fungsi tanpa `return`, `178000` untuk `200000 + 22000`,
+  `200000` untuk `200000 + undefined`)
+
+Pola kedua muncul **4 kali dalam satu sesi**. Penanganan diubah: setiap soal wajib
+menanyakan "apa yang KELUAR", bukan "apa yang dihitung".
+
+---
+
+## Rencana 2026-11-25
+
+| #   | Blok                         | Waktu  |
+|-----|------------------------------|--------|
+| 1   | Protokol buka                | 5 mnt  |
+| 2   | Materi tambahan dari learner | 20 mnt |
+| 3   | Gerbang EASY                 | 15 mnt |
+| 4   | Gerbang MEDIUM               | 20 mnt |
+| 5   | Gerbang HARD                 | 25 mnt |
+| 6   | Gerbang WRITE                | 25 mnt |
+| 7   | Gerbang VERIFY               | 10 mnt |
+| 8   | Gerbang EXPLAIN              | 15 mnt |
+| 9   | Working Skills `docs-01`     | 30 mnt |
+| 10  | Catat + commit               | 10 mnt |
+
+Total ±2 jam 55 menit. **Satu target: gerbang fungsi enam level lulus.**
+
+Dicoding dipause 1-2 hari. Tenggatnya 2027-01-22, jadi masih aman. Kalau lebih
+dari 3 hari, ingatkan.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**

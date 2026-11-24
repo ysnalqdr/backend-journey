@@ -43,6 +43,20 @@ Kolom "sudah diperbaiki?" diisi `ya` kalau di review berikutnya kamu sudah bisa 
 
 Setiap baris: **tanggal · jenis · muncul ke-berapa · sudah diperbaiki?**
 
+- **2026-11-24** · READING · ke-3 · belum
+  - Jumlah yang disebut soal tidak terbaca
+  - Salah: soal menyebut 5 tempat dijawab 4; soal menyebut 6 tempat dijawab 4
+  - Konsep benar: saat soal menyebut angka, tulis angkanya dulu sebelum menjawab
+  - Catatan: muncul 3 kali dalam 2 hari. Penanganan diubah: soal wajib menampilkan
+    daftarnya, bukan hanya menyebut jumlahnya
+- **2026-11-24** · CONCEPT · ke-4 · belum
+  - "Apa yang keluar dari fungsi" belum menempel
+  - Salah: `undefined` dikira error; `12000` untuk fungsi tanpa `return`;
+    `178000` untuk `200000 + 22000`; `200000` untuk `200000 + undefined`
+  - Konsep benar: tanpa `return` hasilnya `undefined`; `undefined` dalam hitungan
+    jadi `NaN`; nilai di dalam fungsi tidak keluar tanpa `return`
+  - Catatan: muncul 4 kali dalam satu sesi. Penanganan: setiap soal wajib
+    menanyakan "apa yang KELUAR", bukan "apa yang dihitung"
 - **2026-11-23** · SYNTAX · ke-1 · belum
   - Kurung kurawal tidak berpasangan
   - Salah: menulis `{` tambahan sebelum `total += i`, sehingga file tidak bisa

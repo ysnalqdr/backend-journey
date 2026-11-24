@@ -29,11 +29,11 @@ bukan di kepala.
 | Hari | Tanggal | Modul           | Hasil | Catatan                          |
 |------|---------|-----------------|-------|----------------------------------|
 | 1    | 23 Nov  | 4.1-4.3         | mulai | modul 1-3 selesai sebelum jadwal |
-| 2    |         | 4.4             |       |                                  |
-| 3    |         | 4.5             |       |                                  |
-| 4    |         | 4.6-4.7         |       |                                  |
-| 5    |         | 4.8-4.11        |       |                                  |
-| 6    |         | 5.1             |       |                                  |
+| 2    | 24 Nov  | 4.4             | lulus | parameter dan argument           |
+| 3    | 24 Nov  | 4.5             | lulus | return value, baca dua kali      |
+| 4    | 24 Nov  | 4.6-4.7         | lulus | function expression, arrow       |
+| 5    | 24 Nov  | 4.8-4.11        | lulus | rangkuman + kuis                 |
+| 6    | 24 Nov  | 5.1             | mulai | object — sedang dikerjakan       |
 | 7    |         | 5.2             |       |                                  |
 | 8    |         | 5.3-5.4         |       |                                  |
 | 9    |         | 5.5-5.7         |       |                                  |
