@@ -700,3 +700,6 @@ A running list of things I do not want to forget.
     ever been done. It had been silent since the first block was completed. A hook that
     never rejects anything is worse than no hook, because it looks like protection.
 
+61. **GitHub counts the commit date, not the push date.** A commit made at 22:12 on the 23rd
+    and pushed on the 24th counts as the 23rd. So a contribution graph only reflects work
+    done *that day*, and pushing late does not move the square. Push the same day.
