@@ -28,9 +28,10 @@
 
 **Jawabanku:**
 
->
+> **Tidak dikerjakan 2026-11-25** — `Array.isArray` butuh materi array (minggu 3).
+> Ditunda ke minggu 3.
 
-**Menit yang kuhabiskan:** ___
+**Menit yang kuhabiskan:** —
 
 ---
 
@@ -48,9 +49,10 @@
 
 **Jawabanku:**
 
->
+> **Tidak dikerjakan 2026-11-25** — `slice`/`splice` butuh materi array (minggu 3).
+> Ditunda ke minggu 3.
 
-**Menit:** ___
+**Menit:** —
 
 ---
 
@@ -60,17 +62,29 @@
 
 **Cari di:** MDN → `Number.isNaN` dan `isNaN`
 
-**Kutipan yang kutemukan:**
+**Enam hasil yang dijalankan learner 2026-11-25 (semua benar):**
 
 ```
-
+isNaN("abc")             -> true
+Number.isNaN("abc")      -> false
+isNaN("123")             -> false
+Number.isNaN("123")      -> false
+isNaN(undefined)         -> true
+Number.isNaN(undefined)  -> false
 ```
 
 **Jawabanku:**
 
->
+> Bedanya: `isNaN` mengubah nilainya jadi angka dulu, baru diperiksa. Jadi `"abc"`
+> berubah jadi `NaN` dan hasilnya `true`. `Number.isNaN` memeriksa langsung tanpa
+> mengubah, jadi `"abc"` bukan `NaN` dan hasilnya `false`.
+> Yang lebih tepat dipakai: `Number.isNaN`, karena `isNaN` menutupi penyebab —
+> masalahnya tipe string, bukan `NaN`.
 
-**Menit:** ___
+**Menit:** 15
+
+**Koreksi:** penjelasan awal learner menyebut `"abc"` bukan angka, tanpa menyebut
+langkah konversi. Mekanismenya dijelaskan setelah itu.
 
 ---
 
@@ -83,14 +97,21 @@
 **Kutipan yang kutemukan:**
 
 ```
-
+?? tidak bisa dicampur langsung dengan && atau ||. Kombinasi itu wajib memakai
+tanda kurung, kalau tidak menghasilkan SyntaxError.
 ```
 
 **Jawabanku:**
 
->
+> Nama resminya **Nullish coalescing operator**. Kalau dicampur `&&` tanpa kurung,
+> hasilnya **SyntaxError** — bukan error saat program jalan, tapi error saat kode
+> dibaca. Buktinya: `null ?? 1 && 2` menghasilkan
+> `SyntaxError: Unexpected token '&&'`. Yang benar: `null ?? (1 && 2)`.
 
-**Menit:** ___
+**Menit:** 10
+
+**Koreksi:** learner sempat mengutip kalimat tentang "falsy values" yang tidak
+menjawab pertanyaan. Jenis errornya sudah benar, kutipannya yang salah.
 
 ---
 
@@ -106,9 +127,9 @@
 
 **Yang masih tidak kupahami setelah membaca:**
 
->
+> **Tidak dikerjakan 2026-11-25** — `reduce` butuh materi array (minggu 3).
 
-**Menit:** ___
+**Menit:** —
 
 ---
 

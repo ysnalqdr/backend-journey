@@ -79,9 +79,9 @@
       "kemampuan": [
         "Mencari di dokumentasi"
       ],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "5 tugas pencarian. Tidak ketemu adalah jawaban sah."
+      "status": "selesai",
+      "terakhir": "2026-11-25",
+      "catatan": "Selesai 2026-11-25, tugas 3 dan 4 saja. Tugas 1, 2, 5 ditunda ke minggu 3 karena butuh array. Tugas 3 (Number.isNaN vs isNaN): 6/6 hasil benar, penjelasan dikoreksi (langkah konversi tipe). Tugas 4 (??): nama benar, jenis error benar (SyntaxError), tapi kutipan MDN yang diambil tidak mendukung jawaban."
     },
     {
       "id": "memecah-01",
