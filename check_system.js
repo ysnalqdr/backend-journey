@@ -828,10 +828,15 @@ if (dirty) {
     const hariIni = new Date().toLocaleDateString("en-CA");
     const n = log.trim() ? log.trim().split("\n").filter((d) => d === hariIni).length : 0;
 
-    if (n > 8) {
-        warn("commit hari ini: " + n + " commit (alarm > 8, aturan 52)");
+    // Aturan #52 (diganti 2026-11-25): satu artefak satu commit, standar 5 artefak sehari.
+    // Alarm bukan pada jumlah commit, tapi pada commit yang tidak sepadan dengan artefak.
+    // Di atas 12 commit sehari hampir pasti ada artefak yang dipecah tanpa alasan.
+    if (n > 12) {
+        warn("commit hari ini: " + n + " (alarm > 12, aturan 52 — artefak dipecah?)");
+    } else if (n > 0 && n < 3) {
+        warn("commit hari ini: " + n + " (di bawah 3, aturan 53 — tulis alasannya di TRAIN_LOG)");
     } else {
-        ok("commit hari ini: " + n + ", di bawah alarm");
+        ok("commit hari ini: " + n + ", wajar");
     }
 }
 
