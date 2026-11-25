@@ -433,26 +433,35 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     (ICSE 2022, ~44% of commit messages in active OSS projects could be improved). Four
     commits for one gate answer "what", never "why", and make the history unreadable.
 
-52. **Maximum two commits per session.** A session is one sitting, not one day. A free day
-    with four sittings may have eight commits; a work day with one sitting has two.
+52. **One artifact, one commit. Five artifacts a day is the standard.** The count is a
+    *result*, never a target. A day that produces five real artifacts produces five
+    commits; a day with two artifacts produces two, and that is not a failure.
 
-    Why: the cap is not a law, it is an alarm. The real test is rule 51. If six commits are
-    genuinely six revertable artifacts, commit six. If they are one artifact split into six
-    pieces, group them.
+    Why the change: the old cap of two per session produced two opposite failures in three
+    days. On 23 Nov there were ten commits for two artifacts; on 24 and 25 Nov there was
+    one commit for eight artifacts. Both are wrong. The unit is the artifact, not the
+    sitting and not the day.
 
-53. **Unfinished work may still be committed.** Use `wip:` when no artifact is complete.
+    What counts as one artifact: one file, or one coherent change to one file. A gate file,
+    a Working Skills block, a re-check result, a plan document, and a log entry are five
+    separate artifacts. Splitting one artifact into five commits to reach five is forbidden.
+
+53. **A day with fewer than three artifacts is a signal, not a sin.** Write down why in
+    `TRAIN_LOG.md`: too little time, one hard block, or a day that was mostly reading.
+
+54. **Unfinished work may still be committed.** Use `wip:` when no artifact is complete.
     A commit is a checkpoint, not a declaration that the work is done.
 
     Why: conflating commit with "finished" is why Day 4 stretched over three days with
     nothing committed. Git was built for work in progress.
 
-54. **Work directly on `main`.** Do not use a work branch for daily study.
+55. **Work directly on `main`.** Do not use a work branch for daily study.
 
     Why: GitHub only counts commits on the default branch or `gh-pages`. Commits on a side
     branch do not appear on the contribution graph until merged, so a week of work on a
     branch produces a week of grey squares.
 
-55. **Pull requests only for system changes.** Rules, scripts, hooks, and data structure.
+56. **Pull requests only for system changes.** Rules, scripts, hooks, and data structure.
     Not study content, not answers, not materials.
 
     Why: a system change alters how every later session runs, so it deserves a review
@@ -460,13 +469,13 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
     changing the system every day, which is the "building machines instead of lifting
     weights" pattern this repo has already fallen into twice.
 
-56. **Issues for code or system defects. Not for understanding defects.** A wrong answer
+57. **Issues for code or system defects. Not for understanding defects.** A wrong answer
     belongs in `KESALAHAN.md`; a broken hook belongs in an issue.
 
     Why: the two are handled differently. A defect is fixed and closed. A misunderstanding
     needs re-teaching and repeated testing.
 
-57. **Every day has a floor, and the floor counts as passing.** The floor is one block plus
+58. **Every day has a floor, and the floor counts as passing.** The floor is one block plus
     one commit, twenty minutes. On a day that cannot even manage that, one documentation
     commit in five minutes.
 
@@ -476,7 +485,7 @@ reading-to-writing ratio is above 10:1. These six rules train that side.
 
 ------
 
-58. **No question may use an array until arrays are taught.** Checked automatically by
+59. **No question may use an array until arrays are taught.** Checked automatically by
     `check_system.js` #31. A file may opt out only with a `BAHAN-DILUAR-JADWAL` header
     recording the learner's explicit decision.
 
@@ -690,16 +699,16 @@ A running list of things I do not want to forget.
 - Everything starting with `at Module...` is internal Node.js, ignore it
 - When an error happens, JavaScript stops and the rest of the file never runs
 
-59. **Hooks live in the repo, and one script installs them.** The folder `.git/` is never
+60. **Hooks live in the repo, and one script installs them.** The folder `.git/` is never
     committed, so a hook that only lives in `.git/hooks/` disappears on a fresh clone and
     nobody notices. Hooks are kept in `hooks/`, and `sh install_hooks.sh` copies them into
     `.git/hooks/`. After cloning, run the installer before the first commit.
 
-60. **The pre-commit hook is verified, not assumed.** On 2026-11-20 the hook was found dead:
+61. **The pre-commit hook is verified, not assumed.** On 2026-11-20 the hook was found dead:
     `working_skills.js` always exited `0` because its guard only fired when *no* block had
     ever been done. It had been silent since the first block was completed. A hook that
     never rejects anything is worse than no hook, because it looks like protection.
 
-61. **GitHub counts the commit date, not the push date.** A commit made at 22:12 on the 23rd
+62. **GitHub counts the commit date, not the push date.** A commit made at 22:12 on the 23rd
     and pushed on the 24th counts as the 23rd. So a contribution graph only reflects work
     done *that day*, and pushing late does not move the square. Push the same day.
