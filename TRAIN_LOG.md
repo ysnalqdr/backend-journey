@@ -501,6 +501,50 @@ dari 3 hari, ingatkan.
 
 ---
 
+## Ringkasan 2026-11-25
+
+| Item                      | Hasil                          |
+|---------------------------|--------------------------------|
+| Gerbang fungsi enam level | **TUNTAS** — 10/10 pemeriksaan |
+| Day 5                     | **SELESAI**                    |
+| `docs-01`                 | selesai (tugas 3 dan 4)        |
+| Working Skills            | **6 dari 8**                   |
+| Health check              | 39/42 (93%)                    |
+| Commit                    | 2                              |
+
+**Yang paling berharga:** soal VERIFY. AI menulis `harga * 20` bukan `persen`.
+Output `40000` **benar**, tapi kodenya salah. Learner awalnya menjawab `45000`
+karena membaca kode dengan benar — itu naluri yang tepat, walaupun pertanyaannya
+menanyakan output.
+
+**Koreksi yang diberikan:**
+- EASY E3: berhenti di langkah dalam `dua(dua(x))`
+- MEDIUM M3: `"Halo, undefined"` bukan `undefined` — teks vs angka
+- HARD H1b: `"kecil"` bukan kosong; H2b: `ReferenceError` bukan `undefined`
+- WRITE: `12` ditulis mati dua kali sebelum akhirnya pakai `persen`
+- VERIFY: `45000` vs `40000`
+- docs-01 tugas 4: kutipan MDN tidak mendukung jawaban
+
+---
+
+## Rencana 2026-11-26
+
+| #   | Blok                                           | Waktu  |
+|-----|------------------------------------------------|--------|
+| 1   | Protokol buka                                  | 5 mnt  |
+| 2   | Re-check fungsi (jeda 1 hari)                  | 15 mnt |
+| 3   | Working Skills `memecah-01`                    | 40 mnt |
+| 4   | Dicoding lanjut 5.1 object (kalau learner mau) | 40 mnt |
+| 5   | Catat + commit                                 | 10 mnt |
+
+**Target:** re-check fungsi lulus, dan `memecah-01` selesai.
+
+**Catatan:** Day 5 selesai, Day 6 (array) butuh keputusan. Dicoding sekarang di
+5.1 (object) — itu **minggu 4** Journey. Jadi ada pilihan: ikut Dicoding ke object,
+atau ikut Journey ke array dulu.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**

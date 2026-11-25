@@ -13,7 +13,10 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 |------------------------------|--------|------------|--------------|----------------|
 | posisi vs isi                | konsep | 2026-11-15 | tunggu array | 1              |
 | array dasar                  | materi | 2026-11-17 | minggu 3     | belum          |
+| docs-01 tugas 1, 2, 5        | level  | 2026-11-25 | minggu 3     | butuh array    |
 | commit dipecah terlalu kecil | sistem | 2026-11-23 | 2026-11-25   | 9 dalam sehari |
+| soal tanpa informasi cukup   | soal   | 2026-11-24 | 2026-11-26   | ke-4 kalinya   |
+| commit terlalu sedikit       | sistem | 2026-11-24 | 2026-11-26   | 1 untuk 6      |
 
 **Yang tersisa hanya dua, dan dua-duanya menunggu materi minggu 3.** Tidak ada utang
 yang bisa dilunasi sekarang.
