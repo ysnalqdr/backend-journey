@@ -545,6 +545,37 @@ atau ikut Journey ke array dulu.
 
 ---
 
+## Teguran learner 2026-11-25 — yang mengubah sistem
+
+> *"tadi 7 kesalahan itu kamu yang koreksi lalu membenarkan, bukan dariku sendiri.
+> Itu merusak pemahamanku."*
+
+Kucek: dari 7 koreksi 25 Nov, **6 diberikan langsung oleh assistant**. Learner hanya
+menemukan satu sendiri (WRITE `12` ditulis mati), dan itu pun setelah dua kali
+ditunjukkan.
+
+Dan yang lebih parah: `KESALAHAN.md` mencatat **60 kesalahan learner** dan
+**0 kesalahan assistant**. Tidak ada file yang mengevaluasi tutor.
+
+**Yang diperbaiki:**
+
+| #   | Perbaikan                                  |
+|-----|--------------------------------------------|
+| 1   | `KESALAHAN_ASSISTANT.md` dibuat            |
+| 2   | Aturan #52: satu artefak satu commit       |
+| 3   | Aturan #53: kurang dari 3 artefak = sinyal |
+| 4   | Aturan renumber #54-#62                    |
+
+**Cara mengoreksi yang baru:**
+
+| Lama                              | Baru                                       |
+|-----------------------------------|--------------------------------------------|
+| learner salah, assistant jelaskan | learner salah, assistant **tanya dulu**    |
+| langsung beri jawaban             | beri **satu kesempatan** menemukan sendiri |
+| jelaskan hasil akhir              | jelaskan **langkahnya**                    |
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
