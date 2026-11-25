@@ -53,6 +53,7 @@ By the end of this week I can write a temperature converter (Celsius to Fahrenhe
 - `break` `continue` `%`: MEDIUM lulus (#76, #78).
 - nested loop **tuntas**: per konsep (#92), enam level (#93).
 - **Day 4 SELESAI**: for, while, do...while, nested semuanya tuntas.
+- **Day 5 SELESAI**: fungsi enam level (#94), 2026-11-25.
 - `for` **tuntas**: EASY, MEDIUM, HARD, WRITE semua lulus (#72–#80).
 - `while` **tuntas**: A-D (#81), EASY (#82), MEDIUM (#83), HARD (#84), WRITE (#85).
 - `do...while` **tuntas**: A-D (#89), EASY/MEDIUM/HARD/WRITE (#89).
@@ -568,6 +569,19 @@ Setiap soal yang ditanyakan, jawaban yang diberikan, dan putusannya. Tanpa ini, 
   Yang meleset hanya eksekusi: menambah dua baris palsu di `i=3`
 - Asumsi developer dijawab tepat: jumlah kolom mengikuti nomor baris, bukan lebar tetap
 - Teknik yang bekerja: tulis jumlah baris dulu (1+2+3=6), lalu hitung tepat sebanyak itu
+
+**#94** · Fungsi TUNTAS enam level · 2026-11-25 · keyakinan: yakin
+- Re-check reading-02: `nilai=3 catat=1`, `x=15` — dua-duanya benar
+- Tujuh konsep lulus: kenapa fungsi, deklarasi, parameter/argumen, return vs
+  console.log, tanpa return, scope, fungsi memanggil fungsi
+- EASY: `42`, `2`, `12` — E3 dua kali ulang (berhenti di langkah dalam)
+- MEDIUM: `undefined`, `undefined`, `"Halo, undefined"` — M3 dikoreksi
+- HARD: `"besar"`, `"kecil"`, `ReferenceError` — dua koreksi
+- WRITE: `hitungDiskon` **3 dari 3 kasus** tanpa contoh
+- VERIFY: AI tulis `harga * 20` bukan `persen`. Output `40000` BENAR, kodenya salah
+- EXPLAIN: menemukan `jumlah / 3` rapuh — angka 3 ditulis mati
+- **Pola yang pulih:** `undefined` vs error, dan `return` sebagai pintu keluar
+- **Pola yang tercatat:** apa yang KELUAR dari fungsi (4 koreksi dalam satu sesi)
 
 **#93** · nested loop TUNTAS enam level · 2026-11-20 · keyakinan: yakin
 - Re-check: `10` dan `3` — dua-duanya benar, termasuk `i` yang berubah di `i=2`

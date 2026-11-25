@@ -60,8 +60,8 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
 | `??` vs `\|\|`                             | 3      | 3      |     |     |
 | `for`, `while`, `do...while`               | 2      | 4      |     |     |
 | `break`, `continue`, nested loop           | 2      | 4      |     |     |
-| Fungsi, parameter, return                  | -      | 2      |     |     |
-| Scope & closure                            | -      | 2      |     |     |
+| Fungsi, parameter, return                  | 3      | 2      |     |     |
+| Scope & closure                            | 3      | 2      |     |     |
 | Array & method (`map`, `filter`, `reduce`) | -      | 3      |     |     |
 | Object, destructuring, spread              | -      | 4      |     |     |
 | Reference vs value (mutability)            | -      | 4      |     |     |
@@ -85,6 +85,11 @@ Target sebelum melamar: **tidak ada konsep inti di bawah status 3**.
   dibuktikan tanpa contoh
 - **`break`, `continue`, nested loop** — status 2, bukan 3. Bukti: Gate Log #76-#78, `11_BreakContinue.js`
   (S1-S9, Q1-Q3). **Belum HARD dan WRITE**. Satu utang: angka yang ditambahkan pada `+=`
+- **Fungsi, parameter, return** — `16_Function.js`, gerbang enam level lulus 2026-11-25.
+  WRITE `hitungDiskon` 3/3 kasus tanpa contoh. VERIFY menemukan `20` ditulis mati.
+  EXPLAIN menemukan `jumlah / 3` rapuh. **Status 3.**
+- **Scope & closure** — bagian scope saja. `16_Function.js` H1/H2, dan koreksi `let`
+  di dalam loop (`review-01`). Closure belum disentuh — status 3 hanya untuk scope
 - **`&&` `||` `!` & short-circuit** — Gate Log #40-#48 (`&&` `||`), #49-#59 (`!`). Semua 4 level PASS
 - **`??` vs `||`** — Gate Log #60-#65: EASY, MEDIUM, HARD, WRITE semua PASS. Resolver `limit`/`diskon` diuji 4 nilai
 
