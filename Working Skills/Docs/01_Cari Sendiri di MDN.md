@@ -115,6 +115,39 @@ menjawab pertanyaan. Jenis errornya sudah benar, kutipannya yang salah.
 
 ---
 
+## Tugas 7 (tambahan 2026-11-27) — `??` memeriksa apa saja
+
+**Hasil dijalankan learner:**
+
+```
+0 ?? 5         -> 0
+null ?? 5      -> 5
+undefined ?? 5 -> 5
+```
+
+**Jawaban learner:** "karena tidak ada null, selalu memilih kiri" — **benar isinya**,
+tapi belum menyebut `undefined`.
+
+**Kutipan MDN yang dicari:**
+
+```
+The nullish coalescing (??) operator is a logical operator that returns its
+right-hand side operand when its left-hand side operand is null or undefined,
+and otherwise returns its left-hand side operand.
+```
+
+**Temuan penting:** learner menulis "tidak ketemu dan susah dimengerti karena bahasa
+Inggris". Padahal kalimat itu adalah **kalimat pertama** di halaman.
+
+Artinya hambatannya bukan struktur dokumentasi, tapi **kemampuan membaca bahasa
+Inggris**. Ini bukan kesalahan learner, tapi **keterampilan yang belum dilatih**, dan
+belum ada di sistem sama sekali.
+
+**Konsekuensi:** semua dokumentasi backend (MDN, Node, PostgreSQL, Spring) berbahasa
+Inggris. Kalau tidak ditangani, hambatan yang sama akan muncul di setiap fase.
+
+---
+
 ## Tugas 5 — baca dokumentasi yang sulit
 
 **Pertanyaan:** Buka MDN → `Array.prototype.reduce`. **Tanpa** membaca penjelasan panjangnya, coba pahami dari **satu contoh kode** saja.

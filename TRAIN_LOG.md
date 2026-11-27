@@ -576,6 +576,81 @@ Dan yang lebih parah: `KESALAHAN.md` mencatat **60 kesalahan learner** dan
 
 ---
 
+## 2026-11-26 — kosong
+
+Tidak ada commit, tidak ada blok Working Skills, tidak ada Dicoding.
+
+**Alasan (aturan #53):** learner sedang banyak tugas lain. Bukan karena sistem
+terlalu berat, bukan karena materi tidak jelas. Satu hari lewat.
+
+**Yang TIDAK dilakukan:** tidak ada hukuman, tidak ada pengulangan paksa, tidak ada
+utang baru. Satu hari hilang tidak mengubah apa pun selain tanggal.
+
+---
+
+## Ringkasan 2026-11-27 — re-check 7 koreksi
+
+| #   | Yang diuji                         | Hasil                  |
+|-----|------------------------------------|------------------------|
+| 1   | `tiga(tiga(2))`                    | benar `18`             |
+| 2   | `"undefined!"` teks vs `undefined` | benar                  |
+| 3   | `"A"` / `"B"` dua jalur return     | benar                  |
+| 4   | `ReferenceError` vs `undefined`    | benar                  |
+| 5   | `10000` angka mati                 | benar                  |
+| 6   | output benar bukan kode benar      | benar setelah dituntun |
+| 7   | kutipan dokumentasi                | **tidak ketemu**       |
+
+**6 dari 7 pulih.** Nomor 6 dijawab benar setelah dua pertanyaan bantuan, tanpa
+diberi jawaban — cara baru berjalan.
+
+**Temuan baru dari nomor 7:** learner tidak bisa mengutip dokumentasi MDN karena
+**bahasa Inggris**. Padahal kalimat yang dicari adalah **kalimat pertama** di halaman.
+Hambatannya bukan struktur dokumentasi, tapi kemampuan membaca Inggris.
+
+Ini belum ada di sistem sama sekali. Semua dokumentasi backend (MDN, Node,
+PostgreSQL, Spring) berbahasa Inggris.
+
+**Usulan (belum diputuskan):** blok Working Skills baru untuk membaca dokumentasi
+Inggris — bukan kursus bahasa Inggris, tapi latihan membaca 5 kalimat dokumentasi
+dan menerjemahkan maksudnya.
+
+---
+
+## Ringkasan 2026-11-27 (lanjutan)
+
+| Item               | Hasil                                          |
+|--------------------|------------------------------------------------|
+| Re-check 7 koreksi | **6 dari 7 pulih**                             |
+| Temuan baru        | hambatan bahasa Inggris di dokumentasi         |
+| `memecah-01`       | **belum** — learner lelah, 2 hari banyak tugas |
+| Commit             | 2                                              |
+| Dicoding           | pause hari ke-2                                |
+
+**`--no-verify` dipakai sekali.** Alasannya: tidak ada blok Working Skills yang
+selesai. Re-check bukan blok Working Skills, dan `memecah-01` belum tuntas.
+Hook menolak dengan benar. Ini kekurangan sesi, dicatat apa adanya.
+
+---
+
+## Rencana 2026-11-28
+
+| #   | Blok                                                   | Waktu  | Artefak |
+|-----|--------------------------------------------------------|--------|---------|
+| 1   | Protokol buka                                          | 5 mnt  | —       |
+| 2   | **`memecah-01`** — soal 2 dan 3                        | 40 mnt | 1       |
+| 3   | **Day 6 konsep 1-4** (kenapa, membuat, indeks, length) | 25 mnt | 2       |
+| 4   | Soal konsep 1-4                                        | 20 mnt | 3       |
+| 5   | **Gerbang EASY array**                                 | 20 mnt | 4       |
+| 6   | Catat + commit                                         | 10 mnt | 5       |
+
+**±2 jam · 5 artefak**
+
+**Target:** `memecah-01` selesai, dan array konsep 1-4 lulus dengan soal.
+
+**Yang tidak dikerjakan:** Dicoding (masih pause), video YouTube.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
