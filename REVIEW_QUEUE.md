@@ -9,12 +9,11 @@ terlupakan, dan utang yang terlupakan jadi utang baru.
 
 ## Terbuka
 
-| Item                                 | Jenis     | Muncul     | Jatuh tempo  | Status      |
-|--------------------------------------|-----------|------------|--------------|-------------|
-| posisi vs isi                        | konsep    | 2026-11-15 | tunggu array | 1           |
-| array dasar                          | materi    | 2026-11-17 | minggu 3     | belum       |
-| INSTAN: 6 koreksi diberikan langsung | assistant | 2026-11-25 | 2026-11-27   | 5 belum     |
-| docs-01 tugas 1, 2, 5                | level     | 2026-11-25 | minggu 3     | butuh array |
+| Item                  | Jenis  | Muncul     | Jatuh tempo  | Status      |
+|-----------------------|--------|------------|--------------|-------------|
+| posisi vs isi         | konsep | 2026-11-15 | tunggu array | 1           |
+| array dasar           | materi | 2026-11-17 | minggu 3     | belum       |
+| docs-01 tugas 1, 2, 5 | level  | 2026-11-25 | minggu 3     | butuh array |
 
 **Yang tersisa hanya dua, dan dua-duanya menunggu materi minggu 3.** Tidak ada utang
 yang bisa dilunasi sekarang.
@@ -31,6 +30,7 @@ sekali di akhir sesi.
 | Item                             | Hasil | Tanggal |
 |----------------------------------|-------|---------|
 | hook pre-commit                  | PASS  | 20 Nov  |
+| INSTAN: cara koreksi diubah      | PASS  | 27 Nov  |
 | empat EXPLAIN kosong             | PASS  | 21 Nov  |
 | cacat soal review-01             | PASS  | 21 Nov  |
 | nested loop gerbang              | PASS  | 20 Nov  |
