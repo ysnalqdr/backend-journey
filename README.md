@@ -712,3 +712,11 @@ A running list of things I do not want to forget.
 62. **GitHub counts the commit date, not the push date.** A commit made at 22:12 on the 23rd
     and pushed on the 24th counts as the 23rd. So a contribution graph only reflects work
     done *that day*, and pushing late does not move the square. Push the same day.
+
+63. **A planning exercise is split into numbered boxes with real numbers.** Not "write five
+    steps" but "stock is 10, request is 3 — what does the counter become?" One decision per
+    box. On 2026-11-28 the same problem failed three times when asked as five steps, then
+    passed in one pass once split into nine boxes.
+
+    Why: a plan has many decisions inside it. Asking for all of them at once measures
+    working memory, not understanding.
