@@ -92,9 +92,9 @@
       "kemampuan": [
         "Memecah masalah"
       ],
-      "status": "belum",
-      "terakhir": null,
-      "catatan": "3 soal tanpa kode. Tulis rencana 4 baris, bukan kode. Bagian kasus aneh yang paling sering dilewatkan."
+      "status": "selesai",
+      "terakhir": "2026-11-28",
+      "catatan": "Selesai 2026-11-28, soal 2 dan 3. Soal 1 ditunda ke minggu 3 karena butuh array of object. Soal 2: learner mengoreksi KUNCI — kunci bilang 'berhenti kalau stok 0', padahal harus lanjut supaya totalGagal lengkap. Soal 3: urutan periksa-terkunci sempat salah (ditaruh setelah password), dan sempat mau memberi tahu 'email tidak terdaftar' (username enumeration). Keduanya sudah benar setelah dituntun."
     },
     {
       "id": "debug-01",

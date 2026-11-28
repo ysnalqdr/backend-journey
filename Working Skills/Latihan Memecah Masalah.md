@@ -63,12 +63,47 @@ tiket yang berhasil dilayani dan berapa yang gagal.
 
 ## Rencana
 
+Dikerjakan 2026-11-28 lewat sembilan kotak kecil. Semua isi di bawah adalah jawaban learner.
+
 ```
-1. Masuk  :
-2. Keluar :
+1. Masuk  : stok awal (angka), dan permintaan tiap hari (deretan angka)
+2. Keluar : dua angka — total terlayani, dan total gagal
+
 3. Langkah:
-4. Kasus  :
+   a. siapkan stok = stokAwal, terlayani = 0, gagal = 0
+   b. untuk setiap hari: bandingkan permintaan hari itu dengan stok
+   c. kalau permintaan <= stok:
+        terlayani += permintaan
+        stok -= permintaan
+   d. kalau permintaan > stok:
+        terlayani += stok
+        gagal += permintaan - stok
+        stok = 0
+   e. setelah semua hari selesai: kembalikan terlayani dan gagal
+      (stok TIDAK dikembalikan — soal tidak memintanya)
+
+4. Kasus:
+   - stok 0 sejak awal  -> semua permintaan masuk gagal, terlayani tetap 0,
+                           program tidak error
+   - permintaan 0       -> terlayani dan gagal tidak bertambah, stok tetap
+                           (tidak perlu if khusus: 0 > stok itu false)
+   - permintaan negatif -> stok MALAH BERTAMBAH (stok - (-5) = stok + 5),
+                           harus ditolak
 ```
+
+## Catatan proses
+
+Learner awalnya menjawab dalam satu paragraf panjang, bukan urutan bernomor. Setelah
+dipecah jadi sembilan kotak kecil dengan angka nyata (stok 10, permintaan 3, lalu stok 7,
+permintaan 8), semua kotak dijawab benar kecuali satu:
+
+| Kotak | Salah                | Koreksi                            |
+|-------|----------------------|------------------------------------|
+| 3d    | "gagal mulai dari 8" | `gagal += permintaan - stok` = `1` |
+
+Pelajaran untuk assistant: soal rencana yang terlalu besar membuat learner bingung
+bukan karena tidak paham, tapi karena keputusannya terlalu banyak sekaligus. Pecah
+jadi kotak bernomor dengan angka nyata.
 
 ---
 
@@ -81,12 +116,46 @@ Tentukan apakah user boleh masuk. Setelah tiga kali salah, akun dikunci.
 
 ## Rencana
 
+Dikerjakan 2026-11-28 lewat kotak bernomor. Semua isi di bawah adalah jawaban learner.
+
 ```
-1. Masuk  :
-2. Keluar :
+1. Masuk  : email (teks), password mentah (teks),
+             dan data user tersimpan: password hash, jumlah salah, status terkunci
+
+2. Keluar : boolean — boleh masuk atau tidak
+
 3. Langkah:
-4. Kasus  :
+   a. cari user berdasarkan email
+   b. kalau user tidak ditemukan: tolak dengan pesan "Email atau password salah"
+   c. periksa apakah akun terkunci; kalau ya, tolak
+   d. hash password yang diketik, bandingkan dengan hash tersimpan
+   e. kalau cocok: izinkan masuk, dan set jumlah salah = 0
+   f. kalau tidak cocok: tolak dengan pesan "Email atau password salah",
+      jumlah salah += 1, lalu kalau jumlah salah >= 3 -> kunci akun
+
+4. Kasus:
+   - email tidak terdaftar  -> tolak, pesan SAMA dengan password salah
+                               ("Email atau password salah"), jangan bilang
+                               "email tidak terdaftar"
+   - akun terkunci          -> tolak walaupun password benar
+   - password kosong        -> tolak
+   - user sudah login       -> tidak perlu cek password lagi
 ```
+
+## Catatan proses
+
+Urutan pemeriksaan adalah bagian tersulit. Learner awalnya menaruh "periksa terkunci"
+**setelah** pemeriksaan password. Alasannya keliru: kalau akun terkunci, password
+tidak perlu diperiksa sama sekali, dan penghitung salah tidak boleh bertambah.
+
+Learner juga awalnya menjawab bahwa sistem **boleh memberi tahu** "email tidak
+terdaftar". Itu lubang keamanan bernama **username enumeration**: penyerang bisa
+memetakan email mana yang punya akun tanpa menebak satu password pun. Setelah
+dijelaskan, learner menjawab benar: satu pesan yang sama untuk kedua kasus.
+
+**Ide learner yang bagus tapi di luar cakupan:** kunci sebaiknya **sementara** dan
+terbuka sendiri setelah waktunya habis. Itu desain lebih baik, tapi butuh `Date`
+(materi minggu 6). Dicatat sebagai pengembangan, bukan bagian rencana ini.
 
 ---
 
@@ -122,7 +191,7 @@ Yang diuji di kasus keempat: apakah kamu sadar `>` dan `>=` beda di batas.
    b. untuk setiap hari: kalau permintaan <= stok, layani penuh
    c. kalau permintaan > stok, layani sebanyak stok, sisanya masuk gagal
    d. kurangi stok
-   e. berhenti kalau stok 0
+   e. LANJUT sampai semua hari selesai (jangan berhenti saat stok 0)
 4. Kasus  :
    - stok 0 sejak awal -> semua permintaan gagal, tidak error
    - permintaan 0 -> tidak mengubah apa pun
@@ -130,6 +199,13 @@ Yang diuji di kasus keempat: apakah kamu sadar `>` dan `>=` beda di batas.
 ```
 
 Yang diuji: apakah kamu sadar harus ada dua penghitung, bukan satu.
+
+**Cacat kunci ditemukan 2026-11-28.** Kunci semula menulis "berhenti kalau stok 0".
+Itu salah: kalau berhenti, `totalGagal` tidak menghitung permintaan di hari-hari
+berikutnya. Contoh: stok 10, permintaan 5, 8, 6, 4 -> gagal seharusnya 3+6+4 = 13,
+tapi dengan `break` hanya tercatat 3.
+
+Learner 2026-11-28 menjawab "lanjut", dan itu benar. Kunci sudah diperbaiki.
 
 ## Soal 3
 
