@@ -651,6 +651,46 @@ Hook menolak dengan benar. Ini kekurangan sesi, dicatat apa adanya.
 
 ---
 
+## Ringkasan 2026-11-28
+
+| Item                      | Hasil                                    |
+|---------------------------|------------------------------------------|
+| `memecah-01`              | **selesai** — soal 2 dan 3               |
+| Working Skills            | **7 dari 8**                             |
+| Kunci `memecah-01` soal 2 | **cacat, dikoreksi learner**             |
+| Aturan #63 baru           | soal rencana dipecah jadi kotak bernomor |
+| Commit                    | 2                                        |
+
+**Kejadian penting:** learner mengoreksi kunci, bukan sebaliknya. Kunci bilang
+"berhenti kalau stok 0", learner bilang "lanjut" — dan learner benar, karena kalau
+berhenti `totalGagal` tidak lengkap.
+
+**Metode yang berhasil:** soal rencana dipecah jadi sembilan kotak bernomor dengan
+angka nyata (stok 10, permintaan 3, lalu stok 7, permintaan 8). Sebelumnya gagal tiga
+kali saat diminta "tulis lima langkah".
+
+**Yang ditunda:** `memecah-01` soal 1 (butuh array of object), `docs-01` tugas 1/2/5.
+Semua menunggu minggu 3.
+
+---
+
+## Rencana 2026-11-29
+
+| #   | Blok                                                   | Waktu  | Artefak |
+|-----|--------------------------------------------------------|--------|---------|
+| 1   | Protokol buka                                          | 5 mnt  | —       |
+| 2   | **Day 6 konsep 1-4** (kenapa, membuat, indeks, length) | 25 mnt | 1       |
+| 3   | Soal konsep 1-4                                        | 20 mnt | 2       |
+| 4   | **Day 6 konsep 5-7** (ubah isi, push, loop)            | 25 mnt | 3       |
+| 5   | Soal konsep 5-7                                        | 20 mnt | 4       |
+| 6   | Catat + commit                                         | 10 mnt | 5       |
+
+**±1 jam 45 menit · 5 artefak**
+
+**Target:** tujuh konsep array lulus dengan soal.
+
+---
+
 ## Rencana sesi berikutnya
 
 **2026-11-15 — belum dikerjakan**
