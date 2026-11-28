@@ -29,6 +29,42 @@ Master plan. Kalau ada aturan yang bentrok dengan README, file ini yang menang.
 **TypeScript, Python, frontend, AI engineering masuk daftar tunggu**
 - Alasan: Anggaran waktu 720–960 jam sudah terpakai ±685 jam
 
+**Daftar bahasa dikunci 2026-11-28 — enam, tidak lebih**
+
+Diputuskan setelah learner mengusulkan sembilan teknologi sekaligus (JS, TS, Node,
+SQL, Java, Go, Python, Rust, Lua) padahal belum menyelesaikan minggu 1.
+
+| #   | Bahasa         | Peran         | Kapan                 |
+|-----|----------------|---------------|-----------------------|
+| 1   | JS / TS / Node | jalan masuk   | minggu 1-12           |
+| 2   | SQL            | semua backend | minggu 9-12           |
+| 3   | Java + Spring  | **utama**     | minggu 13-24          |
+| 4   | Go             | kedua         | minggu 33-40          |
+| 5   | Python         | **tunda**     | setelah kerja pertama |
+| 6   | Rust           | **tunda**     | setelah bisa Go       |
+
+**Lua/Luau (Roblox) dipisah dari jalur ini.** Itu game development, bukan backend.
+Boleh dikerjakan kapan saja sebagai istirahat, tapi **tidak dihitung sebagai kemajuan
+Backend Journey**.
+
+**Alasan penolakan, dengan data Stack Overflow 2026 (n = 14.099):**
+
+| Bahasa | Pemakaian | Kenapa ditunda                                  |
+|--------|-----------|-------------------------------------------------|
+| SQL    | 58,4%     | **sudah dijadwalkan**, bukan hal baru           |
+| Java   | 27,6%     | dipakai, senjata utama                          |
+| Rust   | 18,0%     | nomor 12, dan butuh 2–3x waktu belajar          |
+| Go     | 16,5%     | dipakai, senjata kedua                          |
+| Python | 58,0%     | 58% itu untuk **AI/ML dan data**, bukan backend |
+| Lua    | —         | domain berbeda (game)                           |
+
+**Bukti bahwa Rust belum relevan:** Anthropic memindahkan Messages API dari Python ke
+Rust pada 25 November 2026, dan alasannya adalah trafik naik **1.800 kali**. Bukan
+karena Rust lebih modern. Rust adalah jawaban untuk skala; kita belum sampai skala.
+
+**Aturan yang lahir dari sini:** setiap bahasa harus menjawab satu pertanyaan —
+*"untuk pekerjaan apa, dan kapan dipakai?"* Yang tidak bisa menjawab, ditunda.
+
 
 ---
 
